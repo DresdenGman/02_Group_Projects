@@ -1,0 +1,5 @@
+PROJECT: Examples-50_Pyecharts_Visualization_Examples
+================================================================================
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

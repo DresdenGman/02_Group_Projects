@@ -1,0 +1,9 @@
+PROJECT: Real_Estate-Second_Hand_House_Data_Analysis
+================================================================================
+
+PROJECT OVERVIEW:
+Table of Contents
+ KeywordsData Analysis与Visualization一、Data Cleaning异常数据处理数据概览重复值处理二、Data Analysis1.了解圳二手房房源的整体情况（总体分析）2.影响深圳二手房源价格的因素分析Summary
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

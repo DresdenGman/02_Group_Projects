@@ -1,0 +1,23 @@
+PROJECT: Social_Science-7th_Census_Age_Structure_Analysis
+================================================================================
+
+PROJECT OVERVIEW:
+## 
+ 
+ 
+ 人口yes影响地区发展的重要因素。不同地区的人口年龄结构不仅yes本地区社会发展的一个体现，也yes其未来发展的基础。Analyze其了解有助于我们更好得理解社会的变化，Analyze社会发展有更正确的认识。  
+ 
+ 本次从第7次人口普查数据的地区（省份）之间的人口年龄结构出发，分析人口年龄结构的差异及其影响因素。  
+ 
+ Conclusion：
+ 
+ - 第 7 次人口普查数据统计的2020年中国各地区（省份）的人口年龄结构，将人口分为14岁以下、15到59岁、60岁以上三个年龄段，based on年龄结构的相似度可以各个地区分为三组：  
+ 	- 第 1 组：人口年龄结构特点yes**低高高**，大致yes 1:7:2。包括北京、天津、上海、浙江、东北三省和内蒙古。  
+ 	- 第 2 组：人口年龄结构特点yes**高低高**，大致yes 2:6:2。包括以华北和华中为主的省份。  
+ 	- 第 3 组：人口年龄结构特点特点yes**高高低**，大致yes 2:7:1。包括西藏、新疆、青海、广东、福建、海南等省份。  
+ - 地区间的人口年龄结构和地区经济发展水平相关性不高。  
+ - 14岁以下人口年龄比例差异主要受到城市化进程的影响。城市化水平越高，进度越早，则这部分人口年龄比例越容易较少。  
+ - 15-59岁之间人口年龄比例差异主要受到流动人口的影响。流动人口比例越大，则这部分人口年龄比例越容易更高。
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

@@ -1,0 +1,9 @@
+PROJECT: Other-Water_Quality_Assessment_from_Images
+================================================================================
+
+PROJECT OVERVIEW:
+Table of Contents
+ KeywordsData Exploration分析数据特征提取Support Vector Machine (SVM)模型建立模型评价
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

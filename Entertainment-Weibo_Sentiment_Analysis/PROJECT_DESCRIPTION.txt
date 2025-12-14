@@ -1,0 +1,8 @@
+PROJECT: Entertainment Weibo_Sentiment_Analysis
+================================================================================
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, 
+visualization, and predictive modeling.
+
+PROJECT TYPE: Group Project

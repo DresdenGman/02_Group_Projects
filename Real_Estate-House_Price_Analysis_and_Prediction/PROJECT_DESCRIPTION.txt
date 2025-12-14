@@ -1,0 +1,5 @@
+PROJECT: Real_Estate-House_Price_Analysis_and_Prediction
+================================================================================
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.
