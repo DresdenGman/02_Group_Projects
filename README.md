@@ -1,8 +1,8 @@
 # Group Data Analysis Projects
 
-> A collection of 17 collaborative Python data analysis projects covering diverse domains and applications
+> A collection of 17 collaborative Python data analysis projects from the Mathematical Modeling Society at Beijing Royal School
 
-This repository contains group and collaborative data analysis projects that demonstrate teamwork, teaching capabilities, and comprehensive data science applications. These projects span multiple domains including e-commerce, social science, education, workplace analytics, and specialized applications like computer vision and NLP.
+This repository contains group and collaborative data analysis projects from the **Mathematical Modeling Society** at Beijing Royal School. As the society president, I led and organized these projects with society members, demonstrating teamwork, teaching capabilities, and comprehensive data science applications. These projects span multiple domains including e-commerce, social science, education, workplace analytics, and specialized applications like computer vision and NLP.
 
 ## 📊 Project Overview
 
@@ -227,8 +227,10 @@ These projects are suitable for:
 
 ## 👤 Author
 
-**Group & Collaborative Projects**  
-*Team-based data analysis projects demonstrating collaborative development, teaching capabilities, and diverse domain expertise*
+**Mathematical Modeling Society - Group Projects**  
+*Beijing Royal School*
+
+As the **President of the Mathematical Modeling Society** at Beijing Royal School, I led and organized these 17 collaborative projects with society members. These group projects demonstrate teamwork, teaching capabilities, and comprehensive data science applications. As the society president, I guided members through these projects, providing mentorship and creating educational resources for the community.
 
 ## 📄 License
 
@@ -240,5 +242,5 @@ For questions or collaboration opportunities, please refer to individual project
 
 ---
 
-**Note**: These projects showcase collaborative data science capabilities, teaching excellence, and diverse applications across multiple domains, demonstrating the ability to work effectively in teams and contribute to educational resources.
+**Note**: These projects showcase collaborative data science capabilities, teaching excellence, and diverse applications across multiple domains, demonstrating the ability to work effectively in teams and contribute to educational resources. As the society president, these group projects represent my leadership in organizing, mentoring, and guiding society members through complex data analysis challenges.
 
