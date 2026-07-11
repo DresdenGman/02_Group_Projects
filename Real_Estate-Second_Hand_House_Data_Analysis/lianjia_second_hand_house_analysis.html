@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>链家二手房数据分析</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Second-handData Analysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,7 +14598,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#项目介绍" data-toc-modified-id="项目介绍-1">项目介绍</a></span><ul class="toc-item"><li><span><a href="#关键词" data-toc-modified-id="关键词-1.1">关键词</a></span></li></ul></li><li><span><a href="#数据分析与可视化" data-toc-modified-id="数据分析与可视化-2">数据分析与可视化</a></span><ul class="toc-item"><li><span><a href="#一、数据清洗" data-toc-modified-id="一、数据清洗-2.1">一、数据清洗</a></span><ul class="toc-item"><li><span><a href="#异常数据处理" data-toc-modified-id="异常数据处理-2.1.1">异常数据处理</a></span></li><li><span><a href="#数据概览" data-toc-modified-id="数据概览-2.1.2">数据概览</a></span></li><li><span><a href="#重复值处理" data-toc-modified-id="重复值处理-2.1.3">重复值处理</a></span></li></ul></li><li><span><a href="#二、数据分析" data-toc-modified-id="二、数据分析-2.2">二、数据分析</a></span><ul class="toc-item"><li><span><a href="#1.了解圳二手房房源的整体情况（总体分析）" data-toc-modified-id="1.了解圳二手房房源的整体情况（总体分析）-2.2.1">1.了解圳二手房房源的整体情况（总体分析）</a></span></li><li><span><a href="#2.影响深圳二手房源价格的因素分析" data-toc-modified-id="2.影响深圳二手房源价格的因素分析-2.2.2">2.影响深圳二手房源价格的因素分析</a></span></li></ul></li></ul></li><li><span><a href="#总结" data-toc-modified-id="总结-3">总结</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Project Introduction" data-toc-modified-id="Project Introduction-1">Project Introduction</a></span><ul class="toc-item"><li><span><a href="#Keywords" data-toc-modified-id="Keywords-1.1">Keywords</a></span></li></ul></li><li><span><a href="#Data Analysisvisualization" data-toc-modified-id="Data Analysisvisualization-2">Data Analysisvisualization</a></span><ul class="toc-item"><li><span><a href="#、Data Cleaning" data-toc-modified-id="、Data Cleaning-2.1">、Data Cleaning</a></span><ul class="toc-item"><li><span><a href="#dataprocessing" data-toc-modified-id="dataprocessing-2.1.1">dataprocessing</a></span></li><li><span><a href="#data" data-toc-modified-id="data-2.1.2">data</a></span></li><li><span><a href="#processing" data-toc-modified-id="processing-2.1.3">processing</a></span></li></ul></li><li><span><a href="#、Data Analysis" data-toc-modified-id="、Data Analysis-2.2">、Data Analysis</a></span><ul class="toc-item"><li><span><a href="#1.Second-handListing（analysis）" data-toc-modified-id="1.Second-handListing（analysis）-2.2.1">1.Second-handListing（analysis）</a></span></li><li><span><a href="#2.Second-handPriceanalysis" data-toc-modified-id="2.Second-handPriceanalysis-2.2.2">2.Second-handPriceanalysis</a></span></li></ul></li></ul></li><li><span><a href="#" data-toc-modified-id="-3"></a></span></li></ul></div>
 
 </div>
 </div>
@@ -14610,44 +14610,44 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#39033;&#30446;&#20171;&#32461;<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#182;</a></h2><p>本项目主要对链家二手房房源数据进行分析，通过数据可视化了解深圳的二手房源情况，对人们购房做出指导。分析过程主要围绕一下方面展开：项目背景、项目流程（数据来源、分析目标、数据理解、数据可视化与分析）、项目总结。</p>
+<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">Project Introduction<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">¶</a></h2><p>main Second-handListingdataanalysis，through datavisualizationSecond-hand，。analysismain ：、（data、analysis、Data Understanding、datavisualizationanalysis）、。</p>
 <ul>
-<li>项目背景</li>
+<li></li>
 </ul>
-<p>随着经济的发展，北、上、广、深这四大都市迅速发展，在经济、政治等方面有突出的表现，而且工作机会多，生活质量较高，是大多数人所向往的地方。但是要在这些城市定居是一件不容易的事情，这样来说购买二手房是一个可以选择的方案，说到这我们一定会想了解这些地区的房源大概情况。所以本项目是对深圳链家二手房房源进行的分析，希望可以帮助部分人解决购房问题，从多维度出发分析，帮助买家拿定主意，实现合理的购房。</p>
+<p>，、、、，、，，，。 but City，Second-hand，Listing。 so Second-handListinganalysis，minute，analysis，，implement 。</p>
 <ul>
-<li>核心技术</li>
+<li></li>
 </ul>
-<p>Numpy、pandas、Matplotlib库的使用，数据清洗，数据可视化</p>
+<p>Numpy、pandas、Matplotlibusing ，Data Cleaning，datavisualization</p>
 <ul>
-<li>数据</li>
+<li>data</li>
 </ul>
 <p>shenzhen.csv</p>
-<p>数据来源于和鲸社区，附链接：
+<p>data and ，：
 <a href="https://www.kesci.com/home/dataset/5e5e3effb8dfce002d7ed893">https://www.kesci.com/home/dataset/5e5e3effb8dfce002d7ed893</a></p>
 <ul>
-<li>数据理解</li>
+<li>Data Understanding</li>
 </ul>
-<p>深圳二手房房源信息：</p>
-<p>数据量18906条；</p>
-<p>数据说明：</p>
-<p>area：行政区（如：南山区）</p>
-<p>title：房源信息标题</p>
-<p>community：小区</p>
-<p>position：地段位置（如：万象城）</p>
-<p>tax：税率相关（如：房本满五年）</p>
-<p>total_price：总价，单位：万元</p>
-<p>unit_price：单价，单位：元/平米</p>
-<p>hourseType：户型（如：三室一厅）</p>
-<p>hourseSize：面积，单位：平米</p>
-<p>direction：房间朝向</p>
-<p>fitment：装修（如：精装，简装）</p>
+<p>Second-handListinginfo：</p>
+<p>data18906；</p>
+<p>datadescription：</p>
+<p>area：（：）</p>
+<p>title：Listinginfo</p>
+<p>community：Community</p>
+<p>position：Location（：）</p>
+<p>tax：related （：year）</p>
+<p>total_price：，unit：</p>
+<p>unit_price：，unit：/</p>
+<p>hourseType：Layout（：）</p>
+<p>hourseSize：Area，unit：</p>
+<p>direction：Orientation</p>
+<p>fitment：Decoration（：，）</p>
 <ul>
-<li>分析目的</li>
+<li>analysis</li>
 </ul>
-<p>了解圳二手房的大体情况，通过对不同行政区、不同户型、不同朝向、不同装修进行分析来了解。</p>
-<p>分析深圳二手房房价的影响因素有哪些？优质房源有哪些？</p>
-<p>怎么选择合适的房源？</p>
+<p>Second-hand，through different 、different Layout、different Orientation、different Decorationanalysis。</p>
+<p>analysisSecond-handHouse Price？Listing？</p>
+<p>Listing？</p>
 
 </div>
 </div>
@@ -14659,8 +14659,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E5%85%B3%E9%94%AE%E8%AF%8D">&#20851;&#38190;&#35789;<a class="anchor-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D">&#182;</a></h3><ul>
-<li>pandas数据处理、matplotlib、数据可视化、数据探索分析</li>
+<h3 id="%E5%85%B3%E9%94%AE%E8%AF%8D">Keywords<a class="anchor-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D">¶</a></h3><ul>
+<li>pandasdataprocessing、matplotlib、datavisualization、Data Explorationanalysis</li>
 </ul>
 
 </div>
@@ -14673,7 +14673,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96">&#25968;&#25454;&#20998;&#26512;&#19982;&#21487;&#35270;&#21270;<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96">&#182;</a></h2><h3 id="%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">&#19968;&#12289;&#25968;&#25454;&#28165;&#27927;<a class="anchor-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">&#182;</a></h3>
+<h2 id="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96">Data Analysisvisualization<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96">¶</a></h2><h3 id="%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">、Data Cleaning<a class="anchor-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14682,16 +14682,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 引入使用的库</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using </span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">mpl</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FangSong&#39;</span><span class="p">]</span> <span class="c1"># 指定默认字体</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1">#把plt默认的图片size调大一点</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.sans-serif'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'FangSong'</span><span class="p">]</span> <span class="c1"># </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'figure'</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1">#pltsize</span>
 </pre></div>
 
      </div>
@@ -14704,11 +14704,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#读取数据文件，查看数据大体情况</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./shenzhen.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#datafile，viewdata</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./shenzhen.csv'</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14766,77 +14766,77 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>0</th>
       <td>0</td>
-      <td>罗湖区</td>
-      <td>满五红本， 户型方正朝南，自住装修保养好，花园社区</td>
-      <td>金城华庭</td>
-      <td>螺岭</td>
-      <td>房本满五年</td>
+      <td></td>
+      <td>， Layout，Decoration，</td>
+      <td></td>
+      <td></td>
+      <td>year</td>
       <td>710.0</td>
       <td>79552.0</td>
-      <td>3室1厅</td>
+      <td>31</td>
       <td>89.25</td>
-      <td>南</td>
-      <td>精装</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
-      <td>罗湖区</td>
-      <td>7号线洪湖站前59万平洪湖公园后京基水贝*2个万象城</td>
-      <td>洪湖东岸</td>
-      <td>翠竹</td>
-      <td>房本满五年</td>
+      <td></td>
+      <td>759*2</td>
+      <td></td>
+      <td></td>
+      <td>year</td>
       <td>408.0</td>
       <td>54736.0</td>
-      <td>3室1厅</td>
+      <td>31</td>
       <td>74.54</td>
-      <td>西</td>
-      <td>精装</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <th>2</th>
       <td>2</td>
-      <td>罗湖区</td>
-      <td>《供电南苑。复式三层四房户型》万象城，地理位置优越</td>
-      <td>供电南苑</td>
-      <td>万象城</td>
-      <td>房本满五年</td>
+      <td></td>
+      <td>《。Layout》，</td>
+      <td></td>
+      <td></td>
+      <td>year</td>
       <td>850.0</td>
       <td>67649.0</td>
-      <td>4室1厅</td>
+      <td>41</td>
       <td>125.65</td>
-      <td>西</td>
-      <td>简装</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <th>3</th>
       <td>3</td>
-      <td>罗湖区</td>
-      <td>不用明额 满两年红本 高层东南三房 有钥匙随时可看</td>
-      <td>翡翠公寓</td>
-      <td>翠竹</td>
-      <td>房本满五年</td>
+      <td></td>
+      <td> year  hour</td>
+      <td></td>
+      <td></td>
+      <td>year</td>
       <td>360.0</td>
       <td>60627.0</td>
-      <td>3室2厅</td>
+      <td>32</td>
       <td>59.38</td>
-      <td>南</td>
-      <td>精装</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <th>4</th>
       <td>4</td>
-      <td>罗湖区</td>
-      <td>都市名园 2室1厅 370万</td>
-      <td>都市名园</td>
-      <td>万象城</td>
+      <td></td>
+      <td> 21 370</td>
+      <td></td>
+      <td></td>
       <td>NaN</td>
       <td>370.0</td>
       <td>48259.0</td>
-      <td>2室1厅</td>
+      <td>21</td>
       <td>76.67</td>
-      <td>东北</td>
-      <td>简装</td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -14854,7 +14854,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14977,7 +14977,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%E5%BC%82%E5%B8%B8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">&#24322;&#24120;&#25968;&#25454;&#22788;&#29702;<a class="anchor-link" href="#%E5%BC%82%E5%B8%B8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">&#182;</a></h4><p>房间大小有夸大的部分，经过查询发现房价与房源面积不符合客观事实，进行删除</p>
+<h4 id="%E5%BC%82%E5%B8%B8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">dataprocessing<a class="anchor-link" href="#%E5%BC%82%E5%B8%B8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">¶</a></h4><p>minute，House PriceListingArea，</p>
 
 </div>
 </div>
@@ -14987,11 +14987,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#房间大小超过10000平米的数据</span>
-<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;hourseSize&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10000</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#10000data</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'hourseSize'</span><span class="p">]</span><span class="o">></span><span class="mi">10000</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -15048,17 +15048,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>12546</th>
       <td>12546</td>
-      <td>宝安区</td>
-      <td>弘雅二期花园中间，中间楼层，满五年，红本在手</td>
-      <td>弘雅花园第二期</td>
-      <td>新安</td>
-      <td>房本满五年</td>
+      <td></td>
+      <td>，Floor，year，</td>
+      <td></td>
+      <td></td>
+      <td>year</td>
       <td>550.0</td>
       <td>506.0</td>
-      <td>3室2厅</td>
+      <td>32</td>
       <td>10871.0</td>
-      <td>东南</td>
-      <td>其他</td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -15076,12 +15076,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 删除超过10000平米的数据</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 10000data</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;hourseSize&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10000</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'hourseSize'</span><span class="p">]</span><span class="o">></span><span class="mi">10000</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
 </pre></div>
 
@@ -15119,7 +15119,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%E6%95%B0%E6%8D%AE%E6%A6%82%E8%A7%88">&#25968;&#25454;&#27010;&#35272;<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E6%A6%82%E8%A7%88">&#182;</a></h4>
+<h4 id="%E6%95%B0%E6%8D%AE%E6%A6%82%E8%A7%88">data<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E6%A6%82%E8%A7%88">¶</a></h4>
 </div>
 </div>
 </div>
@@ -15128,10 +15128,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#查看每列的总数、数据类型</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#view、data</span>
 <span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
@@ -15152,7 +15152,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 Int64Index: 18906 entries, 0 to 18906
 Data columns (total 12 columns):
  #   Column       Non-Null Count  Dtype  
@@ -15186,7 +15186,7 @@ memory usage: 1.9+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>发现title和tax列存在缺失数据，但这两列不是需要分析的列。其它列数据完整，不需要进行处理。</p>
+<p>title and taxhas data，need to analysis。data，need to processing。</p>
 
 </div>
 </div>
@@ -15198,7 +15198,7 @@ memory usage: 1.9+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%E9%87%8D%E5%A4%8D%E5%80%BC%E5%A4%84%E7%90%86">&#37325;&#22797;&#20540;&#22788;&#29702;<a class="anchor-link" href="#%E9%87%8D%E5%A4%8D%E5%80%BC%E5%A4%84%E7%90%86">&#182;</a></h4>
+<h4 id="%E9%87%8D%E5%A4%8D%E5%80%BC%E5%A4%84%E7%90%86">processing<a class="anchor-link" href="#%E9%87%8D%E5%A4%8D%E5%80%BC%E5%A4%84%E7%90%86">¶</a></h4>
 </div>
 </div>
 </div>
@@ -15207,10 +15207,10 @@ memory usage: 1.9+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 查看重复值</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># view</span>
 <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
 </pre></div>
 
@@ -15283,7 +15283,7 @@ memory usage: 1.9+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>发现没有重复数据，数据清洗完成，开始数据分析。</p>
+<p>data，Data Cleaning，Data Analysis。</p>
 
 </div>
 </div>
@@ -15295,8 +15295,8 @@ memory usage: 1.9+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">&#20108;&#12289;&#25968;&#25454;&#20998;&#26512;<a class="anchor-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">&#182;</a></h3><h4 id="1.%E4%BA%86%E8%A7%A3%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%88%BF%E6%BA%90%E7%9A%84%E6%95%B4%E4%BD%93%E6%83%85%E5%86%B5%EF%BC%88%E6%80%BB%E4%BD%93%E5%88%86%E6%9E%90%EF%BC%89">1.&#20102;&#35299;&#22323;&#20108;&#25163;&#25151;&#25151;&#28304;&#30340;&#25972;&#20307;&#24773;&#20917;&#65288;&#24635;&#20307;&#20998;&#26512;&#65289;<a class="anchor-link" href="#1.%E4%BA%86%E8%A7%A3%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%88%BF%E6%BA%90%E7%9A%84%E6%95%B4%E4%BD%93%E6%83%85%E5%86%B5%EF%BC%88%E6%80%BB%E4%BD%93%E5%88%86%E6%9E%90%EF%BC%89">&#182;</a></h4><p>主要从四个方面出发利用matplotlib绘制饼图。
-不同行政区、户型、朝向、装修与二手房房源数量的对比</p>
+<h3 id="%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">、Data Analysis<a class="anchor-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">¶</a></h3><h4 id="1.%E4%BA%86%E8%A7%A3%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%88%BF%E6%BA%90%E7%9A%84%E6%95%B4%E4%BD%93%E6%83%85%E5%86%B5%EF%BC%88%E6%80%BB%E4%BD%93%E5%88%86%E6%9E%90%EF%BC%89">1.Second-handListing（analysis）<a class="anchor-link" href="#1.%E4%BA%86%E8%A7%A3%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%88%BF%E6%BA%90%E7%9A%84%E6%95%B4%E4%BD%93%E6%83%85%E5%86%B5%EF%BC%88%E6%80%BB%E4%BD%93%E5%88%86%E6%9E%90%EF%BC%89">¶</a></h4><p>main utilizing matplotlib。
+different 、Layout、Orientation、DecorationSecond-handListingCount</p>
 
 </div>
 </div>
@@ -15306,29 +15306,29 @@ memory usage: 1.9+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 不同行政区房源数量占比</span>
-<span class="n">area_house_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;area&#39;</span><span class="p">)[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">area_house_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1">#按照降序排列</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># different ListingCountShare</span>
+<span class="n">area_house_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'area'</span><span class="p">)[</span><span class="s1">'area'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">area_house_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1">#</span>
 <span class="c1"># area_house_count</span>
 
-<span class="c1"># 不同户型房源数量占比</span>
-<span class="n">hourseType_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;hourseType&#39;</span><span class="p">)[</span><span class="s1">&#39;hourseType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">hourseType_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1">#按照降序排列</span>
-<span class="n">new_hourseType_count</span> <span class="o">=</span> <span class="n">hourseType_count</span><span class="p">[</span><span class="n">hourseType_count</span><span class="o">&gt;</span><span class="mi">700</span><span class="p">]</span>
-<span class="n">new_hourseType_count</span><span class="p">[</span><span class="s1">&#39;其它&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hourseType_count</span><span class="p">[</span><span class="n">hourseType_count</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># different LayoutListingCountShare</span>
+<span class="n">hourseType_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'hourseType'</span><span class="p">)[</span><span class="s1">'hourseType'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">hourseType_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1">#</span>
+<span class="n">new_hourseType_count</span> <span class="o">=</span> <span class="n">hourseType_count</span><span class="p">[</span><span class="n">hourseType_count</span><span class="o">></span><span class="mi">700</span><span class="p">]</span>
+<span class="n">new_hourseType_count</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">hourseType_count</span><span class="p">[</span><span class="n">hourseType_count</span><span class="o"><</span><span class="mi">700</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="c1"># new_hourseType_count</span>
 
-<span class="c1"># 不同朝向房源数量占比()</span>
-<span class="n">direction_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;direction&#39;</span><span class="p">)[</span><span class="s1">&#39;direction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>  
-<span class="n">new_direction_count</span> <span class="o">=</span><span class="n">direction_count</span><span class="p">[</span><span class="n">direction_count</span><span class="o">&gt;</span><span class="mi">800</span><span class="p">]</span>
-<span class="n">new_direction_count</span><span class="p">[</span><span class="s1">&#39;其它&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">direction_count</span><span class="p">[</span><span class="n">direction_count</span><span class="o">&lt;</span><span class="mi">800</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># different OrientationListingCountShare()</span>
+<span class="n">direction_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'direction'</span><span class="p">)[</span><span class="s1">'direction'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>  
+<span class="n">new_direction_count</span> <span class="o">=</span><span class="n">direction_count</span><span class="p">[</span><span class="n">direction_count</span><span class="o">></span><span class="mi">800</span><span class="p">]</span>
+<span class="n">new_direction_count</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">direction_count</span><span class="p">[</span><span class="n">direction_count</span><span class="o"><</span><span class="mi">800</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">new_direction_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-<span class="c1"># 不同装修</span>
-<span class="n">fitment_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;fitment&#39;</span><span class="p">)[</span><span class="s1">&#39;fitment&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># different Decoration</span>
+<span class="n">fitment_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'fitment'</span><span class="p">)[</span><span class="s1">'fitment'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">fitment_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
@@ -15344,7 +15344,7 @@ memory usage: 1.9+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>绘图</p>
+<p></p>
 
 </div>
 </div>
@@ -15354,25 +15354,25 @@ memory usage: 1.9+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;不同行政区房源数量占比情况&quot;</span><span class="p">)</span>
-<span class="n">area_house_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;%0.f</span><span class="si">%%</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different ListingCountShare"</span><span class="p">)</span>
+<span class="n">area_house_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">'%0.f</span><span class="si">%%</span><span class="s1">'</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 
 <span class="n">ax2</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;不同户型房源数量占比情况&quot;</span><span class="p">)</span>
-<span class="n">new_hourseType_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;%0.f</span><span class="si">%%</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different LayoutListingCountShare"</span><span class="p">)</span>
+<span class="n">new_hourseType_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">'%0.f</span><span class="si">%%</span><span class="s1">'</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 
 <span class="n">ax3</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;不同朝向房源数量占比情况&quot;</span><span class="p">)</span>
-<span class="n">new_direction_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;%0.f</span><span class="si">%%</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different OrientationListingCountShare"</span><span class="p">)</span>
+<span class="n">new_direction_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">'%0.f</span><span class="si">%%</span><span class="s1">'</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 
 <span class="n">ax4</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;不同装修类型的占比情况&quot;</span><span class="p">)</span>
-<span class="n">fitment_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;%0.f</span><span class="si">%%</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">startangle</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different DecorationShare"</span><span class="p">)</span>
+<span class="n">fitment_count</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">'%0.f</span><span class="si">%%</span><span class="s1">'</span><span class="p">,</span><span class="n">labeldistance</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">startangle</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15415,12 +15415,12 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>从以上图形我们可以看出：</p>
-<p>（1）行政区房源数量，龙岗区、罗湖区、福田区、南山区的二手房房源数量占比为16%且最多，龙华区次之。看来大部分行政区的房源数量还是很充足的，差异最大的是坪山区二手房源数量最少只占了3%。</p>
-<p>（2）深圳二手房房源户型类别多，3室2厅户型的数量最多，2室1厅次之。由此看出大众购房户型类别丰富多样，且以常见户型为主。</p>
-<p>（3）从不同朝向房源数量占比了解到朝向为南的房源数量最多占所有朝向类型的32%，东南朝向房源数量也挺多占24%，相差不大；南北、西北等其它朝向数量较少。这两种朝向的房源数较多说明了大众买房还是比较喜欢朝南的方向，光线比较充足。</p>
-<p>（4）深圳二手房的装修主要以精装和简装为主，精装占很大一部分54%。精装的房间能提高人们入住的舒适度。
-总体分析来说提供了选择二手房的大方向。</p>
+<p>We can see ：</p>
+<p>（1）ListingCount，、、、Second-handListingCountShare16%，。minuteListingCount，Second-handCount3%。</p>
+<p>（2）Second-handListingLayout，32LayoutCount，21。Layout，Layout。</p>
+<p>（3）different OrientationListingCountShareOrientationListingCountOrientation32%，OrientationListingCount24%，；、OrientationCount。OrientationListingdescriptioncompare，compare。</p>
+<p>（4）Second-handDecorationmain  and ，minute54%。。
+analysisSecond-hand。</p>
 
 </div>
 </div>
@@ -15432,8 +15432,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.%E5%BD%B1%E5%93%8D%E6%B7%B1%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%BA%90%E4%BB%B7%E6%A0%BC%E7%9A%84%E5%9B%A0%E7%B4%A0%E5%88%86%E6%9E%90">2.&#24433;&#21709;&#28145;&#22323;&#20108;&#25163;&#25151;&#28304;&#20215;&#26684;&#30340;&#22240;&#32032;&#20998;&#26512;<a class="anchor-link" href="#2.%E5%BD%B1%E5%93%8D%E6%B7%B1%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%BA%90%E4%BB%B7%E6%A0%BC%E7%9A%84%E5%9B%A0%E7%B4%A0%E5%88%86%E6%9E%90">&#182;</a></h4><ul>
-<li>不同行政区对房价的影响</li>
+<h4 id="2.%E5%BD%B1%E5%93%8D%E6%B7%B1%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%BA%90%E4%BB%B7%E6%A0%BC%E7%9A%84%E5%9B%A0%E7%B4%A0%E5%88%86%E6%9E%90">2.Second-handPriceanalysis<a class="anchor-link" href="#2.%E5%BD%B1%E5%93%8D%E6%B7%B1%E5%9C%B3%E4%BA%8C%E6%89%8B%E6%88%BF%E6%BA%90%E4%BB%B7%E6%A0%BC%E7%9A%84%E5%9B%A0%E7%B4%A0%E5%88%86%E6%9E%90">¶</a></h4><ul>
+<li>different House Price</li>
 </ul>
 
 </div>
@@ -15444,11 +15444,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 不同区的总价对比</span>
-<span class="n">area_house_mean_totalprice</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;area&#39;</span><span class="p">)[</span><span class="s1">&#39;total_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># different </span>
+<span class="n">area_house_mean_totalprice</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'area'</span><span class="p">)[</span><span class="s1">'total_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">area_house_mean_totalprice</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">area_house_mean_totalprice</span>
 </pre></div>
@@ -15473,14 +15473,14 @@ class="
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>area
-南山区    1055.371167
-宝安区     815.907730
-福田区     757.017633
-龙华区     687.321865
-盐田区     517.372137
-罗湖区     478.523033
-龙岗区     474.388533
-坪山区     318.978323
+    1055.371167
+     815.907730
+     757.017633
+     687.321865
+     517.372137
+     478.523033
+     474.388533
+     318.978323
 Name: total_price, dtype: float64</pre>
 </div>
 
@@ -15495,11 +15495,11 @@ Name: total_price, dtype: float64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 不同区的单价对比</span>
-<span class="n">area_house_mean_unitprice</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;area&#39;</span><span class="p">)[</span><span class="s1">&#39;unit_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># different </span>
+<span class="n">area_house_mean_unitprice</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'area'</span><span class="p">)[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">area_house_mean_unitprice</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">area_house_mean_unitprice</span>
 </pre></div>
@@ -15524,14 +15524,14 @@ Name: total_price, dtype: float64</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>area
-南山区    92239.793667
-福田区    77030.074333
-宝安区    67826.517791
-龙华区    60516.629759
-罗湖区    57632.523000
-盐田区    49925.460775
-龙岗区    44816.287667
-坪山区    35425.415133
+    92239.793667
+    77030.074333
+    67826.517791
+    60516.629759
+    57632.523000
+    49925.460775
+    44816.287667
+    35425.415133
 Name: unit_price, dtype: float64</pre>
 </div>
 
@@ -15546,21 +15546,21 @@ Name: unit_price, dtype: float64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;深圳不同地区总价对比&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">300</span><span class="p">,</span><span class="mi">1100</span><span class="p">])</span>  <span class="c1">#设置y坐标轴的范围</span>
-<span class="n">rects</span> <span class="o">=</span> <span class="n">area_house_mean_totalprice</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1E90FF&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#DDA0DD&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different "</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">300</span><span class="p">,</span><span class="mi">1100</span><span class="p">])</span>  <span class="c1">#y</span>
+<span class="n">rects</span> <span class="o">=</span> <span class="n">area_house_mean_totalprice</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'#1E90FF'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'#DDA0DD'</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">'y'</span><span class="p">)</span>
 
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;深圳不同地区单价对比&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different "</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">30000</span><span class="p">,</span><span class="mi">100000</span><span class="p">])</span>
-<span class="n">area_house_mean_unitprice</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#4876FF&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#DDA0DD&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">area_house_mean_unitprice</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'#4876FF'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'#DDA0DD'</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">'y'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15604,7 +15604,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>从以上图形我们可以看出，南山区的单价和总价是是8个区中最高的，并且其二手房的总价比其他区的都要高200万左右，二手房单价比其他区的要高20000元左右。坪山区二手房的单价和总价都是最低的。</p>
+<p>We can see ， and 8，Second-hand200，Second-hand20000。Second-hand and 。</p>
 
 </div>
 </div>
@@ -15617,7 +15617,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>不同地段对房价的影响</li>
+<li>different LocationHouse Price</li>
 </ul>
 
 </div>
@@ -15628,26 +15628,26 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">position_house_mean_price</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;position&#39;</span><span class="p">)[</span><span class="s1">&#39;total_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">position_house_mean_price</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'position'</span><span class="p">)[</span><span class="s1">'total_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">position_house_mean_price</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1">#绘图  只展示排名前十的地段</span>
+<span class="c1">#  RankLocation</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;房价排名前十的地段&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># 设置标题字体大小</span>
-<span class="c1"># 设置刻度字体大小</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"House PriceRankLocation"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># </span>
+<span class="c1"># </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="c1"># 设置坐标标签字体大小</span>
+<span class="c1"># label</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">position_house_mean_price</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span>
-    <span class="s1">&#39;#CD3700&#39;</span><span class="p">,</span><span class="s1">&#39;#9ACD32&#39;</span><span class="p">,</span><span class="s1">&#39;#7EC0EE&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;#4876FF&#39;</span><span class="p">,</span><span class="s1">&#39;#EEA9B8&#39;</span><span class="p">,</span><span class="s1">&#39;#EE7942&#39;</span><span class="p">,</span><span class="s1">&#39;#CD69C9&#39;</span><span class="p">,</span><span class="s1">&#39;#668B8B&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#DDA0DD&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="s1">'#CD3700'</span><span class="p">,</span><span class="s1">'#9ACD32'</span><span class="p">,</span><span class="s1">'#7EC0EE'</span><span class="p">,</span><span class="s1">'y'</span><span class="p">,</span><span class="s1">'orange'</span><span class="p">,</span><span class="s1">'#4876FF'</span><span class="p">,</span><span class="s1">'#EEA9B8'</span><span class="p">,</span><span class="s1">'#EE7942'</span><span class="p">,</span><span class="s1">'#CD69C9'</span><span class="p">,</span><span class="s1">'#668B8B'</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'#DDA0DD'</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15690,10 +15690,10 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>由以上图形可知，排名前十的地段分别为：曦城、香蜜湖、红树湾、深圳湾、宝安中心、华侨城、百花、科技园、竹子林、蛇口，曦城的房价最高，前十的所有地段的二手房源总价都高于1200万元。可见要想住在好地段就得有雄厚的经济实力。
-那么排名前十的地段分布在哪个行政区呢？（只分析排名前2的行政区）</p>
+<p>，RankLocationrespectively：、、、、、、、、、，House Price，LocationSecond-hand1200。Location。
+RankLocationDistribution？（analysisRank2）</p>
 <ul>
-<li>南山区和宝安区，不同地段对房价的影响，排名前十的地段在这两区的分布情况</li>
+<li> and ，different LocationHouse Price，RankLocationDistribution</li>
 </ul>
 
 </div>
@@ -15704,27 +15704,27 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 南山区的不同地段的均价对比</span>
-<span class="n">area_nanshan_price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;南山区&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;position&#39;</span><span class="p">)[</span><span class="s1">&#39;total_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># different Location</span>
+<span class="n">area_nanshan_price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'area'</span><span class="p">]</span><span class="o">==</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'position'</span><span class="p">)[</span><span class="s1">'total_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">area_nanshan_price</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1">#area_nanshan_price</span>
 
-<span class="c1"># 宝安区的不同地段的均价对比</span>
-<span class="n">area_baoan_price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;宝安区&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;position&#39;</span><span class="p">)[</span><span class="s1">&#39;total_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1"># different Location</span>
+<span class="n">area_baoan_price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'area'</span><span class="p">]</span><span class="o">==</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'position'</span><span class="p">)[</span><span class="s1">'total_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">area_baoan_price</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1">#area_baoan_price</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;南山区的房价对比&quot;</span><span class="p">)</span>
-<span class="n">area_nanshan_price</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;#4876FF&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#668B8B&#39;</span><span class="p">])</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"House Price"</span><span class="p">)</span>
+<span class="n">area_nanshan_price</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'y'</span><span class="p">,</span><span class="s1">'#4876FF'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#668B8B'</span><span class="p">])</span> 
 
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;宝安区的房价对比&quot;</span><span class="p">)</span>
-<span class="n">area_baoan_price</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#CD3700&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">,</span><span class="s1">&#39;#A4D3EE&#39;</span><span class="p">])</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"House Price"</span><span class="p">)</span>
+<span class="n">area_baoan_price</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'#CD3700'</span><span class="p">,</span><span class="s1">'orange'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">,</span><span class="s1">'#A4D3EE'</span><span class="p">])</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
 </pre></div>
 
@@ -15767,7 +15767,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>从以上图形可以看出：二手房房价排名前十的地段在南山区占了三个，在宝安区占了两个。宝安区的不同地段房价高低差异比较大，大部分房价都是在600万左右。</p>
+<p>We can see ：Second-handHouse PriceRankLocation，。different LocationHouse Pricecompare，minuteHouse Price600。</p>
 
 </div>
 </div>
@@ -15780,7 +15780,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>总价排名前十的小区</li>
+<li>RankCommunity</li>
 </ul>
 
 </div>
@@ -15791,22 +15791,22 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">community_top10</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;community&#39;</span><span class="p">)[</span><span class="s1">&#39;total_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">community_top10</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'community'</span><span class="p">)[</span><span class="s1">'total_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># fig = plt.figure(figsize=(12,8),dpi=100)</span>
 <span class="c1"># ax = fig.add_subplot(1,1,1)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-<span class="c1"># 设置刻度字体大小</span>
+<span class="c1"># </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="c1"># 设置坐标标签字体大小</span>
+<span class="c1"># label</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;二手房均价（总价）排名前十的小区分析&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Second-hand（）RankCommunityanalysis"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">community_top10</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15850,7 +15850,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>以上图可以看出，二手房房源总价排名前十的小区都有哪些，可以通过这个作为选择小区的依据。</p>
+<p>We can see ，Second-handListingRankCommunity，through Community。</p>
 
 </div>
 </div>
@@ -15863,7 +15863,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>房屋朝向对价格的影响</li>
+<li>OrientationPrice</li>
 </ul>
 
 </div>
@@ -15874,15 +15874,15 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 房屋朝向对价格的影响，只分析单价</span>
-<span class="n">direction_unit_price</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;direction&#39;</span><span class="p">)[</span><span class="s1">&#39;unit_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># OrientationPrice，analysis</span>
+<span class="n">direction_unit_price</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'direction'</span><span class="p">)[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;房屋朝向对价格的影响&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"OrientationPrice"</span><span class="p">)</span>
 <span class="n">direction_unit_price</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#DDA0DD&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'#DDA0DD'</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">'y'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15926,7 +15926,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>装修对价格的影响</li>
+<li>DecorationPrice</li>
 </ul>
 
 </div>
@@ -15937,22 +15937,22 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fit_price</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;fitment&#39;</span><span class="p">)[</span><span class="s1">&#39;unit_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fit_price</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'fitment'</span><span class="p">)[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-<span class="c1"># 设置刻度字体大小</span>
+<span class="c1"># </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="c1"># 设置坐标标签字体大小</span>
+<span class="c1"># label</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;不同装修和单价的关系&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;单价（万元/每平方米）&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different Decoration and "</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"（/）"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 
-<span class="n">fit_price</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#FF7F50&#39;</span><span class="p">,</span><span class="s1">&#39;#00E00D&#39;</span><span class="p">,</span><span class="s1">&#39;#FFA500&#39;</span><span class="p">,</span><span class="s1">&#39;#7B68EE&#39;</span><span class="p">])</span>
+<span class="n">fit_price</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'#FF7F50'</span><span class="p">,</span><span class="s1">'#00E00D'</span><span class="p">,</span><span class="s1">'#FFA500'</span><span class="p">,</span><span class="s1">'#7B68EE'</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15995,7 +15995,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>装修的价格没有太大的差异。</p>
+<p>DecorationPrice。</p>
 
 </div>
 </div>
@@ -16008,7 +16008,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>分析房屋大小与房价之间的关系</li>
+<li>analysisHouse Price</li>
 </ul>
 
 </div>
@@ -16019,27 +16019,27 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 通过密度图和散点图来分析房屋特征</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># through  and analysisfeature</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="c1"># 设置坐标标签字体大小</span>
+<span class="c1"># label</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;房间大小分布密度分析&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;hourseSize&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#F4A460&#39;</span><span class="p">,</span><span class="n">density</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1">#直方图  desity=True显示频率，为False显示频数</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;hourseSize&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>     <span class="c1">#折线图 kind=&#39;kde&#39;(是与直方图相关的密度图)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Distributionanalysis"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'hourseSize'</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'#F4A460'</span><span class="p">,</span><span class="n">density</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1">#  desity=True，False</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'hourseSize'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'kde'</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>     <span class="c1"># kind='kde'(related )</span>
 
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1"># 设置坐标标签字体大小</span>
+<span class="c1"># label</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;房间大小与房价关系分析&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;hourseSize&#39;</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;total_price&#39;</span><span class="p">],</span><span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"House Priceanalysis"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'hourseSize'</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">'total_price'</span><span class="p">],</span><span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -16093,9 +16093,9 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>由上图知：</p>
-<p>（1）房源面积主要集中分布在0-250平米之间，但是还有部分房间面积超出正常范围。总的来说比较稳定</p>
-<p>（2）由散点图可以看出，随着房间面积增大，房间的总价在不断升高，面积和总价成正相关。 面积处在0-200之间的房源，总价在0-2000万元之间。</p>
+<p>：</p>
+<p>（1）ListingAreamain Distribution0-250， but minuteArea。compare</p>
+<p>（2）We can see ，Area，，Area and related 。 Area0-200Listing，0-2000。</p>
 
 </div>
 </div>
@@ -16108,7 +16108,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>其它方面的分析</li>
+<li>analysis</li>
 </ul>
 
 </div>
@@ -16119,15 +16119,15 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 不同装修房间的平均面积</span>
-<span class="n">fit_average_size</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;fitment&#39;</span><span class="p">)[</span><span class="s1">&#39;hourseSize&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># different DecorationArea</span>
+<span class="n">fit_average_size</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'fitment'</span><span class="p">)[</span><span class="s1">'hourseSize'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">fit_average_size</span> 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;不同装修房间的平均面积&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="c1"># plt.ylable(&quot;面积（平米）&quot;)</span>
-<span class="n">fit_average_size</span> <span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#FF7F50&#39;</span><span class="p">,</span><span class="s1">&#39;#00E00D&#39;</span><span class="p">,</span><span class="s1">&#39;#FFA500&#39;</span><span class="p">,</span><span class="s1">&#39;#7B68EE&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different DecorationArea"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="c1"># plt.ylable("Area（）")</span>
+<span class="n">fit_average_size</span> <span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'#FF7F50'</span><span class="p">,</span><span class="s1">'#00E00D'</span><span class="p">,</span><span class="s1">'#FFA500'</span><span class="p">,</span><span class="s1">'#7B68EE'</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -16170,7 +16170,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>由上图可以看出毛坯房的面积最大，比其它三种装修类型的面积大50平米左右，其它三种装修类型的平均面积相差不大。</p>
+<p>We can see Area，DecorationArea50，DecorationArea。</p>
 
 </div>
 </div>
@@ -16180,17 +16180,17 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 不同价格区间内的房源数量</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># different PriceListingCount</span>
 
 <span class="n">bins_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">9000</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">bins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;total_price&#39;</span><span class="p">],</span><span class="n">bins_arr</span><span class="p">)</span>
-<span class="n">totalprice_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;total_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'total_price'</span><span class="p">],</span><span class="n">bins_arr</span><span class="p">)</span>
+<span class="n">totalprice_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'total_price'</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;深圳不同总价区间内的二手房源数量分析&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;二手房数量&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"different Second-handCountanalysis"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Second-handCount"</span><span class="p">)</span>
 <span class="n">totalprice_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -16234,7 +16234,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>由上图可以看出，房价（总价）在（20，250]间的房源数量最多，（520,1020]房源数量次之，价格特别高的房很少。可以说房价处于正常范围内。</p>
+<p>We can see ，House Price（）（20，250]ListingCount，（520,1020]ListingCount，Price。House Price。</p>
 
 </div>
 </div>
@@ -16246,12 +16246,12 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E6%80%BB%E7%BB%93">&#24635;&#32467;<a class="anchor-link" href="#%E6%80%BB%E7%BB%93">&#182;</a></h2><p>房源数量最多的区有龙岗区、罗湖区、福田区、南山区，在这四个区中南山区宝安区、福田区的总价比较高都在700百万以上。</p>
-<p>对于想选择好地段、价钱差不多就行的人，推荐选择宝安中心的房源。因为宝安中心价格在排名前十的地段中位于第5，说明地段不错，房价在前十中不算很高，值得推荐。</p>
-<p>小区的选择可以参照二手房均价（总价）排名前十的小区，进行选择。房屋朝向推荐朝南，朝东南的方向。</p>
-<p>装修可以根据自己的喜好进行选择，优先选择精装，要想房间面积大可以选择毛坯房。</p>
-<p>房间面积主要集中在0-250平米之间，价格低于2000万元。</p>
-<p>对于普通大众，可以考虑20-250万元的房源（在这里推荐坪山区）可能在地段的选择上可以不怎么考虑，但是房屋朝向，装修可供选择的种类还是挺多的。</p>
+<h2 id="%E6%80%BB%E7%BB%93"><a class="anchor-link" href="#%E6%80%BB%E7%BB%93">¶</a></h2><p>ListingCount、、、，、compare700。</p>
+<p>Location、，Listing。 because PriceRankLocation5，descriptionLocation，House Price，。</p>
+<p>CommunitySecond-hand（）RankCommunity，。Orientation，。</p>
+<p>Decorationbased on ，，Area。</p>
+<p>Areamain 0-250，Price2000。</p>
+<p>，20-250Listing（）Location， but Orientation，Decoration。</p>
 
 </div>
 </div>

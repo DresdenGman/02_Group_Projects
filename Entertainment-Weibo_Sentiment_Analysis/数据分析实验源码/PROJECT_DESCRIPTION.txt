@@ -1,4 +1,4 @@
-PROJECT: 数据分析实验源码
+PROJECT: Data Analysis
 ================================================================================
 
 This project demonstrates data analysis and machine learning techniques.

@@ -1,0 +1,9 @@
+PROJECT: Workplace-Employee_Turnover_Analysis
+================================================================================
+
+PROJECT OVERVIEW:
+Table of Contents
+ 1.数据检查与理解1.1. 检查yes否存在缺失值1.2. 适当的改名来更直观的理解和获取特征列1.3. View Data的信息1.4. 展示所有类型特征的信息1.5. 类别数字化1.6. 改变columns的顺序2.Data Exploration与分析2.1. 描述性分析2.2. Correlation Analysis2.3.Variable Analysis2.3.1. 公司当前员工离职与在职的比率2.3.2. 公司员工的满意度与入职年份的关系2.3.3. 公司各部门的员工离职与在职情况Analyze比2.3.4. 公司各部门的员工的工资水平2.3.5 员工薪资与离职率2.3.6. 员工过去5年的升职情况与离职Analyze比2.3.7. 员工绩效与离职的Analyze比3.Summary3.1. 离职原因分析3.2. 公司需要思考🤔的问题参考
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

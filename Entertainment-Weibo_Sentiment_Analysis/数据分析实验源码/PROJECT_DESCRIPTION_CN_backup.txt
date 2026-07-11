@@ -1,0 +1,5 @@
+PROJECT: 数据分析实验源码
+================================================================================
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

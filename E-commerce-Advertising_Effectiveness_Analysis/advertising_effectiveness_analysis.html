@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>聚类分析广告效果</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Cluster AnalysisAdvertisingEffectiveness</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14260,49 +14260,49 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#项目介绍" data-toc-modified-id="项目介绍-1">项目介绍</a></span><ul class="toc-item"><li><ul class="toc-item"><li><span><a href="#数据维度概况" data-toc-modified-id="数据维度概况-1.0.1">数据维度概况</a></span></li><li><span><a href="#数据13个维度介绍" data-toc-modified-id="数据13个维度介绍-1.0.2">数据13个维度介绍</a></span></li></ul></li></ul></li><li><span><a href="#导入库，加载数据" data-toc-modified-id="导入库，加载数据-2">导入库，加载数据</a></span><ul class="toc-item"><li><span><a href="#数据审查" data-toc-modified-id="数据审查-2.1">数据审查</a></span></li></ul></li><li><span><a href="#数据处理" data-toc-modified-id="数据处理-3">数据处理</a></span></li><li><span><a href="#建立模型" data-toc-modified-id="建立模型-4">建立模型</a></span></li><li><span><a href="#聚类结果特征分析与展示" data-toc-modified-id="聚类结果特征分析与展示-5">聚类结果特征分析与展示</a></span></li><li><span><a href="#数据结论" data-toc-modified-id="数据结论-6">数据结论</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Project Introduction" data-toc-modified-id="Project Introduction-1">Project Introduction</a></span><ul class="toc-item"><li><ul class="toc-item"><li><span><a href="#data" data-toc-modified-id="data-1.0.1">data</a></span></li><li><span><a href="#data13" data-toc-modified-id="data13-1.0.2">data13</a></span></li></ul></li></ul></li><li><span><a href="#import，data" data-toc-modified-id="import，data-2">import，data</a></span><ul class="toc-item"><li><span><a href="#data" data-toc-modified-id="data-2.1">data</a></span></li></ul></li><li><span><a href="#dataprocessing" data-toc-modified-id="dataprocessing-3">dataprocessing</a></span></li><li><span><a href="#model" data-toc-modified-id="model-4">model</a></span></li><li><span><a href="#clusteringresultfeatureanalysis" data-toc-modified-id="clusteringresultfeatureanalysis-5">clusteringresultfeatureanalysis</a></span></li><li><span><a href="#data" data-toc-modified-id="data-6">data</a></span></li></ul></div>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#39033;&#30446;&#20171;&#32461;">&#39033;&#30446;&#20171;&#32461;<a class="anchor-link" href="#&#39033;&#30446;&#20171;&#32461;">&#182;</a></h2>
+<h2 id="Project Introduction">Project Introduction<a class="anchor-link" href="#Project Introduction">¶</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>假如公司投放广告的渠道很多，每个渠道的客户性质也可能不同，比如在优酷视频投广告和今日头条投放广告，效果可能会有差异。现在需要对广告效果分析实现有针对性的广告效果测量和优化工作。</p>
-<p>本案例，通过各类广告渠道90天内额日均UV，平均注册率、平均搜索率、访问深度、平均停留时长、订单转化率、投放时间、素材类型、广告类型、合作方式、广告尺寸和广告卖点等特征，将渠道分类，找出每类渠道的重点特征，为加下来的业务讨论和数据分析提供支持。</p>
+<p>PlacementAdvertisingChannel，Channelcustomermay different ， e.g., Advertising and dayPlacementAdvertising，Effectivenessmay 。need to AdvertisingEffectivenessanalysisimplement targeting AdvertisingEffectiveness and 。</p>
+<p>，through AdvertisingChannel90daysdayUV，、、、hour、Order、Placementtime、、Advertising、、Advertising and Advertisingfeature，Channelclassification，Channelfeature， and Data Analysis。</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#25968;&#25454;&#32500;&#24230;&#27010;&#20917;">&#25968;&#25454;&#32500;&#24230;&#27010;&#20917;<a class="anchor-link" href="#&#25968;&#25454;&#32500;&#24230;&#27010;&#20917;">&#182;</a></h4><p>除了渠道唯一标识，共12个维度，889行，有缺失值，有异常值。</p>
-<h4 id="&#25968;&#25454;13&#20010;&#32500;&#24230;&#20171;&#32461;">&#25968;&#25454;13&#20010;&#32500;&#24230;&#20171;&#32461;<a class="anchor-link" href="#&#25968;&#25454;13&#20010;&#32500;&#24230;&#20171;&#32461;">&#182;</a></h4><p>1、渠道代号：渠道唯一标识<br>
-2、日均UV：每天的独立访问量<br>
-3、平均注册率=日均注册用户数/平均每日访问量<br>
-4、平均搜索量：每个访问的搜索量<br>
-5、访问深度：总页面浏览量/平均每天的访问量<br>
-6、平均停留时长=总停留时长/平均每天的访问量<br>
-7、订单转化率=总订单数量/平均每天的访客量<br>
-8、投放时间：每个广告在外投放的天数<br>
-9、素材类型：'jpg' 'swf' 'gif' 'sp'<br>
-10、广告类型：banner、tips、不确定、横幅、暂停<br>
-11、合作方式：'roi' 'cpc' 'cpm' 'cpd'<br>
-12、广告尺寸：'140<em>40' '308</em>388' '450<em>300' '600</em>90' '480<em>360' '960</em>126' '900<em>120'
+<h4 id="data">data<a class="anchor-link" href="#data">¶</a></h4><p>Channel，12，889，missing values，。</p>
+<h4 id="data13">data13<a class="anchor-link" href="#data13">¶</a></h4><p>1、Channel：Channel<br>
+2、dayUV：days<br>
+3、=dayuser/day<br>
+4、：<br>
+5、：/days<br>
+6、hour=hour/days<br>
+7、Order=OrderCount/days<br>
+8、Placementtime：AdvertisingPlacementdays<br>
+9、：'jpg' 'swf' 'gif' 'sp'<br>
+10、Advertising：banner、tips、、、<br>
+11、：'roi' 'cpc' 'cpm' 'cpd'<br>
+12、Advertising：'140<em>40' '308</em>388' '450<em>300' '600</em>90' '480<em>360' '960</em>126' '900<em>120'
 '390</em>270'<br>
-13、广告卖点：打折、满减、满赠、秒杀、直降、满返</p>
+13、Advertising：、、、second、、</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#23548;&#20837;&#24211;&#65292;&#21152;&#36733;&#25968;&#25454;">&#23548;&#20837;&#24211;&#65292;&#21152;&#36733;&#25968;&#25454;<a class="anchor-link" href="#&#23548;&#20837;&#24211;&#65292;&#21152;&#36733;&#25968;&#25454;">&#182;</a></h2>
+<h2 id="import，data">import，data<a class="anchor-link" href="#import，data">¶</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
@@ -14310,12 +14310,12 @@ a.anchor-link {
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span> 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span><span class="p">,</span><span class="n">OneHotEncoder</span> 
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span> <span class="c1"># 导入轮廓系数指标</span>
-<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span> <span class="c1"># KMeans模块</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span> <span class="c1"># import</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span> <span class="c1"># KMeans</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="c1">## 设置属性防止中文乱码</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sa">u</span><span class="s1">&#39;SimHei&#39;</span><span class="p">]</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1">## attribute</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.sans-serif'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sa">u</span><span class="s1">'SimHei'</span><span class="p">]</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.unicode_minus'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 
      </div>
@@ -14326,16 +14326,16 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>以上是加载库的国际惯例，OneHotEncoder是独热编码，如果一个类别特征有n个类别，将该变量按照类别分裂成N维新变量，包含则标记为1，否则为0，用N维特征表示原来的特征。</p>
+<p>，OneHotEncoderencoding， if featuren，variableminuteNvariable，contains1，0，Nfeatureindicatesfeature。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;./ad_performance.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">'./ad_performance.csv'</span><span class="p">)</span>
 <span class="n">raw_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14375,19 +14375,19 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>渠道代号</th>
-      <th>日均UV</th>
-      <th>平均注册率</th>
-      <th>平均搜索量</th>
-      <th>访问深度</th>
-      <th>平均停留时间</th>
-      <th>订单转化率</th>
-      <th>投放总时间</th>
-      <th>素材类型</th>
-      <th>广告类型</th>
-      <th>合作方式</th>
-      <th>广告尺寸</th>
-      <th>广告卖点</th>
+      <th>Channel</th>
+      <th>dayUV</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>time</th>
+      <th>Order</th>
+      <th>Placementtime</th>
+      <th></th>
+      <th>Advertising</th>
+      <th></th>
+      <th>Advertising</th>
+      <th>Advertising</th>
     </tr>
   </thead>
   <tbody>
@@ -14405,7 +14405,7 @@ a.anchor-link {
       <td>banner</td>
       <td>roi</td>
       <td>140*40</td>
-      <td>打折</td>
+      <td></td>
     </tr>
     <tr>
       <th>1</th>
@@ -14421,7 +14421,7 @@ a.anchor-link {
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
     </tr>
     <tr>
       <th>2</th>
@@ -14437,7 +14437,7 @@ a.anchor-link {
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
     </tr>
     <tr>
       <th>3</th>
@@ -14453,7 +14453,7 @@ a.anchor-link {
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
     </tr>
     <tr>
       <th>4</th>
@@ -14469,7 +14469,7 @@ a.anchor-link {
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -14485,22 +14485,22 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>渠道代号是唯一标识，日均UV到投放总时间是数值型（float和int）变量，后面是字符型变量。</p>
+<p>Channel，dayUVPlacementtime（float and int）variable，variable。</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#25968;&#25454;&#23457;&#26597;">&#25968;&#25454;&#23457;&#26597;<a class="anchor-link" href="#&#25968;&#25454;&#23457;&#26597;">&#182;</a></h3>
+<h3 id="data">data<a class="anchor-link" href="#data">¶</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 查看基本状态</span>
-<span class="n">raw_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># 打印输出前2条数据</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># viewbasic </span>
+<span class="n">raw_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># 2data</span>
 </pre></div>
 
      </div>
@@ -14539,19 +14539,19 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>渠道代号</th>
-      <th>日均UV</th>
-      <th>平均注册率</th>
-      <th>平均搜索量</th>
-      <th>访问深度</th>
-      <th>平均停留时间</th>
-      <th>订单转化率</th>
-      <th>投放总时间</th>
-      <th>素材类型</th>
-      <th>广告类型</th>
-      <th>合作方式</th>
-      <th>广告尺寸</th>
-      <th>广告卖点</th>
+      <th>Channel</th>
+      <th>dayUV</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>time</th>
+      <th>Order</th>
+      <th>Placementtime</th>
+      <th></th>
+      <th>Advertising</th>
+      <th></th>
+      <th>Advertising</th>
+      <th>Advertising</th>
     </tr>
   </thead>
   <tbody>
@@ -14569,7 +14569,7 @@ a.anchor-link {
       <td>banner</td>
       <td>roi</td>
       <td>140*40</td>
-      <td>打折</td>
+      <td></td>
     </tr>
     <tr>
       <th>1</th>
@@ -14585,7 +14585,7 @@ a.anchor-link {
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -14601,10 +14601,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span><span class="c1"># 打印数据类型分布</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span><span class="c1"># dataDistribution</span>
 </pre></div>
 
      </div>
@@ -14624,24 +14624,24 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 889 entries, 0 to 888
 Data columns (total 13 columns):
  #   Column  Non-Null Count  Dtype  
 ---  ------  --------------  -----  
- 0   渠道代号    889 non-null    object 
- 1   日均UV    889 non-null    float64
- 2   平均注册率   889 non-null    float64
- 3   平均搜索量   889 non-null    float64
- 4   访问深度    889 non-null    float64
- 5   平均停留时间  887 non-null    float64
- 6   订单转化率   889 non-null    float64
- 7   投放总时间   889 non-null    int64  
- 8   素材类型    889 non-null    object 
- 9   广告类型    889 non-null    object 
- 10  合作方式    889 non-null    object 
- 11  广告尺寸    889 non-null    object 
- 12  广告卖点    889 non-null    object 
+ 0   Channel    889 non-null    object 
+ 1   dayUV    889 non-null    float64
+ 2      889 non-null    float64
+ 3      889 non-null    float64
+ 4       889 non-null    float64
+ 5   time  887 non-null    float64
+ 6   Order   889 non-null    float64
+ 7   Placementtime   889 non-null    int64  
+ 8       889 non-null    object 
+ 9   Advertising    889 non-null    object 
+ 10      889 non-null    object 
+ 11  Advertising    889 non-null    object 
+ 12  Advertising    889 non-null    object 
 dtypes: float64(6), int64(1), object(6)
 memory usage: 90.4+ KB
 </pre>
@@ -14655,10 +14655,10 @@ memory usage: 90.4+ KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="c1"># 打印原始数据基本描述性信息</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="c1"># databasic info</span>
 </pre></div>
 
      </div>
@@ -14709,7 +14709,7 @@ memory usage: 90.4+ KB
   </thead>
   <tbody>
     <tr>
-      <th>日均UV</th>
+      <th>dayUV</th>
       <td>889.0</td>
       <td>540.85</td>
       <td>1634.41</td>
@@ -14720,7 +14720,7 @@ memory usage: 90.4+ KB
       <td>25294.77</td>
     </tr>
     <tr>
-      <th>平均注册率</th>
+      <th></th>
       <td>889.0</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -14731,7 +14731,7 @@ memory usage: 90.4+ KB
       <td>0.04</td>
     </tr>
     <tr>
-      <th>平均搜索量</th>
+      <th></th>
       <td>889.0</td>
       <td>0.03</td>
       <td>0.11</td>
@@ -14742,7 +14742,7 @@ memory usage: 90.4+ KB
       <td>1.04</td>
     </tr>
     <tr>
-      <th>访问深度</th>
+      <th></th>
       <td>889.0</td>
       <td>2.17</td>
       <td>3.80</td>
@@ -14753,7 +14753,7 @@ memory usage: 90.4+ KB
       <td>98.98</td>
     </tr>
     <tr>
-      <th>平均停留时间</th>
+      <th>time</th>
       <td>887.0</td>
       <td>262.67</td>
       <td>224.36</td>
@@ -14764,7 +14764,7 @@ memory usage: 90.4+ KB
       <td>4450.83</td>
     </tr>
     <tr>
-      <th>订单转化率</th>
+      <th>Order</th>
       <td>889.0</td>
       <td>0.00</td>
       <td>0.01</td>
@@ -14775,7 +14775,7 @@ memory usage: 90.4+ KB
       <td>0.22</td>
     </tr>
     <tr>
-      <th>投放总时间</th>
+      <th>Placementtime</th>
       <td>889.0</td>
       <td>16.05</td>
       <td>8.51</td>
@@ -14799,23 +14799,23 @@ memory usage: 90.4+ KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>上面代码，分别展示前两条数据、所有特征的数据类型、以及数值型特征的五值分布</p>
+<p>，respectivelydata、featuredata、and featureDistribution</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>查看缺失值情况：</p>
+<p>viewmissing values：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 缺失值审查</span>
-<span class="n">na_cols</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 查看每一列是否具有缺失值</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># missing values</span>
+<span class="n">na_cols</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># viewmissing values</span>
 <span class="n">na_cols</span>
 </pre></div>
 
@@ -14838,19 +14838,19 @@ memory usage: 90.4+ KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>渠道代号      False
-日均UV      False
-平均注册率     False
-平均搜索量     False
-访问深度      False
-平均停留时间     True
-订单转化率     False
-投放总时间     False
-素材类型      False
-广告类型      False
-合作方式      False
-广告尺寸      False
-广告卖点      False
+<pre>Channel      False
+dayUV      False
+     False
+     False
+      False
+time     True
+Order     False
+Placementtime     False
+      False
+Advertising      False
+      False
+Advertising      False
+Advertising      False
 dtype: bool</pre>
 </div>
 
@@ -14863,10 +14863,10 @@ dtype: bool</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1"># 查看具有缺失值的行总记录数</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1"># viewmissing valuesrecord</span>
 </pre></div>
 
      </div>
@@ -14888,19 +14888,19 @@ dtype: bool</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>平均停留时间    2
-渠道代号      0
-日均UV      0
-平均注册率     0
-平均搜索量     0
-访问深度      0
-订单转化率     0
-投放总时间     0
-素材类型      0
-广告类型      0
-合作方式      0
-广告尺寸      0
-广告卖点      0
+<pre>time    2
+Channel      0
+dayUV      0
+     0
+     0
+      0
+Order     0
+Placementtime     0
+      0
+Advertising      0
+      0
+Advertising      0
+Advertising      0
 dtype: int64</pre>
 </div>
 
@@ -14913,17 +14913,17 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>变量之间的相关性分析：</p>
+<p>variableCorrelationanalysis：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 相关性分析</span>
-<span class="n">raw_data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="c1"># 打印原始数据相关性信息</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correlationanalysis</span>
+<span class="n">raw_data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="c1"># dataCorrelationinfo</span>
 </pre></div>
 
      </div>
@@ -14962,18 +14962,18 @@ dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>日均UV</th>
-      <th>平均注册率</th>
-      <th>平均搜索量</th>
-      <th>访问深度</th>
-      <th>平均停留时间</th>
-      <th>订单转化率</th>
-      <th>投放总时间</th>
+      <th>dayUV</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>time</th>
+      <th>Order</th>
+      <th>Placementtime</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>日均UV</th>
+      <th>dayUV</th>
       <td>1.00</td>
       <td>-0.05</td>
       <td>-0.07</td>
@@ -14983,7 +14983,7 @@ dtype: int64</pre>
       <td>-0.04</td>
     </tr>
     <tr>
-      <th>平均注册率</th>
+      <th></th>
       <td>-0.05</td>
       <td>1.00</td>
       <td>0.24</td>
@@ -14993,7 +14993,7 @@ dtype: int64</pre>
       <td>-0.01</td>
     </tr>
     <tr>
-      <th>平均搜索量</th>
+      <th></th>
       <td>-0.07</td>
       <td>0.24</td>
       <td>1.00</td>
@@ -15003,7 +15003,7 @@ dtype: int64</pre>
       <td>-0.03</td>
     </tr>
     <tr>
-      <th>访问深度</th>
+      <th></th>
       <td>-0.02</td>
       <td>0.11</td>
       <td>0.06</td>
@@ -15013,7 +15013,7 @@ dtype: int64</pre>
       <td>0.06</td>
     </tr>
     <tr>
-      <th>平均停留时间</th>
+      <th>time</th>
       <td>0.04</td>
       <td>0.22</td>
       <td>0.17</td>
@@ -15023,7 +15023,7 @@ dtype: int64</pre>
       <td>0.05</td>
     </tr>
     <tr>
-      <th>订单转化率</th>
+      <th>Order</th>
       <td>-0.05</td>
       <td>0.32</td>
       <td>0.13</td>
@@ -15033,7 +15033,7 @@ dtype: int64</pre>
       <td>-0.00</td>
     </tr>
     <tr>
-      <th>投放总时间</th>
+      <th>Placementtime</th>
       <td>-0.04</td>
       <td>-0.01</td>
       <td>-0.03</td>
@@ -15056,13 +15056,13 @@ dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 相关性可视化展示</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correlationvisualization</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
 <span class="n">corr</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span><span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'Reds'</span><span class="p">,</span><span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15084,7 +15084,7 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;AxesSubplot:&gt;</pre>
+<pre><AxesSubplot:></pre>
 </div>
 
 </div>
@@ -15112,28 +15112,28 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>可以看到，“访问深度”和“平均停留时间”相关性比较高，相关性高说明两个变量在建立模型的时候，作用是一样或者效果是一样的，可以考虑组合或者删除其一。</p>
+<p>We can see ，“” and “time”Correlationcompare，Correlationdescriptionvariablemodelhour，Effectiveness，can 。</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25968;&#25454;&#22788;&#29702;">&#25968;&#25454;&#22788;&#29702;<a class="anchor-link" href="#&#25968;&#25454;&#22788;&#29702;">&#182;</a></h2>
+<h2 id="dataprocessing">dataprocessing<a class="anchor-link" href="#dataprocessing">¶</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>数据了解的差不多了，我们开始时处理数据，把常规数据通过清洗、转换、规约、聚合、抽样等方式变成机器学习可以识别或者提升准确度的数据。</p>
+<p>data，hourprocessingdata，datathrough 、、、、can Accuracydata。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1 删除平均平均停留时间列</span>
-<span class="n">raw_data2</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;平均停留时间&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1 time</span>
+<span class="n">raw_data2</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'time'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15144,21 +15144,21 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>类别变量的独热编码：</p>
+<p>variableencoding：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 类别变量取值</span>
-<span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;素材类型&quot;</span><span class="p">,</span><span class="s2">&quot;广告类型&quot;</span><span class="p">,</span><span class="s2">&quot;合作方式&quot;</span><span class="p">,</span><span class="s2">&quot;广告尺寸&quot;</span><span class="p">,</span><span class="s2">&quot;广告卖点&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># variable</span>
+<span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s2">""</span><span class="p">,</span><span class="s2">"Advertising"</span><span class="p">,</span><span class="s2">""</span><span class="p">,</span><span class="s2">"Advertising"</span><span class="p">,</span><span class="s2">"Advertising"</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
     <span class="n">data</span><span class="o">=</span><span class="n">raw_data2</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量【</span><span class="si">{0}</span><span class="s2">】的取值有：</span><span class="se">\n</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">data</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-·&quot;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"variable【</span><span class="si">{0}</span><span class="s2">】：</span><span class="se">\n</span><span class="si">{1}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">data</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"-·"</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15178,21 +15178,21 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>变量【素材类型】的取值有：
-[&#39;jpg&#39; &#39;swf&#39; &#39;gif&#39; &#39;sp&#39;]
+<pre>variable【】：
+['jpg' 'swf' 'gif' 'sp']
 -·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
-变量【广告类型】的取值有：
-[&#39;banner&#39; &#39;tips&#39; &#39;不确定&#39; &#39;横幅&#39; &#39;暂停&#39;]
+variable【Advertising】：
+['banner' 'tips' '' '' '']
 -·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
-变量【合作方式】的取值有：
-[&#39;roi&#39; &#39;cpc&#39; &#39;cpm&#39; &#39;cpd&#39;]
+variable【】：
+['roi' 'cpc' 'cpm' 'cpd']
 -·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
-变量【广告尺寸】的取值有：
-[&#39;140*40&#39; &#39;308*388&#39; &#39;450*300&#39; &#39;600*90&#39; &#39;480*360&#39; &#39;960*126&#39; &#39;900*120&#39;
- &#39;390*270&#39;]
+variable【Advertising】：
+['140*40' '308*388' '450*300' '600*90' '480*360' '960*126' '900*120'
+ '390*270']
 -·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
-变量【广告卖点】的取值有：
-[&#39;打折&#39; &#39;满减&#39; &#39;满赠&#39; &#39;秒杀&#39; &#39;直降&#39; &#39;满返&#39;]
+variable【Advertising】：
+['' '' '' 'second' '' '']
 -·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
 </pre>
 </div>
@@ -15205,13 +15205,13 @@ dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 字符串分类独热编码处理</span>
-<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;素材类型&#39;</span><span class="p">,</span><span class="s1">&#39;广告类型&#39;</span><span class="p">,</span><span class="s1">&#39;合作方式&#39;</span><span class="p">,</span><span class="s1">&#39;广告尺寸&#39;</span><span class="p">,</span><span class="s1">&#39;广告卖点&#39;</span><span class="p">]</span> 
-<span class="n">model_ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># 建立OneHotEncode对象</span>
-<span class="n">ohe_matrix</span> <span class="o">=</span> <span class="n">model_ohe</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">raw_data2</span><span class="p">[</span><span class="n">cols</span><span class="p">])</span>  <span class="c1"># 直接转换</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># classificationencodingprocessing</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">''</span><span class="p">,</span><span class="s1">'Advertising'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">'Advertising'</span><span class="p">,</span><span class="s1">'Advertising'</span><span class="p">]</span> 
+<span class="n">model_ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># OneHotEncode</span>
+<span class="n">ohe_matrix</span> <span class="o">=</span> <span class="n">model_ohe</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">raw_data2</span><span class="p">[</span><span class="n">cols</span><span class="p">])</span>  <span class="c1"># </span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ohe_matrix</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
@@ -15247,10 +15247,10 @@ dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用pandas的方法</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pandas</span>
 <span class="n">ohe_matrix1</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">raw_data2</span><span class="p">[</span><span class="n">cols</span><span class="p">])</span>
 <span class="n">ohe_matrix1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -15291,27 +15291,27 @@ dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>素材类型_gif</th>
-      <th>素材类型_jpg</th>
-      <th>素材类型_sp</th>
-      <th>素材类型_swf</th>
-      <th>广告类型_banner</th>
-      <th>广告类型_tips</th>
-      <th>广告类型_不确定</th>
-      <th>广告类型_暂停</th>
-      <th>广告类型_横幅</th>
-      <th>合作方式_cpc</th>
+      <th>_gif</th>
+      <th>_jpg</th>
+      <th>_sp</th>
+      <th>_swf</th>
+      <th>Advertising_banner</th>
+      <th>Advertising_tips</th>
+      <th>Advertising_</th>
+      <th>Advertising_</th>
+      <th>Advertising_</th>
+      <th>_cpc</th>
       <th>...</th>
-      <th>广告尺寸_480*360</th>
-      <th>广告尺寸_600*90</th>
-      <th>广告尺寸_900*120</th>
-      <th>广告尺寸_960*126</th>
-      <th>广告卖点_打折</th>
-      <th>广告卖点_满减</th>
-      <th>广告卖点_满赠</th>
-      <th>广告卖点_满返</th>
-      <th>广告卖点_直降</th>
-      <th>广告卖点_秒杀</th>
+      <th>Advertising_480*360</th>
+      <th>Advertising_600*90</th>
+      <th>Advertising_900*120</th>
+      <th>Advertising_960*126</th>
+      <th>Advertising_</th>
+      <th>Advertising_</th>
+      <th>Advertising_</th>
+      <th>Advertising_</th>
+      <th>Advertising_</th>
+      <th>Advertising_second</th>
     </tr>
   </thead>
   <tbody>
@@ -15450,19 +15450,19 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>数据标准化：</p>
+<p>data：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 数据标准化</span>
-<span class="n">sacle_matrix</span> <span class="o">=</span> <span class="n">raw_data2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># 获得要转换的矩阵</span>
-<span class="n">model_scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>  <span class="c1"># 建立MinMaxScaler模型对象</span>
-<span class="n">data_scaled</span> <span class="o">=</span> <span class="n">model_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sacle_matrix</span><span class="p">)</span>  <span class="c1"># MinMaxScaler标准化处理</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data standardization</span>
+<span class="n">sacle_matrix</span> <span class="o">=</span> <span class="n">raw_data2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># </span>
+<span class="n">model_scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>  <span class="c1"># MinMaxScalermodel</span>
+<span class="n">data_scaled</span> <span class="o">=</span> <span class="n">model_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sacle_matrix</span><span class="p">)</span>  <span class="c1"># MinMaxScalerprocessing</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data_scaled</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
@@ -15501,16 +15501,16 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>数据处理完，我们将独热编码的数据和标准化转化后的数据合并：</p>
+<p>dataprocessing，encodingdata and data：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # 合并所有维度</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # </span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">data_scaled</span><span class="p">,</span> <span class="n">ohe_matrix</span><span class="p">))</span>
 </pre></div>
 
@@ -15522,36 +15522,36 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>数据处理完，就可以带入模型进行训练了。</p>
+<p>dataprocessing，can modeltraining。</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#24314;&#31435;&#27169;&#22411;">&#24314;&#31435;&#27169;&#22411;<a class="anchor-link" href="#&#24314;&#31435;&#27169;&#22411;">&#182;</a></h2>
+<h2 id="model">model<a class="anchor-link" href="#model">¶</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 通过平均轮廓系数检验得到最佳KMeans聚类模型</span>
-<span class="n">score_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>  <span class="c1"># 用来存储每个K下模型的平局轮廓系数</span>
-<span class="n">silhouette_int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># 初始化的平均轮廓系数阀值</span>
-<span class="k">for</span> <span class="n">n_clusters</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>  <span class="c1"># 遍历从2到5几个有限组</span>
-    <span class="n">model_kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n_clusters</span><span class="p">)</span>  <span class="c1"># 建立聚类模型对象</span>
-    <span class="n">labels_tmp</span> <span class="o">=</span> <span class="n">model_kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># 训练聚类模型</span>
-    <span class="n">silhouette_tmp</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels_tmp</span><span class="p">)</span>  <span class="c1"># 得到每个K下的平均轮廓系数</span>
-    <span class="k">if</span> <span class="n">silhouette_tmp</span> <span class="o">&gt;</span> <span class="n">silhouette_int</span><span class="p">:</span>  <span class="c1"># 如果平均轮廓系数更高</span>
-        <span class="n">best_k</span> <span class="o">=</span> <span class="n">n_clusters</span>  <span class="c1"># 保存K将最好的K存储下来</span>
-        <span class="n">silhouette_int</span> <span class="o">=</span> <span class="n">silhouette_tmp</span>  <span class="c1"># 保存平均轮廓得分</span>
-        <span class="n">best_kmeans</span> <span class="o">=</span> <span class="n">model_kmeans</span>  <span class="c1"># 保存模型实例对象</span>
-        <span class="n">cluster_labels_k</span> <span class="o">=</span> <span class="n">labels_tmp</span>  <span class="c1"># 保存聚类标签</span>
-    <span class="n">score_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">n_clusters</span><span class="p">,</span> <span class="n">silhouette_tmp</span><span class="p">])</span>  <span class="c1"># 将每次K及其得分追加到列表</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:*^60}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;K值对应的轮廓系数:&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">score_list</span><span class="p">))</span>  <span class="c1"># 打印输出所有K下的详细得分</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;最优的K值是:</span><span class="si">{0}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">对应的轮廓系数是:</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">best_k</span><span class="p">,</span> <span class="n">silhouette_int</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># through KMeansclusteringmodel</span>
+<span class="n">score_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>  <span class="c1"># Kmodel</span>
+<span class="n">silhouette_int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># </span>
+<span class="k">for</span> <span class="n">n_clusters</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>  <span class="c1"># 25</span>
+    <span class="n">model_kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n_clusters</span><span class="p">)</span>  <span class="c1"># clusteringmodel</span>
+    <span class="n">labels_tmp</span> <span class="o">=</span> <span class="n">model_kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># trainingclusteringmodel</span>
+    <span class="n">silhouette_tmp</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels_tmp</span><span class="p">)</span>  <span class="c1"># K</span>
+    <span class="k">if</span> <span class="n">silhouette_tmp</span> <span class="o">></span> <span class="n">silhouette_int</span><span class="p">:</span>  <span class="c1">#  if </span>
+        <span class="n">best_k</span> <span class="o">=</span> <span class="n">n_clusters</span>  <span class="c1"># saveKK</span>
+        <span class="n">silhouette_int</span> <span class="o">=</span> <span class="n">silhouette_tmp</span>  <span class="c1"># saveScore</span>
+        <span class="n">best_kmeans</span> <span class="o">=</span> <span class="n">model_kmeans</span>  <span class="c1"># savemodel</span>
+        <span class="n">cluster_labels_k</span> <span class="o">=</span> <span class="n">labels_tmp</span>  <span class="c1"># saveclusteringlabel</span>
+    <span class="n">score_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">n_clusters</span><span class="p">,</span> <span class="n">silhouette_tmp</span><span class="p">])</span>  <span class="c1"># KScore</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="si">{:*^60}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'K:'</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">score_list</span><span class="p">))</span>  <span class="c1"># Kdetailed Score</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'K:</span><span class="si">{0}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">:</span><span class="si">{1}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">best_k</span><span class="p">,</span> <span class="n">silhouette_int</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15571,15 +15571,15 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>*************************K值对应的轮廓系数:*************************
+<pre>*************************K:*************************
 [[2.         0.38655493]
  [3.         0.45864451]
  [4.         0.50209812]
  [5.         0.4800359 ]
  [6.         0.47761127]
  [7.         0.50189829]]
-最优的K值是:4 
-对应的轮廓系数是:0.5020981194788054
+K:4 
+:0.5020981194788054
 </pre>
 </div>
 </div>
@@ -15591,29 +15591,29 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>总体思想（评价指标）还是怎么聚才能使得簇内距离足够小，簇与簇之间平均距离足够大来评判。</p>
+<p>（Assessment），。</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#32858;&#31867;&#32467;&#26524;&#29305;&#24449;&#20998;&#26512;&#19982;&#23637;&#31034;">&#32858;&#31867;&#32467;&#26524;&#29305;&#24449;&#20998;&#26512;&#19982;&#23637;&#31034;<a class="anchor-link" href="#&#32858;&#31867;&#32467;&#26524;&#29305;&#24449;&#20998;&#26512;&#19982;&#23637;&#31034;">&#182;</a></h2>
+<h2 id="clusteringresultfeatureanalysis">clusteringresultfeatureanalysis<a class="anchor-link" href="#clusteringresultfeatureanalysis">¶</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>通过上面模型，我们其实给每个观测（样本）打了个标签clusters，即他属于4类中的哪一类：</p>
+<p>through model，（sample）labelclusters，i.e. 4：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 将原始数据与聚类标签整合</span>
-<span class="n">cluster_labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cluster_labels_k</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;clusters&#39;</span><span class="p">])</span>  <span class="c1"># 获得训练集下的标签信息</span>
-<span class="n">merge_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">raw_data2</span><span class="p">,</span> <span class="n">cluster_labels</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 将原始处理过的数据跟聚类标签整合</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dataclusteringlabel</span>
+<span class="n">cluster_labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cluster_labels_k</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'clusters'</span><span class="p">])</span>  <span class="c1"># training setlabelinfo</span>
+<span class="n">merge_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">raw_data2</span><span class="p">,</span> <span class="n">cluster_labels</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># processingdataclusteringlabel</span>
 <span class="n">merge_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15653,18 +15653,18 @@ dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>渠道代号</th>
-      <th>日均UV</th>
-      <th>平均注册率</th>
-      <th>平均搜索量</th>
-      <th>访问深度</th>
-      <th>订单转化率</th>
-      <th>投放总时间</th>
-      <th>素材类型</th>
-      <th>广告类型</th>
-      <th>合作方式</th>
-      <th>广告尺寸</th>
-      <th>广告卖点</th>
+      <th>Channel</th>
+      <th>dayUV</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Order</th>
+      <th>Placementtime</th>
+      <th></th>
+      <th>Advertising</th>
+      <th></th>
+      <th>Advertising</th>
+      <th>Advertising</th>
       <th>clusters</th>
     </tr>
   </thead>
@@ -15682,7 +15682,7 @@ dtype: int64</pre>
       <td>banner</td>
       <td>roi</td>
       <td>140*40</td>
-      <td>打折</td>
+      <td></td>
       <td>0</td>
     </tr>
     <tr>
@@ -15698,7 +15698,7 @@ dtype: int64</pre>
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
       <td>0</td>
     </tr>
     <tr>
@@ -15714,7 +15714,7 @@ dtype: int64</pre>
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
       <td>0</td>
     </tr>
     <tr>
@@ -15730,7 +15730,7 @@ dtype: int64</pre>
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
       <td>0</td>
     </tr>
     <tr>
@@ -15746,7 +15746,7 @@ dtype: int64</pre>
       <td>banner</td>
       <td>cpc</td>
       <td>140*40</td>
-      <td>满减</td>
+      <td></td>
       <td>0</td>
     </tr>
   </tbody>
@@ -15763,20 +15763,20 @@ dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>然后看看，每个类别下的样本数量和占比情况：</p>
+<p>，sampleCount and Share：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 计算每个聚类类别下的样本量和样本占比</span>
-<span class="n">clustering_count</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">merge_data</span><span class="p">[</span><span class="s1">&#39;渠道代号&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">merge_data</span><span class="p">[</span><span class="s1">&#39;clusters&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">())</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;渠道代号&#39;</span><span class="p">:</span> <span class="s1">&#39;counts&#39;</span><span class="p">})</span>  <span class="c1"># 计算每个聚类类别的样本量</span>
-<span class="n">clustering_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">clustering_count</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">merge_data</span><span class="p">))</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;counts&#39;</span><span class="p">:</span> <span class="s1">&#39;percentage&#39;</span><span class="p">})</span>  <span class="c1"># 计算每个聚类类别的样本量占比</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculateclusteringsample and sampleShare</span>
+<span class="n">clustering_count</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">merge_data</span><span class="p">[</span><span class="s1">'Channel'</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">merge_data</span><span class="p">[</span><span class="s1">'clusters'</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">())</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'Channel'</span><span class="p">:</span> <span class="s1">'counts'</span><span class="p">})</span>  <span class="c1"># calculateclusteringsample</span>
+<span class="n">clustering_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">clustering_count</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">merge_data</span><span class="p">))</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'counts'</span><span class="p">:</span> <span class="s1">'percentage'</span><span class="p">})</span>  <span class="c1"># calculateclusteringsampleShare</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">clustering_count</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="o">*</span><span class="mi">30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"#"</span><span class="o">*</span><span class="mi">30</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">clustering_ratio</span><span class="p">)</span>
 </pre></div>
 
@@ -15813,35 +15813,35 @@ percentage  0.17  0.35  0.08  0.39
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>每个类别内部最显著的特征：</p>
+<p>feature：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 计算各个聚类类别内部最显著特征值</span>
-<span class="n">cluster_features</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 空列表，用于存储最终合并后的所有特征信息</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">best_k</span><span class="p">):</span>  <span class="c1"># 读取每个类索引</span>
-    <span class="n">label_data</span> <span class="o">=</span> <span class="n">merge_data</span><span class="p">[</span><span class="n">merge_data</span><span class="p">[</span><span class="s1">&#39;clusters&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">line</span><span class="p">]</span>  <span class="c1"># 获得特定类的数据</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculateclusteringfeature</span>
+<span class="n">cluster_features</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># ，featureinfo</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">best_k</span><span class="p">):</span>  <span class="c1"># </span>
+    <span class="n">label_data</span> <span class="o">=</span> <span class="n">merge_data</span><span class="p">[</span><span class="n">merge_data</span><span class="p">[</span><span class="s1">'clusters'</span><span class="p">]</span> <span class="o">==</span> <span class="n">line</span><span class="p">]</span>  <span class="c1"># data</span>
 
-    <span class="n">part1_data</span> <span class="o">=</span> <span class="n">label_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># 获得数值型数据特征</span>
-    <span class="n">part1_desc</span> <span class="o">=</span> <span class="n">part1_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 得到数值型特征的描述性统计信息</span>
-    <span class="n">merge_data1</span> <span class="o">=</span> <span class="n">part1_desc</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># 得到数值型特征的均值</span>
+    <span class="n">part1_data</span> <span class="o">=</span> <span class="n">label_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># datafeature</span>
+    <span class="n">part1_desc</span> <span class="o">=</span> <span class="n">part1_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># featureinfo</span>
+    <span class="n">merge_data1</span> <span class="o">=</span> <span class="n">part1_desc</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># feature</span>
 
-    <span class="n">part2_data</span> <span class="o">=</span> <span class="n">label_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 获得字符串型数据特征</span>
-    <span class="n">part2_desc</span> <span class="o">=</span> <span class="n">part2_data</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>  <span class="c1"># 获得字符串型数据特征的描述性统计信息</span>
-    <span class="n">merge_data2</span> <span class="o">=</span> <span class="n">part2_desc</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># 获得字符串型数据特征的最频繁值</span>
+    <span class="n">part2_data</span> <span class="o">=</span> <span class="n">label_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># datafeature</span>
+    <span class="n">part2_desc</span> <span class="o">=</span> <span class="n">part2_data</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">'all'</span><span class="p">)</span>  <span class="c1"># datafeatureinfo</span>
+    <span class="n">merge_data2</span> <span class="o">=</span> <span class="n">part2_desc</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># datafeature</span>
 
-    <span class="n">merge_line</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">merge_data1</span><span class="p">,</span> <span class="n">merge_data2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 将数值型和字符串型典型特征沿行合并</span>
-    <span class="n">cluster_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">merge_line</span><span class="p">)</span>  <span class="c1"># 将每个类别下的数据特征追加到列表</span>
+    <span class="n">merge_line</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">merge_data1</span><span class="p">,</span> <span class="n">merge_data2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1">#  and feature</span>
+    <span class="n">cluster_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">merge_line</span><span class="p">)</span>  <span class="c1"># datafeature</span>
 
-<span class="c1">#  输出完整的类别特征信息</span>
-<span class="n">cluster_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cluster_features</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># 将列表转化为矩阵</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:*^60}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;每个类别主要的特征:&#39;</span><span class="p">))</span>
-<span class="n">all_cluster_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">clustering_count</span><span class="p">,</span> <span class="n">clustering_ratio</span><span class="p">,</span> <span class="n">cluster_pd</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 将每个聚类类别的所有信息合并</span>
+<span class="c1">#  featureinfo</span>
+<span class="n">cluster_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cluster_features</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="si">{:*^60}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'main feature:'</span><span class="p">))</span>
+<span class="n">all_cluster_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">clustering_count</span><span class="p">,</span> <span class="n">clustering_ratio</span><span class="p">,</span> <span class="n">cluster_pd</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># clusteringinfo</span>
 <span class="n">all_cluster_set</span>
 </pre></div>
 
@@ -15862,7 +15862,7 @@ percentage  0.17  0.35  0.08  0.39
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>*************************每个类别主要的特征:*************************
+<pre>*************************main feature:*************************
 </pre>
 </div>
 </div>
@@ -15915,81 +15915,81 @@ percentage  0.17  0.35  0.08  0.39
       <td>0.39</td>
     </tr>
     <tr>
-      <th>日均UV</th>
+      <th>dayUV</th>
       <td>2717.419</td>
       <td>1390.013</td>
       <td>1904.371</td>
       <td>933.015</td>
     </tr>
     <tr>
-      <th>平均注册率</th>
+      <th></th>
       <td>0.005</td>
       <td>0.003</td>
       <td>0.003</td>
       <td>0.003</td>
     </tr>
     <tr>
-      <th>平均搜索量</th>
+      <th></th>
       <td>0.051</td>
       <td>0.152</td>
       <td>0.106</td>
       <td>0.064</td>
     </tr>
     <tr>
-      <th>访问深度</th>
+      <th></th>
       <td>0.947</td>
       <td>1.168</td>
       <td>0.943</td>
       <td>5.916</td>
     </tr>
     <tr>
-      <th>订单转化率</th>
+      <th>Order</th>
       <td>0.007</td>
       <td>0.017</td>
       <td>0.009</td>
       <td>0.006</td>
     </tr>
     <tr>
-      <th>投放总时间</th>
+      <th>Placementtime</th>
       <td>8.529</td>
       <td>8.199</td>
       <td>8.217</td>
       <td>8.77</td>
     </tr>
     <tr>
-      <th>素材类型</th>
+      <th></th>
       <td>jpg</td>
       <td>swf</td>
       <td>swf</td>
       <td>jpg</td>
     </tr>
     <tr>
-      <th>广告类型</th>
+      <th>Advertising</th>
       <td>banner</td>
-      <td>不确定</td>
+      <td></td>
       <td>tips</td>
-      <td>横幅</td>
+      <td></td>
     </tr>
     <tr>
-      <th>合作方式</th>
+      <th></th>
       <td>cpc</td>
       <td>roi</td>
       <td>cpm</td>
       <td>cpc</td>
     </tr>
     <tr>
-      <th>广告尺寸</th>
+      <th>Advertising</th>
       <td>308*388</td>
       <td>600*90</td>
       <td>450*300</td>
       <td>600*90</td>
     </tr>
     <tr>
-      <th>广告卖点</th>
-      <td>满减</td>
-      <td>打折</td>
-      <td>打折</td>
-      <td>直降</td>
+      <th>Advertising</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -16005,20 +16005,20 @@ percentage  0.17  0.35  0.08  0.39
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>图形化输出：</p>
+<p>：</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#各类别数据预处理</span>
-<span class="n">num_sets</span> <span class="o">=</span> <span class="n">cluster_pd</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">6</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>  <span class="c1"># 获取要展示的数据</span>
-<span class="n">num_sets_max_min</span> <span class="o">=</span> <span class="n">model_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">num_sets</span><span class="p">)</span>  <span class="c1"># 获得标准化后的数据</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Data Preprocessing</span>
+<span class="n">num_sets</span> <span class="o">=</span> <span class="n">cluster_pd</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">6</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>  <span class="c1"># data</span>
+<span class="n">num_sets_max_min</span> <span class="o">=</span> <span class="n">model_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">num_sets</span><span class="p">)</span>  <span class="c1"># data</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">num_sets</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'-'</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">num_sets_max_min</span><span class="p">)</span>
 </pre></div>
 
@@ -16039,7 +16039,7 @@ percentage  0.17  0.35  0.08  0.39
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>       日均UV  平均注册率  平均搜索量   访问深度  订单转化率  投放总时间
+<pre>       dayUV         Order  Placementtime
 0  2717.419  0.005  0.051  0.947  0.007  8.529
 1  1390.013  0.003  0.152  1.168  0.017  8.199
 2  1904.371  0.003  0.106  0.943  0.009  8.217
@@ -16064,31 +16064,31 @@ percentage  0.17  0.35  0.08  0.39
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 画图</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>  <span class="c1"># 建立画布</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 增加子网格，注意polar参数</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>  <span class="c1"># 设置要展示的数据标签</span>
-<span class="n">cor_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>  <span class="c1"># 定义不同类别的颜色</span>
-<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># 计算各个区间的角度</span>
-<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">angles</span><span class="p">,</span> <span class="p">[</span><span class="n">angles</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>  <span class="c1"># 建立相同首尾字段以便于闭合</span>
-<span class="c1"># 画雷达图</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_sets</span><span class="p">)):</span>  <span class="c1"># 循环每个类别</span>
-    <span class="n">data_tmp</span> <span class="o">=</span> <span class="n">num_sets_max_min</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># 获得对应类数据</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">data_tmp</span><span class="p">,</span> <span class="p">[</span><span class="n">data_tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>  <span class="c1"># 建立相同首尾字段以便于闭合</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cor_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;第</span><span class="si">%d</span><span class="s2">类渠道&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>  <span class="c1"># 画线</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># </span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>  <span class="c1"># </span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># ，polarparameter</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>  <span class="c1"># datalabel</span>
+<span class="n">cor_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'g'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">]</span>  <span class="c1"># different Color</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># calculate</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">angles</span><span class="p">,</span> <span class="p">[</span><span class="n">angles</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>  <span class="c1"># </span>
+<span class="c1"># </span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_sets</span><span class="p">)):</span>  <span class="c1"># </span>
+    <span class="n">data_tmp</span> <span class="o">=</span> <span class="n">num_sets_max_min</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># data</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">data_tmp</span><span class="p">,</span> <span class="p">[</span><span class="n">data_tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>  <span class="c1"># </span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="s1">'o-'</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cor_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">"</span><span class="si">%d</span><span class="s2">Channel"</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>  <span class="c1"># </span>
     <span class="n">ax</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
     
-<span class="c1"># 设置图像显示格式</span>
+<span class="c1"># Image</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">angles</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set_thetagrids</span><span class="p">(</span><span class="n">angles</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="s2">&quot;SimHei&quot;</span><span class="p">)</span>  <span class="c1"># 设置极坐标轴</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;各聚类类别显著特征对比&quot;</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="s2">&quot;SimHei&quot;</span><span class="p">)</span>  <span class="c1"># 设置标题放置</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_rlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">)</span>  <span class="c1"># 设置坐标轴尺度范围</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span> <span class="p">,</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>  <span class="c1"># 设置图例位置</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_thetagrids</span><span class="p">(</span><span class="n">angles</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="s2">"SimHei"</span><span class="p">)</span>  <span class="c1"># </span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"clusteringfeature"</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="s2">"SimHei"</span><span class="p">)</span>  <span class="c1"># </span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_rlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">)</span>  <span class="c1"># </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper right"</span> <span class="p">,</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>  <span class="c1"># </span>
 </pre></div>
 
      </div>
@@ -16110,7 +16110,7 @@ percentage  0.17  0.35  0.08  0.39
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.         1.04719755 2.0943951  3.14159265 4.1887902  5.23598776
  0.        ]
-[&#39;日均UV&#39; &#39;平均注册率&#39; &#39;平均搜索量&#39; &#39;访问深度&#39; &#39;订单转化率&#39; &#39;投放总时间&#39;]
+['dayUV' '' '' '' 'Order' 'Placementtime']
 </pre>
 </div>
 </div>
@@ -16124,7 +16124,7 @@ percentage  0.17  0.35  0.08  0.39
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x26d17769b08&gt;</pre>
+<pre><matplotlib.legend.Legend at 0x26d17769b08></pre>
 </div>
 
 </div>
@@ -16152,34 +16152,34 @@ percentage  0.17  0.35  0.08  0.39
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25968;&#25454;&#32467;&#35770;">&#25968;&#25454;&#32467;&#35770;<a class="anchor-link" href="#&#25968;&#25454;&#32467;&#35770;">&#182;</a></h2>
+<h2 id="data">data<a class="anchor-link" href="#data">¶</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>从案例结果来看，所有的渠道被分为4各类别，每个类别的样本量分别为：154、313、349 、73，对应占比分别为：17%、35%、39%、8%。</p>
+<p>result，Channelminute4，sampleare:：154、313、349 、73，Shareare:：17%、35%、39%、8%。</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>通过雷达图可以清楚的知道：</p>
+<p>through can ：</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>类别1（索引为2类的渠道）
-这类广告媒体除了访问深度和投放时间较高，其他属性较低，因此这类广告媒体效果质量较差，并且占到39%，因此这类是主题渠道之一。
-业务部门要考虑他的实际投放价值。</p>
-<p>类别2（索引为1类的渠道）
-这类广告媒体除了访问深度略差，在平均搜索量、日均UV、订单转化率等广告效果指标上表现良好，是一类综合效果较好的渠道。
-但是日均UV是短板，较低。无法给企业带来大量的流量以及新用户，这类广告的特质适合用户转化，尤其是有关订单的转化提升。</p>
-<p>类别3（索引为0类的渠道）
-这类广告媒体的显著特征是日均UV和注册率较高，其“引流”和“拉新”效果好，可以在广告媒体中定位为引流角色。
-符合“广而告之”的诉求，适合“拉新”使用。</p>
-<p>类别4（索引为3类的渠道）
-这类渠道各方面特征都不明显，各个流量质量和流量数量的指标均处于“中等”层次。不突出但是均衡，考虑在各场景下可以考虑在这个渠道投放广告。</p>
+<p>1（2Channel）
+Advertising and Placementtime，attribute， therefore AdvertisingEffectiveness，39%， therefore Channel。
+Placement。</p>
+<p>2（1Channel）
+Advertising，、dayUV、OrderAdvertisingEffectiveness，EffectivenessChannel。
+ but dayUV，。and user，Advertisinguser，Order。</p>
+<p>3（0Channel）
+AdvertisingfeaturedayUV and ，“” and “”Effectiveness，can Advertising。
+“Advertising”，“”using 。</p>
+<p>4（3Channel）
+Channelfeature， and Count“”。 but ，can ChannelPlacementAdvertising。</p>
 
 </div>
 </div>

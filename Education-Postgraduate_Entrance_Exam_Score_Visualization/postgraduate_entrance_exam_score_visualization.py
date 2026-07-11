@@ -2,14 +2,14 @@
 # coding: utf-8
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#项目介绍" data-toc-modified-id="项目介绍-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>项目介绍</a></span></li><li><span><a href="#导入库" data-toc-modified-id="导入库-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>导入库</a></span></li><li><span><a href="#读取文件考研历年国家分数线" data-toc-modified-id="读取文件考研历年国家分数线-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>读取文件考研历年国家分数线</a></span></li><li><span><a href="#处理重复值和空值" data-toc-modified-id="处理重复值和空值-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>处理重复值和空值</a></span></li><li><span><a href="#删除不需要的列" data-toc-modified-id="删除不需要的列-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>删除不需要的列</a></span></li><li><span><a href="#替换删除特殊字符" data-toc-modified-id="替换删除特殊字符-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>替换删除特殊字符</a></span></li><li><span><a href="#单独筛选出2020年考研信息" data-toc-modified-id="单独筛选出2020年考研信息-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>单独筛选出2020年考研信息</a></span></li><li><span><a href="#统计专业" data-toc-modified-id="统计专业-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>统计专业</a></span></li><li><span><a href="#分组归纳学校对应的专业数（专业可能是重复值）" data-toc-modified-id="分组归纳学校对应的专业数（专业可能是重复值）-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>分组归纳学校对应的专业数（专业可能是重复值）</a></span></li><li><span><a href="#转化考研专业总分特殊值" data-toc-modified-id="转化考研专业总分特殊值-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>转化考研专业总分特殊值</a></span></li><li><span><a href="#分组归纳各专业的最高分，最低分，平均分" data-toc-modified-id="分组归纳各专业的最高分，最低分，平均分-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>分组归纳各专业的最高分，最低分，平均分</a></span></li><li><span><a href="#绘制各专业分数的柱状图" data-toc-modified-id="绘制各专业分数的柱状图-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>绘制各专业分数的柱状图</a></span></li><li><span><a href="#绘制2020年考研专业Top50" data-toc-modified-id="绘制2020年考研专业Top50-13"><span class="toc-item-num">13&nbsp;&nbsp;</span>绘制2020年考研专业Top50</a></span></li><li><span><a href="#绘制关键词云图" data-toc-modified-id="绘制关键词云图-14"><span class="toc-item-num">14&nbsp;&nbsp;</span>绘制关键词云图</a></span></li><li><span><a href="#读取2021年考研调剂信息" data-toc-modified-id="读取2021年考研调剂信息-15"><span class="toc-item-num">15&nbsp;&nbsp;</span>读取2021年考研调剂信息</a></span></li><li><span><a href="#转换学校属性类别" data-toc-modified-id="转换学校属性类别-16"><span class="toc-item-num">16&nbsp;&nbsp;</span>转换学校属性类别</a></span></li><li><span><a href="#删除重复值" data-toc-modified-id="删除重复值-17"><span class="toc-item-num">17&nbsp;&nbsp;</span>删除重复值</a></span></li><li><span><a href="#拼接调剂信息" data-toc-modified-id="拼接调剂信息-18"><span class="toc-item-num">18&nbsp;&nbsp;</span>拼接调剂信息</a></span></li><li><span><a href="#查看缺失数据" data-toc-modified-id="查看缺失数据-19"><span class="toc-item-num">19&nbsp;&nbsp;</span>查看缺失数据</a></span></li><li><span><a href="#发布时间对应的发布频次" data-toc-modified-id="发布时间对应的发布频次-20"><span class="toc-item-num">20&nbsp;&nbsp;</span>发布时间对应的发布频次</a></span></li><li><span><a href="#调剂信息发布时间走势图" data-toc-modified-id="调剂信息发布时间走势图-21"><span class="toc-item-num">21&nbsp;&nbsp;</span>调剂信息发布时间走势图</a></span><ul class="toc-item"><li><span><a href="#由于考研成绩是在2月底发布的，所以调剂发布学校也随着增多" data-toc-modified-id="由于考研成绩是在2月底发布的，所以调剂发布学校也随着增多-21.1"><span class="toc-item-num">21.1&nbsp;&nbsp;</span>由于考研成绩是在2月底发布的，所以调剂发布学校也随着增多</a></span></li></ul></li><li><span><a href="#绘制学校类别饼图" data-toc-modified-id="绘制学校类别饼图-22"><span class="toc-item-num">22&nbsp;&nbsp;</span>绘制学校类别饼图</a></span></li><li><span><a href="#调剂信息发布数省份分布" data-toc-modified-id="调剂信息发布数省份分布-23"><span class="toc-item-num">23&nbsp;&nbsp;</span>调剂信息发布数省份分布</a></span></li></ul></div>
+# <div class="toc"><ul class="toc-item"><li><span><a href="#Project Introduction" data-toc-modified-id="Project Introduction-1"><span class="toc-item-num">1  </span>Project Introduction</a></span></li><li><span><a href="#import" data-toc-modified-id="import-2"><span class="toc-item-num">2  </span>import</a></span></li><li><span><a href="#filePostgraduate ExamyearScore Line" data-toc-modified-id="filePostgraduate ExamyearScore Line-3"><span class="toc-item-num">3  </span>filePostgraduate ExamyearScore Line</a></span></li><li><span><a href="#processing and null" data-toc-modified-id="processing and null-4"><span class="toc-item-num">4  </span>processing and null</a></span></li><li><span><a href="#need to " data-toc-modified-id="need to -5"><span class="toc-item-num">5  </span>need to </a></span></li><li><span><a href="#" data-toc-modified-id="-6"><span class="toc-item-num">6  </span></a></span></li><li><span><a href="#2020yearPostgraduate Examinfo" data-toc-modified-id="2020yearPostgraduate Examinfo-7"><span class="toc-item-num">7  </span>2020yearPostgraduate Examinfo</a></span></li><li><span><a href="#" data-toc-modified-id="-8"><span class="toc-item-num">8  </span></a></span></li><li><span><a href="#minute（may ）" data-toc-modified-id="minute（may ）-9"><span class="toc-item-num">9  </span>minute（may ）</a></span></li><li><span><a href="#Postgraduate Examminute" data-toc-modified-id="Postgraduate Examminute-10"><span class="toc-item-num">10  </span>Postgraduate Examminute</a></span></li><li><span><a href="#minuteminute，minute，minute" data-toc-modified-id="minuteminute，minute，minute-11"><span class="toc-item-num">11  </span>minuteminute，minute，minute</a></span></li><li><span><a href="#Score" data-toc-modified-id="Score-12"><span class="toc-item-num">12  </span>Score</a></span></li><li><span><a href="#2020yearPostgraduate ExamTop50" data-toc-modified-id="2020yearPostgraduate ExamTop50-13"><span class="toc-item-num">13  </span>2020yearPostgraduate ExamTop50</a></span></li><li><span><a href="#Keywords" data-toc-modified-id="Keywords-14"><span class="toc-item-num">14  </span>Keywords</a></span></li><li><span><a href="#2021yearPostgraduate Examinfo" data-toc-modified-id="2021yearPostgraduate Examinfo-15"><span class="toc-item-num">15  </span>2021yearPostgraduate Examinfo</a></span></li><li><span><a href="#attribute" data-toc-modified-id="attribute-16"><span class="toc-item-num">16  </span>attribute</a></span></li><li><span><a href="#" data-toc-modified-id="-17"><span class="toc-item-num">17  </span></a></span></li><li><span><a href="#info" data-toc-modified-id="info-18"><span class="toc-item-num">18  </span>info</a></span></li><li><span><a href="#viewdata" data-toc-modified-id="viewdata-19"><span class="toc-item-num">19  </span>viewdata</a></span></li><li><span><a href="#time" data-toc-modified-id="time-20"><span class="toc-item-num">20  </span>time</a></span></li><li><span><a href="#infotime" data-toc-modified-id="infotime-21"><span class="toc-item-num">21  </span>infotime</a></span><ul class="toc-item"><li><span><a href="#Postgraduate Exam2month， so " data-toc-modified-id="Postgraduate Exam2month， so -21.1"><span class="toc-item-num">21.1  </span>Postgraduate Exam2month， so </a></span></li></ul></li><li><span><a href="#" data-toc-modified-id="-22"><span class="toc-item-num">22  </span></a></span></li><li><span><a href="#infoDistribution" data-toc-modified-id="infoDistribution-23"><span class="toc-item-num">23  </span>infoDistribution</a></span></li></ul></div>
 
-# ### 项目介绍
-# * 数据来源 IT：2021年考研调剂信息 通过考研网站 + 百度百科 整理获取
-# * 可视化主要使用 pyecharts 
+# ### Project Introduction
+# * data IT：2021yearPostgraduate Examinfo through Postgraduate Exam +  
+# * visualizationmain using  pyecharts 
 # 
 
-# ### 导入库
+# ### Import libraries
 
 # In[1]:
 
@@ -19,24 +19,24 @@ import requests
 import pandas as pd 
 import pyecharts.options as opts
 from pyecharts.charts import *
-from pyecharts.globals import ThemeType#设定主题
+from pyecharts.globals import ThemeType#
 from pyecharts.commons.utils import JsCode
 import chardet 
 import jieba
 import numpy as np
 
 
-# ### 读取文件考研历年国家分数线
+# ### filePostgraduate ExamyearScore Line
 
 # In[2]:
 
 
-df1 = pd.read_csv(r'./考研历年国家分数线(1).csv')
-df2 = pd.read_csv(r'./考研历年国家分数线(2).csv')
-df3 = pd.read_csv(r'./考研历年国家分数线(3).csv')
-df4 = pd.read_csv(r'./考研历年国家分数线(4).csv')
-df5 = pd.read_csv(r'./考研历年国家分数线(5).csv')
-df6 = pd.read_csv(r'./考研历年国家分数线(6).csv')
+df1 = pd.read_csv(r'./Postgraduate ExamyearScore Line(1).csv')
+df2 = pd.read_csv(r'./Postgraduate ExamyearScore Line(2).csv')
+df3 = pd.read_csv(r'./Postgraduate ExamyearScore Line(3).csv')
+df4 = pd.read_csv(r'./Postgraduate ExamyearScore Line(4).csv')
+df5 = pd.read_csv(r'./Postgraduate ExamyearScore Line(5).csv')
+df6 = pd.read_csv(r'./Postgraduate ExamyearScore Line(6).csv')
 df_all= pd.concat([df1,df2,df3,df4,df5,df6])
 df_all.info()
 
@@ -47,13 +47,13 @@ df_all.info()
 print(df_all.shape)
 
 
-# ### 处理重复值和空值
+# ### processing and null
 
 # In[4]:
 
 
-print('重复值：' ,df_all.duplicated().sum())
-print('空值: \n',df_all.isnull().sum())
+print('：' ,df_all.duplicated().sum())
+print('null: \n',df_all.isnull().sum())
 
 
 # In[5]:
@@ -73,55 +73,55 @@ print(df_all.shape)
 # In[7]:
 
 
-print('重复值：' ,df_all.duplicated().sum())
-print('空值: \n',df_all.isnull().sum())
+print('：' ,df_all.duplicated().sum())
+print('null: \n',df_all.isnull().sum())
 
 
-# ### 删除不需要的列
+# ### need to 
 
 # In[8]:
 
 
-df_all = df_all.drop(labels=['学校名称_链接','院系名称_链接','专业名称_链接'],axis=1)
+df_all = df_all.drop(labels=['_','_','_'],axis=1)
 df_all.head(2)
 
 
-# ### 替换删除特殊字符
+# ### 
 
 # In[9]:
 
 
-df_all['专业名称'] = df_all['专业名称'].str.replace('\(专业学位\)','')
-df_all['专业名称'] = df_all['专业名称'].str.replace('★','')
+df_all[''] = df_all[''].str.replace('\(\)','')
+df_all[''] = df_all[''].str.replace('★','')
 df_all.head(2)
 
 
-# ### 单独筛选出2020年考研信息
+# ### 2020yearPostgraduate Examinfo
 
 # In[10]:
 
 
-data_2020 = df_all[df_all['年份'] == 2020]
+data_2020 = df_all[df_all['Year'] == 2020]
 data_2020.info()
 
 
-# ### 统计专业
+# ### 
 
 # In[11]:
 
 
-data_2020['专业名称'].value_counts()[:100]
+data_2020[''].value_counts()[:100]
 
 
-# ### 分组归纳学校对应的专业数（专业可能是重复值）
+# ### Grouping（may ）
 
 # In[12]:
 
 
-data_2020.groupby('学校名称')['专业名称'].count().sort_values(ascending = False)[:100]
+data_2020.groupby('')[''].count().sort_values(ascending = False)[:100]
 
 
-# ### 转化考研专业总分特殊值
+# ### Postgraduate Examminute
 
 # In[13]:
 
@@ -132,22 +132,22 @@ def tranform_num(x):
     else:
         return x
     
-data_2020['总分'] = data_2020['总分'].apply(lambda x:tranform_num(x) )
-data_2020['总分'] = data_2020['总分'].astype('int')
+data_2020['minute'] = data_2020['minute'].apply(lambda x:tranform_num(x) )
+data_2020['minute'] = data_2020['minute'].astype('int')
 
 
-# ### 分组归纳各专业的最高分，最低分，平均分
+# ### Groupingminute，minute，minute
 
 # In[14]:
 
 
-data_1 = data_2020.groupby('专业名称')['总分'].agg([np.mean, np.max,np.min])
+data_1 = data_2020.groupby('')['minute'].agg([np.mean, np.max,np.min])
 data_1['mean'] = data_1['mean'].astype('int')
 data_1 = data_1.sort_values(by=['mean'],ascending=False)[:50]
 data_1
 		
 data_1.columns = ['mean','amax','amin']
-# ### 绘制各专业分数的柱状图
+# ### Score
 
 # In[15]:
 
@@ -158,13 +158,13 @@ bar = Bar(init_opts=opts.InitOpts(theme='light',
                                     )
 
 bar.add_xaxis(data_1.index.tolist())
-bar.add_yaxis('最高分', 
+bar.add_yaxis('minute', 
                data_1['amax'].tolist(),
                z_level=1,
                stack='1',
                category_gap='50%',
                tooltip_opts=opts.TooltipOpts(is_show=False),
-               label_opts=opts.LabelOpts(position='insideRight', formatter='{c} 分'),
+               label_opts=opts.LabelOpts(position='insideRight', formatter='{c} minute'),
                itemstyle_opts={"normal": {
                         'shadowBlur': 10,
                         'shadowColor': 'rgba(0, 0, 0, 0.1)',
@@ -175,13 +175,13 @@ bar.add_yaxis('最高分',
                         'borderWidth':2}
                 },
                )
-bar.add_yaxis('最低分', 
+bar.add_yaxis('minute', 
                data_1['amin'].tolist(),
                z_level=1,
                stack='1',
                category_gap='50%',
                tooltip_opts=opts.TooltipOpts(is_show=False),
-               label_opts=opts.LabelOpts(position='insideLeft', formatter='{c} 分'),
+               label_opts=opts.LabelOpts(position='insideLeft', formatter='{c} minute'),
                itemstyle_opts={"normal": {
                         'shadowBlur': 10,
                         'shadowColor': 'rgba(0, 0, 0, 0.1)',
@@ -194,14 +194,14 @@ bar.add_yaxis('最低分',
                )
 
 
-bar.set_global_opts(title_opts=opts.TitleOpts(title="各专业的最高分和最低分",
+bar.set_global_opts(title_opts=opts.TitleOpts(title="minute and minute",
                                               pos_left="center",
                                               pos_top='0%',
                                               title_textstyle_opts=opts.TextStyleOpts(font_size=20,
                                                                                       color='#00BFFF')),
                         legend_opts=opts.LegendOpts(is_show=True, pos_top='3%'),
                         datazoom_opts=opts.DataZoomOpts(type_='inside',
-                                                    range_start=50,   # 设置起止位置，50%-100%
+                                                    range_start=50,   # ，50%-100%
                                                     range_end=100,
                                                     orient='vertical'),
                         xaxis_opts=opts.AxisOpts(is_show=False, max_=818),
@@ -216,10 +216,10 @@ bar.render_notebook()
 # In[16]:
 
 
-data_2 = data_2020['专业名称'].value_counts()[:50]
+data_2 = data_2020[''].value_counts()[:50]
 
 
-# ### 绘制2020年考研专业Top50
+# ### 2020yearPostgraduate ExamTop50
 
 # In[17]:
 
@@ -231,19 +231,19 @@ bar = Bar(init_opts=opts.InitOpts(theme='light',
                                   width='1000px',
                                   height='900px'))
 bar.add_xaxis(data_x)
-bar.add_yaxis('考研专业', [int(i) for i in data_y])
+bar.add_yaxis('Postgraduate Exam', [int(i) for i in data_y])
 bar.set_series_opts(label_opts=opts.LabelOpts(position="insideLeft",
                                               font_size=12,
                                               font_weight='bold',
-                                              formatter='{b}:{c} 个'))
-bar.set_global_opts(title_opts=opts.TitleOpts(title="2020年考研专业Top50", pos_top='2%', pos_left='center', 
+                                              formatter='{b}:{c} '))
+bar.set_global_opts(title_opts=opts.TitleOpts(title="2020yearPostgraduate ExamTop50", pos_top='2%', pos_left='center', 
                                               title_textstyle_opts=opts.TextStyleOpts(font_size=20,
                                                                                       color='#00BFFF')),
                     legend_opts=opts.LegendOpts(is_show=False),
                     xaxis_opts=opts.AxisOpts(is_show=False, is_scale=True),
                     yaxis_opts=opts.AxisOpts(is_show=False),
                     datazoom_opts=opts.DataZoomOpts(type_='inside',
-                                                    range_start=50,   # 设置起止位置，50%-100%
+                                                    range_start=50,   # ，50%-100%
                                                     range_end=100,
                                                     orient='vertical'),
                     
@@ -258,33 +258,33 @@ bar.reversal_axis()
 bar.render_notebook()
 
 
-# ### 绘制关键词云图
+# ### Keywords
 
 # In[18]:
 
 
 def get_cut_words(content_series):
-    # 读入停用词表
-    stop_words = [' ','是','的'] 
+    # 
+    stop_words = [' ','',''] 
 
-#     with open(r"\中文停用词库.txt", 'r') as f:
+#     with open(r"\.txt", 'r') as f:
 #         lines = f.readlines()
 #         for line in lines:
 #             stop_words.append(line.strip())
 
-    # 添加关键词
+    # Keywords
     my_words = ['']      
     for i in my_words:
         jieba.add_word(i) 
 
-    # 自定义停用词
-    my_stop_words = ['查看','详细','详见','详情','与化','03','02','01','正文','多个','相关']    
+    # 
+    my_stop_words = ['view','detailed ','','','','03','02','01','','','related ']    
     stop_words.extend(my_stop_words)               
 
-    # 分词
+    # minute
     word_num = jieba.lcut(content_series.str.cat(sep='。'), cut_all=False)
 
-    # 条件筛选
+    # 
     word_num_selected = [i for i in word_num if i not in stop_words and len(i)>=2]
     
     return word_num_selected
@@ -293,13 +293,13 @@ def get_cut_words(content_series):
 # In[19]:
 
 
-text1 = get_cut_words(content_series=df_all.专业名称)
+text1 = get_cut_words(content_series=df_all.)
 
 
 # In[22]:
 
 
-# 安装stylecloud
+# stylecloud
 get_ipython().system('pip install stylecloud  -i https://pypi.tuna.tsinghua.edu.cn/simple')
 
 
@@ -316,16 +316,16 @@ stylecloud.gen_stylecloud(
     font_path=r'./SimHei.ttf',
     icon_name='fas fa-book',
     size=768,
-    output_name='./词云图1.png'
+    output_name='./1.png'
 )
 
-Image(filename='./词云图1.png')
+Image(filename='./1.png')
 
 
 # In[24]:
 
 
-text2 = get_cut_words(content_series=df_all.学校名称)
+text2 = get_cut_words(content_series=df_all.)
 text2[:4]
 
 
@@ -338,13 +338,13 @@ stylecloud.gen_stylecloud(
     font_path=r'./SimHei.ttf',
     icon_name='fas fa-graduation-cap',
     size=768,
-    output_name='词云图2.png'
+    output_name='2.png'
 )
 
-Image(filename='词云图2.png')
+Image(filename='2.png')
 
 
-# ### 读取2021年考研调剂信息
+# ### 2021yearPostgraduate Examinfo
 
 # In[26]:
 
@@ -355,7 +355,7 @@ import pandas as pd
 # In[27]:
 
 
-df_info = pd.read_excel(r'./大学信息2021new.xlsx')
+df_info = pd.read_excel(r'./Universityinfo2021new.xlsx')
 df_info.head()
 
 
@@ -371,59 +371,59 @@ get_ipython().system('pip install openpyxl -i https://pypi.tuna.tsinghua.edu.cn/
 df_info.info()
 
 
-# ### 转换学校属性类别
+# ### attribute
 
 # In[30]:
 
 
 def transform_attr(x):
-    #转换学校属性
+    #attribute
     if '211' in x and '985' not in x:
         return 211 
     elif '985' in x:
         return '985'
     else:
-        return '双非'
+        return ''
     
 def transform_type(x):
-    #转换学校类型
-    if '理工类' in x or '理工类院校' in x or '理工科' in x or '理工、教学研究型大学' in x or '理工类\n[4]' in x or '理工\n[6]' in x:
-        return '理工'
-    elif '综合类' in x or '综合性大学\n[3]' in x or '综合类（应用型大学）' in x or '综合、研究教学型大学' in x or '综合类大学' in x or '综合师范类' in x:
-        return '综合'
-    elif '师范类院校' in x or '师范类' in x or '师范类（综合类）' in x or '师范（综合）' in x or '地方师范院校' in x:
-        return '师范'
-    elif '农林类' in x or '农业类' in x: 
-        return '农林'
-    elif '医药类' in x:
-        return '医药'
-    elif '民族类' in x:
-        return '民族'
-    elif '未知' in x or '国有企业' in x or '科技型企业' in x or '公立大学' in x:
-        return '其他'
-    elif '重点' in x or '省' in x or '2' in x or '' in x:
-        return '其他'
+    #
+    if '' in x or '' in x or '' in x or '、University' in x or '\n[4]' in x or '\n[6]' in x:
+        return ''
+    elif '' in x or 'University\n[3]' in x or '（University）' in x or '、University' in x or 'University' in x or '' in x:
+        return ''
+    elif '' in x or '' in x or '（）' in x or '（）' in x or '' in x:
+        return ''
+    elif '' in x or '' in x: 
+        return ''
+    elif '' in x:
+        return ''
+    elif '' in x:
+        return ''
+    elif '' in x or '' in x or '' in x or 'University' in x:
+        return ''
+    elif '' in x or '' in x or '2' in x or '' in x:
+        return ''
     else:
         return x 
     
-# 转换数据
+# data
 df_info['school_level'] = df_info.school_attr.astype(str).apply(lambda x:transform_attr(x))
 df_info['school_types'] = df_info.school_type.astype(str).apply(lambda x: transform_type(x))
-# 筛选字段
+# 
 df_info= df_info[['school','province','school_level','school_types']]
 
-# 处理省份数据
-df_info.loc[(df_info.school=='北京工商大学')&(df_info.province=='未知'), 'province']= '北京' 
-df_info.loc[(df_info.school=='哈尔滨工程大学')&(df_info.province=='未知'), 'province']= '哈尔滨' 
-df_info.loc[(df_info.school=='江苏大学')&(df_info.province=='未知'), 'province']= '江苏' 
-df_info.loc[(df_info.school=='青岛大学')&(df_info.province=='未知'), 'province']= '山东' 
-df_info.loc[(df_info.school=='北京石油化工学院')&(df_info.province=='未知'), 'province']= '北京' 
-df_info.loc[(df_info.school=='齐鲁工业大学')&(df_info.province=='未知'), 'province']= '山东'
-df_info.loc[(df_info.school=='江苏科技大学')&(df_info.province=='未知'), 'province']= '江苏'
-df_info.loc[(df_info.school=='浙江农林大学')&(df_info.province=='未知'), 'province']= '浙江'
-df_info.loc[(df_info.school=='燕山大学')&(df_info.province=='未知'), 'province']= '河北'
-df_info.loc[(df_info.school=='福州大学')&(df_info.province=='未知'), 'province']= '福建'
-df_info.loc[(df_info.school=='内蒙古科技大学')&(df_info.province=='未知'), 'province']= '内蒙古'
+# processingdata
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= '' 
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= '' 
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= '' 
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= '' 
+df_info.loc[(df_info.school=='')&(df_info.province==''), 'province']= '' 
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= ''
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= ''
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= ''
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= ''
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= ''
+df_info.loc[(df_info.school=='University')&(df_info.province==''), 'province']= ''
 
 
 # In[31]:
@@ -432,12 +432,12 @@ df_info.loc[(df_info.school=='内蒙古科技大学')&(df_info.province=='未知
 df_info.head()
 
 
-# ### 删除重复值
+# ### 
 
 # In[32]:
 
 
-df_info = df_info.drop_duplicates()#删除重
+df_info = df_info.drop_duplicates()#
 df_info.info()
 
 
@@ -450,7 +450,7 @@ df_info.shape
 # In[34]:
 
 
-df = pd.read_excel(r'./考研调剂数据-3.08.xlsx')
+df = pd.read_excel(r'./Postgraduate Examdata-3.08.xlsx')
 df.shape
 
 
@@ -467,7 +467,7 @@ df_2021.shape
 pd.merge(df_2021,df_info,how = 'left',on = 'school').shape
 
 
-# ### 拼接调剂信息
+# ### info
 
 # In[37]:
 
@@ -483,7 +483,7 @@ df_all = df_all[['school','name','time','province','school_level','school_types'
 df_all.head()
 
 
-# ### 查看缺失数据
+# ### viewdata
 
 # In[39]:
 
@@ -491,7 +491,7 @@ df_all.head()
 df_all.isnull().sum()
 
 
-# ### 发布时间对应的发布频次
+# ### time
 
 # In[40]:
 
@@ -500,19 +500,19 @@ pub_time = df_all.time.value_counts().sort_index()
 pub_time
 
 
-# ### 调剂信息发布时间走势图
+# ### infotime
 
 # In[41]:
 
 
 line1 = Line(init_opts=opts.InitOpts(width='1000px',height='600px'))
 line1.add_xaxis(pub_time.index.tolist())
-line1.add_yaxis('发布热度',pub_time.values.tolist(),
+line1.add_yaxis('',pub_time.values.tolist(),
                areastyle_opts=opts.AreaStyleOpts(opacity=0.5),
                label_opts=opts.LabelOpts(is_show=True))
-line1.set_global_opts(title_opts=opts.TitleOpts(title='调剂信息发布时间走势图'),
+line1.set_global_opts(title_opts=opts.TitleOpts(title='infotime'),
                      toolbox_opts=opts.ToolboxOpts(),
-                      xaxis_opts=opts.AxisOpts(name='时间',
+                      xaxis_opts=opts.AxisOpts(name='time',
                                                type_='category',                                           
                                                axislabel_opts=opts.LabelOpts(rotate=45),
                                                ),
@@ -520,9 +520,9 @@ line1.set_global_opts(title_opts=opts.TitleOpts(title='调剂信息发布时间�
 line1.render_notebook()
 
 
-# #### 由于考研成绩是在2月底发布的，所以调剂发布学校也随着增多
+# #### Postgraduate Exam2month， so 
 
-# ### 绘制学校类别饼图
+# ### 
 
 # In[42]:
 
@@ -540,7 +540,7 @@ pie1 = Pie(init_opts=opts.InitOpts(theme='light',width='800px',height='600px'))
 pie1.add("", 
          [*zip(level_perc.index, level_perc.values)], 
          radius=["40%","75%"]) 
-pie1.set_global_opts(title_opts=opts.TitleOpts(title='学校层次分布',pos_left='center', pos_top='center',title_textstyle_opts=opts.TextStyleOpts(
+pie1.set_global_opts(title_opts=opts.TitleOpts(title='Distribution',pos_left='center', pos_top='center',title_textstyle_opts=opts.TextStyleOpts(
                                                    color='#00BFFF', font_size=30, font_weight='bold'),
                                                ), 
                      legend_opts=opts.LegendOpts(orient="vertical", pos_top="15%", pos_left="2%"),
@@ -550,7 +550,7 @@ pie1.set_series_opts(label_opts=opts.LabelOpts(formatter="{c}%"))
 pie1.render_notebook()
 
 
-# ### 调剂信息发布数省份分布
+# ### infoDistribution
 
 # In[44]:
 
@@ -562,14 +562,14 @@ province_num
 # In[45]:
 
 
-# 条形图
+# 
 bar1 = Bar(init_opts=opts.InitOpts(theme='light',width='1000px', height='1000px')) 
 bar1.add_xaxis(province_num.index.tolist())
-bar1.add_yaxis("省份", province_num.values.tolist()) 
-bar1.set_global_opts(title_opts=opts.TitleOpts(title="调剂信息发布数省份分布"), 
+bar1.add_yaxis("", province_num.values.tolist()) 
+bar1.set_global_opts(title_opts=opts.TitleOpts(title="infoDistribution"), 
 #                      toolbox_opts=opts.ToolboxOpts(),
                      visualmap_opts=opts.VisualMapOpts(max_=79)) 
-bar1.set_series_opts(label_opts=opts.LabelOpts(position='right'))  # 标签
+bar1.set_series_opts(label_opts=opts.LabelOpts(position='right'))  # label
 bar1.reversal_axis() 
 bar1.render_notebook()
 
@@ -579,7 +579,7 @@ bar1.render_notebook()
 
 c = Map(init_opts=opts.InitOpts(width='800px', height='750px'))
 c.add('',[list(z) for z in zip(province_num.index.tolist(), province_num.values.tolist())], 'china')
-c.set_global_opts(title_opts=opts.TitleOpts('调剂信息省份分布地图'), 
+c.set_global_opts(title_opts=opts.TitleOpts('infoDistribution'), 
 #                   toolbox_opts=opts.ToolboxOpts(is_show=True), 
                   visualmap_opts=opts.VisualMapOpts(max_=79)) 
 c.render_notebook()
@@ -594,38 +594,38 @@ print([list(z) for z in zip(province_num.index.tolist(), province_num.values.tol
 # In[60]:
 
 
-# 改为省份全称才能正常显示
+# 
 c = Map(init_opts=opts.InitOpts(width='800px', height='750px'))
-c.add('',[['贵州省', 2],
- ['宁夏回族自治区', 2],
- ['甘肃省', 4],
- ['海南省', 4],
- ['内蒙古自治区', 4],
- ['新疆维吾尔自治区', 5],
- ['云南省', 6],
- ['天津市', 11],
- ['广西壮族自治区', 14],
- ['安徽省', 18],
- ['河南省', 20],
- ['福建省', 20],
- ['四川省', 21],
- ['重庆市', 22],
- ['湖南省', 23],
- ['山西省', 24],
- ['江西省', 28],
- ['河北省', 30],
- ['吉林省', 32],
- ['浙江省', 33],
- ['辽宁省', 39],
- ['陕西省', 40],
- ['上海市', 41],
- ['江苏省', 45],
- ['黑龙江省', 46],
- ['湖北省', 48],
- ['广东省', 49],
- ['山东省', 64],
- ['北京市', 79]], 'china')
-c.set_global_opts(title_opts=opts.TitleOpts('调剂信息省份分布地图'), 
+c.add('',[['', 2],
+ ['', 2],
+ ['', 4],
+ ['', 4],
+ ['', 4],
+ ['', 5],
+ ['', 6],
+ ['days', 11],
+ ['', 14],
+ ['', 18],
+ ['', 20],
+ ['', 20],
+ ['', 21],
+ ['', 22],
+ ['', 23],
+ ['', 24],
+ ['', 28],
+ ['', 30],
+ ['', 32],
+ ['', 33],
+ ['', 39],
+ ['', 40],
+ ['', 41],
+ ['', 45],
+ ['', 46],
+ ['', 48],
+ ['', 49],
+ ['', 64],
+ ['', 79]], 'china')
+c.set_global_opts(title_opts=opts.TitleOpts('infoDistribution'), 
 #                   toolbox_opts=opts.ToolboxOpts(is_show=True), 
                   visualmap_opts=opts.VisualMapOpts(max_=79)) 
 c.render_notebook()

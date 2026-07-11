@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>时令蔬菜有哪些</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>SeasonalVegetable</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,7 +14598,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#项目介绍" data-toc-modified-id="项目介绍-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>项目介绍</a></span></li><li><span><a href="#环境准备" data-toc-modified-id="环境准备-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>环境准备</a></span></li><li><span><a href="#数据预处理" data-toc-modified-id="数据预处理-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>数据预处理</a></span></li><li><span><a href="#各类农产品批发价的历史变化" data-toc-modified-id="各类农产品批发价的历史变化-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>各类农产品批发价的历史变化</a></span><ul class="toc-item"><li><span><a href="#畜禽产品" data-toc-modified-id="畜禽产品-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>畜禽产品</a></span></li><li><span><a href="#水产品" data-toc-modified-id="水产品-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>水产品</a></span></li><li><span><a href="#水果" data-toc-modified-id="水果-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>水果</a></span></li><li><span><a href="#蔬菜" data-toc-modified-id="蔬菜-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>蔬菜</a></span></li></ul></li><li><span><a href="#农产品批发价的历史波动幅度" data-toc-modified-id="农产品批发价的历史波动幅度-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>农产品批发价的历史波动幅度</a></span></li><li><span><a href="#使用多元回归计算农产品价格的趋势和季节性" data-toc-modified-id="使用多元回归计算农产品价格的趋势和季节性-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>使用多元回归计算农产品价格的趋势和季节性</a></span><ul class="toc-item"><li><span><a href="#如何计算季节性" data-toc-modified-id="如何计算季节性-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>如何计算季节性</a></span></li><li><span><a href="#计算所有农产品的季节性信息" data-toc-modified-id="计算所有农产品的季节性信息-6.2"><span class="toc-item-num">6.2&nbsp;&nbsp;</span>计算所有农产品的季节性信息</a></span></li><li><span><a href="#哪些农产品的季节性更强？" data-toc-modified-id="哪些农产品的季节性更强？-6.3"><span class="toc-item-num">6.3&nbsp;&nbsp;</span>哪些农产品的季节性更强？</a></span></li></ul></li><li><span><a href="#时令蔬菜有哪些？" data-toc-modified-id="时令蔬菜有哪些？-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>时令蔬菜有哪些？</a></span></li><li><span><a href="#哪些农产品的价格有明显的涨跌？" data-toc-modified-id="哪些农产品的价格有明显的涨跌？-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>哪些农产品的价格有明显的涨跌？</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Project Introduction" data-toc-modified-id="Project Introduction-1"><span class="toc-item-num">1  </span>Project Introduction</a></span></li><li><span><a href="#" data-toc-modified-id="-2"><span class="toc-item-num">2  </span></a></span></li><li><span><a href="#Data Preprocessing" data-toc-modified-id="Data Preprocessing-3"><span class="toc-item-num">3  </span>Data Preprocessing</a></span></li><li><span><a href="#" data-toc-modified-id="-4"><span class="toc-item-num">4  </span></a></span><ul class="toc-item"><li><span><a href="#" data-toc-modified-id="-4.1"><span class="toc-item-num">4.1  </span></a></span></li><li><span><a href="#" data-toc-modified-id="-4.2"><span class="toc-item-num">4.2  </span></a></span></li><li><span><a href="#" data-toc-modified-id="-4.3"><span class="toc-item-num">4.3  </span></a></span></li><li><span><a href="#Vegetable" data-toc-modified-id="Vegetable-4.4"><span class="toc-item-num">4.4  </span>Vegetable</a></span></li></ul></li><li><span><a href="#" data-toc-modified-id="-5"><span class="toc-item-num">5  </span></a></span></li><li><span><a href="#using regressioncalculatePrice and Seasonal" data-toc-modified-id="using regressioncalculatePrice and Seasonal-6"><span class="toc-item-num">6  </span>using regressioncalculatePrice and Seasonal</a></span><ul class="toc-item"><li><span><a href="#calculateSeasonal" data-toc-modified-id="calculateSeasonal-6.1"><span class="toc-item-num">6.1  </span>calculateSeasonal</a></span></li><li><span><a href="#calculateSeasonalinfo" data-toc-modified-id="calculateSeasonalinfo-6.2"><span class="toc-item-num">6.2  </span>calculateSeasonalinfo</a></span></li><li><span><a href="#Seasonal？" data-toc-modified-id="Seasonal？-6.3"><span class="toc-item-num">6.3  </span>Seasonal？</a></span></li></ul></li><li><span><a href="#SeasonalVegetable？" data-toc-modified-id="SeasonalVegetable？-7"><span class="toc-item-num">7  </span>SeasonalVegetable？</a></span></li><li><span><a href="#Price？" data-toc-modified-id="Price？-8"><span class="toc-item-num">8  </span>Price？</a></span></li></ul></div>
 
 </div>
 </div>
@@ -14610,20 +14610,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#39033;&#30446;&#20171;&#32461;<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#182;</a></h2><p>又到了吃西瓜的季节。之所以在夏季吃西瓜，不仅仅因为其可以解暑，而且在夏天是西瓜的大量上市时期，价格还会比较便宜。在我们的食谱中，还有许多像西瓜这样的具有明显季节性的食材。这次的项目将通过分析农产品批发价的时间序列数据，发现具有强季节性的蔬菜，为在合适的季节吃合适的蔬菜提供参考。同时也对过去几年农产品的价格变化趋势进行了解。其中的主要发现包括：</p>
+<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">Project Introduction<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">¶</a></h2><p>Season。 so ，not only  because can ，but also dayshour，Pricecompare。，Seasonal。through analysisTime Seriesdata，SeasonalVegetable，SeasonVegetable。houryearPrice。where main including ：</p>
 <ul>
-<li>价格具有强季节性的农产品主要是蔬菜和水果。例如菠菜、韭菜在春季，西瓜、冬瓜在夏季，巨峰葡萄在秋季，莲藕在冬季的价格会较低。</li>
-<li>在过去两年里，约52%的农产品有明显的价格变化趋势。其中大部分为价格上升趋势，以水产品为代表。而猪肉和生姜是少有的有着价格下降趋势的产品。</li>
+<li>PriceSeasonalmain Vegetable and 。 e.g., 、，、，，Price。</li>
+<li>year，52%Price。where minutePrice，。 and Price。</li>
 </ul>
-<p>不过，价格变化不仅受到农产品供给变化的影响，还会受到市场需求、运输存储、制度政策等变化的影响。因此如果要确认是否真的是时令蔬菜，还应结合农产品的实际培育周期来进行校验。</p>
+<p>，Pricenot only ，、、。 therefore  if SeasonalVegetable，。</p>
 <ul>
-<li>数据说明</li>
+<li>datadescription</li>
 </ul>
-<p>数据来自中国农业农村部在过去两年（2020年6月到2022年5月）从全国批发市场采集的逐月农产品批发价格数据。数据中涉及到的农产品品种包含5种畜禽产品、5种水果、7种水产品以及28种蔬菜。</p>
+<p>datayear（2020year6month2022year5month）NationalmonthPricedata。datacontains5、5、7and 28Vegetable。</p>
 <ul>
-<li>关键词</li>
+<li>Keywords</li>
 </ul>
-<p>matplotlib、seaborn可视化、多元回归</p>
+<p>matplotlib、seabornvisualization、regression</p>
 
 </div>
 </div>
@@ -14635,7 +14635,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87">&#29615;&#22659;&#20934;&#22791;<a class="anchor-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87">&#182;</a></h2>
+<h2 id="%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><a class="anchor-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14644,10 +14644,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pandas</span><span class="o">==</span><span class="m">1</span>.3.5<span class="w"> </span><span class="nv">matplotlib</span><span class="o">==</span><span class="m">3</span>.5.2<span class="w"> </span><span class="nv">seaborn</span><span class="o">==</span><span class="m">0</span>.11.2<span class="w"> </span>-i<span class="w"> </span>https://pypi.mirrors.ustc.edu.cn/simple/<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pandas</span><span class="o">==</span><span class="m">1</span>.3.5<span class="w"> </span><span class="nv">matplotlib</span><span class="o">==</span><span class="m">3</span>.5.2<span class="w"> </span><span class="nv">seaborn</span><span class="o">==</span><span class="m">0</span>.11.2<span class="w"> </span>-i<span class="w"> </span>https://pypi.mirrors.ustc.edu.cn/simple/<span class="w"> </span>><span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>><span class="p">&</span><span class="m">1</span>
 </pre></div>
 
      </div>
@@ -14660,7 +14660,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -14671,18 +14671,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cycler</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;seaborn-darkgrid&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"seaborn-darkgrid"</span><span class="p">)</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Dark2</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
 
 <span class="n">mpl_config</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;font.family&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft YaHei&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-    <span class="s2">&quot;axes.titlesize&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
-    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;axes.titlepad&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
-    <span class="s2">&quot;axes.labelsize&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span>
-    <span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">:</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+    <span class="s2">"font.family"</span><span class="p">:</span> <span class="s2">"Microsoft YaHei"</span><span class="p">,</span>
+    <span class="s2">"figure.figsize"</span><span class="p">:</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="s2">"axes.titlesize"</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="s2">"axes.titleweight"</span><span class="p">:</span> <span class="s2">"bold"</span><span class="p">,</span>
+    <span class="s2">"axes.titlepad"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
+    <span class="s2">"axes.labelsize"</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span>
+    <span class="s1">'axes.prop_cycle'</span><span class="p">:</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
 <span class="p">}</span>
 
 
@@ -14706,8 +14706,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\Administrator\AppData\Local\Temp\2\ipykernel_11204\4024306048.py:9: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
-  plt.style.use(&#34;seaborn-darkgrid&#34;)
+<pre>C:\Users\Administrator\AppData\Local\Temp\2\ipykernel_11204\4024306048.py:9: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as 'seaborn-v0_8-<style>'. Alternatively, directly use the seaborn API instead.
+  plt.style.use("seaborn-darkgrid")
 </pre>
 </div>
 </div>
@@ -14721,10 +14721,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./wholesale_price_of_agricultural_products.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./wholesale_price_of_agricultural_products.csv'</span><span class="p">)</span>
 <span class="n">raw_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14774,37 +14774,37 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>0</th>
       <td>202012</td>
-      <td>芹菜</td>
+      <td></td>
       <td>3.76</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
     </tr>
     <tr>
       <th>1</th>
       <td>202012</td>
-      <td>西红柿</td>
+      <td></td>
       <td>4.56</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
     </tr>
     <tr>
       <th>2</th>
       <td>202012</td>
-      <td>豆角</td>
+      <td></td>
       <td>7.90</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
     </tr>
     <tr>
       <th>3</th>
       <td>202012</td>
-      <td>白萝卜</td>
+      <td></td>
       <td>1.93</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
     </tr>
     <tr>
       <th>4</th>
       <td>202012</td>
-      <td>茄子</td>
+      <td></td>
       <td>4.97</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
     </tr>
   </tbody>
 </table>
@@ -14824,7 +14824,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">&#25968;&#25454;&#39044;&#22788;&#29702;<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">&#182;</a></h2>
+<h2 id="%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">Data Preprocessing<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14833,20 +14833,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 为贴近常用的农产品标价单价，将原本的价格单位`元/公斤`转化为`元/斤`。（一公斤等于一千克，一斤等于500克）</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ，Priceunit`/``/`。（，500）</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">raw_df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-    <span class="n">year_month</span> <span class="o">=</span> <span class="n">raw_df</span><span class="p">[</span><span class="s2">&quot;year_month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;str&quot;</span><span class="p">)</span>
-<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="s2">&quot;price_1kg&quot;</span><span class="p">},</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">year_month</span> <span class="o">=</span> <span class="n">raw_df</span><span class="p">[</span><span class="s2">"year_month"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"str"</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">"price"</span><span class="p">:</span><span class="s2">"price_1kg"</span><span class="p">},</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-    <span class="n">year</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year_month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">4</span><span class="p">])),</span>
-    <span class="n">month</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year_month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])),</span>
-    <span class="n">year_month</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year_month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
-    <span class="n">price_500g</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;price_1kg&quot;</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"year_month"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">4</span><span class="p">])),</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"year_month"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])),</span>
+    <span class="n">year_month</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"year_month"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s2">"</span><span class="p">),</span>
+    <span class="n">price_500g</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"price_1kg"</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span>
 <span class="p">)</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14901,9 +14901,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>0</th>
       <td>2020-12</td>
-      <td>芹菜</td>
+      <td></td>
       <td>3.76</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>1.880</td>
@@ -14911,9 +14911,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>1</th>
       <td>2020-12</td>
-      <td>西红柿</td>
+      <td></td>
       <td>4.56</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>2.280</td>
@@ -14921,9 +14921,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>2</th>
       <td>2020-12</td>
-      <td>豆角</td>
+      <td></td>
       <td>7.90</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>3.950</td>
@@ -14931,9 +14931,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>3</th>
       <td>2020-12</td>
-      <td>白萝卜</td>
+      <td></td>
       <td>1.93</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>0.965</td>
@@ -14941,9 +14941,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>4</th>
       <td>2020-12</td>
-      <td>茄子</td>
+      <td></td>
       <td>4.97</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>2.485</td>
@@ -14951,9 +14951,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>5</th>
       <td>2020-12</td>
-      <td>胡萝卜</td>
+      <td></td>
       <td>2.45</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>1.225</td>
@@ -14961,9 +14961,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>6</th>
       <td>2020-12</td>
-      <td>黄瓜</td>
+      <td></td>
       <td>4.40</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>2.200</td>
@@ -14971,9 +14971,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>7</th>
       <td>2020-12</td>
-      <td>莴笋</td>
+      <td></td>
       <td>3.16</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>1.580</td>
@@ -14981,9 +14981,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>8</th>
       <td>2020-12</td>
-      <td>青椒</td>
+      <td></td>
       <td>6.15</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>3.075</td>
@@ -14991,9 +14991,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>9</th>
       <td>2020-12</td>
-      <td>菜花</td>
+      <td></td>
       <td>3.86</td>
-      <td>蔬菜</td>
+      <td>Vegetable</td>
       <td>2020</td>
       <td>12</td>
       <td>1.930</td>
@@ -15016,7 +15016,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%90%84%E7%B1%BB%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E5%8F%98%E5%8C%96">&#21508;&#31867;&#20892;&#20135;&#21697;&#25209;&#21457;&#20215;&#30340;&#21382;&#21490;&#21464;&#21270;<a class="anchor-link" href="#%E5%90%84%E7%B1%BB%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E5%8F%98%E5%8C%96">&#182;</a></h2>
+<h2 id="%E5%90%84%E7%B1%BB%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E5%8F%98%E5%8C%96"><a class="anchor-link" href="#%E5%90%84%E7%B1%BB%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E5%8F%98%E5%8C%96">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15025,11 +15025,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_season</span><span class="p">(</span><span class="n">month</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;将月份映射到季度上&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Month"""</span>
     <span class="k">if</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">elif</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
@@ -15050,18 +15050,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_title</span><span class="p">(</span><span class="n">products</span><span class="p">,</span><span class="n">category</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">category</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">target_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;各种</span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">target_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"various </span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">"</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">max_target_show</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="n">target_name</span> <span class="o">=</span> <span class="s2">&quot;、&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">products</span><span class="p">[:</span><span class="n">max_target_show</span><span class="p">])</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_target_show</span><span class="p">:</span>
-            <span class="n">target_name</span> <span class="o">+=</span> <span class="s2">&quot;等&quot;</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target_name</span><span class="si">}</span><span class="s2">的价格历史变化（2020年6月 - 2022年5月）&quot;</span>
+        <span class="n">target_name</span> <span class="o">=</span> <span class="s2">"、"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">products</span><span class="p">[:</span><span class="n">max_target_show</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span> <span class="o">></span> <span class="n">max_target_show</span><span class="p">:</span>
+            <span class="n">target_name</span> <span class="o">+=</span> <span class="s2">""</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">target_name</span><span class="si">}</span><span class="s2">Price（2020year6month - 2022year5month）"</span>
     <span class="k">return</span> <span class="n">title</span>
 </pre></div>
 
@@ -15075,27 +15075,27 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span>
 
-<span class="n">UNIQUE_YEAR_MONTH</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year_month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<span class="n">UNIQUE_YEAR_MONTH</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"year_month"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">plot_ts</span><span class="p">(</span><span class="n">products</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fig</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;绘制部分产品的价格历史变化图</span>
+<span class="w">    </span><span class="sd">"""minutePrice</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    products : list or str, optional</span>
-<span class="sd">        产品名称或产品名称的列表</span>
+<span class="sd">        </span>
 <span class="sd">    category : str, optional</span>
-<span class="sd">        品类名称</span>
+<span class="sd">        Category</span>
 <span class="sd">    ax: mpl.axes.Axes, optional</span>
-<span class="sd">        如果为空，则会重新创建图层</span>
+<span class="sd">         if ，</span>
 <span class="sd">    fig: matplotlib.Figure, optional</span>
-<span class="sd">        如果为空，则会重新创建画布</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">         if ，</span>
+<span class="sd">    """</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
         <span class="n">_products</span> <span class="o">=</span> <span class="n">products</span>
@@ -15103,38 +15103,38 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         <span class="n">_products</span> <span class="o">=</span> <span class="p">[</span><span class="n">products</span><span class="p">]</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">_products</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
-            <span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;category == &#39;</span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)[</span><span class="s2">&quot;product&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+            <span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">"category == '</span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">'"</span><span class="p">)[</span><span class="s2">"product"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;未正确设置products或category&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">"productscategory"</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="p">((</span><span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">fig</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)):</span>
         <span class="n">_fig</span><span class="p">,</span> <span class="n">_ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">_fig</span><span class="p">,</span> <span class="n">_ax</span> <span class="o">=</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
 
-    <span class="c1"># 绘制价格历史变化折线图</span>
+    <span class="c1"># Price</span>
 
     <span class="n">y_max</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">product</span> <span class="ow">in</span> <span class="n">_products</span><span class="p">:</span>
-        <span class="n">cdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;product == &#39;</span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;year_month&quot;</span><span class="p">)</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">[</span><span class="s2">&quot;price_500g&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">cdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">"product == '</span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"year_month"</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">[</span><span class="s2">"price_500g"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
         <span class="n">y_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">y_max</span><span class="p">)</span>
-        <span class="n">_ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">UNIQUE_YEAR_MONTH</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;-o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">product</span><span class="p">)</span>
+        <span class="n">_ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">UNIQUE_YEAR_MONTH</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">"-o"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">product</span><span class="p">)</span>
     <span class="n">_ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
     <span class="n">tick_labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">UNIQUE_YEAR_MONTH</span><span class="p">]</span>
     <span class="n">_ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">UNIQUE_YEAR_MONTH</span><span class="p">)),</span> <span class="n">tick_labels</span><span class="p">)</span>
 
     <span class="n">title</span> <span class="o">=</span> <span class="n">get_title</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">category</span><span class="p">)</span>
     <span class="n">_ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-    <span class="n">_ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;批发价（元/斤）&quot;</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-    <span class="n">_ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;年月&quot;</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">_ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"（/）"</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">_ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"yearmonth"</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-    <span class="c1"># 使用imshow绘制四季背景色</span>
+    <span class="c1"># using imshow</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="n">get_season</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">UNIQUE_YEAR_MONTH</span><span class="p">]]</span>
 
     <span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">(</span>
-        <span class="p">[</span><span class="s1">&#39;LightBlue&#39;</span><span class="p">,</span> <span class="s2">&quot;YellowGreen&quot;</span><span class="p">,</span> <span class="s2">&quot;Tomato&quot;</span><span class="p">,</span> <span class="s2">&quot;SandyBrown&quot;</span><span class="p">])</span>
+        <span class="p">[</span><span class="s1">'LightBlue'</span><span class="p">,</span> <span class="s2">"YellowGreen"</span><span class="p">,</span> <span class="s2">"Tomato"</span><span class="p">,</span> <span class="s2">"SandyBrown"</span><span class="p">])</span>
 
     <span class="n">ims</span> <span class="o">=</span> <span class="n">_ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span>
         <span class="n">data</span><span class="p">,</span>
@@ -15142,21 +15142,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
         <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
 
-    <span class="c1"># 调整ticks的位置，使得label可以对应到每个颜色的中央</span>
+    <span class="c1"># ticks，labelcan Color</span>
     <span class="n">colorbar_ticks</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">1.15</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">,</span> <span class="mf">2.6</span><span class="p">]</span>
-    <span class="n">colorbar_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;冬&quot;</span><span class="p">,</span> <span class="s2">&quot;春&quot;</span><span class="p">,</span> <span class="s2">&quot;夏&quot;</span><span class="p">,</span> <span class="s2">&quot;秋&quot;</span><span class="p">]</span>
+    <span class="n">colorbar_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">]</span>
     <span class="n">colorbar</span> <span class="o">=</span> <span class="n">_fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">ims</span><span class="p">,</span>
                              <span class="n">ax</span><span class="o">=</span><span class="n">_ax</span><span class="p">,</span>
-                             <span class="n">label</span><span class="o">=</span><span class="s2">&quot;四季&quot;</span><span class="p">,</span>
+                             <span class="n">label</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span>
                              <span class="n">ticks</span><span class="o">=</span><span class="n">colorbar_ticks</span><span class="p">,</span>
-                             <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
+                             <span class="n">orientation</span><span class="o">=</span><span class="s1">'horizontal'</span><span class="p">,</span>
                              <span class="n">shrink</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
     <span class="n">colorbar</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">(</span><span class="n">colorbar_labels</span><span class="p">)</span>
-    <span class="n">_ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
-    <span class="n">_ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+    <span class="n">_ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'upper right'</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">_ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">"auto"</span><span class="p">)</span>
 
 
-<span class="c1"># plot_ts(category=&#39;水产品&#39;)</span>
+<span class="c1"># plot_ts(category='')</span>
 </pre></div>
 
      </div>
@@ -15171,7 +15171,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E7%95%9C%E7%A6%BD%E4%BA%A7%E5%93%81">&#30044;&#31165;&#20135;&#21697;<a class="anchor-link" href="#%E7%95%9C%E7%A6%BD%E4%BA%A7%E5%93%81">&#182;</a></h3>
+<h3 id="%E7%95%9C%E7%A6%BD%E4%BA%A7%E5%93%81"><a class="anchor-link" href="#%E7%95%9C%E7%A6%BD%E4%BA%A7%E5%93%81">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15180,10 +15180,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;畜禽产品&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15225,10 +15225,10 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>从畜禽产品的价格历史变化可以看出：</p>
+<p>PriceWe can see ：</p>
 <ul>
-<li>猪肉的价格有一个明显的下降过程。主要下降的时间段发生在2021年2月到2021年10月，从20元/斤以上的价格下降到10元/斤左右。</li>
-<li>除猪肉之外的其他畜禽产品价格则较为稳定。</li>
+<li>Price。main time2021year2month2021year10month，20/Price10/。</li>
+<li>Price。</li>
 </ul>
 
 </div>
@@ -15241,7 +15241,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E6%B0%B4%E4%BA%A7%E5%93%81">&#27700;&#20135;&#21697;<a class="anchor-link" href="#%E6%B0%B4%E4%BA%A7%E5%93%81">&#182;</a></h3>
+<h3 id="%E6%B0%B4%E4%BA%A7%E5%93%81"><a class="anchor-link" href="#%E6%B0%B4%E4%BA%A7%E5%93%81">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15250,10 +15250,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;水产品&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15295,17 +15295,17 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>从水产品的价格历史变化可以看出：</p>
+<p>PriceWe can see ：</p>
 <ul>
-<li>水产品的价格整体呈小幅上升的趋势。</li>
-<li>鲫鱼、鲤鱼等淡水鱼在2021年的春季出现明显的价格上涨，并在当年夏秋季逐渐回落。</li>
+<li>Price。</li>
+<li>、2021yearPrice，year。</li>
 </ul>
-<p>当时有一份2021年5月份关于淡水鱼价格上升的<a href="http://henan.china.com.cn/finance/2021-05/25/content_41572802.htm">报道</a>，其中提到了一些可能的原因：</p>
+<p>hour2021year5MonthPrice<a href="http://henan.china.com.cn/finance/2021-05/25/content_41572802.htm"></a>，where may ：</p>
 <ul>
-<li>以往淡水鱼价格较低，导致淡水鱼养殖面积减少</li>
-<li>春节期间的供应减少了当前的供给</li>
-<li>气温较高时活鱼在运输中的损耗大</li>
-<li>夏季为淡水鱼的需求旺季</li>
+<li>Price，Area</li>
+<li></li>
+<li>hour</li>
+<li></li>
 </ul>
 
 </div>
@@ -15318,7 +15318,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E6%B0%B4%E6%9E%9C">&#27700;&#26524;<a class="anchor-link" href="#%E6%B0%B4%E6%9E%9C">&#182;</a></h3>
+<h3 id="%E6%B0%B4%E6%9E%9C"><a class="anchor-link" href="#%E6%B0%B4%E6%9E%9C">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15327,10 +15327,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;水果&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15372,10 +15372,10 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>水果有着更加明显的季节性</p>
+<p>Seasonal</p>
 <ul>
-<li>巨峰葡萄在秋季价格较低，而在春末夏初达到价格顶峰。</li>
-<li>人人都喜欢的西瓜在夏季和初秋的价格会比较低，因此即使是遇到了秋老虎，我们仍然可以买到便宜的西瓜。</li>
+<li>Price，Price。</li>
+<li> and Pricecompare， therefore i.e. ，can 。</li>
 </ul>
 
 </div>
@@ -15388,7 +15388,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E8%94%AC%E8%8F%9C">&#34092;&#33756;<a class="anchor-link" href="#%E8%94%AC%E8%8F%9C">&#182;</a></h3>
+<h3 id="%E8%94%AC%E8%8F%9C">Vegetable<a class="anchor-link" href="#%E8%94%AC%E8%8F%9C">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15397,10 +15397,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;蔬菜&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">"Vegetable"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15442,7 +15442,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>蔬菜种类众多，全部展示出来的效果比较差。后面会用其他方式分析其价格变化的规律。</p>
+<p>Vegetable，Effectivenesscompare。analysisPrice。</p>
 
 </div>
 </div>
@@ -15454,7 +15454,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E6%B3%A2%E5%8A%A8%E5%B9%85%E5%BA%A6">&#20892;&#20135;&#21697;&#25209;&#21457;&#20215;&#30340;&#21382;&#21490;&#27874;&#21160;&#24133;&#24230;<a class="anchor-link" href="#%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E6%B3%A2%E5%8A%A8%E5%B9%85%E5%BA%A6">&#182;</a></h2>
+<h2 id="%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E6%B3%A2%E5%8A%A8%E5%B9%85%E5%BA%A6"><a class="anchor-link" href="#%E5%86%9C%E4%BA%A7%E5%93%81%E6%89%B9%E5%8F%91%E4%BB%B7%E7%9A%84%E5%8E%86%E5%8F%B2%E6%B3%A2%E5%8A%A8%E5%B9%85%E5%BA%A6">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15463,34 +15463,34 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 基于农产品和品类的数据汇总</span>
-<span class="n">product_gdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;product&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
-    <span class="n">price_500g_std</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;price_500g&quot;</span><span class="p">,</span> <span class="s2">&quot;std&quot;</span><span class="p">),</span>
-    <span class="n">price_500g_max</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;price_500g&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">),</span>
-    <span class="n">price_500g_min</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;price_500g&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">),</span>
-    <span class="n">price_500g_mean</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;price_500g&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># based on  and Categorydata</span>
+<span class="n">product_gdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"product"</span><span class="p">,</span> <span class="s2">"category"</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">price_500g_std</span><span class="o">=</span><span class="p">(</span><span class="s2">"price_500g"</span><span class="p">,</span> <span class="s2">"std"</span><span class="p">),</span>
+    <span class="n">price_500g_max</span><span class="o">=</span><span class="p">(</span><span class="s2">"price_500g"</span><span class="p">,</span> <span class="s2">"max"</span><span class="p">),</span>
+    <span class="n">price_500g_min</span><span class="o">=</span><span class="p">(</span><span class="s2">"price_500g"</span><span class="p">,</span> <span class="s2">"min"</span><span class="p">),</span>
+    <span class="n">price_500g_mean</span><span class="o">=</span><span class="p">(</span><span class="s2">"price_500g"</span><span class="p">,</span> <span class="s2">"mean"</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="c1"># 计算价格的变异系数（coefficient of variation）</span>
+<span class="c1"># calculatePrice（coefficient of variation）</span>
 <span class="n">product_gdf</span> <span class="o">=</span> <span class="n">product_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-    <span class="n">price_500g_varc</span><span class="o">=</span><span class="n">product_gdf</span><span class="p">[</span><span class="s2">&quot;price_500g_std&quot;</span><span class="p">]</span> <span class="o">/</span>
-    <span class="n">product_gdf</span><span class="p">[</span><span class="s2">&quot;price_500g_mean&quot;</span><span class="p">]</span>
+    <span class="n">price_500g_varc</span><span class="o">=</span><span class="n">product_gdf</span><span class="p">[</span><span class="s2">"price_500g_std"</span><span class="p">]</span> <span class="o">/</span>
+    <span class="n">product_gdf</span><span class="p">[</span><span class="s2">"price_500g_mean"</span><span class="p">]</span>
 <span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">plot_price_varc_chart</span><span class="p">():</span>
     <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">product_gdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;price_500g_varc&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;price_500g_mean&quot;</span><span class="p">,</span>
-                    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">product</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">product_gdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()[[</span><span class="s2">&quot;product&quot;</span><span class="p">,</span> <span class="s2">&quot;price_500g_varc&quot;</span><span class="p">,</span> <span class="s2">&quot;price_500g_mean&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">product_gdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"category"</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">x</span><span class="o">=</span><span class="s2">"price_500g_varc"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"price_500g_mean"</span><span class="p">,</span>
+                    <span class="n">hue</span><span class="o">=</span><span class="s2">"category"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">product</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">product_gdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()[[</span><span class="s2">"product"</span><span class="p">,</span> <span class="s2">"price_500g_varc"</span><span class="p">,</span> <span class="s2">"price_500g_mean"</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
 
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;各个农产品的历史平均价格和价格波动幅度的对比&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;历史价格波动幅度（历史价格的变异系数）&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;历史平均价格（元/斤）&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Price and Price Fluctuation"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Price Fluctuation（Price）"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Price（/）"</span><span class="p">)</span>
 
 
 <span class="n">plot_price_varc_chart</span><span class="p">()</span>
@@ -15535,17 +15535,17 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>上面对比了各个农产品的历史平均价格和历史价格的波动幅度：</p>
+<p>Price and Price：</p>
 <ul>
-<li>波动幅度较大的农产品以蔬菜为主。且在蔬菜里面，瓜果类的价格变动会更高，根茎类/菇类的蔬菜价格波动较小，叶菜类的价格波动居中。这可能和不同蔬菜的培育和存储特点有关。</li>
-<li>猪肉的位置非常显眼，其在平均价格较高的情况下仍然有较大的价格波动幅度。其价格变化也确实在过去几年引起了人们的普遍关注。</li>
-<li>西瓜和巨峰葡萄是水果品类中价格波动最大的两个产品。这可能体现了其较强的季节性。</li>
-<li>价格较高的牛肉、羊肉等的价格波动幅度较小。</li>
+<li>Vegetable。Vegetable，Price，/VegetablePrice Fluctuation，Price Fluctuation。may  and different Vegetable and 。</li>
+<li>，PricePrice Fluctuation。Priceyear。</li>
+<li> and CategoryPrice Fluctuation。may Seasonal。</li>
+<li>Price、Price Fluctuation。</li>
 </ul>
 <p>PS：</p>
 $$  
 
-历史价格波动幅度 = 历史价格的变异系数 = \frac{历史价格的标准差}{历史价格的平均值}  
+Price Fluctuation = Price = \frac{Pricestd}{Pricemean}  
 
 $$
 </div>
@@ -15558,14 +15558,14 @@ $$
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E8%AE%A1%E7%AE%97%E5%86%9C%E4%BA%A7%E5%93%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%B6%8B%E5%8A%BF%E5%92%8C%E5%AD%A3%E8%8A%82%E6%80%A7">&#20351;&#29992;&#22810;&#20803;&#22238;&#24402;&#35745;&#31639;&#20892;&#20135;&#21697;&#20215;&#26684;&#30340;&#36235;&#21183;&#21644;&#23395;&#33410;&#24615;<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E8%AE%A1%E7%AE%97%E5%86%9C%E4%BA%A7%E5%93%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%B6%8B%E5%8A%BF%E5%92%8C%E5%AD%A3%E8%8A%82%E6%80%A7">&#182;</a></h2><h3 id="%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E5%AD%A3%E8%8A%82%E6%80%A7">&#22914;&#20309;&#35745;&#31639;&#23395;&#33410;&#24615;<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E5%AD%A3%E8%8A%82%E6%80%A7">&#182;</a></h3><p>下面使用多元回归的方法来分析价格的季节性。以西瓜为例，其步骤为：</p>
+<h2 id="%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E8%AE%A1%E7%AE%97%E5%86%9C%E4%BA%A7%E5%93%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%B6%8B%E5%8A%BF%E5%92%8C%E5%AD%A3%E8%8A%82%E6%80%A7">using regressioncalculatePrice and Seasonal<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E8%AE%A1%E7%AE%97%E5%86%9C%E4%BA%A7%E5%93%81%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%B6%8B%E5%8A%BF%E5%92%8C%E5%AD%A3%E8%8A%82%E6%80%A7">¶</a></h2><h3 id="%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E5%AD%A3%E8%8A%82%E6%80%A7">calculateSeasonal<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E5%AD%A3%E8%8A%82%E6%80%A7">¶</a></h3><p>using regressionanalysisPriceSeasonal。，：</p>
 <ol>
-<li>选取西瓜的历史批发价数据。本数据集中一共有24个月的数据。</li>
-<li>将每个月的价格视为回归的目标变量。</li>
-<li>将24个月按照顺序赋予从1到24的序号，作为趋势的特征变量。</li>
-<li>对月份进行One-Hot编码，得到从1月到12月的12个特征变量。每条西瓜的价格记录都会在其中某个月的特征变量中标注为1，其他月份则为0。</li>
-<li>基于上述特征变量，针对目标变量价格构建多元回归模型</li>
-<li>以回归模型针对趋势特征变量的系数代表价格变化趋势，以各个月份特征变量的系数代表该月对价格的影响，即季节性影响。</li>
+<li>data。dataset24monthdata。</li>
+<li>monthPriceregressionvariable。</li>
+<li>24month124，featurevariable。</li>
+<li>MonthOne-Hotencoding，1month12month12featurevariable。Pricerecordwhere monthfeaturevariable1，Month0。</li>
+<li>based on featurevariable，targeting variablePriceregressionmodel</li>
+<li>regressionmodeltargeting featurevariablePrice，MonthfeaturevariablemonthPrice，i.e. Seasonal。</li>
 </ol>
 
 </div>
@@ -15576,24 +15576,24 @@ $$
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 
 <span class="k">def</span> <span class="nf">fit_regression_model</span><span class="p">(</span><span class="n">product</span><span class="p">):</span>
 
-    <span class="n">sdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;product == &#39;</span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
-    <span class="n">sdf</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;year_month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+    <span class="n">sdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">"product == '</span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
+    <span class="n">sdf</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"year_month"</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
         <span class="n">ts_rank</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">sdf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
         <span class="n">constant</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">month</span> <span class="o">=</span> <span class="n">sdf</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;month-</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">02</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">month</span> <span class="o">=</span> <span class="n">sdf</span><span class="p">[</span><span class="s2">"month"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="sa">f</span><span class="s2">"month-</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">02</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="p">)</span>
-    <span class="n">sdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">sdf</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">sdf</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">])],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">sdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">sdf</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">sdf</span><span class="p">[</span><span class="s2">"month"</span><span class="p">])],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="c1"># 包含1个序列，12个月和一个常数列，所以是最后14列</span>
+    <span class="c1"># contains1，12month and ， so 14</span>
     <span class="n">feature_names</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">14</span><span class="p">:]</span>
-    <span class="n">target_name</span> <span class="o">=</span> <span class="s2">&quot;price_500g&quot;</span>
+    <span class="n">target_name</span> <span class="o">=</span> <span class="s2">"price_500g"</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">sdf</span><span class="p">[</span><span class="n">feature_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">sdf</span><span class="p">[</span><span class="n">target_name</span><span class="p">]</span>
 
@@ -15601,7 +15601,7 @@ $$
     <span class="n">fit_result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">model</span><span class="p">,</span><span class="n">fit_result</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span>
 
-<span class="n">product</span> <span class="o">=</span> <span class="s1">&#39;西瓜&#39;</span>
+<span class="n">product</span> <span class="o">=</span> <span class="s1">''</span>
 <span class="n">model</span><span class="p">,</span><span class="n">fit_result</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">fit_regression_model</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
 </pre></div>
 
@@ -15617,7 +15617,7 @@ $$
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>下面是以西瓜为例的拟合结果，可以看到各个特征变量的参数及其P值的结果</p>
+<p>result，We can see featurevariableparameterPresult</p>
 
 </div>
 </div>
@@ -15627,7 +15627,7 @@ $$
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fit_result</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -15757,7 +15757,7 @@ $$
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>通过上述方法，我们可以从价格的时间序列中分离出价格的趋势和季节性。分离后的效果如下图所示。</p>
+<p>through ，can PriceTime SeriesminutePrice and Seasonal。minuteEffectivenessas follows。</p>
 
 </div>
 </div>
@@ -15767,43 +15767,43 @@ $$
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_regression_result</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">fit_result</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    绘制回归拟合后的图表，包括</span>
-<span class="sd">    - 估计值和实际值的对比</span>
-<span class="sd">    - 趋势</span>
-<span class="sd">    - 季节性</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    regression，including </span>
+<span class="sd">    -  and </span>
+<span class="sd">    - </span>
+<span class="sd">    - Seasonal</span>
+<span class="sd">    """</span>
     <span class="n">year_month</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">UNIQUE_YEAR_MONTH</span><span class="p">]</span>
 
     <span class="n">fig</span><span class="p">,(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">,</span><span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
     <span class="n">params</span> <span class="o">=</span> <span class="n">fit_result</span><span class="o">.</span><span class="n">params</span>
     
-    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_month</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">X</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;估计值&quot;</span><span class="p">)</span>
-    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_month</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;实际值&quot;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_month</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">X</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_month</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
-    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;估计值和实际值对比&quot;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">" and "</span><span class="p">)</span>
 
     <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">year_month</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="n">trend</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;constant&quot;</span><span class="p">]</span>
+    <span class="n">trend</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">params</span><span class="p">[</span><span class="s2">"ts_rank"</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">params</span><span class="p">[</span><span class="s2">"constant"</span><span class="p">]</span>
 
     <span class="n">trend_value</span> <span class="o">=</span> <span class="p">[</span><span class="n">trend</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span>  <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_month</span><span class="p">,</span> <span class="n">trend_value</span><span class="p">)</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">min</span><span class="p">(</span><span class="n">trend_value</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">),</span><span class="nb">max</span><span class="p">(</span><span class="n">trend_value</span><span class="p">)</span> <span class="o">*</span><span class="mf">1.5</span><span class="p">)</span>
-    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;趋势&quot;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 
-    <span class="n">month_coef</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">,</span><span class="s2">&quot;constant&quot;</span><span class="p">])</span>
+    <span class="n">month_coef</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"ts_rank"</span><span class="p">,</span><span class="s2">"constant"</span><span class="p">])</span>
     <span class="n">month_coef_values</span> <span class="o">=</span> <span class="n">month_coef</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
     <span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">month_coef</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">month_coef_values</span> <span class="p">)</span>
     <span class="n">ax3</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">min</span><span class="p">(</span><span class="n">month_coef_values</span><span class="p">)</span> <span class="o">*</span><span class="mf">1.5</span><span class="p">),</span><span class="nb">max</span><span class="p">(</span><span class="n">month_coef_values</span><span class="p">)</span> <span class="o">*</span><span class="mf">1.5</span><span class="p">)</span>
-    <span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;季节性&quot;</span><span class="p">)</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;针对</span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">的时间序列分析&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Seasonal"</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">"targeting </span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">Time Seriesanalysis"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">)</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     
     
@@ -15854,7 +15854,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E8%AE%A1%E7%AE%97%E6%89%80%E6%9C%89%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E4%BF%A1%E6%81%AF">&#35745;&#31639;&#25152;&#26377;&#20892;&#20135;&#21697;&#30340;&#23395;&#33410;&#24615;&#20449;&#24687;<a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E6%89%80%E6%9C%89%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E4%BF%A1%E6%81%AF">&#182;</a></h3>
+<h3 id="%E8%AE%A1%E7%AE%97%E6%89%80%E6%9C%89%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E4%BF%A1%E6%81%AF">calculateSeasonalinfo<a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E6%89%80%E6%9C%89%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E4%BF%A1%E6%81%AF">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15863,30 +15863,30 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">TEST_ALPHA_VALUE</span> <span class="o">=</span> <span class="mf">0.05</span>
 
 <span class="k">def</span> <span class="nf">get_season_info</span><span class="p">(</span><span class="n">fit_result</span><span class="p">,):</span>
     
-    <span class="n">pvalue_check</span> <span class="o">=</span> <span class="n">fit_result</span><span class="o">.</span><span class="n">pvalues</span> <span class="o">&lt;</span> <span class="n">TEST_ALPHA_VALUE</span>
+    <span class="n">pvalue_check</span> <span class="o">=</span> <span class="n">fit_result</span><span class="o">.</span><span class="n">pvalues</span> <span class="o"><</span> <span class="n">TEST_ALPHA_VALUE</span>
     <span class="n">params</span> <span class="o">=</span> <span class="n">fit_result</span><span class="o">.</span><span class="n">params</span>
 
     <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">UNIQUE_YEAR_MONTH</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="n">trend</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;constant&quot;</span><span class="p">]</span>
+    <span class="n">trend</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">params</span><span class="p">[</span><span class="s2">"ts_rank"</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">params</span><span class="p">[</span><span class="s2">"constant"</span><span class="p">]</span>
     <span class="n">trend_value</span> <span class="o">=</span> <span class="p">[</span><span class="n">trend</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span>  <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
     
-    <span class="n">season_params</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">,</span><span class="s2">&quot;constant&quot;</span><span class="p">])</span>
+    <span class="n">season_params</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"ts_rank"</span><span class="p">,</span><span class="s2">"constant"</span><span class="p">])</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s2">&quot;is_trend_significant&quot;</span><span class="p">:</span><span class="n">pvalue_check</span><span class="p">[</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;trend_std&quot;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">trend_value</span><span class="p">),</span><span class="mi">4</span><span class="p">),</span>
-        <span class="s2">&quot;trend_slope&quot;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">],</span><span class="mi">4</span><span class="p">),</span>
-        <span class="s2">&quot;season_significant_rate&quot;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pvalue_check</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">,</span><span class="s2">&quot;constant&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">4</span><span class="p">),</span>
-        <span class="s2">&quot;season_std&quot;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">season_params</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">4</span><span class="p">),</span>
-        <span class="s2">&quot;season_values&quot;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">season_params</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
-        <span class="s2">&quot;season_pvalues&quot;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">fit_result</span><span class="o">.</span><span class="n">pvalues</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;ts_rank&quot;</span><span class="p">,</span><span class="s2">&quot;constant&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+        <span class="s2">"is_trend_significant"</span><span class="p">:</span><span class="n">pvalue_check</span><span class="p">[</span><span class="s2">"ts_rank"</span><span class="p">],</span>
+        <span class="s2">"trend_std"</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">trend_value</span><span class="p">),</span><span class="mi">4</span><span class="p">),</span>
+        <span class="s2">"trend_slope"</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s2">"ts_rank"</span><span class="p">],</span><span class="mi">4</span><span class="p">),</span>
+        <span class="s2">"season_significant_rate"</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pvalue_check</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"ts_rank"</span><span class="p">,</span><span class="s2">"constant"</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">4</span><span class="p">),</span>
+        <span class="s2">"season_std"</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">season_params</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">4</span><span class="p">),</span>
+        <span class="s2">"season_values"</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">season_params</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+        <span class="s2">"season_pvalues"</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">fit_result</span><span class="o">.</span><span class="n">pvalues</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"ts_rank"</span><span class="p">,</span><span class="s2">"constant"</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 
     <span class="p">}</span>
 
@@ -15903,18 +15903,18 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_all_prdocut_season_info</span><span class="p">():</span>
-    <span class="n">products</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;product&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+    <span class="n">products</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"product"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
     <span class="n">season_info_collect</span>  <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">product</span> <span class="ow">in</span> <span class="n">products</span><span class="p">:</span>
         <span class="n">model</span><span class="p">,</span><span class="n">fit_result</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">fit_regression_model</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
         <span class="n">season_info</span> <span class="o">=</span> <span class="n">get_season_info</span><span class="p">(</span><span class="n">fit_result</span><span class="p">)</span>
         <span class="n">season_info</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s2">&quot;product&quot;</span><span class="p">:</span><span class="n">product</span>
+                <span class="s2">"product"</span><span class="p">:</span><span class="n">product</span>
             <span class="p">}</span>
         <span class="p">)</span>
         <span class="n">season_info_collect</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">season_info</span><span class="p">)</span>
@@ -15935,18 +15935,18 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">season_mdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">season_df</span><span class="p">,</span><span class="n">product_gdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span><span class="n">on</span><span class="o">=</span><span class="s2">&quot;product&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">season_mdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">season_df</span><span class="p">,</span><span class="n">product_gdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span><span class="n">on</span><span class="o">=</span><span class="s2">"product"</span><span class="p">)</span>
 <span class="n">season_mdf</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-    <span class="n">season_varc</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;season_std&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;price_500g_mean&quot;</span><span class="p">],</span>
-    <span class="n">trend_varc</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;trend_std&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;price_500g_mean&quot;</span><span class="p">],</span>
-    <span class="n">season_varc_percent</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;season_std&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;price_500g_std&quot;</span><span class="p">],</span>
-    <span class="n">trend_varc_percent</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;trend_std&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">&quot;price_500g_std&quot;</span><span class="p">],</span>
+    <span class="n">season_varc</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">"season_std"</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">"price_500g_mean"</span><span class="p">],</span>
+    <span class="n">trend_varc</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">"trend_std"</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">"price_500g_mean"</span><span class="p">],</span>
+    <span class="n">season_varc_percent</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">"season_std"</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">"price_500g_std"</span><span class="p">],</span>
+    <span class="n">trend_varc_percent</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="p">[</span><span class="s2">"trend_std"</span><span class="p">]</span><span class="o">/</span><span class="n">season_mdf</span><span class="p">[</span><span class="s2">"price_500g_std"</span><span class="p">],</span>
 <span class="p">)</span>
 
-<span class="c1"># season_mdf.sort_values(&quot;season_varc&quot;,ascending=False).head(1)</span>
+<span class="c1"># season_mdf.sort_values("season_varc",ascending=False).head(1)</span>
 </pre></div>
 
      </div>
@@ -15961,7 +15961,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E6%9B%B4%E5%BC%BA%EF%BC%9F">&#21738;&#20123;&#20892;&#20135;&#21697;&#30340;&#23395;&#33410;&#24615;&#26356;&#24378;&#65311;<a class="anchor-link" href="#%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E6%9B%B4%E5%BC%BA%EF%BC%9F">&#182;</a></h3>
+<h3 id="%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E6%9B%B4%E5%BC%BA%EF%BC%9F">Seasonal？<a class="anchor-link" href="#%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E5%AD%A3%E8%8A%82%E6%80%A7%E6%9B%B4%E5%BC%BA%EF%BC%9F">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15970,35 +15970,35 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_seasonal_comapre</span><span class="p">():</span>
     <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-    <span class="n">x_col</span> <span class="o">=</span> <span class="s2">&quot;season_varc&quot;</span>
-    <span class="n">y_col</span> <span class="o">=</span><span class="s2">&quot;price_500g_mean&quot;</span>
-    <span class="n">size_col</span> <span class="o">=</span> <span class="s2">&quot;season_significant_rate&quot;</span>
+    <span class="n">x_col</span> <span class="o">=</span> <span class="s2">"season_varc"</span>
+    <span class="n">y_col</span> <span class="o">=</span><span class="s2">"price_500g_mean"</span>
+    <span class="n">size_col</span> <span class="o">=</span> <span class="s2">"season_significant_rate"</span>
 
-    <span class="n">x_col</span> <span class="o">=</span> <span class="s2">&quot;season_significant_rate&quot;</span>
-    <span class="n">y_col</span> <span class="o">=</span> <span class="s2">&quot;season_varc&quot;</span>
-    <span class="n">size_col</span> <span class="o">=</span> <span class="s2">&quot;season_varc_percent&quot;</span>
+    <span class="n">x_col</span> <span class="o">=</span> <span class="s2">"season_significant_rate"</span>
+    <span class="n">y_col</span> <span class="o">=</span> <span class="s2">"season_varc"</span>
+    <span class="n">size_col</span> <span class="o">=</span> <span class="s2">"season_varc_percent"</span>
 
-    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">season_mdf</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span><span class="n">x</span><span class="o">=</span><span class="n">x_col</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">y_col</span><span class="p">,</span>
-        <span class="n">size</span><span class="o">=</span><span class="n">size_col</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;category&quot;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">400</span><span class="p">),</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;季节性的统计意义显著性程度&quot;</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">season_mdf</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"category"</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span><span class="n">x</span><span class="o">=</span><span class="n">x_col</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">y_col</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="n">size_col</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s2">"category"</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">400</span><span class="p">),</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Seasonal"</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.1</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;季节性对于价格的实际影响程度&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"SeasonalPrice"</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,)</span>
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">product</span> <span class="ow">in</span> <span class="n">season_mdf</span><span class="p">[[</span><span class="n">x_col</span><span class="p">,</span><span class="n">y_col</span><span class="p">,</span><span class="s2">&quot;product&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">product</span> <span class="ow">in</span> <span class="n">season_mdf</span><span class="p">[[</span><span class="n">x_col</span><span class="p">,</span><span class="n">y_col</span><span class="p">,</span><span class="s2">"product"</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">product</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;不同农产品的季节性程度对比&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],</span><span class="s2">&quot;--&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.1</span><span class="p">],[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span><span class="s2">&quot;--&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"different Seasonal"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],</span><span class="s2">"--"</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.1</span><span class="p">],[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span><span class="s2">"--"</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="s2">&quot;①&quot;</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="s2">&quot;②&quot;</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="s2">&quot;③&quot;</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="s2">&quot;④&quot;</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="s2">"①"</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">"size"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">"color"</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="s2">"②"</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">"size"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">"color"</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="s2">"③"</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">"size"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">"color"</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="s2">"④"</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">"size"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">"color"</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
 <span class="n">plot_seasonal_comapre</span><span class="p">()</span>
 </pre></div>
 
@@ -16041,19 +16041,19 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>上图的横坐标是农产品的季节性在统计意义上的显著性程度，纵坐标是季节性对农产品价格的实际影响程度。二者的数值越高，则代表农产品的季节性越强烈。</p>
-<p>基于这两个数值，分别以0.2和0.1作为阈值，可以将农产品划分为四组。</p>
+<p>Seasonal，SeasonalPrice。，Seasonal。</p>
+<p>based on ，respectively0.2 and 0.1，can minute。</p>
 <ul>
-<li>第1组是我们最感兴趣的，其既有统计意义上显著性，在实际意义上也大幅影响价格波动。这一组以蔬菜和水果为主。</li>
-<li>唯一的例外是猪肉。虽然猪肉有一定的季节性，但在过去几年，由于其降价趋势的影响，其季节性体现得不明显。</li>
-<li>第4组的农产品虽然有统计意义上显著的季节性，但实际对价格影响较小，在实际生活中往往可以忽略不记。</li>
+<li>1，，Price Fluctuation。Vegetable and 。</li>
+<li>。 although Seasonal，year，，Seasonal。</li>
+<li>4 although Seasonal，Price，can 。</li>
 </ul>
 <p>PS：</p>
 $$  
-季节性在统计意义上的显著性程度 = \frac{通过显著性检验的月份}{12}  
+Seasonal = \frac{through Month}{12}  
 $$$$  
 
-季节性对于价格的实际影响程度 = \frac{季节性波动的标准差}{价格的平均值}  
+SeasonalPrice = \frac{Seasonalstd}{Pricemean}  
 
 $$
 </div>
@@ -16064,11 +16064,11 @@ $$
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">product</span><span class="o">=</span><span class="s2">&quot;豆角&quot;</span>
-<span class="c1"># product=&quot;西瓜&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">product</span><span class="o">=</span><span class="s2">""</span>
+<span class="c1"># product=""</span>
 <span class="n">plot_product_regression</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
 </pre></div>
 
@@ -16111,7 +16111,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E6%97%B6%E4%BB%A4%E8%94%AC%E8%8F%9C%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F">&#26102;&#20196;&#34092;&#33756;&#26377;&#21738;&#20123;&#65311;<a class="anchor-link" href="#%E6%97%B6%E4%BB%A4%E8%94%AC%E8%8F%9C%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F">&#182;</a></h2>
+<h2 id="%E6%97%B6%E4%BB%A4%E8%94%AC%E8%8F%9C%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F">SeasonalVegetable？<a class="anchor-link" href="#%E6%97%B6%E4%BB%A4%E8%94%AC%E8%8F%9C%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F">¶</a></h2>
 </div>
 </div>
 </div>
@@ -16120,28 +16120,28 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_seasonal_heatmap</span><span class="p">(</span><span class="n">min_season_significant_rate</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">min_season_varc</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">season_varc_percent</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;season_significant_rate &gt; </span><span class="si">{</span><span class="n">min_season_significant_rate</span><span class="si">}</span><span class="s2"> and season_varc &gt; </span><span class="si">{</span><span class="n">min_season_varc</span><span class="si">}</span><span class="s2"> and season_varc_percent &gt; </span><span class="si">{</span><span class="n">season_varc_percent</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"season_significant_rate > </span><span class="si">{</span><span class="n">min_season_significant_rate</span><span class="si">}</span><span class="s2"> and season_varc > </span><span class="si">{</span><span class="n">min_season_varc</span><span class="si">}</span><span class="s2"> and season_varc_percent > </span><span class="si">{</span><span class="n">season_varc_percent</span><span class="si">}</span><span class="s2">"</span>
     <span class="n">season_sdf</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
     <span class="n">n_product</span> <span class="o">=</span> <span class="n">season_sdf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">season_sdf</span> <span class="o">=</span> <span class="n">season_sdf</span><span class="p">[[</span><span class="s2">&quot;product&quot;</span><span class="p">,</span> <span class="s2">&quot;season_values&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">explode</span><span class="p">(</span>
-        <span class="s2">&quot;season_values&quot;</span><span class="p">)</span>
+    <span class="n">season_sdf</span> <span class="o">=</span> <span class="n">season_sdf</span><span class="p">[[</span><span class="s2">"product"</span><span class="p">,</span> <span class="s2">"season_values"</span><span class="p">]]</span><span class="o">.</span><span class="n">explode</span><span class="p">(</span>
+        <span class="s2">"season_values"</span><span class="p">)</span>
     <span class="n">season_sdf</span> <span class="o">=</span> <span class="n">season_sdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
         <span class="n">year_month</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span> <span class="o">*</span> <span class="n">n_product</span><span class="p">,</span>
-        <span class="n">season_value</span><span class="o">=</span><span class="n">season_sdf</span><span class="p">[</span><span class="s2">&quot;season_values&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">season_value</span><span class="o">=</span><span class="n">season_sdf</span><span class="p">[</span><span class="s2">"season_values"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
     <span class="p">)</span>
 
-    <span class="n">season_table</span> <span class="o">=</span> <span class="n">season_sdf</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s2">&quot;product&quot;</span><span class="p">,</span> <span class="s2">&quot;year_month&quot;</span><span class="p">,</span> <span class="s2">&quot;season_value&quot;</span><span class="p">)</span>
+    <span class="n">season_table</span> <span class="o">=</span> <span class="n">season_sdf</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s2">"product"</span><span class="p">,</span> <span class="s2">"year_month"</span><span class="p">,</span> <span class="s2">"season_value"</span><span class="p">)</span>
 
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">season_table</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">RdYlGn_r</span><span class="p">,</span>
-                <span class="n">norm</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.02f&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;月份&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;时令蔬菜的季节性价格变化热力图&quot;</span><span class="p">,</span><span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+                <span class="n">norm</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">".02f"</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"SeasonalVegetableSeasonalPrice"</span><span class="p">,</span><span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">plot_seasonal_heatmap</span><span class="p">(</span><span class="n">min_season_significant_rate</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">min_season_varc</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">season_varc_percent</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 </pre></div>
@@ -16164,7 +16164,7 @@ class="
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>C:\Users\Administrator\AppData\Local\Temp\2\ipykernel_11204\758783678.py:12: FutureWarning: In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.
-  season_table = season_sdf.pivot(&#34;product&#34;, &#34;year_month&#34;, &#34;season_value&#34;)
+  season_table = season_sdf.pivot("product", "year_month", "season_value")
 </pre>
 </div>
 </div>
@@ -16196,18 +16196,18 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>季节性价格热力图中，正数代表价格在当季的提升趋势，负数代表价格的下降趋势。</p>
-<p>从整体来看，在春末和夏季有许多蔬菜产品会进入价格较便宜的时期。</p>
-<p>如果根据月份来划分，并认为价格低的原因主要是蔬菜产量提升导致，则推导出各个时间的时令蔬菜有：</p>
+<p>SeasonalPrice，Price，Price。</p>
+<p>， and VegetablePricehour。</p>
+<p> if based on Monthminute，Pricemain Vegetable，timeSeasonalVegetable：</p>
 <ul>
-<li>3月份-5月份：菠菜</li>
-<li>4月份-7月份：韭菜</li>
-<li>5月份-7月份：蒜苔</li>
-<li>5月份-9月份：豆角、青椒</li>
-<li>6月份-10月份：西瓜、茄子、大葱、南瓜、冬瓜</li>
-<li>8月份-9月份：鸭梨</li>
-<li>9月份-1月份：巨峰葡萄</li>
-<li>11月份-12月份：莲藕</li>
+<li>3Month-5Month：</li>
+<li>4Month-7Month：</li>
+<li>5Month-7Month：</li>
+<li>5Month-9Month：、</li>
+<li>6Month-10Month：、、、、</li>
+<li>8Month-9Month：</li>
+<li>9Month-1Month：</li>
+<li>11Month-12Month：</li>
 </ul>
 
 </div>
@@ -16220,7 +16220,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E4%BB%B7%E6%A0%BC%E6%9C%89%E6%98%8E%E6%98%BE%E7%9A%84%E6%B6%A8%E8%B7%8C%EF%BC%9F">&#21738;&#20123;&#20892;&#20135;&#21697;&#30340;&#20215;&#26684;&#26377;&#26126;&#26174;&#30340;&#28072;&#36300;&#65311;<a class="anchor-link" href="#%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E4%BB%B7%E6%A0%BC%E6%9C%89%E6%98%8E%E6%98%BE%E7%9A%84%E6%B6%A8%E8%B7%8C%EF%BC%9F">&#182;</a></h2>
+<h2 id="%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E4%BB%B7%E6%A0%BC%E6%9C%89%E6%98%8E%E6%98%BE%E7%9A%84%E6%B6%A8%E8%B7%8C%EF%BC%9F">Price？<a class="anchor-link" href="#%E5%93%AA%E4%BA%9B%E5%86%9C%E4%BA%A7%E5%93%81%E7%9A%84%E4%BB%B7%E6%A0%BC%E6%9C%89%E6%98%8E%E6%98%BE%E7%9A%84%E6%B6%A8%E8%B7%8C%EF%BC%9F">¶</a></h2>
 </div>
 </div>
 </div>
@@ -16229,35 +16229,35 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_trend_chart</span><span class="p">():</span>
-    <span class="n">trend_significant_count_df</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;is_trend_significant&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;product&quot;</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">))</span>
-    <span class="n">trend_product_df</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;is_trend_significant == True&quot;</span><span class="p">)</span>
+    <span class="n">trend_significant_count_df</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"is_trend_significant"</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="p">(</span><span class="s2">"product"</span><span class="p">,</span><span class="s2">"count"</span><span class="p">))</span>
+    <span class="n">trend_product_df</span> <span class="o">=</span> <span class="n">season_mdf</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"is_trend_significant == True"</span><span class="p">)</span>
 
-    <span class="n">x_col</span> <span class="o">=</span> <span class="s2">&quot;trend_slope&quot;</span>
-    <span class="n">y_col</span> <span class="o">=</span> <span class="s2">&quot;trend_varc&quot;</span>
+    <span class="n">x_col</span> <span class="o">=</span> <span class="s2">"trend_slope"</span>
+    <span class="n">y_col</span> <span class="o">=</span> <span class="s2">"trend_varc"</span>
     <span class="n">fig</span><span class="p">,</span> <span class="p">[</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">]</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-    <span class="n">trend_significant_count_df</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span><span class="s2">&quot;是&quot;</span><span class="p">,</span><span class="kc">False</span><span class="p">:</span><span class="s2">&quot;否&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;农产品是否有显著的价格变化趋势&quot;</span><span class="p">)</span>
-    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;是否有显著价格变化趋势&quot;</span><span class="p">)</span>
+    <span class="n">trend_significant_count_df</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="kc">False</span><span class="p">:</span><span class="s2">""</span><span class="p">})</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s2">"count"</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">,</span><span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Price"</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Price"</span><span class="p">)</span>
     
     <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
-        <span class="n">data</span><span class="o">=</span><span class="n">trend_product_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">trend_product_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"category"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
         <span class="n">x</span><span class="o">=</span><span class="n">x_col</span><span class="p">,</span>
         <span class="n">y</span><span class="o">=</span><span class="n">y_col</span><span class="p">,</span>
-        <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;category&quot;</span><span class="p">,</span>
+        <span class="n">hue</span><span class="o">=</span><span class="s2">"category"</span><span class="p">,</span>
         <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span>
         <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
         <span class="n">s</span><span class="o">=</span><span class="mi">200</span>
     <span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">product</span> <span class="ow">in</span> <span class="n">season_mdf</span><span class="p">[[</span><span class="n">x_col</span><span class="p">,</span> <span class="n">y_col</span><span class="p">,</span> <span class="s2">&quot;product&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.05</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">product</span> <span class="ow">in</span> <span class="n">season_mdf</span><span class="p">[[</span><span class="n">x_col</span><span class="p">,</span> <span class="n">y_col</span><span class="p">,</span> <span class="s2">"product"</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">></span> <span class="mf">0.05</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">></span> <span class="mf">0.1</span><span class="p">:</span>
             <span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
-    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;有显著趋势的农产品的价格变化趋势&quot;</span><span class="p">)</span>
-    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;价格的逐月变化率（元/斤月）&quot;</span><span class="p">)</span>
-    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;趋势对于价格的实际影响程度&quot;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Price"</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Pricemonth（/month）"</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Price"</span><span class="p">)</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 
 
@@ -16304,9 +16304,9 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>约有52%的农产品有显著的价格变化趋势。而在有显著的价格变化趋势的产品中，大部分农产品的价格呈现上升趋势。其中淡水鱼的价格上升最高。</li>
-<li>大家都喜欢的西瓜也有一定的上升趋势。家庭料理中常见的黄瓜和西红柿也有明显的上限趋势。</li>
-<li>在价格下降趋势的农产品中，除了我们熟知的猪肉之外，生姜也有着显著的下降趋势。其价格历史变化可以参考下图。</li>
+<li>52%Price。Price，minutePrice。where Price。</li>
+<li>。 and 。</li>
+<li>Price，，。Pricecan 。</li>
 </ul>
 
 </div>
@@ -16317,10 +16317,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">products</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;生姜&quot;</span><span class="p">,</span><span class="s2">&quot;西红柿&quot;</span><span class="p">,</span><span class="s2">&quot;西瓜&quot;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_ts</span><span class="p">(</span><span class="n">products</span><span class="o">=</span><span class="p">[</span><span class="s2">""</span><span class="p">,</span><span class="s2">""</span><span class="p">,</span><span class="s2">""</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16362,7 +16362,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>从中可以看到，生姜的批发价格在2020年10月达到顶峰之后就一直逐月下降。参考相关的<a href="http://finance.people.com.cn/n1/2021/1227/c1004-32317588.html">报道</a>，生姜价格下降的主要原因是之前生姜价格持续上升，吸引了产量提升。但随后由于产量过高而发生供过于求，从而导致价格下降。</p>
+<p>We can see ，Price2020year10monthmonth。related <a href="http://finance.people.com.cn/n1/2021/1227/c1004-32317588.html"></a>，Pricemain Price，。，Price。</p>
 
 </div>
 </div>

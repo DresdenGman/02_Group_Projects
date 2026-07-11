@@ -3,7 +3,7 @@ PROJECT: E-commerce-Advertising_Effectiveness_Analysis
 
 PROJECT OVERVIEW:
 Table of Contents
- 数据维度概况数据13个维度介绍导入库，加载数据数据审查数据处理建立模型聚类结果特征分析与展示数据Conclusion
+ datadata13import，datadatadataprocessingmodelclusteringresultfeatureanalysisdataConclusion
 
 This project demonstrates data analysis and machine learning techniques.
 Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

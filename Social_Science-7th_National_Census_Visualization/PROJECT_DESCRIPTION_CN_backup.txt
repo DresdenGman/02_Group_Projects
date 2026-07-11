@@ -1,0 +1,5 @@
+PROJECT: Social_Science-7th_National_Census_Visualization
+================================================================================
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

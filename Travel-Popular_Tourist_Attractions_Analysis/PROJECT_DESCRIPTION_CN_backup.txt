@@ -1,0 +1,9 @@
+PROJECT: Travel-Popular_Tourist_Attractions_Analysis
+================================================================================
+
+PROJECT OVERVIEW:
+Table of Contents
+ 1&nbsp;&nbsp;2&nbsp;&nbsp;1. 导入模块3&nbsp;&nbsp;2.Pandas数据处理3.1&nbsp;&nbsp;2.1 Read Data3.2&nbsp;&nbsp;2.2 查看索引、数据类型和内存信息3.3&nbsp;&nbsp;2.3 查看数值型列汇总统计3.4&nbsp;&nbsp;2.4 查看销量为0的行3.5&nbsp;&nbsp;2.5 去除销量为0的行数据3.6&nbsp;&nbsp;2.6 统计各列空值3.7&nbsp;&nbsp;2.7 将星级缺失值用‘未知’填充3.8&nbsp;&nbsp;2.8 也可以将所有缺失值都用‘未知’填充3.9&nbsp;&nbsp;2.9 按销量排序4&nbsp;&nbsp;3. PyechartsData Visualization4.1&nbsp;&nbsp;3.1 销量前20热门景点数据4.2&nbsp;&nbsp;3.2 假期出行数据全国地图分布4.3&nbsp;&nbsp;3.3 各省市4A-5A景区数量柱状图4.4&nbsp;&nbsp;3.4 各省市4A-5A景区数量玫瑰图4.5&nbsp;&nbsp;3.5 各省市4A-5A景区数量阴影散点图4.6&nbsp;&nbsp;3.6 各省市4A-5A景区地图分布4.7&nbsp;&nbsp;3.7 门票价格区间占比玫瑰图4.8&nbsp;&nbsp;3.8 门票价格区间数量散点图4.9&nbsp;&nbsp;3.9 景点简介词云5&nbsp;&nbsp;Summary
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

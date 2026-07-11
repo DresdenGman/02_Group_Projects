@@ -3,7 +3,7 @@ PROJECT: Social_Science-Chinese_Marriage_Status_Analysis
 
 PROJECT OVERVIEW:
 Table of Contents
- 1&nbsp;&nbsp;2&nbsp;&nbsp;数据准备3&nbsp;&nbsp;婚姻状况概览4&nbsp;&nbsp;婚姻的开始4.1&nbsp;&nbsp;什么时候结婚？4.2&nbsp;&nbsp;结婚年龄的推迟4.3&nbsp;&nbsp;未婚人口的男女比例5&nbsp;&nbsp;婚姻的变故：离婚和丧偶5.1&nbsp;&nbsp;离婚5.2&nbsp;&nbsp;丧偶6&nbsp;&nbsp;结语
+ 1  2  data3  Marriage4  Marriage4.1  hour？4.2  Age4.3  Population5  Marriage： and 5.1  5.2  6  
 
 This project demonstrates data analysis and machine learning techniques.
 Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

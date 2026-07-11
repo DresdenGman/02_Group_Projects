@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>京东评论数据情感分析</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>JD.comReviewdataSentimentanalysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,7 +14598,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#1-数据导入及预处理" data-toc-modified-id="1-数据导入及预处理-1">1 数据导入及预处理</a></span><ul class="toc-item"><li><span><a href="#1.1-数据导入" data-toc-modified-id="1.1-数据导入-1.1">1.1 数据导入</a></span></li><li><span><a href="#1.2-数据描述" data-toc-modified-id="1.2-数据描述-1.2">1.2 数据描述</a></span></li><li><span><a href="#1.3-数据预处理" data-toc-modified-id="1.3-数据预处理-1.3">1.3 数据预处理</a></span></li></ul></li><li><span><a href="#2-情感分析" data-toc-modified-id="2-情感分析-2">2 情感分析</a></span><ul class="toc-item"><li><span><a href="#2.1-情感分" data-toc-modified-id="2.1-情感分-2.1">2.1 情感分</a></span></li><li><span><a href="#2.2-情感分直方图" data-toc-modified-id="2.2-情感分直方图-2.2">2.2 情感分直方图</a></span></li><li><span><a href="#2.3-词云图" data-toc-modified-id="2.3-词云图-2.3">2.3 词云图</a></span></li><li><span><a href="#2.4-关键词提取" data-toc-modified-id="2.4-关键词提取-2.4">2.4 关键词提取</a></span></li></ul></li><li><span><a href="#3-积极评论与消极评论" data-toc-modified-id="3-积极评论与消极评论-3">3 积极评论与消极评论</a></span><ul class="toc-item"><li><span><a href="#3.1-积极评论与消极评论占比" data-toc-modified-id="3.1-积极评论与消极评论占比-3.1">3.1 积极评论与消极评论占比</a></span></li><li><span><a href="#3.2-消极评论分析" data-toc-modified-id="3.2-消极评论分析-3.2">3.2 消极评论分析</a></span></li></ul></li><li><span><a href="#总结" data-toc-modified-id="总结-4">总结</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#1-dataimportprocessing" data-toc-modified-id="1-dataimportprocessing-1">1 dataimportprocessing</a></span><ul class="toc-item"><li><span><a href="#1.1-dataimport" data-toc-modified-id="1.1-dataimport-1.1">1.1 dataimport</a></span></li><li><span><a href="#1.2-data" data-toc-modified-id="1.2-data-1.2">1.2 data</a></span></li><li><span><a href="#1.3-Data Preprocessing" data-toc-modified-id="1.3-Data Preprocessing-1.3">1.3 Data Preprocessing</a></span></li></ul></li><li><span><a href="#2-Sentimentanalysis" data-toc-modified-id="2-Sentimentanalysis-2">2 Sentimentanalysis</a></span><ul class="toc-item"><li><span><a href="#2.1-Sentimentminute" data-toc-modified-id="2.1-Sentimentminute-2.1">2.1 Sentimentminute</a></span></li><li><span><a href="#2.2-Sentimentminute" data-toc-modified-id="2.2-Sentimentminute-2.2">2.2 Sentimentminute</a></span></li><li><span><a href="#2.3-" data-toc-modified-id="2.3--2.3">2.3 </a></span></li><li><span><a href="#2.4-Keywordsextract" data-toc-modified-id="2.4-Keywordsextract-2.4">2.4 Keywordsextract</a></span></li></ul></li><li><span><a href="#3-ReviewReview" data-toc-modified-id="3-ReviewReview-3">3 ReviewReview</a></span><ul class="toc-item"><li><span><a href="#3.1-ReviewReviewShare" data-toc-modified-id="3.1-ReviewReviewShare-3.1">3.1 ReviewReviewShare</a></span></li><li><span><a href="#3.2-Reviewanalysis" data-toc-modified-id="3.2-Reviewanalysis-3.2">3.2 Reviewanalysis</a></span></li></ul></li><li><span><a href="#" data-toc-modified-id="-4"></a></span></li></ul></div>
 
 </div>
 </div>
@@ -14610,7 +14610,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%8F%8A%E9%A2%84%E5%A4%84%E7%90%86">1 &#25968;&#25454;&#23548;&#20837;&#21450;&#39044;&#22788;&#29702;<a class="anchor-link" href="#1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%8F%8A%E9%A2%84%E5%A4%84%E7%90%86">&#182;</a></h1>
+<h1 id="1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%8F%8A%E9%A2%84%E5%A4%84%E7%90%86">1 dataimportprocessing<a class="anchor-link" href="#1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%8F%8A%E9%A2%84%E5%A4%84%E7%90%86">¶</a></h1>
 </div>
 </div>
 </div>
@@ -14621,7 +14621,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5">1.1 &#25968;&#25454;&#23548;&#20837;<a class="anchor-link" href="#1.1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5">&#182;</a></h2>
+<h2 id="1.1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5">1.1 dataimport<a class="anchor-link" href="#1.1-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14630,11 +14630,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./京东评论数据.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./JD.comReviewdata.csv'</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -14704,7 +14704,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
       <td>03b51aa9-2b5e-41c3-a40b-343164a1d23a</td>
       <td>comment</td>
       <td>11801751173</td>
-      <td>还可以刷脸解锁，帮朋友买的，她很满意</td>
+      <td>can ，，</td>
       <td>2018-08-13 12:24:59</td>
       <td>0</td>
       <td>5</td>
@@ -14713,9 +14713,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
       <td>...</td>
       <td>NaN</td>
       <td>k***0</td>
-      <td>PLUS会员</td>
+      <td>PLUS</td>
       <td>2</td>
-      <td>来自京东iPhone客户端</td>
+      <td>JD.comiPhonecustomer</td>
       <td>1.0</td>
       <td>4.0</td>
       <td>2018-08-09 13:38:15</td>
@@ -14728,7 +14728,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
       <td>03b51aa9-2b5e-41c3-a40b-343164a1d23a</td>
       <td>comment</td>
       <td>11525358140</td>
-      <td>第一次买vivo，真心不错，1498的机子，没想到照相很清晰，性价比很高，买值了，还送了小音...</td>
+      <td>vivo，，1498，，，，...</td>
       <td>2018-05-27 17:49:17</td>
       <td>7</td>
       <td>5</td>
@@ -14736,10 +14736,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
       <td>0</td>
       <td>...</td>
       <td>NaN</td>
-      <td>呢***呐</td>
-      <td>PLUS会员</td>
+      <td>***</td>
+      <td>PLUS</td>
       <td>4</td>
-      <td>来自京东Android客户端</td>
+      <td>JD.comAndroidcustomer</td>
       <td>1.0</td>
       <td>5.0</td>
       <td>2018-05-22 09:32:37</td>
@@ -14765,7 +14765,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.2-%E6%95%B0%E6%8D%AE%E6%8F%8F%E8%BF%B0">1.2 &#25968;&#25454;&#25551;&#36848;<a class="anchor-link" href="#1.2-%E6%95%B0%E6%8D%AE%E6%8F%8F%E8%BF%B0">&#182;</a></h2>
+<h2 id="1.2-%E6%95%B0%E6%8D%AE%E6%8F%8F%E8%BF%B0">1.2 data<a class="anchor-link" href="#1.2-%E6%95%B0%E6%8D%AE%E6%8F%8F%E8%BF%B0">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14774,7 +14774,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14969,7 +14969,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.3-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">1.3 &#25968;&#25454;&#39044;&#22788;&#29702;<a class="anchor-link" href="#1.3-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">&#182;</a></h2>
+<h2 id="1.3-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">1.3 Data Preprocessing<a class="anchor-link" href="#1.3-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14978,11 +14978,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#取出sku_id&#39;,&#39;content&#39;字段</span>
-<span class="n">data1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;sku_id&#39;</span><span class="p">,</span><span class="s1">&#39;content&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#sku_id','content'</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">'sku_id'</span><span class="p">,</span><span class="s1">'content'</span><span class="p">]]</span>
 <span class="n">data1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
@@ -15030,52 +15030,52 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr>
       <th>0</th>
       <td>7534113</td>
-      <td>还可以刷脸解锁，帮朋友买的，她很满意</td>
+      <td>can ，，</td>
     </tr>
     <tr>
       <th>1</th>
       <td>7534113</td>
-      <td>第一次买vivo，真心不错，1498的机子，没想到照相很清晰，性价比很高，买值了，还送了小音...</td>
+      <td>vivo，，1498，，，，...</td>
     </tr>
     <tr>
       <th>2</th>
       <td>7534113</td>
-      <td>手机好用快递送的快。</td>
+      <td>。</td>
     </tr>
     <tr>
       <th>3</th>
       <td>8240587</td>
-      <td>手机收到。外观设计很好！美观大方。我喜欢！一直使用华为手机。从荣耀七，荣耀八，荣耀九。反正一...</td>
+      <td>。！。！using 。，，。...</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5942439</td>
-      <td>收到了，挺好的，声音大，电池大，好用发货速度快，非常满意，好好好。</td>
+      <td>，，，，，，。</td>
     </tr>
     <tr>
       <th>5</th>
       <td>5089275</td>
-      <td>本来觉得双十一还会便宜的，想不到和11月初的价格差不多，想想还是感觉入手了，早买早享受。我的...</td>
+      <td>Double 11， and 11monthPrice，，。...</td>
     </tr>
     <tr>
       <th>6</th>
       <td>7081550</td>
-      <td>没有真正意义上的窄边框，不过已经不错了，手机流畅，另外还有51G空间可用，同时试了下近距拍摄...</td>
+      <td>，，，51G，hour...</td>
     </tr>
     <tr>
       <th>7</th>
       <td>5663902</td>
-      <td>幻夜黑颜色很漂亮，2.5D屏幕，圆润。2K屏很清晰，惊艳</td>
+      <td>Color，2.5D，。2K，</td>
     </tr>
     <tr>
       <th>8</th>
       <td>7283905</td>
-      <td>特地用了一段时间才来评价，这手机值得这个价钱，打游戏还行，就是电池很不耐用，摄像头也很突出，...</td>
+      <td>timeAssessment，，，，，...</td>
     </tr>
     <tr>
       <th>9</th>
       <td>5001213</td>
-      <td>机器没得说，价格也合理，虽说仍有不足，但还是比较满意的，首发就抢到了，暂时发现的不足就是扬声...</td>
+      <td>，Price，，compare，，hour...</td>
     </tr>
   </tbody>
 </table>
@@ -15095,7 +15095,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="2-%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90">2 &#24773;&#24863;&#20998;&#26512;<a class="anchor-link" href="#2-%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90">&#182;</a></h1>
+<h1 id="2-%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90">2 Sentimentanalysis<a class="anchor-link" href="#2-%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90">¶</a></h1>
 </div>
 </div>
 </div>
@@ -15106,7 +15106,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.1-%E6%83%85%E6%84%9F%E5%88%86">2.1 &#24773;&#24863;&#20998;<a class="anchor-link" href="#2.1-%E6%83%85%E6%84%9F%E5%88%86">&#182;</a></h2>
+<h2 id="2.1-%E6%83%85%E6%84%9F%E5%88%86">2.1 Sentimentminute<a class="anchor-link" href="#2.1-%E6%83%85%E6%84%9F%E5%88%86">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15115,10 +15115,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#安装snownlp包</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#snownlp</span>
 <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>snownlp<span class="w">  </span>-i<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple
 </pre></div>
 
@@ -15144,10 +15144,10 @@ Collecting snownlp
   Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3d/b3/37567686662100d3bce62d3b0f2adec18ab4b9ff2b61abd7a61c39343c1d/snownlp-0.12.3.tar.gz (37.6 MB)
      ---------------------------------------- 37.6/37.6 MB 3.1 MB/s eta 0:00:00
   Preparing metadata (setup.py): started
-  Preparing metadata (setup.py): finished with status &#39;done&#39;
+  Preparing metadata (setup.py): finished with status 'done'
 Building wheels for collected packages: snownlp
   Building wheel for snownlp (setup.py): started
-  Building wheel for snownlp (setup.py): finished with status &#39;done&#39;
+  Building wheel for snownlp (setup.py): finished with status 'done'
   Created wheel for snownlp: filename=snownlp-0.12.3-py3-none-any.whl size=37760953 sha256=400f03511ccda3443b1a0c80aa51754ac9840c0a2e37c47eadb04472268b8d67
   Stored in directory: c:\users\administrator\appdata\local\pip\cache\wheels\e3\39\48\6bf6f2fdb44ab1aeb2bbbc27b79941ff05d39d181fdaad0fb5
 Successfully built snownlp
@@ -15163,7 +15163,7 @@ Successfully installed snownlp-0.12.3
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
-[notice] A new release of pip available: 22.3.1 -&gt; 23.0
+[notice] A new release of pip available: 22.3.1 -> 23.0
 [notice] To update, run: python.exe -m pip install --upgrade pip
 </pre>
 </div>
@@ -15178,11 +15178,11 @@ Successfully installed snownlp-0.12.3
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">snownlp</span> <span class="kn">import</span> <span class="n">SnowNLP</span>
-<span class="n">data1</span><span class="p">[</span><span class="s1">&#39;emotion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">SnowNLP</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">sentiments</span><span class="p">)</span>
+<span class="n">data1</span><span class="p">[</span><span class="s1">'emotion'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">SnowNLP</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">sentiments</span><span class="p">)</span>
 <span class="n">data1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
@@ -15208,7 +15208,7 @@ A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  data1[&#39;emotion&#39;] = data1[&#39;content&#39;].apply(lambda x:SnowNLP(x).sentiments)
+  data1['emotion'] = data1['content'].apply(lambda x:SnowNLP(x).sentiments)
 </pre>
 </div>
 </div>
@@ -15246,61 +15246,61 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <tr>
       <th>0</th>
       <td>7534113</td>
-      <td>还可以刷脸解锁，帮朋友买的，她很满意</td>
+      <td>can ，，</td>
       <td>0.470635</td>
     </tr>
     <tr>
       <th>1</th>
       <td>7534113</td>
-      <td>第一次买vivo，真心不错，1498的机子，没想到照相很清晰，性价比很高，买值了，还送了小音...</td>
+      <td>vivo，，1498，，，，...</td>
       <td>0.999999</td>
     </tr>
     <tr>
       <th>2</th>
       <td>7534113</td>
-      <td>手机好用快递送的快。</td>
+      <td>。</td>
       <td>0.561609</td>
     </tr>
     <tr>
       <th>3</th>
       <td>8240587</td>
-      <td>手机收到。外观设计很好！美观大方。我喜欢！一直使用华为手机。从荣耀七，荣耀八，荣耀九。反正一...</td>
+      <td>。！。！using 。，，。...</td>
       <td>0.868183</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5942439</td>
-      <td>收到了，挺好的，声音大，电池大，好用发货速度快，非常满意，好好好。</td>
+      <td>，，，，，，。</td>
       <td>0.983088</td>
     </tr>
     <tr>
       <th>5</th>
       <td>5089275</td>
-      <td>本来觉得双十一还会便宜的，想不到和11月初的价格差不多，想想还是感觉入手了，早买早享受。我的...</td>
+      <td>Double 11， and 11monthPrice，，。...</td>
       <td>0.984574</td>
     </tr>
     <tr>
       <th>6</th>
       <td>7081550</td>
-      <td>没有真正意义上的窄边框，不过已经不错了，手机流畅，另外还有51G空间可用，同时试了下近距拍摄...</td>
+      <td>，，，51G，hour...</td>
       <td>0.956682</td>
     </tr>
     <tr>
       <th>7</th>
       <td>5663902</td>
-      <td>幻夜黑颜色很漂亮，2.5D屏幕，圆润。2K屏很清晰，惊艳</td>
+      <td>Color，2.5D，。2K，</td>
       <td>0.999839</td>
     </tr>
     <tr>
       <th>8</th>
       <td>7283905</td>
-      <td>特地用了一段时间才来评价，这手机值得这个价钱，打游戏还行，就是电池很不耐用，摄像头也很突出，...</td>
+      <td>timeAssessment，，，，，...</td>
       <td>0.996540</td>
     </tr>
     <tr>
       <th>9</th>
       <td>5001213</td>
-      <td>机器没得说，价格也合理，虽说仍有不足，但还是比较满意的，首发就抢到了，暂时发现的不足就是扬声...</td>
+      <td>，Price，，compare，，hour...</td>
       <td>0.992436</td>
     </tr>
   </tbody>
@@ -15319,7 +15319,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -15425,7 +15425,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>emotion平均值为0.74，中位数为0.96，25%分位数为0.56，可见不到25%的数据造成了整体均值的较大下移。</li>
+<li>emotionmean0.74，0.96，25%minute0.56，25%data。</li>
 </ul>
 
 </div>
@@ -15438,7 +15438,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.2-%E6%83%85%E6%84%9F%E5%88%86%E7%9B%B4%E6%96%B9%E5%9B%BE">2.2 &#24773;&#24863;&#20998;&#30452;&#26041;&#22270;<a class="anchor-link" href="#2.2-%E6%83%85%E6%84%9F%E5%88%86%E7%9B%B4%E6%96%B9%E5%9B%BE">&#182;</a></h2>
+<h2 id="2.2-%E6%83%85%E6%84%9F%E5%88%86%E7%9B%B4%E6%96%B9%E5%9B%BE">2.2 Sentimentminute<a class="anchor-link" href="#2.2-%E6%83%85%E6%84%9F%E5%88%86%E7%9B%B4%E6%96%B9%E5%9B%BE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15447,22 +15447,22 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#情感分直方图</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Sentimentminute</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SimHei&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.sans-serif'</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="s1">'SimHei'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.unicode_minus'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data1</span><span class="p">[</span><span class="s1">&#39;emotion&#39;</span><span class="p">],</span><span class="n">bins</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#4F94CD&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data1</span><span class="p">[</span><span class="s1">'emotion'</span><span class="p">],</span><span class="n">bins</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'#4F94CD'</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;情感分&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;数量&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;情感分直方图&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Sentimentminute'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Count'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Sentimentminute'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15507,9 +15507,9 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>由直方图可见，评论内容两级分化较为严重；</p>
+<li><p>，Reviewminute；</p>
 </li>
-<li><p>3637条评论中有约2200条评论情感分在[0.9，1]区间内；同时，有约500条评论情感分在[0，0.1]区间内。</p>
+<li><p>3637Review2200ReviewSentimentminute[0.9，1]；hour，500ReviewSentimentminute[0，0.1]。</p>
 </li>
 </ul>
 
@@ -15523,7 +15523,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.3-%E8%AF%8D%E4%BA%91%E5%9B%BE">2.3 &#35789;&#20113;&#22270;<a class="anchor-link" href="#2.3-%E8%AF%8D%E4%BA%91%E5%9B%BE">&#182;</a></h2>
+<h2 id="2.3-%E8%AF%8D%E4%BA%91%E5%9B%BE">2.3 <a class="anchor-link" href="#2.3-%E8%AF%8D%E4%BA%91%E5%9B%BE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15532,27 +15532,27 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
 <span class="kn">import</span> <span class="nn">jieba</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">()</span>
-<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]:</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">''</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]:</span>
     <span class="n">text</span> <span class="o">+=</span> <span class="n">s</span>
-<span class="n">data_cut</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+<span class="n">data_cut</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
 
-<span class="n">w</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">font_path</span><span class="o">=</span><span class="s2">&quot;./SimHei.ttf&quot;</span><span class="p">,</span>
-                      <span class="n">stopwords</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;的&#39;</span><span class="p">,</span><span class="s1">&#39;我&#39;</span><span class="p">,</span><span class="s1">&#39;了&#39;</span><span class="p">,</span><span class="s1">&#39;是&#39;</span><span class="p">,</span><span class="s1">&#39;和&#39;</span><span class="p">,</span><span class="s1">&#39;都&#39;</span><span class="p">,</span><span class="s1">&#39;就&#39;</span><span class="p">,</span><span class="s1">&#39;用&#39;</span><span class="p">],</span>  <span class="c1"># 去掉停用词</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">font_path</span><span class="o">=</span><span class="s2">"./SimHei.ttf"</span><span class="p">,</span>
+                      <span class="n">stopwords</span><span class="o">=</span><span class="p">[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">' and '</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">],</span>  <span class="c1"># </span>
                       <span class="c1">#max_words=100,</span>
                       <span class="n">width</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
                       <span class="n">height</span><span class="o">=</span><span class="mi">1200</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">data_cut</span><span class="p">)</span>
-<span class="c1"># 保存词云</span>
-<span class="n">w</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;词云图.png&#39;</span><span class="p">)</span>
-<span class="c1"># 显示词云文件</span>
+<span class="c1"># save</span>
+<span class="n">w</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">'.png'</span><span class="p">)</span>
+<span class="c1"># file</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">"off"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15608,7 +15608,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.4-%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96">2.4 &#20851;&#38190;&#35789;&#25552;&#21462;<a class="anchor-link" href="#2.4-%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96">&#182;</a></h2>
+<h2 id="2.4-%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96">2.4 Keywordsextract<a class="anchor-link" href="#2.4-%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15617,10 +15617,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#关键词top10</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Keywordstop10</span>
 <span class="kn">from</span> <span class="nn">jieba</span> <span class="kn">import</span> <span class="n">analyse</span> 
 <span class="n">key_words</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">analyse</span><span class="o">.</span><span class="n">extract_tags</span><span class="p">(</span><span class="n">sentence</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">topK</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">withWeight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allowPOS</span><span class="o">=</span><span class="p">())</span>
 <span class="n">key_words</span>
@@ -15645,16 +15645,16 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[(&#39;手机&#39;, 0.20904023041744998),
- (&#39;不错&#39;, 0.10491967558213072),
- (&#39;京东&#39;, 0.09431019624843097),
- (&#39;屏幕&#39;, 0.054966423247022445),
- (&#39;华为&#39;, 0.05061411737589104),
- (&#39;小米&#39;, 0.04731076382922812),
- (&#39;拍照&#39;, 0.04647606302614274),
- (&#39;非常&#39;, 0.044200923839597485),
- (&#39;手感&#39;, 0.04270424332006433),
- (&#39;感觉&#39;, 0.040063432512755605)]</pre>
+<pre>[('', 0.20904023041744998),
+ ('', 0.10491967558213072),
+ ('JD.com', 0.09431019624843097),
+ ('', 0.054966423247022445),
+ ('', 0.05061411737589104),
+ ('', 0.04731076382922812),
+ ('', 0.04647606302614274),
+ ('', 0.044200923839597485),
+ ('', 0.04270424332006433),
+ ('', 0.040063432512755605)]</pre>
 </div>
 
 </div>
@@ -15671,7 +15671,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>以上关键词显示，消费者比较在意手机的“屏幕”“拍照”“手感”等特性，“华为”“小米”是出现频次最高的两个手机品牌。</li>
+<li>Keywords，Consumptioncompare“”“”“”，“”“”Brand。</li>
 </ul>
 
 </div>
@@ -15684,7 +15684,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="3-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA">3 &#31215;&#26497;&#35780;&#35770;&#19982;&#28040;&#26497;&#35780;&#35770;<a class="anchor-link" href="#3-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA">&#182;</a></h1>
+<h1 id="3-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA">3 ReviewReview<a class="anchor-link" href="#3-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA">¶</a></h1>
 </div>
 </div>
 </div>
@@ -15695,7 +15695,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.1-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%8D%A0%E6%AF%94">3.1 &#31215;&#26497;&#35780;&#35770;&#19982;&#28040;&#26497;&#35780;&#35770;&#21344;&#27604;<a class="anchor-link" href="#3.1-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%8D%A0%E6%AF%94">&#182;</a></h2>
+<h2 id="3.1-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%8D%A0%E6%AF%94">3.1 ReviewReviewShare<a class="anchor-link" href="#3.1-%E7%A7%AF%E6%9E%81%E8%AF%84%E8%AE%BA%E4%B8%8E%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%8D%A0%E6%AF%94">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15704,18 +15704,18 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#计算积极评论与消极评论各自的数目</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#calculateReviewReview</span>
 <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">neg</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data1</span><span class="p">[</span><span class="s1">&#39;emotion&#39;</span><span class="p">]:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mf">0.5</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data1</span><span class="p">[</span><span class="s1">'emotion'</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">>=</span> <span class="mf">0.5</span><span class="p">:</span>
         <span class="n">pos</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">neg</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;积极评论，消极评论数目分别为：&#39;</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">neg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Review，Revieware:：'</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">neg</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15735,7 +15735,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>积极评论，消极评论数目分别为： 2791 846
+<pre>Review，Revieware:： 2791 846
 </pre>
 </div>
 </div>
@@ -15749,17 +15749,17 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 积极评论占比</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ReviewShare</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SimHei&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.sans-serif'</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="s1">'SimHei'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.unicode_minus'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="n">pie_labels</span><span class="o">=</span><span class="s1">&#39;postive&#39;</span><span class="p">,</span><span class="s1">&#39;negative&#39;</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">([</span><span class="n">pos</span><span class="p">,</span><span class="n">neg</span><span class="p">],</span><span class="n">labels</span><span class="o">=</span><span class="n">pie_labels</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pie_labels</span><span class="o">=</span><span class="s1">'postive'</span><span class="p">,</span><span class="s1">'negative'</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">([</span><span class="n">pos</span><span class="p">,</span><span class="n">neg</span><span class="p">],</span><span class="n">labels</span><span class="o">=</span><span class="n">pie_labels</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">,</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15803,7 +15803,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.2-%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%88%86%E6%9E%90">3.2 &#28040;&#26497;&#35780;&#35770;&#20998;&#26512;<a class="anchor-link" href="#3.2-%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%88%86%E6%9E%90">&#182;</a></h2>
+<h2 id="3.2-%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%88%86%E6%9E%90">3.2 Reviewanalysis<a class="anchor-link" href="#3.2-%E6%B6%88%E6%9E%81%E8%AF%84%E8%AE%BA%E5%88%86%E6%9E%90">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15812,11 +15812,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#获取消极评论数据</span>
-<span class="n">data2</span><span class="o">=</span><span class="n">data1</span><span class="p">[</span><span class="n">data1</span><span class="p">[</span><span class="s1">&#39;emotion&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Reviewdata</span>
+<span class="n">data2</span><span class="o">=</span><span class="n">data1</span><span class="p">[</span><span class="n">data1</span><span class="p">[</span><span class="s1">'emotion'</span><span class="p">]</span><span class="o"><</span><span class="mf">0.5</span><span class="p">]</span>
 <span class="n">data2</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
@@ -15865,61 +15865,61 @@ class="
     <tr>
       <th>0</th>
       <td>7534113</td>
-      <td>还可以刷脸解锁，帮朋友买的，她很满意</td>
+      <td>can ，，</td>
       <td>0.470635</td>
     </tr>
     <tr>
       <th>13</th>
       <td>5942439</td>
-      <td>收到货，声音很大，功能也多，适合老人用，就是重量有点重，</td>
+      <td>，，，，，</td>
       <td>0.461794</td>
     </tr>
     <tr>
       <th>17</th>
       <td>7283905</td>
-      <td>27号下的单，今天收到1星期内，坐标河南商丘，手机是武汉仓过来的。充电头是5V2A的 不支持...</td>
+      <td>27，days1，，。5V2A ...</td>
       <td>0.001627</td>
     </tr>
     <tr>
       <th>18</th>
       <td>5001213</td>
-      <td>今天刚收到！\n看到京东的快递包装盒，我内心是一群奔腾而过的！几千块钱的物品包装，没有防压提...</td>
+      <td>days！\nJD.com，！，...</td>
       <td>0.495955</td>
     </tr>
     <tr>
       <th>22</th>
       <td>5942439</td>
-      <td>用着目前还可以，就是不知道可以用多久。希望久一些吧。</td>
+      <td>can ，can 。。</td>
       <td>0.239150</td>
     </tr>
     <tr>
       <th>32</th>
       <td>5001213</td>
-      <td>第一批抢到，两天后才收到，机器没一代惊艳，边框略粗，全面屏？解决了通话，回归正常手机行列！！...</td>
+      <td>，days，，，？，regression！！...</td>
       <td>0.444317</td>
     </tr>
     <tr>
       <th>35</th>
       <td>8240587</td>
-      <td>总体来说，颜值非常高，很好看，虽然说是后置指纹，但是后背看起来还是挺不错的。用起来整体体验还...</td>
+      <td>，，， although ， but 。...</td>
       <td>0.000012</td>
     </tr>
     <tr>
       <th>44</th>
       <td>3901175</td>
-      <td>手机还可以，就刚开始把卡放进去的时候不显示卡，过了第二天才显示出来，耳机也没有，还有就是怎么...</td>
+      <td>can ，hour，days，，...</td>
       <td>0.005839</td>
     </tr>
     <tr>
       <th>48</th>
       <td>7534113</td>
-      <td>像素不行，反正买都买了用都用了总体来说还行吧不讨厌也不喜欢一般般，暂时没有什么问题</td>
+      <td>，，hour</td>
       <td>0.499447</td>
     </tr>
     <tr>
       <th>51</th>
       <td>5089275</td>
-      <td>总之还是挺好的，挺不错、虽然没有什么优惠吧，抢了个神券还不能用！！！也是用的上了第三个苹果、...</td>
+      <td>，、 although ，！！！、...</td>
       <td>0.457264</td>
     </tr>
   </tbody>
@@ -15938,20 +15938,20 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#消极评论词云图</span>
-<span class="n">text2</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data2</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Review</span>
+<span class="n">text2</span> <span class="o">=</span> <span class="s1">''</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data2</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]:</span>
     <span class="n">text2</span> <span class="o">+=</span> <span class="n">s</span>
-<span class="n">data_cut2</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="n">text2</span><span class="p">))</span>
+<span class="n">data_cut2</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="n">text2</span><span class="p">))</span>
 <span class="n">w</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">data_cut2</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;消极评论词云.png&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">'Review.png'</span><span class="p">)</span>
 
-<span class="c1"># 显示词云文件</span>
+<span class="c1"># file</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">"off"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15992,10 +15992,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#消极评论关键词top10</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#ReviewKeywordstop10</span>
 <span class="n">key_words</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">analyse</span><span class="o">.</span><span class="n">extract_tags</span><span class="p">(</span><span class="n">sentence</span><span class="o">=</span><span class="n">text2</span><span class="p">,</span> <span class="n">topK</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">withWeight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allowPOS</span><span class="o">=</span><span class="p">())</span>
 <span class="n">key_words</span>
 </pre></div>
@@ -16019,16 +16019,16 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[(&#39;手机&#39;, 0.19237764869875004),
- (&#39;京东&#39;, 0.08930157104159077),
- (&#39;未填写&#39;, 0.08087213276666493),
- (&#39;评价&#39;, 0.06602737843353074),
- (&#39;屏幕&#39;, 0.05285184715212572),
- (&#39;快递&#39;, 0.050103021155518554),
- (&#39;用户&#39;, 0.05005720904465942),
- (&#39;充电&#39;, 0.04605195695403029),
- (&#39;收到&#39;, 0.038929704221495554),
- (&#39;没有&#39;, 0.03758001077768642)]</pre>
+<pre>[('', 0.19237764869875004),
+ ('JD.com', 0.08930157104159077),
+ ('', 0.08087213276666493),
+ ('Assessment', 0.06602737843353074),
+ ('', 0.05285184715212572),
+ ('', 0.050103021155518554),
+ ('user', 0.05005720904465942),
+ ('', 0.04605195695403029),
+ ('', 0.038929704221495554),
+ ('', 0.03758001077768642)]</pre>
 </div>
 
 </div>
@@ -16045,9 +16045,9 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>消极评论关键词显示，“屏幕”“快递”“充电”是造成用户体验不佳的几个重要因素；屏幕和充电问题有可能是手机不良品率过高或快递压迫；</p>
+<li><p>ReviewKeywords，“”“”“”user； and may ；</p>
 </li>
-<li><p>因此平台应注重提高手机品控，降低不良品率；另外应设法提升发货，配送，派件的效率和质量。</p>
+<li><p> therefore ，；，， and 。</p>
 </li>
 </ul>
 
@@ -16061,7 +16061,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="%E6%80%BB%E7%BB%93">&#24635;&#32467;<a class="anchor-link" href="#%E6%80%BB%E7%BB%93">&#182;</a></h1>
+<h1 id="%E6%80%BB%E7%BB%93"><a class="anchor-link" href="#%E6%80%BB%E7%BB%93">¶</a></h1>
 </div>
 </div>
 </div>
@@ -16072,7 +16072,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>本文使用jieba，snownlp，wordcloud，matplotlib等模块对文本数据进行了简要的情感分析及可视化，旨在了解用户使用体验，以此对平台运营提出优化建议。</p>
+<p>using jieba，snownlp，wordcloud，matplotlibdataSentimentanalysisvisualization，userusing ，。</p>
 
 </div>
 </div>

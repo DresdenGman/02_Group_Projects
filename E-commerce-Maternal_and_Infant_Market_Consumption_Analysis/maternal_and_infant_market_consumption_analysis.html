@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>母婴市场消费数据分析</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Maternal & InfantConsumptionData Analysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,7 +14598,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#母婴商品销售数据分析" data-toc-modified-id="母婴商品销售数据分析-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>母婴商品销售数据分析</a></span><ul class="toc-item"><li><span><a href="#项目介绍" data-toc-modified-id="项目介绍-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>项目介绍</a></span><ul class="toc-item"><li><span><a href="#项目背景" data-toc-modified-id="项目背景-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>项目背景</a></span></li><li><span><a href="#分析目的" data-toc-modified-id="分析目的-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>分析目的</a></span></li></ul></li><li><span><a href="#数据准备" data-toc-modified-id="数据准备-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>数据准备</a></span><ul class="toc-item"><li><span><a href="#导入数据" data-toc-modified-id="导入数据-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span>导入数据</a></span></li><li><span><a href="#数据清洗" data-toc-modified-id="数据清洗-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span>数据清洗</a></span></li></ul></li><li><span><a href="#数据分析" data-toc-modified-id="数据分析-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>数据分析</a></span><ul class="toc-item"><li><span><a href="#整体市场情况" data-toc-modified-id="整体市场情况-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>整体市场情况</a></span><ul class="toc-item"><li><span><a href="#第一季度销量下滑原因" data-toc-modified-id="第一季度销量下滑原因-1.3.1.1"><span class="toc-item-num">1.3.1.1&nbsp;&nbsp;</span>第一季度销量下滑原因</a></span></li><li><span><a href="#第四季度销量上升原因" data-toc-modified-id="第四季度销量上升原因-1.3.1.2"><span class="toc-item-num">1.3.1.2&nbsp;&nbsp;</span>第四季度销量上升原因</a></span></li><li><span><a href="#复购率" data-toc-modified-id="复购率-1.3.1.3"><span class="toc-item-num">1.3.1.3&nbsp;&nbsp;</span>复购率</a></span></li></ul></li><li><span><a href="#商品销售情况" data-toc-modified-id="商品销售情况-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>商品销售情况</a></span></li></ul></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Maternal & InfantProductSalesData Analysis" data-toc-modified-id="Maternal & InfantProductSalesData Analysis-1"><span class="toc-item-num">1  </span>Maternal & InfantProductSalesData Analysis</a></span><ul class="toc-item"><li><span><a href="#Project Introduction" data-toc-modified-id="Project Introduction-1.1"><span class="toc-item-num">1.1  </span>Project Introduction</a></span><ul class="toc-item"><li><span><a href="#" data-toc-modified-id="-1.1.1"><span class="toc-item-num">1.1.1  </span></a></span></li><li><span><a href="#analysis" data-toc-modified-id="analysis-1.1.2"><span class="toc-item-num">1.1.2  </span>analysis</a></span></li></ul></li><li><span><a href="#data" data-toc-modified-id="data-1.2"><span class="toc-item-num">1.2  </span>data</a></span><ul class="toc-item"><li><span><a href="#importdata" data-toc-modified-id="importdata-1.2.1"><span class="toc-item-num">1.2.1  </span>importdata</a></span></li><li><span><a href="#Data Cleaning" data-toc-modified-id="Data Cleaning-1.2.2"><span class="toc-item-num">1.2.2  </span>Data Cleaning</a></span></li></ul></li><li><span><a href="#Data Analysis" data-toc-modified-id="Data Analysis-1.3"><span class="toc-item-num">1.3  </span>Data Analysis</a></span><ul class="toc-item"><li><span><a href="#" data-toc-modified-id="-1.3.1"><span class="toc-item-num">1.3.1  </span></a></span><ul class="toc-item"><li><span><a href="#" data-toc-modified-id="-1.3.1.1"><span class="toc-item-num">1.3.1.1  </span></a></span></li><li><span><a href="#" data-toc-modified-id="-1.3.1.2"><span class="toc-item-num">1.3.1.2  </span></a></span></li><li><span><a href="#" data-toc-modified-id="-1.3.1.3"><span class="toc-item-num">1.3.1.3  </span></a></span></li></ul></li><li><span><a href="#ProductSales" data-toc-modified-id="ProductSales-1.3.2"><span class="toc-item-num">1.3.2  </span>ProductSales</a></span></li></ul></li></ul></li></ul></div>
 
 </div>
 </div>
@@ -14610,7 +14610,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="%E6%AF%8D%E5%A9%B4%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">&#27597;&#23156;&#21830;&#21697;&#38144;&#21806;&#25968;&#25454;&#20998;&#26512;<a class="anchor-link" href="#%E6%AF%8D%E5%A9%B4%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">&#182;</a></h1>
+<h1 id="%E6%AF%8D%E5%A9%B4%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">Maternal & InfantProductSalesData Analysis<a class="anchor-link" href="#%E6%AF%8D%E5%A9%B4%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">¶</a></h1>
 </div>
 </div>
 </div>
@@ -14621,7 +14621,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#39033;&#30446;&#20171;&#32461;<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#182;</a></h2>
+<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">Project Introduction<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14632,10 +14632,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF">&#39033;&#30446;&#32972;&#26223;<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF">&#182;</a></h3><p>政策Politics：国家发展改革委2013年5月28日表示，13个部门将出台系列政策措施，从可信交易、移动支付、网络电子发票、商贸流通和物流配送共5个方面支持电子商务发展，有利于促进在线母婴商品市场快速发展。</p>
-<p>经济Economy：随着国内经济的稳定增长，2015年我国城镇居民可支配收入增长到31195元， 同期农村居民可支配收入增长到11422元。不断提高的人均可支配收入将提升家庭的消费意愿，2015年中国母婴行业市场规模有望达到2万亿。</p>
-<p>社会Society：对于一线城市居民来说，随时随地通过手机、电脑等电子网络设备足不出门即可完成购物的新型消费方式更能适应他们紧凑的生活节奏；而对于二三线城市以及农村居民，物流上门配送带来的便捷也使得网购更具吸引力。</p>
-<p>技术Technology：4G网络的普及、手机和ipad等移动设备快速升级迭代更新、网络在线支付系统的发展，为电子商务迅速崛起注入强大的动力。</p>
+<h3 id="%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF">¶</a></h3><p>Politics：2013year5month28dayindicates，13，、、、 and 5，Maternal & InfantProduct。</p>
+<p>Economy：，2015yearRevenue31195， Revenue11422。RevenueConsumption，2015yearMaternal & Infant2。</p>
+<p>Society：City，hourthrough 、i.e. ShoppingConsumption；Cityand ，。</p>
+<p>Technology：4G、 and ipad、，。</p>
 
 </div>
 </div>
@@ -14647,9 +14647,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84">&#20998;&#26512;&#30446;&#30340;<a class="anchor-link" href="#%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84">&#182;</a></h3><ol>
-<li>帮助在线商家针对不同的时间节点和场景做出不同的销售和运营管理策略，帮助商家提高销量和营业额、减少经营成本。</li>
-<li>根据父母的购买行为来预测孩子的年龄，或者根据孩子的信息(年龄、性别等)来预测用户会购买什么样的商品。</li>
+<h3 id="%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84">analysis<a class="anchor-link" href="#%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84">¶</a></h3><ol>
+<li>targeting different time and different Sales and ， and 、。</li>
+<li>based on predictionAge，based on info(Age、Gender)predictionuserProduct。</li>
 </ol>
 
 </div>
@@ -14660,7 +14660,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14671,13 +14671,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="kn">import</span> <span class="nn">pyecharts.options</span> <span class="k">as</span> <span class="nn">opts</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Microsoft YaHei&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="c1"># 作图的字体默认设置</span>
-<span class="n">fontdict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-            <span class="s1">&#39;horizontalalignment&#39;</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.sans-serif'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Microsoft YaHei'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.unicode_minus'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># </span>
+<span class="n">fontdict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'fontsize'</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="s1">'horizontalalignment'</span><span class="p">:</span> <span class="s1">'center'</span><span class="p">}</span>
 </pre></div>
 
      </div>
@@ -14692,7 +14692,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87">&#25968;&#25454;&#20934;&#22791;<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87">&#182;</a></h2>
+<h2 id="%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87">data<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14703,7 +14703,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE">&#23548;&#20837;&#25968;&#25454;<a class="anchor-link" href="#%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE">&#182;</a></h3>
+<h3 id="%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE">importdata<a class="anchor-link" href="#%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14712,11 +14712,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baby</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./(sample)sam_tianchi_mum_baby.csv&quot;</span><span class="p">)</span>
-<span class="n">trade</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./(sample)sam_tianchi_mum_baby_trade_history.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baby</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./(sample)sam_tianchi_mum_baby.csv"</span><span class="p">)</span>
+<span class="n">trade</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./(sample)sam_tianchi_mum_baby_trade_history.csv"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14729,7 +14729,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">baby</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14823,7 +14823,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trade</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14941,7 +14941,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">baby</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -14964,7 +14964,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 953 entries, 0 to 952
 Data columns (total 3 columns):
  #   Column    Non-Null Count  Dtype
@@ -14987,7 +14987,7 @@ memory usage: 22.5 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trade</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15010,7 +15010,7 @@ memory usage: 22.5 KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 29971 entries, 0 to 29970
 Data columns (total 7 columns):
  #   Column      Non-Null Count  Dtype 
@@ -15037,7 +15037,7 @@ memory usage: 1.6+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trade</span><span class="o">.</span><span class="n">buy_mount</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -15084,15 +15084,15 @@ Name: buy_mount, dtype: float64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">quantity</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">buy_mount</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">quantity</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">quantity</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;单个订单购买量分布&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;订单数&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;购买量&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"OrderDistribution"</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Order"</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15135,12 +15135,12 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">&#25968;&#25454;&#28165;&#27927;<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">&#182;</a></h3><ol>
-<li>保留buy_amount[1,195]以内的订单。</li>
-<li>查看有无缺失值异常值，并进行处理。</li>
-<li>trade中的auction_id未指定是什么属性，我们就将他默认改为item_id。</li>
-<li>数据集中的property全是数字，需要有对应的字典才能知道对应什么属性，这边先删除。</li>
-<li>day改成日期形式。</li>
+<h3 id="%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">Data Cleaning<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97">¶</a></h3><ol>
+<li>buy_amount[1,195]Order。</li>
+<li>viewmissing values，processing。</li>
+<li>tradeauction_idattribute，item_id。</li>
+<li>datasetproperty，need to attribute，。</li>
+<li>daydate。</li>
 </ol>
 
 </div>
@@ -15151,19 +15151,19 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 保留buy_mount[0,195]以内的记录</span>
-<span class="n">trade</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">buy_mount</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">buy_mount</span> <span class="o">&lt;=</span> <span class="mi">195</span><span class="p">)]</span>
-<span class="c1"># 列重命名</span>
-<span class="n">trade</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;auction_id&quot;</span><span class="p">:</span> <span class="s2">&quot;item_id&quot;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1"># 先将property暂且取出放在一边，后续再分析</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># buy_mount[0,195]record</span>
+<span class="n">trade</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">buy_mount</span> <span class="o">>=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">buy_mount</span> <span class="o"><=</span> <span class="mi">195</span><span class="p">)]</span>
+<span class="c1"># </span>
+<span class="n">trade</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">"auction_id"</span><span class="p">:</span> <span class="s2">"item_id"</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># property，analysis</span>
 <span class="nb">property</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">property</span>
-<span class="n">trade</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;property&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1"># 日期类型转换</span>
-<span class="n">baby</span><span class="p">[</span><span class="s1">&#39;birthday&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">baby</span><span class="o">.</span><span class="n">birthday</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">))</span>
-<span class="n">trade</span><span class="p">[</span><span class="s1">&#39;day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">))</span>
+<span class="n">trade</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'property'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># date</span>
+<span class="n">baby</span><span class="p">[</span><span class="s1">'birthday'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">baby</span><span class="o">.</span><span class="n">birthday</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'str'</span><span class="p">))</span>
+<span class="n">trade</span><span class="p">[</span><span class="s1">'day'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'str'</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15176,10 +15176,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 本次统计数据的时间范围是2012/7/2-2015/2/5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># datatime2012/7/2-2015/2/5</span>
 <span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
@@ -15222,7 +15222,7 @@ Name: day, dtype: object</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_cat1</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">cat1</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
@@ -15230,11 +15230,11 @@ Name: day, dtype: object</pre>
 <span class="n">count_item</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">item_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 <span class="n">sales_volume</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">buy_mount</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">count_user</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">user_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商品类目数：&quot;</span><span class="p">,</span> <span class="n">count_cat1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商品类别数：&quot;</span><span class="p">,</span> <span class="n">count_cat</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商品数：&quot;</span><span class="p">,</span> <span class="n">count_item</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;总销量：&quot;</span><span class="p">,</span> <span class="n">sales_volume</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;用户数&quot;</span><span class="p">,</span> <span class="n">count_user</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Product："</span><span class="p">,</span> <span class="n">count_cat1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Product："</span><span class="p">,</span> <span class="n">count_cat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Product："</span><span class="p">,</span> <span class="n">count_item</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"："</span><span class="p">,</span> <span class="n">sales_volume</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"user"</span><span class="p">,</span> <span class="n">count_user</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15254,11 +15254,11 @@ Name: day, dtype: object</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>商品类目数： 6
-商品类别数： 662
-商品数： 28394
-总销量： 49973
-用户数 29915
+<pre>Product： 6
+Product： 662
+Product： 28394
+： 49973
+user 29915
 </pre>
 </div>
 </div>
@@ -15274,7 +15274,7 @@ Name: day, dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">&#25968;&#25454;&#20998;&#26512;<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">&#182;</a></h2>
+<h2 id="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">Data Analysis<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15285,7 +15285,7 @@ Name: day, dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E6%95%B4%E4%BD%93%E5%B8%82%E5%9C%BA%E6%83%85%E5%86%B5">&#25972;&#20307;&#24066;&#22330;&#24773;&#20917;<a class="anchor-link" href="#%E6%95%B4%E4%BD%93%E5%B8%82%E5%9C%BA%E6%83%85%E5%86%B5">&#182;</a></h3>
+<h3 id="%E6%95%B4%E4%BD%93%E5%B8%82%E5%9C%BA%E6%83%85%E5%86%B5"><a class="anchor-link" href="#%E6%95%B4%E4%BD%93%E5%B8%82%E5%9C%BA%E6%83%85%E5%86%B5">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15294,19 +15294,19 @@ Name: day, dtype: object</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 根据年月查看销量趋势</span>
-<span class="c1"># 根据年分组</span>
-<span class="n">year_item</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[[</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span> <span class="s1">&#39;buy_mount&#39;</span><span class="p">,</span> <span class="s1">&#39;day&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)[</span>
-    <span class="s1">&#39;buy_mount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="c1"># 各年季度销量情况</span>
-<span class="n">year_quarter_item</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[[</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span> <span class="s1">&#39;buy_mount&#39;</span><span class="p">,</span> <span class="s1">&#39;day&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">quarter</span><span class="p">])[</span>
-    <span class="s1">&#39;buy_mount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="c1"># 根据年月分组</span>
-<span class="n">year_month_item</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[[</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span> <span class="s1">&#39;buy_mount&#39;</span><span class="p">,</span> <span class="s1">&#39;day&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
-    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">])[</span><span class="s1">&#39;buy_mount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># based on yearmonthview</span>
+<span class="c1"># based on yearminute</span>
+<span class="n">year_item</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[[</span><span class="s1">'item_id'</span><span class="p">,</span> <span class="s1">'buy_mount'</span><span class="p">,</span> <span class="s1">'day'</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)[</span>
+    <span class="s1">'buy_mount'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># year</span>
+<span class="n">year_quarter_item</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[[</span><span class="s1">'item_id'</span><span class="p">,</span> <span class="s1">'buy_mount'</span><span class="p">,</span> <span class="s1">'day'</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">quarter</span><span class="p">])[</span>
+    <span class="s1">'buy_mount'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># based on yearmonthminute</span>
+<span class="n">year_month_item</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[[</span><span class="s1">'item_id'</span><span class="p">,</span> <span class="s1">'buy_mount'</span><span class="p">,</span> <span class="s1">'day'</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">trade</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">])[</span><span class="s1">'buy_mount'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15319,15 +15319,15 @@ Name: day, dtype: object</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 各年销量情况</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># year</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">year_item</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">year_item</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;年销量趋势&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;年份&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;销量&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"year"</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15370,7 +15370,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<pre><code>2017/7-2015/2期间总销量是49973件，从上图我们可以看出淘宝和天猫平台母婴商品市场销量整体呈现上升趋势，但是波动较大。
+<pre><code>2017/7-2015/249973，We can see  and daysMaternal & InfantProduct， but 。
 </code></pre>
 
 </div>
@@ -15381,11 +15381,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">index_list</span> <span class="o">=</span> <span class="n">year_quarter_item</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="n">index_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">index_list</span><span class="p">]</span>
+<span class="n">index_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'-'</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">index_list</span><span class="p">]</span>
 <span class="n">index_list</span>
 </pre></div>
 
@@ -15408,17 +15408,17 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;2012-3&#39;,
- &#39;2012-4&#39;,
- &#39;2013-1&#39;,
- &#39;2013-2&#39;,
- &#39;2013-3&#39;,
- &#39;2013-4&#39;,
- &#39;2014-1&#39;,
- &#39;2014-2&#39;,
- &#39;2014-3&#39;,
- &#39;2014-4&#39;,
- &#39;2015-1&#39;]</pre>
+<pre>['2012-3',
+ '2012-4',
+ '2013-1',
+ '2013-2',
+ '2013-3',
+ '2013-4',
+ '2014-1',
+ '2014-2',
+ '2014-3',
+ '2014-4',
+ '2015-1']</pre>
 </div>
 
 </div>
@@ -15432,15 +15432,15 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 各季度销售情况</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sales</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">index_list</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">year_quarter_item</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;季度销量趋势&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;(年,季度)&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;销量&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"(year,)"</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -15484,8 +15484,8 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>2015年由于数据缺失，所以不能反应2015年第一季度的真实销量情况</li>
-<li>每年第一季度的销售额都会呈现一定幅度的下跌。每年第四季度的销量都会呈现大幅度上升。</li>
+<li>2015yeardata， so 2015year</li>
+<li>yearSales。year。</li>
 </ol>
 
 </div>
@@ -15496,20 +15496,20 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 各月份销量情况</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">year_month_item</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Month</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s2">"/"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">year_month_item</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">year_month_item</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
 <span class="n">p</span>  <span class="o">=</span><span class="n">pyc</span><span class="o">.</span><span class="n">Bar</span><span class="p">()</span><span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="n">xaxis_data</span><span class="o">=</span><span class="n">x</span>
-                    <span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s2">&quot;销量&quot;</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> 
+                    <span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> 
                         <span class="n">markpoint_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkPointOpts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkPointItem</span><span class="p">(</span><span class="n">coord</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">4</span><span class="p">]],</span> <span class="n">value</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> 
                         <span class="n">opts</span><span class="o">.</span><span class="n">MarkPointItem</span><span class="p">(</span><span class="n">coord</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">10</span><span class="p">]],</span> <span class="n">value</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">10</span><span class="p">]),</span> 
                     <span class="n">opts</span><span class="o">.</span><span class="n">MarkPointItem</span><span class="p">(</span><span class="n">coord</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">16</span><span class="p">]],</span> <span class="n">value</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">16</span><span class="p">]),</span> 
                     <span class="n">opts</span><span class="o">.</span><span class="n">MarkPointItem</span><span class="p">(</span><span class="n">coord</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">22</span><span class="p">]],</span> <span class="n">value</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">22</span><span class="p">]),</span> <span class="n">opts</span><span class="o">.</span><span class="n">MarkPointItem</span><span class="p">(</span><span class="n">coord</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">28</span><span class="p">]],</span> <span class="n">value</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">28</span><span class="p">])])</span>
                     <span class="p">)</span><span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                <span class="p">)</span><span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;月销量趋势&quot;</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="s2">&quot;2012/7-2015/2的销量趋势图&quot;</span><span class="p">),</span> <span class="n">toolbox_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ToolboxOpts</span><span class="p">())</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"month"</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="s2">"2012/7-2015/2"</span><span class="p">),</span> <span class="n">toolbox_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ToolboxOpts</span><span class="p">())</span>
 <span class="n">p</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
 </pre></div>
 
@@ -15908,8 +15908,8 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>2013年和2014年的第一季度销量都有所下滑，主要聚集在1、2月。</li>
-<li>每年的5月、11月都会出现不同程度的销量上涨。</li>
+<li>2013year and 2014year，main 1、2month。</li>
+<li>year5month、11monthdifferent 。</li>
 </ol>
 
 </div>
@@ -15922,7 +15922,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8B%E6%BB%91%E5%8E%9F%E5%9B%A0">&#31532;&#19968;&#23395;&#24230;&#38144;&#37327;&#19979;&#28369;&#21407;&#22240;<a class="anchor-link" href="#%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8B%E6%BB%91%E5%8E%9F%E5%9B%A0">&#182;</a></h4><p>假设一下销售量下降是否和春节假期有关?\</p>
+<h4 id="%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8B%E6%BB%91%E5%8E%9F%E5%9B%A0"><a class="anchor-link" href="#%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8B%E6%BB%91%E5%8E%9F%E5%9B%A0">¶</a></h4><p>Sales and ?\</p>
 
 </div>
 </div>
@@ -15932,19 +15932,19 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">high</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    输入日期型字符串,返回日期范围内的销量和用户量</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">high</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-></span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    date,date and user</span>
+<span class="sd">    """</span>
     <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-    <span class="n">low</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="s2">&quot;%Y/%m/</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">high</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">high</span><span class="p">,</span> <span class="s2">&quot;%Y/%m/</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">trade_low</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">&gt;=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">low</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">low</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">low</span><span class="o">.</span><span class="n">day</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span>
-        <span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">&lt;=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">high</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">high</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">high</span><span class="o">.</span><span class="n">day</span><span class="p">))]</span>
-    <span class="n">group_low</span> <span class="o">=</span> <span class="n">trade_low</span><span class="p">[[</span><span class="s1">&#39;buy_mount&#39;</span><span class="p">,</span> <span class="s1">&#39;day&#39;</span><span class="p">,</span> <span class="s1">&#39;user_id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="s2">"%Y/%m/</span><span class="si">%d</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">high</span><span class="p">,</span> <span class="s2">"%Y/%m/</span><span class="si">%d</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">trade_low</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">>=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">low</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">low</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">low</span><span class="o">.</span><span class="n">day</span><span class="p">))</span> <span class="o">&</span> <span class="p">(</span>
+        <span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o"><=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">high</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">high</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">high</span><span class="o">.</span><span class="n">day</span><span class="p">))]</span>
+    <span class="n">group_low</span> <span class="o">=</span> <span class="n">trade_low</span><span class="p">[[</span><span class="s1">'buy_mount'</span><span class="p">,</span> <span class="s1">'day'</span><span class="p">,</span> <span class="s1">'user_id'</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
         <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">trade_low</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">trade_low</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span><span class="p">])</span>
     <span class="n">mount</span> <span class="o">=</span> <span class="n">group_low</span><span class="o">.</span><span class="n">buy_mount</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
     <span class="n">user</span> <span class="o">=</span> <span class="n">group_low</span><span class="o">.</span><span class="n">user_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
@@ -15962,18 +15962,18 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lineMountUser</span><span class="p">(</span><span class="n">mount</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    输入销量和用户量数据以及标题，生成折线图</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">plot</span> <span class="o">=</span> <span class="n">pyc</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="n">xaxis_data</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mount</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
-                                <span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s2">&quot;销量&quot;</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mount</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">markline_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineOpts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineItem</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;当月销量均值&#39;</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">)])</span>
-                                            <span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s2">&quot;用户量&quot;</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">markline_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineOpts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineItem</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;当月用户量量均值&#39;</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">)])</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">     and userdataand ，</span>
+<span class="sd">    """</span>
+    <span class="n">plot</span> <span class="o">=</span> <span class="n">pyc</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="n">xaxis_data</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s2">"/"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mount</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+                                <span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mount</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">markline_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineOpts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineItem</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'month'</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="s2">"average"</span><span class="p">)])</span>
+                                            <span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s2">"user"</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">markline_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineOpts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">opts</span><span class="o">.</span><span class="n">MarkLineItem</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'monthuser'</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="s2">"average"</span><span class="p">)])</span>
                                                         <span class="p">)</span><span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                                                                          <span class="p">)</span><span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">),</span> <span class="n">toolbox_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ToolboxOpts</span><span class="p">(),</span> <span class="n">tooltip_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TooltipOpts</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="s1">&#39;axis&#39;</span><span class="p">)</span>
+                                                                          <span class="p">)</span><span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">),</span> <span class="n">toolbox_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ToolboxOpts</span><span class="p">(),</span> <span class="n">tooltip_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TooltipOpts</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="s1">'axis'</span><span class="p">)</span>
                                                                                             <span class="p">)</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">plot</span>
 </pre></div>
@@ -15988,13 +15988,13 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mount_2013_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">&quot;2013/1/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2013/3/31&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">mount_2014_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">&quot;2014/1/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2014/3/31&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">user_2013_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">&quot;2013/1/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2013/3/31&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">user_2014_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">&quot;2014/1/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2014/3/31&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mount_2013_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">"2013/1/1"</span><span class="p">,</span> <span class="s2">"2013/3/31"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mount_2014_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">"2014/1/1"</span><span class="p">,</span> <span class="s2">"2014/3/31"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">user_2013_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">"2013/1/1"</span><span class="p">,</span> <span class="s2">"2013/3/31"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">user_2014_1_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span><span class="n">trade</span><span class="p">,</span> <span class="s2">"2014/1/1"</span><span class="p">,</span> <span class="s2">"2014/3/31"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -16007,10 +16007,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2013_1_quarter</span><span class="p">,</span> <span class="n">user_2013_1_quarter</span><span class="p">,</span> <span class="s2">&quot;2013年第一季度销量&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2013_1_quarter</span><span class="p">,</span> <span class="n">user_2013_1_quarter</span><span class="p">,</span> <span class="s2">"2013year"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -17178,10 +17178,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2014_1_quarter</span><span class="p">,</span> <span class="n">user_2014_1_quarter</span><span class="p">,</span> <span class="s2">&quot;2014年第一季度销量&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2014_1_quarter</span><span class="p">,</span> <span class="n">user_2014_1_quarter</span><span class="p">,</span> <span class="s2">"2014year"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18352,13 +18352,13 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>2013/2/1-2013/2/15处于销量谷底，2013年春节假期：2013/2/9-2013/2/15</li>
-<li>2014/1/26-2014/2/4处于销售谷底，2014年春节假期：2014/1/31-2014/2/6</li>
+<li>2013/2/1-2013/2/15，2013year：2013/2/9-2013/2/15</li>
+<li>2014/1/26-2014/2/4Sales，2014year：2014/1/31-2014/2/6</li>
 </ul>
 <blockquote>
-<p>2015年春节假期是2015/2/18-2015/2/24，数据集统计时间只到2015/2/5，所以就暂不分析2015年第一季度情况</p>
+<p>2015year2015/2/18-2015/2/24，datasettime2015/2/5， so analysis2015year</p>
 </blockquote>
-<p>临近春节可能存在部分企业提早放假，快递停运，销售低谷时段与春节假期基本吻合，假期结束后购买量和用户量上升，所以可以认为第一季度销量下降是由春节假期造成的</p>
+<p>may has minute，，Saleshourbasic ， and user， so can </p>
 
 </div>
 </div>
@@ -18370,7 +18370,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%E7%AC%AC%E5%9B%9B%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8A%E5%8D%87%E5%8E%9F%E5%9B%A0">&#31532;&#22235;&#23395;&#24230;&#38144;&#37327;&#19978;&#21319;&#21407;&#22240;<a class="anchor-link" href="#%E7%AC%AC%E5%9B%9B%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8A%E5%8D%87%E5%8E%9F%E5%9B%A0">&#182;</a></h4><p>假设是否与双11双12活动有关？</p>
+<h4 id="%E7%AC%AC%E5%9B%9B%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8A%E5%8D%87%E5%8E%9F%E5%9B%A0"><a class="anchor-link" href="#%E7%AC%AC%E5%9B%9B%E5%AD%A3%E5%BA%A6%E9%94%80%E9%87%8F%E4%B8%8A%E5%8D%87%E5%8E%9F%E5%9B%A0">¶</a></h4><p>1112？</p>
 
 </div>
 </div>
@@ -18380,15 +18380,15 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mount_2012_4_quarter</span><span class="p">,</span> <span class="n">user_2012_4_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span>
-    <span class="n">trade</span><span class="p">,</span> <span class="s2">&quot;2012/10/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2012/12/31&quot;</span><span class="p">)</span>
+    <span class="n">trade</span><span class="p">,</span> <span class="s2">"2012/10/1"</span><span class="p">,</span> <span class="s2">"2012/12/31"</span><span class="p">)</span>
 <span class="n">mount_2013_4_quarter</span><span class="p">,</span> <span class="n">user_2013_4_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span>
-    <span class="n">trade</span><span class="p">,</span> <span class="s2">&quot;2013/10/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2013/12/31&quot;</span><span class="p">)</span>
+    <span class="n">trade</span><span class="p">,</span> <span class="s2">"2013/10/1"</span><span class="p">,</span> <span class="s2">"2013/12/31"</span><span class="p">)</span>
 <span class="n">mount_2014_4_quarter</span><span class="p">,</span> <span class="n">user_2014_4_quarter</span> <span class="o">=</span> <span class="n">quarterData</span><span class="p">(</span>
-    <span class="n">trade</span><span class="p">,</span> <span class="s2">&quot;2014/10/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2014/12/31&quot;</span><span class="p">)</span>
+    <span class="n">trade</span><span class="p">,</span> <span class="s2">"2014/10/1"</span><span class="p">,</span> <span class="s2">"2014/12/31"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18401,10 +18401,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2012_4_quarter</span><span class="p">,</span> <span class="n">user_2012_4_quarter</span><span class="p">,</span> <span class="s2">&quot;2012年第四季度销量&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2012_4_quarter</span><span class="p">,</span> <span class="n">user_2012_4_quarter</span><span class="p">,</span> <span class="s2">"2012year"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -19590,10 +19590,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2013_4_quarter</span><span class="p">,</span> <span class="n">user_2013_4_quarter</span><span class="p">,</span> <span class="s2">&quot;2013年第四季度销量&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2013_4_quarter</span><span class="p">,</span> <span class="n">user_2013_4_quarter</span><span class="p">,</span> <span class="s2">"2013year"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -20779,10 +20779,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2014_4_quarter</span><span class="p">,</span> <span class="n">user_2014_4_quarter</span><span class="p">,</span> <span class="s2">&quot;2014年第四季度销量&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lineMountUser</span><span class="p">(</span><span class="n">mount_2014_4_quarter</span><span class="p">,</span> <span class="n">user_2014_4_quarter</span><span class="p">,</span> <span class="s2">"2014year"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21971,8 +21971,8 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>可以很明显看出2013年和2014年双十一及双十二当天的销量和销售额都激增。</li>
-<li>每年的双十一活动用户量和销量都比往年多，用户量增长为75%-80%。</li>
+<li>can 2013year and 2014yearDouble 11days and Sales。</li>
+<li>yearDouble 11user and year，user75%-80%。</li>
 </ol>
 
 </div>
@@ -21985,7 +21985,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%E5%A4%8D%E8%B4%AD%E7%8E%87">&#22797;&#36141;&#29575;<a class="anchor-link" href="#%E5%A4%8D%E8%B4%AD%E7%8E%87">&#182;</a></h4>
+<h4 id="%E5%A4%8D%E8%B4%AD%E7%8E%87"><a class="anchor-link" href="#%E5%A4%8D%E8%B4%AD%E7%8E%87">¶</a></h4>
 </div>
 </div>
 </div>
@@ -21994,11 +21994,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># trade = pd.merge(left=trade, right=baby, how=&#39;left&#39;,</span>
-<span class="c1">#                       on=&#39;user_id&#39;, suffixes=(&quot;_trade&quot;, &quot;_baby&quot;))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># trade = pd.merge(left=trade, right=baby, how='left',</span>
+<span class="c1">#                       on='user_id', suffixes=("_trade", "_baby"))</span>
 </pre></div>
 
      </div>
@@ -22011,14 +22011,14 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 由于数据不完整，所以我们只计算2013年和2014年的复购率</span>
-<span class="n">repurchase_data_2013</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">&gt;=</span> <span class="n">datetime</span><span class="p">(</span>
-    <span class="mi">2013</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">&lt;=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))]</span>
-<span class="n">repurchase_data_2014</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">&gt;=</span> <span class="n">datetime</span><span class="p">(</span>
-    <span class="mi">2014</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">&lt;=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data， so calculate2013year and 2014year</span>
+<span class="n">repurchase_data_2013</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">>=</span> <span class="n">datetime</span><span class="p">(</span>
+    <span class="mi">2013</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o"><=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))]</span>
+<span class="n">repurchase_data_2014</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o">>=</span> <span class="n">datetime</span><span class="p">(</span>
+    <span class="mi">2014</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">day</span> <span class="o"><=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))]</span>
 </pre></div>
 
      </div>
@@ -22031,14 +22031,14 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 根据月和userid分组</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># based on month and useridminute</span>
 <span class="n">group_2013</span> <span class="o">=</span> <span class="n">repurchase_data_2013</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
-    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">repurchase_data_2013</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s1">&#39;user_id&#39;</span><span class="p">])</span>
+    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">repurchase_data_2013</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s1">'user_id'</span><span class="p">])</span>
 <span class="n">group_2014</span> <span class="o">=</span> <span class="n">repurchase_data_2014</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
-    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">repurchase_data_2014</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s1">&#39;user_id&#39;</span><span class="p">])</span>
+    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">repurchase_data_2014</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s1">'user_id'</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -22051,11 +22051,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">repurchase_data_2013</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
-    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">repurchase_data_2013</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s1">&#39;user_id&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()[[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">repurchase_data_2013</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s1">'user_id'</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()[[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -22091,17 +22091,17 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">cmonthPurchaseRate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    导入根据月和userid分组数据</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    importbased on month and useridminutedata</span>
+<span class="sd">    """</span>
     <span class="n">rate</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">):</span>
         <span class="n">cmonth_bought_user</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="p">()[[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-        <span class="n">cmonth_repurchase_user</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="p">()[[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">cmonth_repurchase_user</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="p">()[[</span><span class="n">i</span><span class="p">]]</span> <span class="o">></span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
         <span class="n">rate</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">cmonth_repurchase_user</span><span class="o">/</span><span class="n">cmonth_bought_user</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">rate</span>
 </pre></div>
@@ -22116,7 +22116,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">purchase_rate_month_2013</span> <span class="o">=</span> <span class="n">cmonthPurchaseRate</span><span class="p">(</span><span class="n">group_2013</span><span class="p">)</span>
@@ -22133,14 +22133,14 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pyc</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="n">xaxis_data</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)]</span>
                      <span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span>
-    <span class="n">series_name</span><span class="o">=</span><span class="s1">&#39;2013年当月复购率&#39;</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="n">purchase_rate_month_2013</span>
-<span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s1">&#39;2014年当月复购率&#39;</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="n">purchase_rate_month_2014</span>
-            <span class="p">)</span><span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;当月复购率变化趋势&quot;</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="s2">&quot;2013年及2014年月复购率变化趋势&quot;</span><span class="p">),</span> <span class="n">toolbox_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ToolboxOpts</span><span class="p">(),</span> <span class="n">tooltip_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TooltipOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">trigger</span><span class="o">=</span><span class="s1">&#39;axis&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
+    <span class="n">series_name</span><span class="o">=</span><span class="s1">'2013yearmonth'</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="n">purchase_rate_month_2013</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="n">series_name</span><span class="o">=</span><span class="s1">'2014yearmonth'</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="n">purchase_rate_month_2014</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"month"</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="s2">"2013year2014yearmonth"</span><span class="p">),</span> <span class="n">toolbox_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ToolboxOpts</span><span class="p">(),</span> <span class="n">tooltip_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TooltipOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">trigger</span><span class="o">=</span><span class="s1">'axis'</span><span class="p">))</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -22579,19 +22579,19 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 产品大类复购率</span>
-<span class="c1"># 根据产品大类分组，然后循环大类进行索引求出每个大类的复购率</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cat1&#39;</span><span class="p">,</span> <span class="s1">&#39;user_id&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># </span>
+<span class="c1"># based on minute，</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'cat1'</span><span class="p">,</span> <span class="s1">'user_id'</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 <span class="n">purchase_dict</span><span class="o">=</span><span class="p">{}</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">trade</span><span class="o">.</span><span class="n">cat1</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
     <span class="n">c</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
     <span class="n">purchase_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="p">((</span><span class="n">c</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">-</span><span class="n">c</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="n">c</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">purchase_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">y</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">purchase_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;各大类复购率&quot;</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="n">fontdict</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -22634,7 +22634,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>4月、10月及11月都存在一定的用户当月复购，但是复购率都极低，各产品大类的复购率也极低，均未到达1%，考虑到用户单次购买量大多是一件，且复购率低，说明用户对单一商品的回购欲望极低，商家应该从产品角度进行考虑，例如产品质量及购物体验等。</p>
+<p>4month、10month11monthhas usermonth， but ，，1%，user，，descriptionuserProduct，， e.g., Shopping。</p>
 
 </div>
 </div>
@@ -22646,7 +22646,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%83%85%E5%86%B5">&#21830;&#21697;&#38144;&#21806;&#24773;&#20917;<a class="anchor-link" href="#%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%83%85%E5%86%B5">&#182;</a></h3>
+<h3 id="%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%83%85%E5%86%B5">ProductSales<a class="anchor-link" href="#%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E6%83%85%E5%86%B5">¶</a></h3>
 </div>
 </div>
 </div>
@@ -22655,14 +22655,14 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 商品大类销售情况</span>
-<span class="n">cat</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;cat1&quot;</span><span class="p">)[</span><span class="s1">&#39;buy_mount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ProductSales</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"cat1"</span><span class="p">)[</span><span class="s1">'buy_mount'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">cat</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">cat</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;商品大类销售情况&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;商品大类&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"ProductSales"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Product"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -22703,15 +22703,15 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 人均大类购买情况</span>
-<span class="n">cat_aver_user</span> <span class="o">=</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;cat1&quot;</span><span class="p">)[</span><span class="s1">&#39;buy_mount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
-<span class="p">)</span> <span class="o">/</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;cat1&quot;</span><span class="p">)[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># </span>
+<span class="n">cat_aver_user</span> <span class="o">=</span> <span class="p">(</span><span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"cat1"</span><span class="p">)[</span><span class="s1">'buy_mount'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+<span class="p">)</span> <span class="o">/</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"cat1"</span><span class="p">)[</span><span class="s1">'user_id'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">cat_aver_user</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">cat_aver_user</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;商品大类人均购买情况&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;商品大类&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Product"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Product"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -22752,14 +22752,14 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 大类下子类别数量</span>
-<span class="n">cat_count</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;cat1&quot;</span><span class="p">)[</span><span class="s1">&#39;cat_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Count</span>
+<span class="n">cat_count</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"cat1"</span><span class="p">)[</span><span class="s1">'cat_id'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">cat_count</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">cat_count</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;商品大类的子类数量&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;商品大类&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"ProductCount"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Product"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -22802,7 +22802,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>大类28和50008168销量最佳，大类38虽然销量低、子类数最少但是人均购买量却很高，说明用户在购买38大类下的产品时选择余地较少，但同时用户对此类产品的需求又很旺盛，可以适量的增加38大类下的子类产品，提高销售量</p>
+<p>28 and 50008168，38 although 、 but ，descriptionuser38hour，houruser，can 38，Sales</p>
 
 </div>
 </div>
@@ -22812,7 +22812,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -22828,7 +22828,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -22844,7 +22844,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -22860,7 +22860,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 

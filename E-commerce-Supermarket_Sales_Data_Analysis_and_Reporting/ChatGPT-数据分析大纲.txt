@@ -1,41 +1,41 @@
-I. 引言
-A. 介绍分析的目的和数据来源
-B. 概述报告的结构
+I. 
+A. analysis and data
+B. Structure
 
-II. 数据总体概况
-A. 描述数据集
-B. 数据清洗和预处理
-C. 探索性数据分析
+II. data
+A. dataset
+B. Data Cleaning and processing
+C. Data Analysis
 
-III. 销售趋势分析
-A. 描述时间范围内的销售情况
-B. 每月销售额的变化
-C. 每周销售额的变化
-D. 对销售额随时间变化的趋势进行分析
+III. Salesanalysis
+A. timeSales
+B. monthSales
+C. Sales
+D. Salestimeanalysis
 
-IV. 产品销售分析
-A. 最畅销的产品类别
-B. 最受欢迎的品牌
-C. 不同季节和时间段中产品的销售情况
-D. 最畅销的产品组合
+IV. Salesanalysis
+A. Category
+B. Brand
+C. different Season and timeSales
+D. 
 
-V. 客户分析
-A. 新客户和老客户的比例
-B. 不同地区的客户来源
-C. 不同年龄段客户的购买行为
-D. 不同性别客户的购买行为
+V. customeranalysis
+A. customer and customer
+B. different customer
+C. different Agecustomer
+D. different Gendercustomer
 
-VI. 门店分析
-A. 不同门店的销售情况比较
-B. 不同门店的产品和销售额分析
-C. 不同门店的客户来源分析
-D. 不同门店的销售趋势分析
+VI. analysis
+A. different Salescompare
+B. different  and Salesanalysis
+C. different customeranalysis
+D. different Salesanalysis
 
-VII. 结论和建议
-A. 总结分析结果
-B. 提出建议和改进措施
+VII.  and 
+A. analysisresult
+B.  and 
 
-VIII. 结束语
-A. 总结整篇报告
-B. 感谢读者
-C. 提供数据分析支持的联系方式
+VIII. 
+A. 
+B. 
+C. Data Analysis

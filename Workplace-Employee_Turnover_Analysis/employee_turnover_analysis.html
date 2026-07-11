@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>分析员工过早离职原因</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>analysisEmployeeTurnover</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,7 +14598,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#项目介绍" data-toc-modified-id="项目介绍-1">项目介绍</a></span></li><li><span><a href="#1.数据检查与理解" data-toc-modified-id="1.数据检查与理解-2">1.数据检查与理解</a></span><ul class="toc-item"><li><span><a href="#1.1.-检查是否存在缺失值" data-toc-modified-id="1.1.-检查是否存在缺失值-2.1">1.1. 检查是否存在缺失值</a></span></li><li><span><a href="#1.2.-适当的改名来更直观的理解和获取特征列" data-toc-modified-id="1.2.-适当的改名来更直观的理解和获取特征列-2.2">1.2. 适当的改名来更直观的理解和获取特征列</a></span></li><li><span><a href="#1.3.-查看数据的信息" data-toc-modified-id="1.3.-查看数据的信息-2.3">1.3. 查看数据的信息</a></span></li><li><span><a href="#1.4.-展示所有类型特征的信息" data-toc-modified-id="1.4.-展示所有类型特征的信息-2.4">1.4. 展示所有类型特征的信息</a></span></li><li><span><a href="#1.5.-类别数字化" data-toc-modified-id="1.5.-类别数字化-2.5">1.5. 类别数字化</a></span></li><li><span><a href="#1.6.-改变columns的顺序" data-toc-modified-id="1.6.-改变columns的顺序-2.6">1.6. 改变columns的顺序</a></span></li></ul></li><li><span><a href="#2.数据探索与分析" data-toc-modified-id="2.数据探索与分析-3">2.数据探索与分析</a></span><ul class="toc-item"><li><span><a href="#2.1.-描述性分析" data-toc-modified-id="2.1.-描述性分析-3.1">2.1. 描述性分析</a></span></li><li><span><a href="#2.2.-相关性分析" data-toc-modified-id="2.2.-相关性分析-3.2">2.2. 相关性分析</a></span></li><li><span><a href="#2.3.变量分析" data-toc-modified-id="2.3.变量分析-3.3">2.3.变量分析</a></span><ul class="toc-item"><li><span><a href="#2.3.1.-公司当前员工离职与在职的比率" data-toc-modified-id="2.3.1.-公司当前员工离职与在职的比率-3.3.1">2.3.1. 公司当前员工离职与在职的比率</a></span></li><li><span><a href="#2.3.2.-公司员工的满意度与入职年份的关系" data-toc-modified-id="2.3.2.-公司员工的满意度与入职年份的关系-3.3.2">2.3.2. 公司员工的满意度与入职年份的关系</a></span></li><li><span><a href="#2.3.3.-公司各部门的员工离职与在职情况对比" data-toc-modified-id="2.3.3.-公司各部门的员工离职与在职情况对比-3.3.3">2.3.3. 公司各部门的员工离职与在职情况对比</a></span></li><li><span><a href="#2.3.4.-公司各部门的员工的工资水平" data-toc-modified-id="2.3.4.-公司各部门的员工的工资水平-3.3.4">2.3.4. 公司各部门的员工的工资水平</a></span></li><li><span><a href="#2.3.5-员工薪资与离职率" data-toc-modified-id="2.3.5-员工薪资与离职率-3.3.5">2.3.5 员工薪资与离职率</a></span></li><li><span><a href="#2.3.6.-员工过去5年的升职情况与离职对比" data-toc-modified-id="2.3.6.-员工过去5年的升职情况与离职对比-3.3.6">2.3.6. 员工过去5年的升职情况与离职对比</a></span></li><li><span><a href="#2.3.7.-员工绩效与离职的对比" data-toc-modified-id="2.3.7.-员工绩效与离职的对比-3.3.7">2.3.7. 员工绩效与离职的对比</a></span></li></ul></li></ul></li><li><span><a href="#3.总结" data-toc-modified-id="3.总结-4">3.总结</a></span><ul class="toc-item"><li><span><a href="#3.1.-离职原因分析" data-toc-modified-id="3.1.-离职原因分析-4.1">3.1. 离职原因分析</a></span></li><li><span><a href="#3.2.-公司需要思考🤔的问题" data-toc-modified-id="3.2.-公司需要思考🤔的问题-4.2">3.2. 公司需要思考🤔的问题</a></span></li></ul></li><li><span><a href="#参考" data-toc-modified-id="参考-5">参考</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Project Introduction" data-toc-modified-id="Project Introduction-1">Project Introduction</a></span></li><li><span><a href="#1.data" data-toc-modified-id="1.data-2">1.data</a></span><ul class="toc-item"><li><span><a href="#1.1.-has missing values" data-toc-modified-id="1.1.-has missing values-2.1">1.1. has missing values</a></span></li><li><span><a href="#1.2.- and feature" data-toc-modified-id="1.2.- and feature-2.2">1.2.  and feature</a></span></li><li><span><a href="#1.3.-viewdatainfo" data-toc-modified-id="1.3.-viewdatainfo-2.3">1.3. viewdatainfo</a></span></li><li><span><a href="#1.4.-featureinfo" data-toc-modified-id="1.4.-featureinfo-2.4">1.4. featureinfo</a></span></li><li><span><a href="#1.5.-" data-toc-modified-id="1.5.--2.5">1.5. </a></span></li><li><span><a href="#1.6.-columns" data-toc-modified-id="1.6.-columns-2.6">1.6. columns</a></span></li></ul></li><li><span><a href="#2.Data Explorationanalysis" data-toc-modified-id="2.Data Explorationanalysis-3">2.Data Explorationanalysis</a></span><ul class="toc-item"><li><span><a href="#2.1.-analysis" data-toc-modified-id="2.1.-analysis-3.1">2.1. analysis</a></span></li><li><span><a href="#2.2.-Correlationanalysis" data-toc-modified-id="2.2.-Correlationanalysis-3.2">2.2. Correlationanalysis</a></span></li><li><span><a href="#2.3.variableanalysis" data-toc-modified-id="2.3.variableanalysis-3.3">2.3.variableanalysis</a></span><ul class="toc-item"><li><span><a href="#2.3.1.-EmployeeTurnover" data-toc-modified-id="2.3.1.-EmployeeTurnover-3.3.1">2.3.1. EmployeeTurnover</a></span></li><li><span><a href="#2.3.2.-EmployeeYear" data-toc-modified-id="2.3.2.-EmployeeYear-3.3.2">2.3.2. EmployeeYear</a></span></li><li><span><a href="#2.3.3.-EmployeeTurnover" data-toc-modified-id="2.3.3.-EmployeeTurnover-3.3.3">2.3.3. EmployeeTurnover</a></span></li><li><span><a href="#2.3.4.-Employee" data-toc-modified-id="2.3.4.-Employee-3.3.4">2.3.4. Employee</a></span></li><li><span><a href="#2.3.5-EmployeeSalaryTurnover" data-toc-modified-id="2.3.5-EmployeeSalaryTurnover-3.3.5">2.3.5 EmployeeSalaryTurnover</a></span></li><li><span><a href="#2.3.6.-Employee5yearTurnover" data-toc-modified-id="2.3.6.-Employee5yearTurnover-3.3.6">2.3.6. Employee5yearTurnover</a></span></li><li><span><a href="#2.3.7.-EmployeeTurnover" data-toc-modified-id="2.3.7.-EmployeeTurnover-3.3.7">2.3.7. EmployeeTurnover</a></span></li></ul></li></ul></li><li><span><a href="#3." data-toc-modified-id="3.-4">3.</a></span><ul class="toc-item"><li><span><a href="#3.1.-Turnoveranalysis" data-toc-modified-id="3.1.-Turnoveranalysis-4.1">3.1. Turnoveranalysis</a></span></li><li><span><a href="#3.2.-need to 🤔" data-toc-modified-id="3.2.-need to 🤔-4.2">3.2. need to 🤔</a></span></li></ul></li><li><span><a href="#" data-toc-modified-id="-5"></a></span></li></ul></div>
 
 </div>
 </div>
@@ -14610,21 +14610,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#39033;&#30446;&#20171;&#32461;<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#182;</a></h2><ul>
-<li>背景说明</li>
+<h2 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">Project Introduction<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">¶</a></h2><ul>
+<li>description</li>
 </ul>
-<p>人力资源分析数据集汇聚了对大量员工的信息数据统计，包括企业因素（如部门）、员工行为相关因素（如参与过项目数、每月工作时长、薪资水平等）、以及工作相关因素（如绩效评估、工伤事故）</p>
+<p>analysisdatasetEmployeeinfodata，including （）、Employeerelated （、monthhour、Salary）、and related （evaluation、）</p>
 <ul>
-<li>数据说明</li>
+<li>datadescription</li>
 </ul>
-<p>文件HR_comma_sep.csv中包含10个字段，具体信息如下：</p>
+<p>fileHR_comma_sep.csvcontains10，specific infoas follows：</p>
 <table>
 <thead>
 <tr>
   <th>No</th>
-  <th>	属性</th>
-  <th>	数据类型</th>
-  <th>	字段描述</th>
+  <th>	attribute</th>
+  <th>	data</th>
+  <th>	</th>
 </tr>
 </thead>
 <tbody>
@@ -14632,69 +14632,69 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   <td>1</td>
   <td>satisfaction_level</td>
   <td>Float</td>
-  <td>员工满意程度：0-不满意，1-满意</td>
+  <td>Employee：0-，1-</td>
 </tr>
 <tr>
   <td>2</td>
   <td>last_evaluation</td>
   <td>Float</td>
-  <td>国家</td>
+  <td></td>
 </tr>
 <tr>
   <td>3</td>
   <td>number_project</td>
   <td>Integer</td>
-  <td>在职期间完成的项目数量</td>
+  <td>Count</td>
 </tr>
 <tr>
   <td>4</td>
   <td>average_montly_hours</td>
   <td>Integer</td>
-  <td>每月平均工作时长（hr）</td>
+  <td>monthhour（hr）</td>
 </tr>
 <tr>
   <td>5</td>
   <td>time_spend_company</td>
-  <td>Integer	工龄（年）</td>
+  <td>Integer	（year）</td>
   <td></td>
 </tr>
 <tr>
   <td>6</td>
   <td>work_accident</td>
   <td>Integer</td>
-  <td>是否有工伤：0-没有，1-有</td>
+  <td>：0-，1-</td>
 </tr>
 <tr>
   <td>7</td>
   <td>left</td>
   <td>Integer</td>
-  <td>是否离职：0-在职，1-离职</td>
+  <td>Turnover：0-，1-Turnover</td>
 </tr>
 <tr>
   <td>8</td>
   <td>promotion_last_5years</td>
   <td>Integer</td>
-  <td>过去5年是否有升职：0-没有，1-有</td>
+  <td>5year：0-，1-</td>
 </tr>
 <tr>
   <td>9</td>
   <td>sales</td>
   <td>String</td>
-  <td>工作部门</td>
+  <td></td>
 </tr>
 <tr>
   <td>10</td>
   <td>salary</td>
   <td>String</td>
-  <td>工资的相对等级</td>
+  <td></td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>数据来源</li>
+<li>data</li>
 </ul>
 <p><a href="https://www.kaggle.com/mizanhadi/hr-employee-data-visualisation/data?select=HR_comma_sep.csv">https://www.kaggle.com/mizanhadi/hr-employee-data-visualisation/data?select=HR_comma_sep.csv</a></p>
-<p>本篇notebook会通过描述性分析、相关性分析、变量之间的对比分析来解析影响公司员工离职的因素。以及公司应该思考和解决的问题。</p>
+<p>notebookthrough analysis、Correlationanalysis、variableanalysisEmployeeTurnover。and  and 。</p>
 
 </div>
 </div>
@@ -14706,7 +14706,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>安装包</p>
+<p></p>
 
 </div>
 </div>
@@ -14716,7 +14716,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>plotly<span class="w">  </span>-i<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple<span class="w"> </span>--trusted-host<span class="w"> </span>pypi.tuna.tsinghua.edu.cn
@@ -14742,7 +14742,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <pre>Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
 Collecting plotly
   Using cached https://pypi.tuna.tsinghua.edu.cn/packages/39/0e/df1664219b6ca7967ed76afd05fb71a1b9762f8da67e12206625395bd9ff/plotly-5.13.0-py2.py3-none-any.whl (15.2 MB)
-Requirement already satisfied: tenacity&gt;=6.2.0 in c:\users\administrator\envs\jv\lib\site-packages (from plotly) (8.1.0)
+Requirement already satisfied: tenacity>=6.2.0 in c:\users\administrator\envs\jv\lib\site-packages (from plotly) (8.1.0)
 Installing collected packages: plotly
 Successfully installed plotly-5.13.0
 </pre>
@@ -14755,7 +14755,7 @@ Successfully installed plotly-5.13.0
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
-[notice] A new release of pip available: 22.3.1 -&gt; 23.0
+[notice] A new release of pip available: 22.3.1 -> 23.0
 [notice] To update, run: python.exe -m pip install --upgrade pip
 </pre>
 </div>
@@ -14770,7 +14770,7 @@ Successfully installed plotly-5.13.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>colorlover<span class="w"> </span>-i<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple<span class="w"> </span>--trusted-host<span class="w"> </span>pypi.tuna.tsinghua.edu.cn
@@ -14808,7 +14808,7 @@ Successfully installed colorlover-0.3.0
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
-[notice] A new release of pip available: 22.3.1 -&gt; 23.0
+[notice] A new release of pip available: 22.3.1 -> 23.0
 [notice] To update, run: python.exe -m pip install --upgrade pip
 </pre>
 </div>
@@ -14825,7 +14825,7 @@ Successfully installed colorlover-0.3.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>导入需要的包</p>
+<p>importneed to </p>
 
 </div>
 </div>
@@ -14835,7 +14835,7 @@ Successfully installed colorlover-0.3.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14912,7 +14912,7 @@ Successfully installed colorlover-0.3.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.%E6%95%B0%E6%8D%AE%E6%A3%80%E6%9F%A5%E4%B8%8E%E7%90%86%E8%A7%A3">1.&#25968;&#25454;&#26816;&#26597;&#19982;&#29702;&#35299;<a class="anchor-link" href="#1.%E6%95%B0%E6%8D%AE%E6%A3%80%E6%9F%A5%E4%B8%8E%E7%90%86%E8%A7%A3">&#182;</a></h2>
+<h2 id="1.%E6%95%B0%E6%8D%AE%E6%A3%80%E6%9F%A5%E4%B8%8E%E7%90%86%E8%A7%A3">1.data<a class="anchor-link" href="#1.%E6%95%B0%E6%8D%AE%E6%A3%80%E6%9F%A5%E4%B8%8E%E7%90%86%E8%A7%A3">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14921,11 +14921,11 @@ Successfully installed colorlover-0.3.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#e43620&#39;</span><span class="p">,</span> <span class="s1">&#39;#f16d30&#39;</span><span class="p">,</span><span class="s1">&#39;#d99a6c&#39;</span><span class="p">,</span><span class="s1">&#39;#fed976&#39;</span><span class="p">,</span> <span class="s1">&#39;#b3cb95&#39;</span><span class="p">,</span> <span class="s1">&#39;#41bfb3&#39;</span><span class="p">,</span><span class="s1">&#39;#229bac&#39;</span><span class="p">,</span> <span class="s1">&#39;#256894&#39;</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./HR_comma_sep.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'#e43620'</span><span class="p">,</span> <span class="s1">'#f16d30'</span><span class="p">,</span><span class="s1">'#d99a6c'</span><span class="p">,</span><span class="s1">'#fed976'</span><span class="p">,</span> <span class="s1">'#b3cb95'</span><span class="p">,</span> <span class="s1">'#41bfb3'</span><span class="p">,</span><span class="s1">'#229bac'</span><span class="p">,</span> <span class="s1">'#256894'</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./HR_comma_sep.csv'</span><span class="p">)</span>
 
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -15060,10 +15060,10 @@ Successfully installed colorlover-0.3.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;共有&quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot;条员工记录，&quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;个员工特征。&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">"Employeerecord，"</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">"Employeefeature。"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15083,7 +15083,7 @@ Successfully installed colorlover-0.3.0
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>共有 14999 条员工记录， 10 个员工特征。
+<pre> 14999 Employeerecord， 10 Employeefeature。
 </pre>
 </div>
 </div>
@@ -15099,7 +15099,7 @@ Successfully installed colorlover-0.3.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.1.-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E7%BC%BA%E5%A4%B1%E5%80%BC">1.1. &#26816;&#26597;&#26159;&#21542;&#23384;&#22312;&#32570;&#22833;&#20540;<a class="anchor-link" href="#1.1.-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E7%BC%BA%E5%A4%B1%E5%80%BC">&#182;</a></h3>
+<h3 id="1.1.-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E7%BC%BA%E5%A4%B1%E5%80%BC">1.1. has missing values<a class="anchor-link" href="#1.1.-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E7%BC%BA%E5%A4%B1%E5%80%BC">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15108,7 +15108,7 @@ Successfully installed colorlover-0.3.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -15159,7 +15159,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.2.-%E9%80%82%E5%BD%93%E7%9A%84%E6%94%B9%E5%90%8D%E6%9D%A5%E6%9B%B4%E7%9B%B4%E8%A7%82%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E8%8E%B7%E5%8F%96%E7%89%B9%E5%BE%81%E5%88%97">1.2. &#36866;&#24403;&#30340;&#25913;&#21517;&#26469;&#26356;&#30452;&#35266;&#30340;&#29702;&#35299;&#21644;&#33719;&#21462;&#29305;&#24449;&#21015;<a class="anchor-link" href="#1.2.-%E9%80%82%E5%BD%93%E7%9A%84%E6%94%B9%E5%90%8D%E6%9D%A5%E6%9B%B4%E7%9B%B4%E8%A7%82%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E8%8E%B7%E5%8F%96%E7%89%B9%E5%BE%81%E5%88%97">&#182;</a></h3>
+<h3 id="1.2.-%E9%80%82%E5%BD%93%E7%9A%84%E6%94%B9%E5%90%8D%E6%9D%A5%E6%9B%B4%E7%9B%B4%E8%A7%82%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E8%8E%B7%E5%8F%96%E7%89%B9%E5%BE%81%E5%88%97">1.2.  and feature<a class="anchor-link" href="#1.2.-%E9%80%82%E5%BD%93%E7%9A%84%E6%94%B9%E5%90%8D%E6%9D%A5%E6%9B%B4%E7%9B%B4%E8%A7%82%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E8%8E%B7%E5%8F%96%E7%89%B9%E5%BE%81%E5%88%97">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15168,10 +15168,10 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;sales&quot;</span><span class="p">:</span><span class="s2">&quot;department&quot;</span><span class="p">,</span><span class="s2">&quot;promotion_last_5years&quot;</span><span class="p">:</span><span class="s2">&quot;promotion&quot;</span><span class="p">,</span><span class="s2">&quot;Work_accident&quot;</span><span class="p">:</span><span class="s2">&quot;work_accident&quot;</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"sales"</span><span class="p">:</span><span class="s2">"department"</span><span class="p">,</span><span class="s2">"promotion_last_5years"</span><span class="p">:</span><span class="s2">"promotion"</span><span class="p">,</span><span class="s2">"Work_accident"</span><span class="p">:</span><span class="s2">"work_accident"</span><span class="p">})</span>
 <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 
@@ -15194,10 +15194,10 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Index([&#39;satisfaction_level&#39;, &#39;last_evaluation&#39;, &#39;number_project&#39;,
-       &#39;average_montly_hours&#39;, &#39;time_spend_company&#39;, &#39;work_accident&#39;, &#39;left&#39;,
-       &#39;promotion&#39;, &#39;department&#39;, &#39;salary&#39;],
-      dtype=&#39;object&#39;)</pre>
+<pre>Index(['satisfaction_level', 'last_evaluation', 'number_project',
+       'average_montly_hours', 'time_spend_company', 'work_accident', 'left',
+       'promotion', 'department', 'salary'],
+      dtype='object')</pre>
 </div>
 
 </div>
@@ -15213,7 +15213,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.3.-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BF%A1%E6%81%AF">1.3. &#26597;&#30475;&#25968;&#25454;&#30340;&#20449;&#24687;<a class="anchor-link" href="#1.3.-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BF%A1%E6%81%AF">&#182;</a></h3>
+<h3 id="1.3.-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BF%A1%E6%81%AF">1.3. viewdatainfo<a class="anchor-link" href="#1.3.-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BF%A1%E6%81%AF">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15222,7 +15222,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15245,7 +15245,7 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 14999 entries, 0 to 14998
 Data columns (total 10 columns):
  #   Column                Non-Null Count  Dtype  
@@ -15277,7 +15277,7 @@ memory usage: 1.1+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.4.-%E5%B1%95%E7%A4%BA%E6%89%80%E6%9C%89%E7%B1%BB%E5%9E%8B%E7%89%B9%E5%BE%81%E7%9A%84%E4%BF%A1%E6%81%AF">1.4. &#23637;&#31034;&#25152;&#26377;&#31867;&#22411;&#29305;&#24449;&#30340;&#20449;&#24687;<a class="anchor-link" href="#1.4.-%E5%B1%95%E7%A4%BA%E6%89%80%E6%9C%89%E7%B1%BB%E5%9E%8B%E7%89%B9%E5%BE%81%E7%9A%84%E4%BF%A1%E6%81%AF">&#182;</a></h3>
+<h3 id="1.4.-%E5%B1%95%E7%A4%BA%E6%89%80%E6%9C%89%E7%B1%BB%E5%9E%8B%E7%89%B9%E5%BE%81%E7%9A%84%E4%BF%A1%E6%81%AF">1.4. featureinfo<a class="anchor-link" href="#1.4.-%E5%B1%95%E7%A4%BA%E6%89%80%E6%9C%89%E7%B1%BB%E5%9E%8B%E7%89%B9%E5%BE%81%E7%9A%84%E4%BF%A1%E6%81%AF">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15286,10 +15286,10 @@ memory usage: 1.1+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;O&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">'O'</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15371,10 +15371,10 @@ memory usage: 1.1+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.5.-%E7%B1%BB%E5%88%AB%E6%95%B0%E5%AD%97%E5%8C%96">1.5. &#31867;&#21035;&#25968;&#23383;&#21270;<a class="anchor-link" href="#1.5.-%E7%B1%BB%E5%88%AB%E6%95%B0%E5%AD%97%E5%8C%96">&#182;</a></h3><ol>
-<li>先设置<code>salary</code>与<code>department</code>列为<strong>Category</strong>的数据类型</li>
-<li>保存类别与对应数值的映射字典</li>
-<li>针对<code>salary</code>和<code>department</code>这两个<code>Object</code>类型的<strong>类别</strong>特征，将其进行类别数字化。</li>
+<h3 id="1.5.-%E7%B1%BB%E5%88%AB%E6%95%B0%E5%AD%97%E5%8C%96">1.5. <a class="anchor-link" href="#1.5.-%E7%B1%BB%E5%88%AB%E6%95%B0%E5%AD%97%E5%8C%96">¶</a></h3><ol>
+<li><code>salary</code><code>department</code><strong>Category</strong>data</li>
+<li>save</li>
+<li>targeting <code>salary</code> and <code>department</code><code>Object</code><strong></strong>feature，。</li>
 </ol>
 
 </div>
@@ -15385,12 +15385,12 @@ memory usage: 1.1+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1. 先设置`salary`与`department`列为**Category**的数据类型</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="c1">#, categories=cat.categories)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="c1">#, categories=cat.categories)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1. `salary``department`**Category**data</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'department'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'department'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'category'</span><span class="p">)</span><span class="c1">#, categories=cat.categories)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'salary'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'salary'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'category'</span><span class="p">)</span><span class="c1">#, categories=cat.categories)</span>
 </pre></div>
 
      </div>
@@ -15403,7 +15403,7 @@ memory usage: 1.1+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15426,7 +15426,7 @@ memory usage: 1.1+ MB
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 14999 entries, 0 to 14998
 Data columns (total 10 columns):
  #   Column                Non-Null Count  Dtype   
@@ -15456,12 +15456,12 @@ memory usage: 967.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 保存类别</span>
-<span class="c1"># department_categories = pd.Categorical(df[&#39;department&#39;]).categories</span>
-<span class="c1"># salary_categories = pd.Categorical(df[&#39;salary&#39;]).categories</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># save</span>
+<span class="c1"># department_categories = pd.Categorical(df['department']).categories</span>
+<span class="c1"># salary_categories = pd.Categorical(df['salary']).categories</span>
 </pre></div>
 
      </div>
@@ -15474,12 +15474,12 @@ memory usage: 967.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2. 保存类别与对应数值的映射字典</span>
-<span class="n">salary_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">))</span>
-<span class="n">department_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2. save</span>
+<span class="n">salary_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'salary'</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">))</span>
+<span class="n">department_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'department'</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">))</span>
 <span class="n">salary_dict</span><span class="p">,</span><span class="n">department_dict</span>
 </pre></div>
 
@@ -15502,17 +15502,17 @@ memory usage: 967.4 KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>({0: &#39;high&#39;, 1: &#39;low&#39;, 2: &#39;medium&#39;},
- {0: &#39;IT&#39;,
-  1: &#39;RandD&#39;,
-  2: &#39;accounting&#39;,
-  3: &#39;hr&#39;,
-  4: &#39;management&#39;,
-  5: &#39;marketing&#39;,
-  6: &#39;product_mng&#39;,
-  7: &#39;sales&#39;,
-  8: &#39;support&#39;,
-  9: &#39;technical&#39;})</pre>
+<pre>({0: 'high', 1: 'low', 2: 'medium'},
+ {0: 'IT',
+  1: 'RandD',
+  2: 'accounting',
+  3: 'hr',
+  4: 'management',
+  5: 'marketing',
+  6: 'product_mng',
+  7: 'sales',
+  8: 'support',
+  9: 'technical'})</pre>
 </div>
 
 </div>
@@ -15526,15 +15526,15 @@ memory usage: 967.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3. 针对`salary`和`department`这两个`Object`类型的类别特征，将其进行类别数字化。</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3. targeting `salary` and `department``Object`feature，。</span>
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;category&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'category'</span><span class="p">:</span>
         <span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
         <span class="c1"># df[feature] = pd.Categorical(df[feature]).codes</span>
-        <span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int64&quot;</span><span class="p">)</span> <span class="c1"># 设置数据类型为int64</span>
+        <span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"int64"</span><span class="p">)</span> <span class="c1"># dataint64</span>
 </pre></div>
 
      </div>
@@ -15547,7 +15547,7 @@ memory usage: 967.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15685,9 +15685,9 @@ memory usage: 967.4 KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.6.-%E6%94%B9%E5%8F%98columns%E7%9A%84%E9%A1%BA%E5%BA%8F">1.6. &#25913;&#21464;columns&#30340;&#39034;&#24207;<a class="anchor-link" href="#1.6.-%E6%94%B9%E5%8F%98columns%E7%9A%84%E9%A1%BA%E5%BA%8F">&#182;</a></h3><p>1.先设置columns的顺序
-    - 将<code>left</code>列放置于最后一列以便直观地查看
-2.根据排好的列表顺序应用于dataframe上</p>
+<h3 id="1.6.-%E6%94%B9%E5%8F%98columns%E7%9A%84%E9%A1%BA%E5%BA%8F">1.6. columns<a class="anchor-link" href="#1.6.-%E6%94%B9%E5%8F%98columns%E7%9A%84%E9%A1%BA%E5%BA%8F">¶</a></h3><p>1.columns
+    - <code>left</code>view
+2.based on dataframe</p>
 
 </div>
 </div>
@@ -15697,12 +15697,12 @@ memory usage: 967.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
 <span class="n">cols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cols</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">7</span><span class="p">:])</span> <span class="o">+</span> <span class="p">[</span><span class="n">cols</span><span class="p">[</span><span class="mi">6</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reordered Columns:&#39;</span><span class="p">,</span><span class="n">cols</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Reordered Columns:'</span><span class="p">,</span><span class="n">cols</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15722,7 +15722,7 @@ memory usage: 967.4 KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Reordered Columns: [&#39;satisfaction_level&#39;, &#39;last_evaluation&#39;, &#39;number_project&#39;, &#39;average_montly_hours&#39;, &#39;time_spend_company&#39;, &#39;work_accident&#39;, &#39;promotion&#39;, &#39;department&#39;, &#39;salary&#39;, &#39;left&#39;]
+<pre>Reordered Columns: ['satisfaction_level', 'last_evaluation', 'number_project', 'average_montly_hours', 'time_spend_company', 'work_accident', 'promotion', 'department', 'salary', 'left']
 </pre>
 </div>
 </div>
@@ -15736,10 +15736,10 @@ memory usage: 967.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 根据排好的列表顺序应用于dataframe上</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># based on dataframe</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -15874,7 +15874,7 @@ memory usage: 967.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -15899,7 +15899,7 @@ memory usage: 967.4 KB
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>(14999, 10)
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<class 'pandas.core.frame.DataFrame'>
 RangeIndex: 14999 entries, 0 to 14998
 Data columns (total 10 columns):
  #   Column                Non-Null Count  Dtype  
@@ -15931,7 +15931,7 @@ memory usage: 1.1 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E4%B8%8E%E5%88%86%E6%9E%90">2.&#25968;&#25454;&#25506;&#32034;&#19982;&#20998;&#26512;<a class="anchor-link" href="#2.%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E4%B8%8E%E5%88%86%E6%9E%90">&#182;</a></h2>
+<h2 id="2.%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E4%B8%8E%E5%88%86%E6%9E%90">2.Data Explorationanalysis<a class="anchor-link" href="#2.%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E4%B8%8E%E5%88%86%E6%9E%90">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15942,8 +15942,8 @@ memory usage: 1.1 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.1.-%E6%8F%8F%E8%BF%B0%E6%80%A7%E5%88%86%E6%9E%90">2.1. &#25551;&#36848;&#24615;&#20998;&#26512;<a class="anchor-link" href="#2.1.-%E6%8F%8F%E8%BF%B0%E6%80%A7%E5%88%86%E6%9E%90">&#182;</a></h3><p><strong>对<code>left</code></strong>列进行Group，进行描述性分析<a href="https://zhuanlan.zhihu.com/p/30282012">[1]</a>
-查看在职与离职类别下，每个特征的均值</p>
+<h3 id="2.1.-%E6%8F%8F%E8%BF%B0%E6%80%A7%E5%88%86%E6%9E%90">2.1. analysis<a class="anchor-link" href="#2.1.-%E6%8F%8F%E8%BF%B0%E6%80%A7%E5%88%86%E6%9E%90">¶</a></h3><p><strong><code>left</code></strong>Group，analysis<a href="https://zhuanlan.zhihu.com/p/30282012">[1]</a>
+viewTurnover，feature</p>
 
 </div>
 </div>
@@ -15953,10 +15953,10 @@ memory usage: 1.1 MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">left_summary</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">left_summary</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'left'</span><span class="p">])</span>
 <span class="n">left_summary</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 
@@ -16060,7 +16060,7 @@ memory usage: 1.1 MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -16237,20 +16237,20 @@ memory usage: 1.1 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.2.-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90">2.2. &#30456;&#20851;&#24615;&#20998;&#26512;<a class="anchor-link" href="#2.2.-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90">&#182;</a></h3><p>根据热力图显示，可以发现：</p>
+<h3 id="2.2.-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90">2.2. Correlationanalysis<a class="anchor-link" href="#2.2.-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90">¶</a></h3><p>based on ，：</p>
 <ul>
-<li><code>满意度(satisfaction_level）</code><ul>
-<li>员工<strong>满意度</strong>（satisfaction_level）离职（left）呈较大<strong>负相关</strong>（-）关系，与<strong>完成项目数</strong>（number_project）、<strong>在公司的年份</strong>（time_spend_company）也有一定的负相关性。</li>
+<li><code>(satisfaction_level）</code><ul>
+<li>Employee<strong></strong>（satisfaction_level）Turnover（left）<strong>related </strong>（-），<strong></strong>（number_project）、<strong>Year</strong>（time_spend_company）Correlation。</li>
 </ul>
 </li>
-<li><code>绩效评估(last_evaluation)</code><ul>
-<li>上一次的<strong>绩效评估</strong>(last_evaluation)与<strong>完成项目数</strong>（number_project）和<strong>平均每月工作时间</strong>（average_montly_hours）这两个特征呈较大的<strong>正相关</strong>（+）关系,也就是说，完成项目数越多，平均每月工作时长越长，员工能获得更高的评价。</li>
-<li>但绩效评估与工资，晋升都没有什么相关性，所以员工得到了高绩效评价也不会升职或者涨工资。</li>
+<li><code>evaluation(last_evaluation)</code><ul>
+<li><strong>evaluation</strong>(last_evaluation)<strong></strong>（number_project） and <strong>monthtime</strong>（average_montly_hours）feature<strong>related </strong>（+）,，，monthhour，EmployeeAssessment。</li>
+<li>evaluation，Correlation， so EmployeeAssessment。</li>
 </ul>
 </li>
-<li><code>离职（left）</code><ul>
-<li>离职率与员工<strong>满意度</strong>（satisfaction_level）、过去5年是否有<strong>晋升</strong>（promotion_last_5years）、是否有<strong>工伤</strong>（work_accident）、<strong>工资薪酬</strong>（salary）呈<strong>负相关</strong>（-）关系。如果员工对公司不太满意，且个人价值实现不高，那么离职的可能性会很大。</li>
-<li>离职率与员工的<strong>在公司的年份</strong>（time_spend_company）呈较大<strong>正相关</strong>（+）关系。与<strong>平均每月工作时间</strong>（average_montly_hours），所在<strong>部门</strong>（department）也呈些许正相关性。</li>
+<li><code>Turnover（left）</code><ul>
+<li>TurnoverEmployee<strong></strong>（satisfaction_level）、5year<strong></strong>（promotion_last_5years）、<strong></strong>（work_accident）、<strong></strong>（salary）<strong>related </strong>（-）。 if Employee，implement ，Turnover。</li>
+<li>TurnoverEmployee<strong>Year</strong>（time_spend_company）<strong>related </strong>（+）。<strong>monthtime</strong>（average_montly_hours），<strong></strong>（department）Correlation。</li>
 </ul>
 </li>
 </ul>
@@ -16263,10 +16263,10 @@ memory usage: 1.1 MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>                 <span class="c1"># pearson相关系数</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>                 <span class="c1"># pearsonrelated </span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">corr</span><span class="p">)</span>
 <span class="n">mask</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">tril_indices_from</span><span class="p">(</span><span class="n">mask</span><span class="p">)]</span><span class="o">=</span><span class="kc">True</span>
 </pre></div>
@@ -16281,26 +16281,26 @@ memory usage: 1.1 MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">11</span><span class="p">,</span><span class="mi">7</span><span class="p">)})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">"white"</span><span class="p">):</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:(</span><span class="mi">11</span><span class="p">,</span><span class="mi">7</span><span class="p">)})</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> 
                 <span class="n">xticklabels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-                <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu&#39;</span><span class="p">,</span> <span class="c1"># cmap=&#39;YlGnBu&#39;,  # 颜色</span>
-                <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span>   <span class="c1"># 使用掩码只绘制矩阵的一部分</span>
-                <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.3f&#39;</span><span class="p">,</span>     <span class="c1"># 格式设置</span>
-                <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>    <span class="c1"># 方格内写入数据</span>
-                <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="c1"># 热力图矩阵之间的间隔大小</span>
-                <span class="n">vmax</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span>       <span class="c1"># 图例中最大值</span>
+                <span class="n">cmap</span><span class="o">=</span><span class="s1">'RdBu'</span><span class="p">,</span> <span class="c1"># cmap='YlGnBu',  # Color</span>
+                <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span>   <span class="c1"># using minute</span>
+                <span class="n">fmt</span><span class="o">=</span><span class="s1">'.3f'</span><span class="p">,</span>     <span class="c1"># </span>
+                <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>    <span class="c1"># data</span>
+                <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="c1"># </span>
+                <span class="n">vmax</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span>       <span class="c1"># max</span>
                 <span class="n">square</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="c1"># center = 0</span>
                 <span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Correlation&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Correlation"</span><span class="p">)</span>
 <span class="n">label_x</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">label_x</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">label_x</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">'right'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -16343,7 +16343,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.3.%E5%8F%98%E9%87%8F%E5%88%86%E6%9E%90">2.3.&#21464;&#37327;&#20998;&#26512;<a class="anchor-link" href="#2.3.%E5%8F%98%E9%87%8F%E5%88%86%E6%9E%90">&#182;</a></h3><h4 id="2.3.1.-%E5%85%AC%E5%8F%B8%E5%BD%93%E5%89%8D%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E7%9A%84%E6%AF%94%E7%8E%87">2.3.1. &#20844;&#21496;&#24403;&#21069;&#21592;&#24037;&#31163;&#32844;&#19982;&#22312;&#32844;&#30340;&#27604;&#29575;<a class="anchor-link" href="#2.3.1.-%E5%85%AC%E5%8F%B8%E5%BD%93%E5%89%8D%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E7%9A%84%E6%AF%94%E7%8E%87">&#182;</a></h4>
+<h3 id="2.3.%E5%8F%98%E9%87%8F%E5%88%86%E6%9E%90">2.3.variableanalysis<a class="anchor-link" href="#2.3.%E5%8F%98%E9%87%8F%E5%88%86%E6%9E%90">¶</a></h3><h4 id="2.3.1.-%E5%85%AC%E5%8F%B8%E5%BD%93%E5%89%8D%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E7%9A%84%E6%AF%94%E7%8E%87">2.3.1. EmployeeTurnover<a class="anchor-link" href="#2.3.1.-%E5%85%AC%E5%8F%B8%E5%BD%93%E5%89%8D%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E7%9A%84%E6%AF%94%E7%8E%87">¶</a></h4>
 </div>
 </div>
 </div>
@@ -16352,10 +16352,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">left_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;left_count&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">left_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'left'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"left_count"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16368,10 +16368,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16384,13 +16384,13 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trace</span> <span class="o">=</span> <span class="n">Pie</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;在职&#39;</span><span class="p">,</span><span class="s1">&#39;离职&#39;</span><span class="p">],</span> <span class="n">values</span> <span class="o">=</span> <span class="n">left_count</span><span class="o">.</span><span class="n">left_count</span><span class="p">,</span>
-            <span class="n">hoverinfo</span> <span class="o">=</span> <span class="s2">&quot;label + percent + name&quot;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trace</span> <span class="o">=</span> <span class="n">Pie</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">''</span><span class="p">,</span><span class="s1">'Turnover'</span><span class="p">],</span> <span class="n">values</span> <span class="o">=</span> <span class="n">left_count</span><span class="o">.</span><span class="n">left_count</span><span class="p">,</span>
+            <span class="n">hoverinfo</span> <span class="o">=</span> <span class="s2">"label + percent + name"</span><span class="p">,</span>
             <span class="n">marker</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">colors</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">:]),</span> <span class="n">hole</span> <span class="o">=</span> <span class="mf">.6</span><span class="p">,</span> <span class="n">pull</span> <span class="o">=</span> <span class="mf">.1</span><span class="p">)</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;员工在职与离职的比率&quot;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">380</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">380</span><span class="p">)</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">"EmployeeTurnover"</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">380</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">380</span><span class="p">)</span>
 <span class="n">iplot</span><span class="p">(</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">trace</span><span class="p">],</span> <span class="n">layout</span> <span class="o">=</span> <span class="n">layout</span><span class="p">))</span>
 </pre></div>
 
@@ -16452,7 +16452,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.3.2.-%E5%85%AC%E5%8F%B8%E5%91%98%E5%B7%A5%E7%9A%84%E6%BB%A1%E6%84%8F%E5%BA%A6%E4%B8%8E%E5%85%A5%E8%81%8C%E5%B9%B4%E4%BB%BD%E7%9A%84%E5%85%B3%E7%B3%BB">2.3.2. &#20844;&#21496;&#21592;&#24037;&#30340;&#28385;&#24847;&#24230;&#19982;&#20837;&#32844;&#24180;&#20221;&#30340;&#20851;&#31995;<a class="anchor-link" href="#2.3.2.-%E5%85%AC%E5%8F%B8%E5%91%98%E5%B7%A5%E7%9A%84%E6%BB%A1%E6%84%8F%E5%BA%A6%E4%B8%8E%E5%85%A5%E8%81%8C%E5%B9%B4%E4%BB%BD%E7%9A%84%E5%85%B3%E7%B3%BB">&#182;</a></h4>
+<h4 id="2.3.2.-%E5%85%AC%E5%8F%B8%E5%91%98%E5%B7%A5%E7%9A%84%E6%BB%A1%E6%84%8F%E5%BA%A6%E4%B8%8E%E5%85%A5%E8%81%8C%E5%B9%B4%E4%BB%BD%E7%9A%84%E5%85%B3%E7%B3%BB">2.3.2. EmployeeYear<a class="anchor-link" href="#2.3.2.-%E5%85%AC%E5%8F%B8%E5%91%98%E5%B7%A5%E7%9A%84%E6%BB%A1%E6%84%8F%E5%BA%A6%E4%B8%8E%E5%85%A5%E8%81%8C%E5%B9%B4%E4%BB%BD%E7%9A%84%E5%85%B3%E7%B3%BB">¶</a></h4>
 </div>
 </div>
 </div>
@@ -16461,10 +16461,10 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time_mean_satifaction</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time_spend_company&#39;</span><span class="p">])[</span><span class="s1">&#39;satisfaction_level&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;average_satisfaction&quot;</span><span class="p">)</span> <span class="c1"># 取满意度的均值的</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time_mean_satifaction</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'time_spend_company'</span><span class="p">])[</span><span class="s1">'satisfaction_level'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"average_satisfaction"</span><span class="p">)</span> <span class="c1"># </span>
 </pre></div>
 
      </div>
@@ -16477,14 +16477,14 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time_mean_satifaction</span><span class="o">.</span><span class="n">time_spend_company</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">time_mean_satifaction</span><span class="o">.</span><span class="n">average_satisfaction</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">),)</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span> <span class="s2">&quot;员工满意度与公司在职时间有什么关联？&quot;</span><span class="p">,</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span> <span class="s2">"Employeetime？"</span><span class="p">,</span>
                 <span class="n">width</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
-                <span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;在公司时间（年）&quot;</span><span class="p">),</span>
-                <span class="n">yaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;平均满意度&quot;</span><span class="p">),</span>
+                <span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"time（year）"</span><span class="p">),</span>
+                <span class="n">yaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">""</span><span class="p">),</span>
                 <span class="p">)</span>
 <span class="n">iplot</span><span class="p">(</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">trace</span><span class="p">],</span><span class="n">layout</span><span class="o">=</span> <span class="n">layout</span><span class="p">))</span>
 </pre></div>
@@ -16547,7 +16547,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.3.3.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E6%83%85%E5%86%B5%E5%AF%B9%E6%AF%94">2.3.3. &#20844;&#21496;&#21508;&#37096;&#38376;&#30340;&#21592;&#24037;&#31163;&#32844;&#19982;&#22312;&#32844;&#24773;&#20917;&#23545;&#27604;<a class="anchor-link" href="#2.3.3.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E6%83%85%E5%86%B5%E5%AF%B9%E6%AF%94">&#182;</a></h4><p>可以看出，sales部门的离职人数最多，有1014人，其次是technical技术部门离职697人。</p>
+<h4 id="2.3.3.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E6%83%85%E5%86%B5%E5%AF%B9%E6%AF%94">2.3.3. EmployeeTurnover<a class="anchor-link" href="#2.3.3.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%BB%E8%81%8C%E4%B8%8E%E5%9C%A8%E8%81%8C%E6%83%85%E5%86%B5%E5%AF%B9%E6%AF%94">¶</a></h4><p>We can see ，salesTurnover，1014，technicalTurnover697。</p>
 
 </div>
 </div>
@@ -16557,10 +16557,10 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">depart_left_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">depart_left_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'department'</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'left'</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16573,15 +16573,15 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">left_eles</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">left_eles</span><span class="p">:</span>
-    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">depart_left_table</span><span class="p">[</span><span class="n">l</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">depart_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;离职&#39;</span> <span class="k">if</span> <span class="n">l</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;在职&#39;</span><span class="p">),</span><span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">depart_left_table</span><span class="p">[</span><span class="n">l</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">depart_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s1">'Turnover'</span> <span class="k">if</span> <span class="n">l</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">''</span><span class="p">),</span><span class="n">orientation</span><span class="o">=</span><span class="s1">'h'</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
     <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;每个部门的离职员工数与在职员工数对比&quot;</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s2">&quot;stack&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;部门&quot;</span><span class="p">,</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"TurnoverEmployeeEmployee"</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s2">"stack"</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">"array"</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
 <span class="n">iplot</span><span class="p">(</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">))</span>
 </pre></div>
 
@@ -16643,7 +16643,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.3.4.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B7%A5%E8%B5%84%E6%B0%B4%E5%B9%B3">2.3.4. &#20844;&#21496;&#21508;&#37096;&#38376;&#30340;&#21592;&#24037;&#30340;&#24037;&#36164;&#27700;&#24179;<a class="anchor-link" href="#2.3.4.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B7%A5%E8%B5%84%E6%B0%B4%E5%B9%B3">&#182;</a></h4><p>销售部门（sales）低工资水平（low salary）的最多，有2099人,其次是技术部门(technical)与后勤部门(support),分别为1372人与1146人。</p>
+<h4 id="2.3.4.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B7%A5%E8%B5%84%E6%B0%B4%E5%B9%B3">2.3.4. Employee<a class="anchor-link" href="#2.3.4.-%E5%85%AC%E5%8F%B8%E5%90%84%E9%83%A8%E9%97%A8%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B7%A5%E8%B5%84%E6%B0%B4%E5%B9%B3">¶</a></h4><p>Sales（sales）（low salary），2099,(technical)(support),respectively13721146。</p>
 
 </div>
 </div>
@@ -16653,10 +16653,10 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">depart_salary_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">depart_salary_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'department'</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'salary'</span><span class="p">])</span>
 <span class="c1"># depart_salary_table</span>
 </pre></div>
 
@@ -16670,14 +16670,14 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">depart_salary_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">depart_salary_table</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="n">salary_dict</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]))</span>
     <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;公司各部门的员工工资情况&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">,</span><span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Employee"</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">,</span><span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">"array"</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">department_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
 <span class="n">iplot</span><span class="p">(</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span><span class="n">layout</span> <span class="o">=</span> <span class="n">layout</span><span class="p">))</span>
 </pre></div>
 
@@ -16739,7 +16739,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.3.5-%E5%91%98%E5%B7%A5%E8%96%AA%E8%B5%84%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%8E%87">2.3.5 &#21592;&#24037;&#34218;&#36164;&#19982;&#31163;&#32844;&#29575;<a class="anchor-link" href="#2.3.5-%E5%91%98%E5%B7%A5%E8%96%AA%E8%B5%84%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%8E%87">&#182;</a></h4><p>低薪与中等薪资的员工离职率偏高分别是42%，26%，高薪员工只用7%的离职率。</p>
+<h4 id="2.3.5-%E5%91%98%E5%B7%A5%E8%96%AA%E8%B5%84%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%8E%87">2.3.5 EmployeeSalaryTurnover<a class="anchor-link" href="#2.3.5-%E5%91%98%E5%B7%A5%E8%96%AA%E8%B5%84%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%8E%87">¶</a></h4><p>SalaryEmployeeTurnoverrespectively42%，26%，Employee7%Turnover。</p>
 
 </div>
 </div>
@@ -16749,10 +16749,10 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">salary_left_table</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">salary_left_table</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'salary'</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'left'</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16765,14 +16765,14 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
-    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">salary_left_table</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;在职&quot;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;离职&quot;</span><span class="p">),</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">salary_left_table</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">""</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="s2">"Turnover"</span><span class="p">),</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
     <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;员工薪资对离职的影响&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">580</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span><span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">salary_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">salary_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"EmployeeSalaryTurnover"</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">580</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span><span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">"array"</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">salary_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">salary_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
 <span class="n">iplot</span><span class="p">(</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span><span class="n">layout</span> <span class="o">=</span> <span class="n">layout</span><span class="p">))</span>
 </pre></div>
 
@@ -16834,7 +16834,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.3.6.-%E5%91%98%E5%B7%A5%E8%BF%87%E5%8E%BB5%E5%B9%B4%E7%9A%84%E5%8D%87%E8%81%8C%E6%83%85%E5%86%B5%E4%B8%8E%E7%A6%BB%E8%81%8C%E5%AF%B9%E6%AF%94">2.3.6. &#21592;&#24037;&#36807;&#21435;5&#24180;&#30340;&#21319;&#32844;&#24773;&#20917;&#19982;&#31163;&#32844;&#23545;&#27604;<a class="anchor-link" href="#2.3.6.-%E5%91%98%E5%B7%A5%E8%BF%87%E5%8E%BB5%E5%B9%B4%E7%9A%84%E5%8D%87%E8%81%8C%E6%83%85%E5%86%B5%E4%B8%8E%E7%A6%BB%E8%81%8C%E5%AF%B9%E6%AF%94">&#182;</a></h4><p>过去5年都没有升过职的员工离职率相比升过职的要高出很多。升过职的员工94%都在职。</p>
+<h4 id="2.3.6.-%E5%91%98%E5%B7%A5%E8%BF%87%E5%8E%BB5%E5%B9%B4%E7%9A%84%E5%8D%87%E8%81%8C%E6%83%85%E5%86%B5%E4%B8%8E%E7%A6%BB%E8%81%8C%E5%AF%B9%E6%AF%94">2.3.6. Employee5yearTurnover<a class="anchor-link" href="#2.3.6.-%E5%91%98%E5%B7%A5%E8%BF%87%E5%8E%BB5%E5%B9%B4%E7%9A%84%E5%8D%87%E8%81%8C%E6%83%85%E5%86%B5%E4%B8%8E%E7%A6%BB%E8%81%8C%E5%AF%B9%E6%AF%94">¶</a></h4><p>5yearEmployeeTurnover。Employee94%。</p>
 
 </div>
 </div>
@@ -16844,10 +16844,10 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">promotion_left_table</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;promotion&#39;</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">promotion_left_table</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'promotion'</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'left'</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16860,15 +16860,15 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">promotion_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s2">&quot;没有升职&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;升过职&quot;</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">promotion_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s2">""</span><span class="p">}</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
-    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">promotion_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">promotion_left_table</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;在职&quot;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;离职&quot;</span><span class="p">),</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">promotion_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">promotion_left_table</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">""</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="s2">"Turnover"</span><span class="p">),</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
     <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;员工过去5年是否升职对离职的影响&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span><span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">promotion_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">promotion_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Employee5yearTurnover"</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span><span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s2">"array"</span><span class="p">,</span><span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">promotion_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="n">ticktext</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">promotion_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
 <span class="n">iplot</span><span class="p">(</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span><span class="n">layout</span> <span class="o">=</span> <span class="n">layout</span><span class="p">))</span>
 </pre></div>
 
@@ -16930,7 +16930,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.3.7.-%E5%91%98%E5%B7%A5%E7%BB%A9%E6%95%88%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%9A%84%E5%AF%B9%E6%AF%94">2.3.7. &#21592;&#24037;&#32489;&#25928;&#19982;&#31163;&#32844;&#30340;&#23545;&#27604;<a class="anchor-link" href="#2.3.7.-%E5%91%98%E5%B7%A5%E7%BB%A9%E6%95%88%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%9A%84%E5%AF%B9%E6%AF%94">&#182;</a></h4><p>离职员工不乏很多获得高度评价的</p>
+<h4 id="2.3.7.-%E5%91%98%E5%B7%A5%E7%BB%A9%E6%95%88%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%9A%84%E5%AF%B9%E6%AF%94">2.3.7. EmployeeTurnover<a class="anchor-link" href="#2.3.7.-%E5%91%98%E5%B7%A5%E7%BB%A9%E6%95%88%E4%B8%8E%E7%A6%BB%E8%81%8C%E7%9A%84%E5%AF%B9%E6%AF%94">¶</a></h4><p>TurnoverEmployeeAssessment</p>
 
 </div>
 </div>
@@ -16940,10 +16940,10 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eva_left_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;last_evaluation&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eva_left_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'last_evaluation'</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">'left'</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16956,14 +16956,14 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
-    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">eva_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">eva_left_table</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;在职&quot;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;离职&quot;</span><span class="p">),</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">eva_left_table</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">eva_left_table</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">""</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="s2">"Turnover"</span><span class="p">),</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]))</span>
     <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;员工的绩效评估对离职的影响&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,)</span><span class="c1">#xaxis = dict(tickmode=&quot;array&quot;,tickvals=list(promotion_dict.keys()),ticktext=list(promotion_dict.values())))</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"EmployeeevaluationTurnover"</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,)</span><span class="c1">#xaxis = dict(tickmode="array",tickvals=list(promotion_dict.keys()),ticktext=list(promotion_dict.values())))</span>
 <span class="n">iplot</span><span class="p">(</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span><span class="n">layout</span> <span class="o">=</span> <span class="n">layout</span><span class="p">))</span>
 </pre></div>
 
@@ -17025,22 +17025,22 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.%E6%80%BB%E7%BB%93">3.&#24635;&#32467;<a class="anchor-link" href="#3.%E6%80%BB%E7%BB%93">&#182;</a></h2><h3 id="3.1.-%E7%A6%BB%E8%81%8C%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90">3.1. &#31163;&#32844;&#21407;&#22240;&#20998;&#26512;<a class="anchor-link" href="#3.1.-%E7%A6%BB%E8%81%8C%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90">&#182;</a></h3><p>根据上面的👆分析，总的来看，<strong>离职员工的特征</strong>有以下几点：</p>
+<h2 id="3.%E6%80%BB%E7%BB%93">3.<a class="anchor-link" href="#3.%E6%80%BB%E7%BB%93">¶</a></h2><h3 id="3.1.-%E7%A6%BB%E8%81%8C%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90">3.1. Turnoveranalysis<a class="anchor-link" href="#3.1.-%E7%A6%BB%E8%81%8C%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90">¶</a></h3><p>based on 👆analysis，，<strong>TurnoverEmployeefeature</strong>：</p>
 <ul>
-<li>对公司<strong>满意度低</strong>；</li>
-<li>平均<strong>每天工作时长</strong>为10.4个小时（按一个月每周工作5天来计算），工作劳累；</li>
-<li><strong>薪资</strong>大多为中低水平；</li>
-<li>过去5年基本<strong>没有升过职</strong>；</li>
-<li>离职员工大部分来自<strong>销售</strong>、<strong>技术</strong>与<strong>后勤</strong>部门，销售部门占主要；</li>
-<li>员工离职<strong>并不是单纯的因为绩效不好</strong>，相反，有一大半的离职员工的绩效评价都很高，在0.8-1之间都存在。结合之前相关性分析的发现，高绩效并不会带来升职和加薪，这也从侧面说明了为什么许多获得高评价的员工也会离职的原因。</li>
+<li><strong></strong>；</li>
+<li><strong>dayshour</strong>10.4hour（month5dayscalculate），；</li>
+<li><strong>Salary</strong>；</li>
+<li>5yearbasic <strong></strong>；</li>
+<li>TurnoverEmployeeminute<strong>Sales</strong>、<strong></strong><strong></strong>，Salesmain ；</li>
+<li>EmployeeTurnover<strong> because </strong>，，TurnoverEmployeeAssessment，0.8-1has 。Correlationanalysis， and ，descriptionAssessmentEmployeeTurnover。</li>
 </ul>
-<p><strong>所以，公司里大部分员工离职是因为满意度低、工资低、个人价值实现得不到满足。</strong></p>
-<h3 id="3.2.-%E5%85%AC%E5%8F%B8%E9%9C%80%E8%A6%81%E6%80%9D%E8%80%83%F0%9F%A4%94%E7%9A%84%E9%97%AE%E9%A2%98">3.2. &#20844;&#21496;&#38656;&#35201;&#24605;&#32771;&#129300;&#30340;&#38382;&#39064;<a class="anchor-link" href="#3.2.-%E5%85%AC%E5%8F%B8%E9%9C%80%E8%A6%81%E6%80%9D%E8%80%83%F0%9F%A4%94%E7%9A%84%E9%97%AE%E9%A2%98">&#182;</a></h3><ul>
-<li>为什么获得高绩效评价的员工离职率也很高？甚至评价最高的离职员工数有170多人？为什么这部分员工等不到升职与加薪？</li>
-<li>为什么销售部门的离职员工最多？</li>
-<li>为什么员工对公司的满意度低？</li>
+<p><strong> so ，minuteEmployeeTurnover because 、、implement 。</strong></p>
+<h3 id="3.2.-%E5%85%AC%E5%8F%B8%E9%9C%80%E8%A6%81%E6%80%9D%E8%80%83%F0%9F%A4%94%E7%9A%84%E9%97%AE%E9%A2%98">3.2. need to 🤔<a class="anchor-link" href="#3.2.-%E5%85%AC%E5%8F%B8%E9%9C%80%E8%A6%81%E6%80%9D%E8%80%83%F0%9F%A4%94%E7%9A%84%E9%97%AE%E9%A2%98">¶</a></h3><ul>
+<li>AssessmentEmployeeTurnover？AssessmentTurnoverEmployee170？minuteEmployee？</li>
+<li>SalesTurnoverEmployee？</li>
+<li>Employee？</li>
 </ul>
-<p>公司应该为员工创造一个良好的工作氛围，待遇与职业发展，更大限度的让员工实现自身的价值，从而更好的留住员工。</p>
+<p>Employee，，Employeeimplement ，Employee。</p>
 
 </div>
 </div>
@@ -17052,7 +17052,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%8F%82%E8%80%83">&#21442;&#32771;<a class="anchor-link" href="#%E5%8F%82%E8%80%83">&#182;</a></h2><p><a href="https://www.kaggle.com/mizanhadi/hr-employee-data-visualisation">[1]https://www.kaggle.com/mizanhadi/hr-employee-data-visualisation</a></p>
+<h2 id="%E5%8F%82%E8%80%83"><a class="anchor-link" href="#%E5%8F%82%E8%80%83">¶</a></h2><p><a href="https://www.kaggle.com/mizanhadi/hr-employee-data-visualisation">[1]https://www.kaggle.com/mizanhadi/hr-employee-data-visualisation</a></p>
 
 </div>
 </div>
@@ -17062,7 +17062,7 @@ if (outputEl) {{
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 

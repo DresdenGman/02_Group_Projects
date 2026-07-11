@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2、超市销售数据自动化报表</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2、SupermarketSalesdata</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,7 +14598,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#查看源数据类型" data-toc-modified-id="查看源数据类型-1">查看源数据类型</a></span></li><li><span><a href="#计算本月的相关的指标" data-toc-modified-id="计算本月的相关的指标-2">计算本月的相关的指标</a></span></li><li><span><a href="#计算上月相关指标" data-toc-modified-id="计算上月相关指标-3">计算上月相关指标</a></span></li><li><span><a href="#计算去年同期相关指标" data-toc-modified-id="计算去年同期相关指标-4">计算去年同期相关指标</a></span></li><li><span><a href="#创建DataFrame-添加同比和环比字段" data-toc-modified-id="创建DataFrame-添加同比和环比字段-5">创建DataFrame 添加同比和环比字段</a></span></li><li><span><a href="#查看报表" data-toc-modified-id="查看报表-6">查看报表</a></span></li><li><span><a href="#将结果导出本地" data-toc-modified-id="将结果导出本地-7">将结果导出本地</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#viewdata" data-toc-modified-id="viewdata-1">viewdata</a></span></li><li><span><a href="#calculatemonthrelated " data-toc-modified-id="calculatemonthrelated -2">calculatemonthrelated </a></span></li><li><span><a href="#calculatemonthrelated " data-toc-modified-id="calculatemonthrelated -3">calculatemonthrelated </a></span></li><li><span><a href="#calculateyearrelated " data-toc-modified-id="calculateyearrelated -4">calculateyearrelated </a></span></li><li><span><a href="#DataFrame- and " data-toc-modified-id="DataFrame- and -5">DataFrame  and </a></span></li><li><span><a href="#view" data-toc-modified-id="view-6">view</a></span></li><li><span><a href="#result" data-toc-modified-id="result-7">result</a></span></li></ul></div>
 
 </div>
 </div>
@@ -14610,7 +14610,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E6%9F%A5%E7%9C%8B%E6%BA%90%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">&#26597;&#30475;&#28304;&#25968;&#25454;&#31867;&#22411;<a class="anchor-link" href="#%E6%9F%A5%E7%9C%8B%E6%BA%90%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">&#182;</a></h3>
+<h3 id="%E6%9F%A5%E7%9C%8B%E6%BA%90%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">viewdata<a class="anchor-link" href="#%E6%9F%A5%E7%9C%8B%E6%BA%90%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14619,16 +14619,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
-<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;order-14.1.csv&quot;</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;成交时间&quot;</span><span class="p">],</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;gbk&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"order-14.1.csv"</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">"time"</span><span class="p">],</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'gbk'</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 <span class="c1"># print(data.head(5))</span>
-<span class="c1"># 查看源数据类型</span>
+<span class="c1"># viewdata</span>
 <span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
@@ -14649,18 +14649,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 3744 entries, 0 to 3743
 Data columns (total 7 columns):
  #   Column  Non-Null Count  Dtype         
 ---  ------  --------------  -----         
- 0   商品ID    3478 non-null   float64       
- 1   类别ID    3478 non-null   float64       
- 2   门店编号    3478 non-null   object        
- 3   单价      3478 non-null   float64       
- 4   销量      3478 non-null   float64       
- 5   成交时间    3478 non-null   datetime64[ns]
- 6   订单ID    3478 non-null   object        
+ 0   ProductID    3478 non-null   float64       
+ 1   ID    3478 non-null   float64       
+ 2       3478 non-null   object        
+ 3         3478 non-null   float64       
+ 4         3478 non-null   float64       
+ 5   time    3478 non-null   datetime64[ns]
+ 6   OrderID    3478 non-null   object        
 dtypes: datetime64[ns](1), float64(4), object(2)
 memory usage: 204.9+ KB
 </pre>
@@ -14678,7 +14678,7 @@ memory usage: 204.9+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E8%AE%A1%E7%AE%97%E6%9C%AC%E6%9C%88%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E6%A0%87">&#35745;&#31639;&#26412;&#26376;&#30340;&#30456;&#20851;&#30340;&#25351;&#26631;<a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%AC%E6%9C%88%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E6%A0%87">&#182;</a></h3>
+<h3 id="%E8%AE%A1%E7%AE%97%E6%9C%AC%E6%9C%88%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E6%A0%87">calculatemonthrelated <a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%AC%E6%9C%88%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E6%A0%87">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14687,18 +14687,18 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 计算本月的相关的指标</span>
-<span class="n">This_month</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;成交时间&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;成交时间&quot;</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">28</span><span class="p">))]</span>
-<span class="c1"># 销售额计算</span>
-<span class="n">sales_1</span><span class="o">=</span><span class="p">(</span><span class="n">This_month</span><span class="p">[</span><span class="s2">&quot;销量&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">This_month</span><span class="p">[</span><span class="s1">&#39;单价&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="c1"># 客流量计算</span>
-<span class="n">traffic_1</span><span class="o">=</span><span class="n">This_month</span><span class="p">[</span><span class="s2">&quot;订单ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="c1"># 客单价计算</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculatemonthrelated </span>
+<span class="n">This_month</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span><span class="o">>=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">&</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span><span class="o"><=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">28</span><span class="p">))]</span>
+<span class="c1"># Salescalculate</span>
+<span class="n">sales_1</span><span class="o">=</span><span class="p">(</span><span class="n">This_month</span><span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">*</span><span class="n">This_month</span><span class="p">[</span><span class="s1">''</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># calculate</span>
+<span class="n">traffic_1</span><span class="o">=</span><span class="n">This_month</span><span class="p">[</span><span class="s2">"OrderID"</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="c1"># calculate</span>
 <span class="n">s_t_1</span><span class="o">=</span><span class="n">sales_1</span><span class="o">/</span><span class="n">traffic_1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;本月销售额为：</span><span class="si">{:.2f}</span><span class="s2">,客流量为：</span><span class="si">{}</span><span class="s2">,客单价为：</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sales_1</span><span class="p">,</span><span class="n">traffic_1</span><span class="p">,</span><span class="n">s_t_1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"monthSales：</span><span class="si">{:.2f}</span><span class="s2">,：</span><span class="si">{}</span><span class="s2">,：</span><span class="si">{:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sales_1</span><span class="p">,</span><span class="n">traffic_1</span><span class="p">,</span><span class="n">s_t_1</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14718,7 +14718,7 @@ memory usage: 204.9+ KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>本月销售额为：10412.78,客流量为：343,客单价为：30.36
+<pre>monthSales：10412.78,：343,：30.36
 </pre>
 </div>
 </div>
@@ -14734,7 +14734,7 @@ memory usage: 204.9+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E8%AE%A1%E7%AE%97%E4%B8%8A%E6%9C%88%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">&#35745;&#31639;&#19978;&#26376;&#30456;&#20851;&#25351;&#26631;<a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E4%B8%8A%E6%9C%88%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">&#182;</a></h3>
+<h3 id="%E8%AE%A1%E7%AE%97%E4%B8%8A%E6%9C%88%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">calculatemonthrelated <a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E4%B8%8A%E6%9C%88%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14743,19 +14743,19 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 计算上月相关指标</span>
-<span class="n">last_month</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;成交时间&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;成交时间&quot;</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">))]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculatemonthrelated </span>
+<span class="n">last_month</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span><span class="o">>=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">&</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span><span class="o"><=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">))]</span>
 
-<span class="c1"># 销售额计算</span>
-<span class="n">sales_2</span><span class="o">=</span><span class="p">(</span><span class="n">last_month</span><span class="p">[</span><span class="s2">&quot;销量&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">last_month</span><span class="p">[</span><span class="s1">&#39;单价&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="c1"># 客流量计算</span>
-<span class="n">traffic_2</span><span class="o">=</span><span class="n">last_month</span><span class="p">[</span><span class="s2">&quot;订单ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="c1"># 客单价计算</span>
+<span class="c1"># Salescalculate</span>
+<span class="n">sales_2</span><span class="o">=</span><span class="p">(</span><span class="n">last_month</span><span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">*</span><span class="n">last_month</span><span class="p">[</span><span class="s1">''</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># calculate</span>
+<span class="n">traffic_2</span><span class="o">=</span><span class="n">last_month</span><span class="p">[</span><span class="s2">"OrderID"</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="c1"># calculate</span>
 <span class="n">s_t_2</span><span class="o">=</span><span class="n">sales_2</span><span class="o">/</span><span class="n">traffic_2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;本月销售额为：</span><span class="si">{:.2f}</span><span class="s2">,客流量为：</span><span class="si">{}</span><span class="s2">,客单价为：</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sales_2</span><span class="p">,</span><span class="n">traffic_2</span><span class="p">,</span><span class="n">s_t_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"monthSales：</span><span class="si">{:.2f}</span><span class="s2">,：</span><span class="si">{}</span><span class="s2">,：</span><span class="si">{:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sales_2</span><span class="p">,</span><span class="n">traffic_2</span><span class="p">,</span><span class="n">s_t_2</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14775,7 +14775,7 @@ memory usage: 204.9+ KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>本月销售额为：9940.97,客流量为：315,客单价为：31.56
+<pre>monthSales：9940.97,：315,：31.56
 </pre>
 </div>
 </div>
@@ -14791,7 +14791,7 @@ memory usage: 204.9+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E8%AE%A1%E7%AE%97%E5%8E%BB%E5%B9%B4%E5%90%8C%E6%9C%9F%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">&#35745;&#31639;&#21435;&#24180;&#21516;&#26399;&#30456;&#20851;&#25351;&#26631;<a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E5%8E%BB%E5%B9%B4%E5%90%8C%E6%9C%9F%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">&#182;</a></h3>
+<h3 id="%E8%AE%A1%E7%AE%97%E5%8E%BB%E5%B9%B4%E5%90%8C%E6%9C%9F%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">calculateyearrelated <a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E5%8E%BB%E5%B9%B4%E5%90%8C%E6%9C%9F%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14800,17 +14800,17 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 计算去年同期相关指标</span>
-<span class="n">same_month</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;成交时间&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;成交时间&quot;</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">28</span><span class="p">))]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculateyearrelated </span>
+<span class="n">same_month</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span><span class="o">>=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">&</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span><span class="o"><=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">28</span><span class="p">))]</span>
 
-<span class="n">sales_3</span><span class="o">=</span><span class="p">(</span><span class="n">same_month</span><span class="p">[</span><span class="s2">&quot;销量&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">same_month</span><span class="p">[</span><span class="s2">&quot;单价&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">sales_3</span><span class="o">=</span><span class="p">(</span><span class="n">same_month</span><span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">*</span><span class="n">same_month</span><span class="p">[</span><span class="s2">""</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="n">traffic_3</span><span class="o">=</span><span class="n">same_month</span><span class="p">[</span><span class="s2">&quot;订单ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">traffic_3</span><span class="o">=</span><span class="n">same_month</span><span class="p">[</span><span class="s2">"OrderID"</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="n">s_t_3</span><span class="o">=</span><span class="n">sales_3</span><span class="o">/</span><span class="n">traffic_3</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;本月销售额为：</span><span class="si">{:.2f}</span><span class="s2">,客流量为：</span><span class="si">{}</span><span class="s2">,客单价为：</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sales_3</span><span class="p">,</span><span class="n">traffic_3</span><span class="p">,</span><span class="n">s_t_3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"monthSales：</span><span class="si">{:.2f}</span><span class="s2">,：</span><span class="si">{}</span><span class="s2">,：</span><span class="si">{:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sales_3</span><span class="p">,</span><span class="n">traffic_3</span><span class="p">,</span><span class="n">s_t_3</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14830,7 +14830,7 @@ memory usage: 204.9+ KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>本月销售额为：8596.31,客流量为：262,客单价为：32.81
+<pre>monthSales：8596.31,：262,：32.81
 </pre>
 </div>
 </div>
@@ -14844,25 +14844,25 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 利用函数提高编码效率</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># utilizing encoding</span>
 <span class="k">def</span> <span class="nf">get_month_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">sale</span><span class="o">=</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;销量&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;单价&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="n">traffic</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;订单ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="n">sale</span><span class="o">=</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">*</span><span class="n">data</span><span class="p">[</span><span class="s2">""</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">traffic</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">"OrderID"</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
     <span class="n">s_t</span><span class="o">=</span><span class="n">sale</span><span class="o">/</span><span class="n">traffic</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">sale</span><span class="p">,</span><span class="n">traffic</span><span class="p">,</span><span class="n">s_t</span><span class="p">)</span>
 
-<span class="c1"># 本月相关指数</span>
+<span class="c1"># monthrelated </span>
 <span class="n">sales_1</span><span class="p">,</span><span class="n">traffic_1</span><span class="p">,</span><span class="n">s_t_1</span><span class="o">=</span><span class="n">get_month_data</span><span class="p">(</span><span class="n">This_month</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sales_1</span><span class="p">,</span><span class="n">traffic_1</span><span class="p">,</span><span class="n">s_t_1</span><span class="p">)</span>
 
-<span class="c1"># 上月相关指数</span>
+<span class="c1"># monthrelated </span>
 <span class="n">sales_2</span><span class="p">,</span><span class="n">traffic_2</span><span class="p">,</span><span class="n">s_t_2</span><span class="o">=</span><span class="n">get_month_data</span><span class="p">(</span><span class="n">last_month</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sales_2</span><span class="p">,</span><span class="n">traffic_2</span><span class="p">,</span><span class="n">s_t_2</span><span class="p">)</span>
 
-<span class="c1"># 去年同期相关指数</span>
+<span class="c1"># yearrelated </span>
 <span class="n">sales_3</span><span class="p">,</span><span class="n">traffic_3</span><span class="p">,</span><span class="n">s_t_3</span><span class="o">=</span><span class="n">get_month_data</span><span class="p">(</span><span class="n">same_month</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sales_3</span><span class="p">,</span><span class="n">traffic_3</span><span class="p">,</span><span class="n">s_t_3</span><span class="p">)</span>
 </pre></div>
@@ -14902,7 +14902,7 @@ memory usage: 204.9+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E5%88%9B%E5%BB%BADataFrame-%E6%B7%BB%E5%8A%A0%E5%90%8C%E6%AF%94%E5%92%8C%E7%8E%AF%E6%AF%94%E5%AD%97%E6%AE%B5">&#21019;&#24314;DataFrame &#28155;&#21152;&#21516;&#27604;&#21644;&#29615;&#27604;&#23383;&#27573;<a class="anchor-link" href="#%E5%88%9B%E5%BB%BADataFrame-%E6%B7%BB%E5%8A%A0%E5%90%8C%E6%AF%94%E5%92%8C%E7%8E%AF%E6%AF%94%E5%AD%97%E6%AE%B5">&#182;</a></h3>
+<h3 id="%E5%88%9B%E5%BB%BADataFrame-%E6%B7%BB%E5%8A%A0%E5%90%8C%E6%AF%94%E5%92%8C%E7%8E%AF%E6%AF%94%E5%AD%97%E6%AE%B5">DataFrame  and <a class="anchor-link" href="#%E5%88%9B%E5%BB%BADataFrame-%E6%B7%BB%E5%8A%A0%E5%90%8C%E6%AF%94%E5%92%8C%E7%8E%AF%E6%AF%94%E5%AD%97%E6%AE%B5">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14911,17 +14911,17 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 创建DataFrame</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DataFrame</span>
 <span class="n">report</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">sales_1</span><span class="p">,</span><span class="n">sales_2</span><span class="p">,</span><span class="n">sales_3</span><span class="p">],[</span><span class="n">traffic_1</span><span class="p">,</span><span class="n">traffic_2</span><span class="p">,</span><span class="n">traffic_3</span><span class="p">],[</span><span class="n">s_t_1</span><span class="p">,</span><span class="n">s_t_2</span><span class="p">,</span><span class="n">s_t_3</span><span class="p">]],</span>
-                    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;本月累计&quot;</span><span class="p">,</span><span class="s2">&quot;上月同期&quot;</span><span class="p">,</span><span class="s2">&quot;去年同期&quot;</span><span class="p">],</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;销售额&quot;</span><span class="p">,</span><span class="s2">&quot;客流量&quot;</span><span class="p">,</span><span class="s2">&quot;客单价&quot;</span><span class="p">])</span>
+                    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"month"</span><span class="p">,</span><span class="s2">"month"</span><span class="p">,</span><span class="s2">"year"</span><span class="p">],</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">"Sales"</span><span class="p">,</span><span class="s2">""</span><span class="p">,</span><span class="s2">""</span><span class="p">])</span>
 <span class="c1"># print(report)</span>
-<span class="c1"># 添加同比和环比字段</span>
-<span class="n">report</span><span class="p">[</span><span class="s2">&quot;环比&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">report</span><span class="p">[</span><span class="s2">&quot;本月累计&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">report</span><span class="p">[</span><span class="s2">&quot;上月同期&quot;</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
+<span class="c1">#  and </span>
+<span class="n">report</span><span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">=</span><span class="n">report</span><span class="p">[</span><span class="s2">"month"</span><span class="p">]</span><span class="o">/</span><span class="n">report</span><span class="p">[</span><span class="s2">"month"</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
 
-<span class="n">report</span><span class="p">[</span><span class="s2">&quot;同比&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">report</span><span class="p">[</span><span class="s2">&quot;本月累计&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">report</span><span class="p">[</span><span class="s2">&quot;去年同期&quot;</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">report</span><span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">=</span><span class="n">report</span><span class="p">[</span><span class="s2">"month"</span><span class="p">]</span><span class="o">/</span><span class="n">report</span><span class="p">[</span><span class="s2">"year"</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
 </pre></div>
 
      </div>
@@ -14936,7 +14936,7 @@ memory usage: 204.9+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E6%9F%A5%E7%9C%8B%E6%8A%A5%E8%A1%A8">&#26597;&#30475;&#25253;&#34920;<a class="anchor-link" href="#%E6%9F%A5%E7%9C%8B%E6%8A%A5%E8%A1%A8">&#182;</a></h3>
+<h3 id="%E6%9F%A5%E7%9C%8B%E6%8A%A5%E8%A1%A8">view<a class="anchor-link" href="#%E6%9F%A5%E7%9C%8B%E6%8A%A5%E8%A1%A8">¶</a></h3>
 </div>
 </div>
 </div>
@@ -14945,10 +14945,10 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 查看报表</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># view</span>
 <span class="n">report</span>
 </pre></div>
 
@@ -14988,16 +14988,16 @@ memory usage: 204.9+ KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>本月累计</th>
-      <th>上月同期</th>
-      <th>去年同期</th>
-      <th>环比</th>
-      <th>同比</th>
+      <th>month</th>
+      <th>month</th>
+      <th>year</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>销售额</th>
+      <th>Sales</th>
       <td>10412.780070</td>
       <td>9940.972910</td>
       <td>8596.313470</td>
@@ -15005,7 +15005,7 @@ memory usage: 204.9+ KB
       <td>0.211308</td>
     </tr>
     <tr>
-      <th>客流量</th>
+      <th></th>
       <td>343.000000</td>
       <td>315.000000</td>
       <td>262.000000</td>
@@ -15013,7 +15013,7 @@ memory usage: 204.9+ KB
       <td>0.309160</td>
     </tr>
     <tr>
-      <th>客单价</th>
+      <th></th>
       <td>30.357959</td>
       <td>31.558644</td>
       <td>32.810357</td>
@@ -15038,7 +15038,7 @@ memory usage: 204.9+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E5%B0%86%E7%BB%93%E6%9E%9C%E5%AF%BC%E5%87%BA%E6%9C%AC%E5%9C%B0">&#23558;&#32467;&#26524;&#23548;&#20986;&#26412;&#22320;<a class="anchor-link" href="#%E5%B0%86%E7%BB%93%E6%9E%9C%E5%AF%BC%E5%87%BA%E6%9C%AC%E5%9C%B0">&#182;</a></h3>
+<h3 id="%E5%B0%86%E7%BB%93%E6%9E%9C%E5%AF%BC%E5%87%BA%E6%9C%AC%E5%9C%B0">result<a class="anchor-link" href="#%E5%B0%86%E7%BB%93%E6%9E%9C%E5%AF%BC%E5%87%BA%E6%9C%AC%E5%9C%B0">¶</a></h3>
 </div>
 </div>
 </div>
@@ -15047,11 +15047,11 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 将结果导出本地</span>
-<span class="n">report</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;order.csv&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># result</span>
+<span class="n">report</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"order.csv"</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8-sig"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15064,7 +15064,7 @@ memory usage: 204.9+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 

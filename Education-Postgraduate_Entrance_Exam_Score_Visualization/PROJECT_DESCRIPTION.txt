@@ -3,7 +3,7 @@ PROJECT: Education-Postgraduate_Entrance_Exam_Score_Visualization
 
 PROJECT OVERVIEW:
 Table of Contents
- 1&nbsp;&nbsp;2&nbsp;&nbsp;导入库3&nbsp;&nbsp;读取文件考研历年国家分数线4&nbsp;&nbsp;处理重复值和空值5&nbsp;&nbsp;删除不需要的列6&nbsp;&nbsp;替换删除特殊字符7&nbsp;&nbsp;单独筛选出2020年考研信息8&nbsp;&nbsp;统计专业9&nbsp;&nbsp;分组归纳学校Analyze应的专业数（专业可能yes重复值）10&nbsp;&nbsp;转化考研专业总分特殊值11&nbsp;&nbsp;分组归纳各专业的最高分，最低分，平均分12&nbsp;&nbsp;绘制各专业分数的柱状图13&nbsp;&nbsp;绘制2020年考研专业Top5014&nbsp;&nbsp;绘制Keywords云图15&nbsp;&nbsp;读取2021年考研调剂信息16&nbsp;&nbsp;转换学校属性类别17&nbsp;&nbsp;删除重复值18&nbsp;&nbsp;拼接调剂信息19&nbsp;&nbsp;查看缺失数据20&nbsp;&nbsp;发布时间Analyze应的发布频次21&nbsp;&nbsp;调剂信息发布时间走势图21.1&nbsp;&nbsp;由于考研成绩yes在2月底发布的，所以调剂发布学校也随着增多22&nbsp;&nbsp;绘制学校类别饼图23&nbsp;&nbsp;调剂信息发布数省份分布
+ 1  2  import3  filePostgraduate ExamyearScore Line4  processing and null5  need to 6  7  2020yearPostgraduate Examinfo8  9  minuteAnalyze（may yes）10  Postgraduate Examminute11  minuteminute，minute，minute12  Score13  2020yearPostgraduate ExamTop5014  Keywords15  2021yearPostgraduate Examinfo16  attribute17  18  info19  viewdata20  timeAnalyze21  infotime21.1  Postgraduate Examyes2month， so 22  23  infoDistribution
 
 This project demonstrates data analysis and machine learning techniques.
 Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

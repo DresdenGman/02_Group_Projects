@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>旅游景点</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>TourismAttraction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,7 +14598,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#项目介绍" data-toc-modified-id="项目介绍-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>项目介绍</a></span></li><li><span><a href="#1.-导入模块" data-toc-modified-id="1.-导入模块-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>1. 导入模块</a></span></li><li><span><a href="#2.Pandas数据处理" data-toc-modified-id="2.Pandas数据处理-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>2.Pandas数据处理</a></span><ul class="toc-item"><li><span><a href="#2.1-读取数据" data-toc-modified-id="2.1-读取数据-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>2.1 读取数据</a></span></li><li><span><a href="#2.2-查看索引、数据类型和内存信息" data-toc-modified-id="2.2-查看索引、数据类型和内存信息-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>2.2 查看索引、数据类型和内存信息</a></span></li><li><span><a href="#2.3-查看数值型列汇总统计" data-toc-modified-id="2.3-查看数值型列汇总统计-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>2.3 查看数值型列汇总统计</a></span></li><li><span><a href="#2.4-查看销量为0的行" data-toc-modified-id="2.4-查看销量为0的行-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>2.4 查看销量为0的行</a></span></li><li><span><a href="#2.5-去除销量为0的行数据" data-toc-modified-id="2.5-去除销量为0的行数据-3.5"><span class="toc-item-num">3.5&nbsp;&nbsp;</span>2.5 去除销量为0的行数据</a></span></li><li><span><a href="#2.6-统计各列空值" data-toc-modified-id="2.6-统计各列空值-3.6"><span class="toc-item-num">3.6&nbsp;&nbsp;</span>2.6 统计各列空值</a></span></li><li><span><a href="#2.7-将星级缺失值用‘未知’填充" data-toc-modified-id="2.7-将星级缺失值用‘未知’填充-3.7"><span class="toc-item-num">3.7&nbsp;&nbsp;</span>2.7 将星级缺失值用‘未知’填充</a></span></li><li><span><a href="#2.8-也可以将所有缺失值都用‘未知’填充" data-toc-modified-id="2.8-也可以将所有缺失值都用‘未知’填充-3.8"><span class="toc-item-num">3.8&nbsp;&nbsp;</span>2.8 也可以将所有缺失值都用‘未知’填充</a></span></li><li><span><a href="#2.9-按销量排序" data-toc-modified-id="2.9-按销量排序-3.9"><span class="toc-item-num">3.9&nbsp;&nbsp;</span>2.9 按销量排序</a></span></li></ul></li><li><span><a href="#3.-Pyecharts数据可视化" data-toc-modified-id="3.-Pyecharts数据可视化-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>3. Pyecharts数据可视化</a></span><ul class="toc-item"><li><span><a href="#3.1-销量前20热门景点数据" data-toc-modified-id="3.1-销量前20热门景点数据-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>3.1 销量前20热门景点数据</a></span></li><li><span><a href="#3.2-假期出行数据全国地图分布" data-toc-modified-id="3.2-假期出行数据全国地图分布-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>3.2 假期出行数据全国地图分布</a></span></li><li><span><a href="#3.3-各省市4A-5A景区数量柱状图" data-toc-modified-id="3.3-各省市4A-5A景区数量柱状图-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>3.3 各省市4A-5A景区数量柱状图</a></span></li><li><span><a href="#3.4-各省市4A-5A景区数量玫瑰图" data-toc-modified-id="3.4-各省市4A-5A景区数量玫瑰图-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>3.4 各省市4A-5A景区数量玫瑰图</a></span></li><li><span><a href="#3.5-各省市4A-5A景区数量阴影散点图" data-toc-modified-id="3.5-各省市4A-5A景区数量阴影散点图-4.5"><span class="toc-item-num">4.5&nbsp;&nbsp;</span>3.5 各省市4A-5A景区数量阴影散点图</a></span></li><li><span><a href="#3.6-各省市4A-5A景区地图分布" data-toc-modified-id="3.6-各省市4A-5A景区地图分布-4.6"><span class="toc-item-num">4.6&nbsp;&nbsp;</span>3.6 各省市4A-5A景区地图分布</a></span></li><li><span><a href="#3.7-门票价格区间占比玫瑰图" data-toc-modified-id="3.7-门票价格区间占比玫瑰图-4.7"><span class="toc-item-num">4.7&nbsp;&nbsp;</span>3.7 门票价格区间占比玫瑰图</a></span></li><li><span><a href="#3.8-门票价格区间数量散点图" data-toc-modified-id="3.8-门票价格区间数量散点图-4.8"><span class="toc-item-num">4.8&nbsp;&nbsp;</span>3.8 门票价格区间数量散点图</a></span></li><li><span><a href="#3.9-景点简介词云" data-toc-modified-id="3.9-景点简介词云-4.9"><span class="toc-item-num">4.9&nbsp;&nbsp;</span>3.9 景点简介词云</a></span></li></ul></li><li><span><a href="#总结" data-toc-modified-id="总结-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>总结</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Project Introduction" data-toc-modified-id="Project Introduction-1"><span class="toc-item-num">1  </span>Project Introduction</a></span></li><li><span><a href="#1.-import" data-toc-modified-id="1.-import-2"><span class="toc-item-num">2  </span>1. import</a></span></li><li><span><a href="#2.Pandasdataprocessing" data-toc-modified-id="2.Pandasdataprocessing-3"><span class="toc-item-num">3  </span>2.Pandasdataprocessing</a></span><ul class="toc-item"><li><span><a href="#2.1-data" data-toc-modified-id="2.1-data-3.1"><span class="toc-item-num">3.1  </span>2.1 data</a></span></li><li><span><a href="#2.2-view、data and info" data-toc-modified-id="2.2-view、data and info-3.2"><span class="toc-item-num">3.2  </span>2.2 view、data and info</a></span></li><li><span><a href="#2.3-view" data-toc-modified-id="2.3-view-3.3"><span class="toc-item-num">3.3  </span>2.3 view</a></span></li><li><span><a href="#2.4-view0" data-toc-modified-id="2.4-view0-3.4"><span class="toc-item-num">3.4  </span>2.4 view0</a></span></li><li><span><a href="#2.5-0data" data-toc-modified-id="2.5-0data-3.5"><span class="toc-item-num">3.5  </span>2.5 0data</a></span></li><li><span><a href="#2.6-null" data-toc-modified-id="2.6-null-3.6"><span class="toc-item-num">3.6  </span>2.6 null</a></span></li><li><span><a href="#2.7-missing values‘’" data-toc-modified-id="2.7-missing values‘’-3.7"><span class="toc-item-num">3.7  </span>2.7 missing values‘’</a></span></li><li><span><a href="#2.8-missing values‘’" data-toc-modified-id="2.8-missing values‘’-3.8"><span class="toc-item-num">3.8  </span>2.8 missing values‘’</a></span></li><li><span><a href="#2.9-" data-toc-modified-id="2.9--3.9"><span class="toc-item-num">3.9  </span>2.9 </a></span></li></ul></li><li><span><a href="#3.-Pyechartsdatavisualization" data-toc-modified-id="3.-Pyechartsdatavisualization-4"><span class="toc-item-num">4  </span>3. Pyechartsdatavisualization</a></span><ul class="toc-item"><li><span><a href="#3.1-20Attractiondata" data-toc-modified-id="3.1-20Attractiondata-4.1"><span class="toc-item-num">4.1  </span>3.1 20Attractiondata</a></span></li><li><span><a href="#3.2-dataNationalDistribution" data-toc-modified-id="3.2-dataNationalDistribution-4.2"><span class="toc-item-num">4.2  </span>3.2 dataNationalDistribution</a></span></li><li><span><a href="#3.3-Provincial4A-5ACount" data-toc-modified-id="3.3-Provincial4A-5ACount-4.3"><span class="toc-item-num">4.3  </span>3.3 Provincial4A-5ACount</a></span></li><li><span><a href="#3.4-Provincial4A-5ACount" data-toc-modified-id="3.4-Provincial4A-5ACount-4.4"><span class="toc-item-num">4.4  </span>3.4 Provincial4A-5ACount</a></span></li><li><span><a href="#3.5-Provincial4A-5ACount" data-toc-modified-id="3.5-Provincial4A-5ACount-4.5"><span class="toc-item-num">4.5  </span>3.5 Provincial4A-5ACount</a></span></li><li><span><a href="#3.6-Provincial4A-5ADistribution" data-toc-modified-id="3.6-Provincial4A-5ADistribution-4.6"><span class="toc-item-num">4.6  </span>3.6 Provincial4A-5ADistribution</a></span></li><li><span><a href="#3.7-PriceShare" data-toc-modified-id="3.7-PriceShare-4.7"><span class="toc-item-num">4.7  </span>3.7 PriceShare</a></span></li><li><span><a href="#3.8-PriceCount" data-toc-modified-id="3.8-PriceCount-4.8"><span class="toc-item-num">4.8  </span>3.8 PriceCount</a></span></li><li><span><a href="#3.9-Attraction" data-toc-modified-id="3.9-Attraction-4.9"><span class="toc-item-num">4.9  </span>3.9 Attraction</a></span></li></ul></li><li><span><a href="#" data-toc-modified-id="-5"><span class="toc-item-num">5  </span></a></span></li></ul></div>
 
 </div>
 </div>
@@ -14610,11 +14610,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#39033;&#30446;&#20171;&#32461;<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">&#182;</a></h1><p>本期我们通过去全国各地区景点门票的售卖情况，简单分析一下全国比较热门的景点分布和国民出游情况，看看哪些景点比较受欢迎，希望对小伙伴们有所帮助，如有疑问或者需要改进的地方可以在评论区留言。</p>
+<h1 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">Project Introduction<a class="anchor-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">¶</a></h1><p>through NationalAttraction，analysisNationalcompareAttractionDistribution and ，Attractioncompare，，need to Review。</p>
 <ul>
-<li>关键词</li>
+<li>Keywords</li>
 </ul>
-<p>pandas数据处理、pyecharts可视化、jieba分词</p>
+<p>pandasdataprocessing、pyechartsvisualization、jiebaminute</p>
 
 </div>
 </div>
@@ -14626,7 +14626,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="1.-%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97">1. &#23548;&#20837;&#27169;&#22359;<a class="anchor-link" href="#1.-%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97">&#182;</a></h1>
+<h1 id="1.-%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97">1. import<a class="anchor-link" href="#1.-%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97">¶</a></h1>
 </div>
 </div>
 </div>
@@ -14635,7 +14635,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">jieba</span>
@@ -14664,7 +14664,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="2.Pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">2.Pandas&#25968;&#25454;&#22788;&#29702;<a class="anchor-link" href="#2.Pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">&#182;</a></h1>
+<h1 id="2.Pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">2.Pandasdataprocessing<a class="anchor-link" href="#2.Pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86">¶</a></h1>
 </div>
 </div>
 </div>
@@ -14675,7 +14675,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.1-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE">2.1 &#35835;&#21462;&#25968;&#25454;<a class="anchor-link" href="#2.1-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE">&#182;</a></h2>
+<h2 id="2.1-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE">2.1 data<a class="anchor-link" href="#2.1-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14684,10 +14684,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./旅游景点.xlsx&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">'./TourismAttraction.xlsx'</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14727,89 +14727,89 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>城市</th>
-      <th>名称</th>
-      <th>星级</th>
-      <th>评分</th>
-      <th>价格</th>
-      <th>销量</th>
-      <th>省/市/区</th>
-      <th>坐标</th>
-      <th>简介</th>
-      <th>是否免费</th>
-      <th>具体地址</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
+      <th>Rating</th>
+      <th>Price</th>
+      <th></th>
+      <th>//</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>specific </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>上海</td>
-      <td>上海迪士尼乐园</td>
+      <td></td>
+      <td></td>
       <td>NaN</td>
       <td>0.0</td>
       <td>325.0</td>
       <td>19459</td>
-      <td>上海·上海·浦东新区</td>
+      <td>··</td>
       <td>121.667917,31.149712</td>
-      <td>每个女孩都有一场迪士尼梦</td>
+      <td></td>
       <td>False</td>
-      <td>上海市浦东新区川沙镇黄赵路310号上海迪士尼乐园</td>
+      <td>310</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>上海</td>
-      <td>上海海昌海洋公园</td>
+      <td></td>
+      <td></td>
       <td>4A</td>
       <td>0.0</td>
       <td>276.5</td>
       <td>19406</td>
-      <td>上海·上海·浦东新区</td>
+      <td>··</td>
       <td>121.915647,30.917713</td>
-      <td>看珍稀海洋生物 | 玩超刺激娱乐项目</td>
+      <td> | </td>
       <td>False</td>
-      <td>上海市浦东新区南汇城银飞路166号</td>
+      <td>166</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>上海</td>
-      <td>上海野生动物园</td>
+      <td></td>
+      <td></td>
       <td>5A</td>
       <td>3.6</td>
       <td>116.0</td>
       <td>6764</td>
-      <td>上海·上海·浦东新区</td>
+      <td>··</td>
       <td>121.728112,31.059636</td>
-      <td>全球动物聚集地 | 零距离和动物做朋友</td>
+      <td> |  and </td>
       <td>False</td>
-      <td>上海市浦东新区南六公路178号</td>
+      <td>178</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>上海</td>
-      <td>东方绿舟</td>
+      <td></td>
+      <td></td>
       <td>4A</td>
       <td>3.5</td>
       <td>40.0</td>
       <td>5353</td>
-      <td>上海·上海·青浦区</td>
+      <td>··</td>
       <td>121.015977,31.107866</td>
-      <td>全国首屈一指的青少年校外教育营地</td>
+      <td>NationalyearEducation</td>
       <td>False</td>
-      <td>上海市青浦区沪青平公路6888号</td>
+      <td>6888</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>上海</td>
-      <td>东方明珠</td>
+      <td></td>
+      <td></td>
       <td>5A</td>
       <td>3.8</td>
       <td>54.0</td>
       <td>3966</td>
-      <td>上海·上海·浦东新区</td>
+      <td>··</td>
       <td>121.50626,31.245369</td>
-      <td>感受云端漫步，品味老上海风情</td>
+      <td>，</td>
       <td>False</td>
-      <td>上海市浦东新区世纪大道1号</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -14829,7 +14829,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.2-%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%86%85%E5%AD%98%E4%BF%A1%E6%81%AF">2.2 &#26597;&#30475;&#32034;&#24341;&#12289;&#25968;&#25454;&#31867;&#22411;&#21644;&#20869;&#23384;&#20449;&#24687;<a class="anchor-link" href="#2.2-%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%86%85%E5%AD%98%E4%BF%A1%E6%81%AF">&#182;</a></h2>
+<h2 id="2.2-%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%86%85%E5%AD%98%E4%BF%A1%E6%81%AF">2.2 view、data and info<a class="anchor-link" href="#2.2-%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%86%85%E5%AD%98%E4%BF%A1%E6%81%AF">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14838,7 +14838,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -14861,22 +14861,22 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 2443 entries, 0 to 2442
 Data columns (total 11 columns):
  #   Column  Non-Null Count  Dtype  
 ---  ------  --------------  -----  
- 0   城市      2443 non-null   object 
- 1   名称      2443 non-null   object 
- 2   星级      913 non-null    object 
- 3   评分      2443 non-null   float64
- 4   价格      2443 non-null   float64
- 5   销量      2443 non-null   int64  
- 6   省/市/区   2443 non-null   object 
- 7   坐标      2443 non-null   object 
- 8   简介      2402 non-null   object 
- 9   是否免费    2443 non-null   bool   
- 10  具体地址    2440 non-null   object 
+ 0   City      2443 non-null   object 
+ 1         2443 non-null   object 
+ 2         913 non-null    object 
+ 3   Rating      2443 non-null   float64
+ 4   Price      2443 non-null   float64
+ 5         2443 non-null   int64  
+ 6   //   2443 non-null   object 
+ 7         2443 non-null   object 
+ 8         2402 non-null   object 
+ 9       2443 non-null   bool   
+ 10  specific     2440 non-null   object 
 dtypes: bool(1), float64(2), int64(1), object(7)
 memory usage: 193.4+ KB
 </pre>
@@ -14894,7 +14894,7 @@ memory usage: 193.4+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.3-%E6%9F%A5%E7%9C%8B%E6%95%B0%E5%80%BC%E5%9E%8B%E5%88%97%E6%B1%87%E6%80%BB%E7%BB%9F%E8%AE%A1">2.3 &#26597;&#30475;&#25968;&#20540;&#22411;&#21015;&#27719;&#24635;&#32479;&#35745;<a class="anchor-link" href="#2.3-%E6%9F%A5%E7%9C%8B%E6%95%B0%E5%80%BC%E5%9E%8B%E5%88%97%E6%B1%87%E6%80%BB%E7%BB%9F%E8%AE%A1">&#182;</a></h2>
+<h2 id="2.3-%E6%9F%A5%E7%9C%8B%E6%95%B0%E5%80%BC%E5%9E%8B%E5%88%97%E6%B1%87%E6%80%BB%E7%BB%9F%E8%AE%A1">2.3 view<a class="anchor-link" href="#2.3-%E6%9F%A5%E7%9C%8B%E6%95%B0%E5%80%BC%E5%9E%8B%E5%88%97%E6%B1%87%E6%80%BB%E7%BB%9F%E8%AE%A1">¶</a></h2>
 </div>
 </div>
 </div>
@@ -14903,7 +14903,7 @@ memory usage: 193.4+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14945,9 +14945,9 @@ memory usage: 193.4+ KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>评分</th>
-      <th>价格</th>
-      <th>销量</th>
+      <th>Rating</th>
+      <th>Price</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -15017,7 +15017,7 @@ memory usage: 193.4+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.4-%E6%9F%A5%E7%9C%8B%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C">2.4 &#26597;&#30475;&#38144;&#37327;&#20026;0&#30340;&#34892;<a class="anchor-link" href="#2.4-%E6%9F%A5%E7%9C%8B%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C">&#182;</a></h2>
+<h2 id="2.4-%E6%9F%A5%E7%9C%8B%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C">2.4 view0<a class="anchor-link" href="#2.4-%E6%9F%A5%E7%9C%8B%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15026,10 +15026,10 @@ memory usage: 193.4+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;销量&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15068,89 +15068,89 @@ memory usage: 193.4+ KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>城市</th>
-      <th>名称</th>
-      <th>星级</th>
-      <th>评分</th>
-      <th>价格</th>
-      <th>销量</th>
-      <th>省/市/区</th>
-      <th>坐标</th>
-      <th>简介</th>
-      <th>是否免费</th>
-      <th>具体地址</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
+      <th>Rating</th>
+      <th>Price</th>
+      <th></th>
+      <th>//</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>specific </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>301</th>
-      <td>台湾</td>
-      <td>复兴桥风景区</td>
+      <td></td>
+      <td></td>
       <td>NaN</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0</td>
-      <td>台湾·桃园</td>
+      <td>·</td>
       <td>121.35037883956,24.815040245504</td>
-      <td>带动了北横碧水青山的另一种欢乐风情</td>
+      <td></td>
       <td>False</td>
-      <td>桃园县复兴乡中正路15号</td>
+      <td>15</td>
     </tr>
     <tr>
       <th>302</th>
-      <td>台湾</td>
-      <td>长春祠</td>
+      <td></td>
+      <td></td>
       <td>NaN</td>
       <td>3.5</td>
       <td>0.0</td>
       <td>0</td>
-      <td>台湾·花莲</td>
+      <td>·</td>
       <td>121.60445032684,24.162302549393</td>
-      <td>一道飞瀑分流入溪，山水景色绝佳</td>
+      <td>minute，</td>
       <td>True</td>
-      <td>台湾花莲县</td>
+      <td></td>
     </tr>
     <tr>
       <th>303</th>
-      <td>台湾</td>
-      <td>淡水老街</td>
+      <td></td>
+      <td></td>
       <td>NaN</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0</td>
-      <td>台湾·淡水</td>
+      <td>·</td>
       <td>121.44124069779,25.171297755773</td>
-      <td>美食汇聚的北台湾老街之一</td>
+      <td></td>
       <td>True</td>
-      <td>台北县淡水镇中正路</td>
+      <td></td>
     </tr>
     <tr>
       <th>304</th>
-      <td>台湾</td>
-      <td>士林官邸</td>
+      <td></td>
+      <td></td>
       <td>NaN</td>
       <td>5.0</td>
       <td>0.0</td>
       <td>0</td>
-      <td>台湾·台北</td>
+      <td>·</td>
       <td>121.53013540214,25.093934468272</td>
-      <td>林木参天、绿树幽深，极富神秘色彩</td>
+      <td>days、，</td>
       <td>True</td>
-      <td>台北市士林区中山北路五段兴福林路口</td>
+      <td></td>
     </tr>
     <tr>
       <th>305</th>
-      <td>台湾</td>
-      <td>北安公园</td>
+      <td></td>
+      <td></td>
       <td>NaN</td>
       <td>5.0</td>
       <td>0.0</td>
       <td>0</td>
-      <td>台湾·台北</td>
+      <td>·</td>
       <td>121.52694244942,25.076889096728</td>
-      <td>满园新绿，温雅如诗，连绵一片绿意盎然</td>
+      <td>，，</td>
       <td>False</td>
-      <td>台湾台北市中山北路四段北安路旁</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -15170,7 +15170,7 @@ memory usage: 193.4+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>一共有123行。</p>
+<p>123。</p>
 
 </div>
 </div>
@@ -15182,7 +15182,7 @@ memory usage: 193.4+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.5-%E5%8E%BB%E9%99%A4%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C%E6%95%B0%E6%8D%AE">2.5 &#21435;&#38500;&#38144;&#37327;&#20026;0&#30340;&#34892;&#25968;&#25454;<a class="anchor-link" href="#2.5-%E5%8E%BB%E9%99%A4%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C%E6%95%B0%E6%8D%AE">&#182;</a></h2>
+<h2 id="2.5-%E5%8E%BB%E9%99%A4%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C%E6%95%B0%E6%8D%AE">2.5 0data<a class="anchor-link" href="#2.5-%E5%8E%BB%E9%99%A4%E9%94%80%E9%87%8F%E4%B8%BA0%E7%9A%84%E8%A1%8C%E6%95%B0%E6%8D%AE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15191,10 +15191,10 @@ memory usage: 193.4+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;销量&#39;</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span> 
 <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
@@ -15233,7 +15233,7 @@ memory usage: 193.4+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>去除后还剩下2320行数据。</p>
+<p>2320data。</p>
 
 </div>
 </div>
@@ -15245,7 +15245,7 @@ memory usage: 193.4+ KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.6-%E7%BB%9F%E8%AE%A1%E5%90%84%E5%88%97%E7%A9%BA%E5%80%BC">2.6 &#32479;&#35745;&#21508;&#21015;&#31354;&#20540;<a class="anchor-link" href="#2.6-%E7%BB%9F%E8%AE%A1%E5%90%84%E5%88%97%E7%A9%BA%E5%80%BC">&#182;</a></h2>
+<h2 id="2.6-%E7%BB%9F%E8%AE%A1%E5%90%84%E5%88%97%E7%A9%BA%E5%80%BC">2.6 null<a class="anchor-link" href="#2.6-%E7%BB%9F%E8%AE%A1%E5%90%84%E5%88%97%E7%A9%BA%E5%80%BC">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15254,7 +15254,7 @@ memory usage: 193.4+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -15279,17 +15279,17 @@ memory usage: 193.4+ KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>城市          0
-名称          0
-星级       1407
-评分          0
-价格          0
-销量          0
-省/市/区       0
-坐标          0
-简介         37
-是否免费        0
-具体地址        2
+<pre>City          0
+          0
+       1407
+Rating          0
+Price          0
+          0
+//       0
+          0
+         37
+        0
+specific         2
 dtype: int64</pre>
 </div>
 
@@ -15306,7 +15306,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>星级存在1407个空值，简介37个空值，具体地址2个空值，其他列不存在空值，数据还算比较完整。</p>
+<p>has 1407null，37null，specific 2null，has null，datacompare。</p>
 
 </div>
 </div>
@@ -15318,7 +15318,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.7-%E5%B0%86%E6%98%9F%E7%BA%A7%E7%BC%BA%E5%A4%B1%E5%80%BC%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">2.7 &#23558;&#26143;&#32423;&#32570;&#22833;&#20540;&#29992;&#8216;&#26410;&#30693;&#8217;&#22635;&#20805;<a class="anchor-link" href="#2.7-%E5%B0%86%E6%98%9F%E7%BA%A7%E7%BC%BA%E5%A4%B1%E5%80%BC%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">&#182;</a></h2>
+<h2 id="2.7-%E5%B0%86%E6%98%9F%E7%BA%A7%E7%BC%BA%E5%A4%B1%E5%80%BC%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">2.7 missing values‘’<a class="anchor-link" href="#2.7-%E5%B0%86%E6%98%9F%E7%BA%A7%E7%BC%BA%E5%A4%B1%E5%80%BC%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15327,10 +15327,10 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;星级&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;未知&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
@@ -15353,17 +15353,17 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>城市        0
-名称        0
-星级        0
-评分        0
-价格        0
-销量        0
-省/市/区     0
-坐标        0
-简介       37
-是否免费      0
-具体地址      2
+<pre>City        0
+        0
+        0
+Rating        0
+Price        0
+        0
+//     0
+        0
+       37
+      0
+specific       2
 dtype: int64</pre>
 </div>
 
@@ -15380,7 +15380,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.8-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%B0%86%E6%89%80%E6%9C%89%E7%BC%BA%E5%A4%B1%E5%80%BC%E9%83%BD%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">2.8 &#20063;&#21487;&#20197;&#23558;&#25152;&#26377;&#32570;&#22833;&#20540;&#37117;&#29992;&#8216;&#26410;&#30693;&#8217;&#22635;&#20805;<a class="anchor-link" href="#2.8-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%B0%86%E6%89%80%E6%9C%89%E7%BC%BA%E5%A4%B1%E5%80%BC%E9%83%BD%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">&#182;</a></h2>
+<h2 id="2.8-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%B0%86%E6%89%80%E6%9C%89%E7%BC%BA%E5%A4%B1%E5%80%BC%E9%83%BD%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">2.8 missing values‘’<a class="anchor-link" href="#2.8-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%B0%86%E6%89%80%E6%9C%89%E7%BC%BA%E5%A4%B1%E5%80%BC%E9%83%BD%E7%94%A8%E2%80%98%E6%9C%AA%E7%9F%A5%E2%80%99%E5%A1%AB%E5%85%85">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15389,10 +15389,10 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;未知&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
@@ -15415,17 +15415,17 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>城市       0
-名称       0
-星级       0
-评分       0
-价格       0
-销量       0
-省/市/区    0
-坐标       0
-简介       0
-是否免费     0
-具体地址     0
+<pre>City       0
+       0
+       0
+Rating       0
+Price       0
+       0
+//    0
+       0
+       0
+     0
+specific      0
 dtype: int64</pre>
 </div>
 
@@ -15442,7 +15442,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.9-%E6%8C%89%E9%94%80%E9%87%8F%E6%8E%92%E5%BA%8F">2.9 &#25353;&#38144;&#37327;&#25490;&#24207;<a class="anchor-link" href="#2.9-%E6%8C%89%E9%94%80%E9%87%8F%E6%8E%92%E5%BA%8F">&#182;</a></h2>
+<h2 id="2.9-%E6%8C%89%E9%94%80%E9%87%8F%E6%8E%92%E5%BA%8F">2.9 <a class="anchor-link" href="#2.9-%E6%8C%89%E9%94%80%E9%87%8F%E6%8E%92%E5%BA%8F">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15451,10 +15451,10 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;销量&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15493,89 +15493,89 @@ dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>城市</th>
-      <th>名称</th>
-      <th>星级</th>
-      <th>评分</th>
-      <th>价格</th>
-      <th>销量</th>
-      <th>省/市/区</th>
-      <th>坐标</th>
-      <th>简介</th>
-      <th>是否免费</th>
-      <th>具体地址</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
+      <th>Rating</th>
+      <th>Price</th>
+      <th></th>
+      <th>//</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>specific </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>上海</td>
-      <td>上海迪士尼乐园</td>
-      <td>未知</td>
+      <td></td>
+      <td></td>
+      <td></td>
       <td>0.0</td>
       <td>325.0</td>
       <td>19459</td>
-      <td>上海·上海·浦东新区</td>
+      <td>··</td>
       <td>121.667917,31.149712</td>
-      <td>每个女孩都有一场迪士尼梦</td>
+      <td></td>
       <td>False</td>
-      <td>上海市浦东新区川沙镇黄赵路310号上海迪士尼乐园</td>
+      <td>310</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>上海</td>
-      <td>上海海昌海洋公园</td>
+      <td></td>
+      <td></td>
       <td>4A</td>
       <td>0.0</td>
       <td>276.5</td>
       <td>19406</td>
-      <td>上海·上海·浦东新区</td>
+      <td>··</td>
       <td>121.915647,30.917713</td>
-      <td>看珍稀海洋生物 | 玩超刺激娱乐项目</td>
+      <td> | </td>
       <td>False</td>
-      <td>上海市浦东新区南汇城银飞路166号</td>
+      <td>166</td>
     </tr>
     <tr>
       <th>211</th>
-      <td>北京</td>
-      <td>故宫</td>
+      <td></td>
+      <td></td>
       <td>5A</td>
       <td>5.0</td>
       <td>58.6</td>
       <td>15277</td>
-      <td>北京·北京·东城区</td>
+      <td>··</td>
       <td>116.403347,39.922148</td>
-      <td>世界五大宫之首，穿越与您近在咫尺</td>
+      <td>，</td>
       <td>False</td>
-      <td>北京市东城区景山前街4号</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2187</th>
-      <td>陕西</td>
-      <td>秦始皇帝陵博物院（兵马俑）</td>
+      <td></td>
+      <td>（）</td>
       <td>5A</td>
       <td>4.4</td>
       <td>120.0</td>
       <td>12714</td>
-      <td>陕西·西安·临潼区</td>
+      <td>··</td>
       <td>109.266029,34.386024</td>
-      <td>世界第八大奇迹</td>
+      <td></td>
       <td>False</td>
-      <td>陕西省西安市临潼县秦始皇陵东1.5公里处</td>
+      <td>1.5</td>
     </tr>
     <tr>
       <th>474</th>
-      <td>四川</td>
-      <td>成都大熊猫繁育研究基地</td>
+      <td></td>
+      <td></td>
       <td>4A</td>
       <td>4.0</td>
       <td>52.0</td>
       <td>9731</td>
-      <td>四川·成都·成华区</td>
+      <td>··</td>
       <td>104.152603,30.738951</td>
-      <td>无关黑与白， 不分胖与瘦， 可爱而又温暖</td>
+      <td>， minute， </td>
       <td>False</td>
-      <td>四川省成都市成华区外北熊猫大道1375号</td>
+      <td>1375</td>
     </tr>
   </tbody>
 </table>
@@ -15595,7 +15595,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="3.-Pyecharts%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96">3. Pyecharts&#25968;&#25454;&#21487;&#35270;&#21270;<a class="anchor-link" href="#3.-Pyecharts%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96">&#182;</a></h1>
+<h1 id="3.-Pyecharts%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96">3. Pyechartsdatavisualization<a class="anchor-link" href="#3.-Pyecharts%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96">¶</a></h1>
 </div>
 </div>
 </div>
@@ -15606,7 +15606,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.1-%E9%94%80%E9%87%8F%E5%89%8D20%E7%83%AD%E9%97%A8%E6%99%AF%E7%82%B9%E6%95%B0%E6%8D%AE">3.1 &#38144;&#37327;&#21069;20&#28909;&#38376;&#26223;&#28857;&#25968;&#25454;<a class="anchor-link" href="#3.1-%E9%94%80%E9%87%8F%E5%89%8D20%E7%83%AD%E9%97%A8%E6%99%AF%E7%82%B9%E6%95%B0%E6%8D%AE">&#182;</a></h2>
+<h2 id="3.1-%E9%94%80%E9%87%8F%E5%89%8D20%E7%83%AD%E9%97%A8%E6%99%AF%E7%82%B9%E6%95%B0%E6%8D%AE">3.1 20Attractiondata<a class="anchor-link" href="#3.1-%E9%94%80%E9%87%8F%E5%89%8D20%E7%83%AD%E9%97%A8%E6%99%AF%E7%82%B9%E6%95%B0%E6%8D%AE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15615,32 +15615,32 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 线性渐变</span>
-<span class="n">color_js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;new echarts.graphic.LinearGradient(0, 0, 1, 0,</span>
-<span class="s2">    [{offset: 0, color: &#39;#009ad6&#39;}, {offset: 1, color: &#39;#ed1941&#39;}], false)&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># </span>
+<span class="n">color_js</span> <span class="o">=</span> <span class="s2">"""new echarts.graphic.LinearGradient(0, 0, 1, 0,</span>
+<span class="s2">    [{offset: 0, color: '#009ad6'}, {offset: 1, color: '#ed1941'}], false)"""</span>
 
 
-<span class="n">sort_info</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;销量&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sort_info</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">b1</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">Bar</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">sort_info</span><span class="p">[</span><span class="s1">&#39;名称&#39;</span><span class="p">])[</span><span class="o">-</span><span class="mi">20</span><span class="p">:])</span>
-    <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">&#39;热门景点销量&#39;</span><span class="p">,</span> <span class="n">sort_info</span><span class="p">[</span><span class="s1">&#39;销量&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">20</span><span class="p">:],</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ItemStyleOpts</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">JsCode</span><span class="p">(</span><span class="n">color_js</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">sort_info</span><span class="p">[</span><span class="s1">''</span><span class="p">])[</span><span class="o">-</span><span class="mi">20</span><span class="p">:])</span>
+    <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">'Attraction'</span><span class="p">,</span> <span class="n">sort_info</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">20</span><span class="p">:],</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ItemStyleOpts</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">JsCode</span><span class="p">(</span><span class="n">color_js</span><span class="p">)))</span>
     <span class="o">.</span><span class="n">reversal_axis</span><span class="p">()</span>
     <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span>
-        <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;热门景点销量数据&#39;</span><span class="p">),</span>
-        <span class="n">yaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;景点名称&#39;</span><span class="p">),</span>
-        <span class="n">xaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;销量&#39;</span><span class="p">),</span>
+        <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Attractiondata'</span><span class="p">),</span>
+        <span class="n">yaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Attraction'</span><span class="p">),</span>
+        <span class="n">xaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">''</span><span class="p">),</span>
         <span class="p">)</span>
-    <span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">"right"</span><span class="p">))</span>
 
 <span class="p">)</span>
-<span class="c1"># 将图形整体右移</span>
+<span class="c1"># </span>
 <span class="n">g1</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">Grid</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">grid_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">GridOpts</span><span class="p">(</span><span class="n">pos_left</span><span class="o">=</span><span class="s1">&#39;20%&#39;</span><span class="p">,</span> <span class="n">pos_right</span><span class="o">=</span><span class="s1">&#39;5%&#39;</span><span class="p">))</span>  
+        <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">grid_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">GridOpts</span><span class="p">(</span><span class="n">pos_left</span><span class="o">=</span><span class="s1">'20%'</span><span class="p">,</span> <span class="n">pos_right</span><span class="o">=</span><span class="s1">'5%'</span><span class="p">))</span>  
 <span class="p">)</span>
 <span class="n">g1</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
 </pre></div>
@@ -15930,7 +15930,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.2-%E5%81%87%E6%9C%9F%E5%87%BA%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%85%A8%E5%9B%BD%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">3.2 &#20551;&#26399;&#20986;&#34892;&#25968;&#25454;&#20840;&#22269;&#22320;&#22270;&#20998;&#24067;<a class="anchor-link" href="#3.2-%E5%81%87%E6%9C%9F%E5%87%BA%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%85%A8%E5%9B%BD%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">&#182;</a></h2>
+<h2 id="3.2-%E5%81%87%E6%9C%9F%E5%87%BA%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%85%A8%E5%9B%BD%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">3.2 dataNationalDistribution<a class="anchor-link" href="#3.2-%E5%81%87%E6%9C%9F%E5%87%BA%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%85%A8%E5%9B%BD%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">¶</a></h2>
 </div>
 </div>
 </div>
@@ -15939,43 +15939,43 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dictcode</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;北京&#39;</span><span class="p">:</span> <span class="s1">&#39;北京市&#39;</span><span class="p">,</span>
- <span class="s1">&#39;天津&#39;</span><span class="p">:</span> <span class="s1">&#39;天津市&#39;</span><span class="p">,</span>
- <span class="s1">&#39;河北&#39;</span><span class="p">:</span> <span class="s1">&#39;河北省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;山西&#39;</span><span class="p">:</span> <span class="s1">&#39;山西省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;内蒙古&#39;</span><span class="p">:</span> <span class="s1">&#39;内蒙古自治区&#39;</span><span class="p">,</span>
- <span class="s1">&#39;辽宁&#39;</span><span class="p">:</span> <span class="s1">&#39;辽宁省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;吉林&#39;</span><span class="p">:</span> <span class="s1">&#39;吉林省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;黑龙江&#39;</span><span class="p">:</span> <span class="s1">&#39;黑龙江省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;上海&#39;</span><span class="p">:</span> <span class="s1">&#39;上海市&#39;</span><span class="p">,</span>
- <span class="s1">&#39;江苏&#39;</span><span class="p">:</span> <span class="s1">&#39;江苏省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;浙江&#39;</span><span class="p">:</span> <span class="s1">&#39;浙江省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;安徽&#39;</span><span class="p">:</span> <span class="s1">&#39;安徽省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;福建&#39;</span><span class="p">:</span> <span class="s1">&#39;福建省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;江西&#39;</span><span class="p">:</span> <span class="s1">&#39;江西省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;山东&#39;</span><span class="p">:</span> <span class="s1">&#39;山东省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;河南&#39;</span><span class="p">:</span> <span class="s1">&#39;河南省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;湖北&#39;</span><span class="p">:</span> <span class="s1">&#39;湖北省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;湖南&#39;</span><span class="p">:</span> <span class="s1">&#39;湖南省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;广东&#39;</span><span class="p">:</span> <span class="s1">&#39;广东省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;广西&#39;</span><span class="p">:</span> <span class="s1">&#39;广西壮族自治区&#39;</span><span class="p">,</span>
- <span class="s1">&#39;海南&#39;</span><span class="p">:</span> <span class="s1">&#39;海南省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;重庆&#39;</span><span class="p">:</span> <span class="s1">&#39;重庆市&#39;</span><span class="p">,</span>
- <span class="s1">&#39;四川&#39;</span><span class="p">:</span> <span class="s1">&#39;四川省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;贵州&#39;</span><span class="p">:</span> <span class="s1">&#39;贵州省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;云南&#39;</span><span class="p">:</span> <span class="s1">&#39;云南省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;西藏&#39;</span><span class="p">:</span> <span class="s1">&#39;西藏自治区&#39;</span><span class="p">,</span>
- <span class="s1">&#39;陕西&#39;</span><span class="p">:</span> <span class="s1">&#39;陕西省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;甘肃&#39;</span><span class="p">:</span> <span class="s1">&#39;甘肃省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;青海&#39;</span><span class="p">:</span> <span class="s1">&#39;青海省&#39;</span><span class="p">,</span>
- <span class="s1">&#39;宁夏&#39;</span><span class="p">:</span> <span class="s1">&#39;宁夏回族自治区&#39;</span><span class="p">,</span>
- <span class="s1">&#39;新疆&#39;</span><span class="p">:</span> <span class="s1">&#39;新疆维吾尔自治区&#39;</span><span class="p">,</span>
-<span class="s1">&#39;台湾&#39;</span><span class="p">:</span><span class="s1">&#39;台湾&#39;</span><span class="p">,</span>
- <span class="s1">&#39;香港&#39;</span><span class="p">:</span><span class="s1">&#39;香港&#39;</span><span class="p">,</span>
- <span class="s1">&#39;澳门&#39;</span><span class="p">:</span><span class="s1">&#39;澳门&#39;</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dictcode</span> <span class="o">=</span> <span class="p">{</span><span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">'days'</span><span class="p">:</span> <span class="s1">'days'</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+<span class="s1">''</span><span class="p">:</span><span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span><span class="s1">''</span><span class="p">,</span>
+ <span class="s1">''</span><span class="p">:</span><span class="s1">''</span><span class="p">}</span>
 </pre></div>
 
      </div>
@@ -15988,17 +15988,17 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_tmp1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;城市&#39;</span><span class="p">,</span><span class="s1">&#39;销量&#39;</span><span class="p">]]</span>
-<span class="n">df_counts</span> <span class="o">=</span> <span class="n">df_tmp1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;城市&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_tmp1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'City'</span><span class="p">,</span><span class="s1">''</span><span class="p">]]</span>
+<span class="n">df_counts</span> <span class="o">=</span> <span class="n">df_tmp1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'City'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">m1</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">Map</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;假期出行分布&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">dictcode</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="p">],</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())],</span> <span class="s1">&#39;china&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">'Distribution'</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">dictcode</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="p">],</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())],</span> <span class="s1">'china'</span><span class="p">)</span>
         <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span>
-        <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;假期出行数据地图分布&#39;</span><span class="p">),</span>
-        <span class="n">visualmap_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">VisualMapOpts</span><span class="p">(</span><span class="n">max_</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">is_piecewise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">range_color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;#fa8072&quot;</span><span class="p">,</span> <span class="s2">&quot;#ed1941&quot;</span><span class="p">]),</span>
+        <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'dataDistribution'</span><span class="p">),</span>
+        <span class="n">visualmap_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">VisualMapOpts</span><span class="p">(</span><span class="n">max_</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">is_piecewise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">range_color</span><span class="o">=</span><span class="p">[</span><span class="s2">"white"</span><span class="p">,</span> <span class="s2">"#fa8072"</span><span class="p">,</span> <span class="s2">"#ed1941"</span><span class="p">]),</span>
         <span class="p">)</span>
     <span class="p">)</span>
 <span class="n">m1</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
@@ -16393,8 +16393,8 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>华东、华南、华中</strong>等地区属于国民出游热点地区，尤其是<strong>北京、上海、江苏、广东、四川、陕西</strong>等地区出行比较密集。</p>
-<h2 id="3.3-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E6%9F%B1%E7%8A%B6%E5%9B%BE">3.3 &#21508;&#30465;&#24066;4A-5A&#26223;&#21306;&#25968;&#37327;&#26609;&#29366;&#22270;<a class="anchor-link" href="#3.3-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E6%9F%B1%E7%8A%B6%E5%9B%BE">&#182;</a></h2>
+<p><strong>、、</strong>，<strong>、、、、、</strong>compare。</p>
+<h2 id="3.3-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E6%9F%B1%E7%8A%B6%E5%9B%BE">3.3 Provincial4A-5ACount<a class="anchor-link" href="#3.3-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E6%9F%B1%E7%8A%B6%E5%9B%BE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -16403,22 +16403,22 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 线性渐变</span>
-<span class="n">color_js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;new echarts.graphic.LinearGradient(0, 1, 0, 0,</span>
-<span class="s2">    [{offset: 0, color: &#39;#009ad6&#39;}, {offset: 1, color: &#39;#ed1941&#39;}], false)&quot;&quot;&quot;</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># </span>
+<span class="n">color_js</span> <span class="o">=</span> <span class="s2">"""new echarts.graphic.LinearGradient(0, 1, 0, 0,</span>
+<span class="s2">    [{offset: 0, color: '#009ad6'}, {offset: 1, color: '#ed1941'}], false)"""</span> 
 
-<span class="n">df_tmp2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;星级&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;4A&#39;</span><span class="p">,</span> <span class="s1">&#39;5A&#39;</span><span class="p">])]</span>
-<span class="n">df_counts</span> <span class="o">=</span> <span class="n">df_tmp2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;城市&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="s1">&#39;星级&#39;</span><span class="p">]</span>
+<span class="n">df_tmp2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'4A'</span><span class="p">,</span> <span class="s1">'5A'</span><span class="p">])]</span>
+<span class="n">df_counts</span> <span class="o">=</span> <span class="n">df_tmp2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'City'</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="s1">''</span><span class="p">]</span>
 <span class="n">b2</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">Bar</span><span class="p">()</span>
             <span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="n">df_counts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
-            <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">&#39;4A-5A景区数量&#39;</span><span class="p">,</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ItemStyleOpts</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">JsCode</span><span class="p">(</span><span class="n">color_js</span><span class="p">)))</span>
+            <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">'4A-5ACount'</span><span class="p">,</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ItemStyleOpts</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">JsCode</span><span class="p">(</span><span class="n">color_js</span><span class="p">)))</span>
             <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span>
-            <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;各省市4A-5A景区数量&#39;</span><span class="p">),</span>
-            <span class="n">datazoom_opts</span><span class="o">=</span><span class="p">[</span><span class="n">opts</span><span class="o">.</span><span class="n">DataZoomOpts</span><span class="p">(),</span> <span class="n">opts</span><span class="o">.</span><span class="n">DataZoomOpts</span><span class="p">(</span><span class="n">type_</span><span class="o">=</span><span class="s1">&#39;inside&#39;</span><span class="p">)],</span>
+            <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Provincial4A-5ACount'</span><span class="p">),</span>
+            <span class="n">datazoom_opts</span><span class="o">=</span><span class="p">[</span><span class="n">opts</span><span class="o">.</span><span class="n">DataZoomOpts</span><span class="p">(),</span> <span class="n">opts</span><span class="o">.</span><span class="n">DataZoomOpts</span><span class="p">(</span><span class="n">type_</span><span class="o">=</span><span class="s1">'inside'</span><span class="p">)],</span>
         <span class="p">)</span>
     <span class="p">)</span>
 <span class="n">b2</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
@@ -16731,7 +16731,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.4-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E7%8E%AB%E7%91%B0%E5%9B%BE">3.4 &#21508;&#30465;&#24066;4A-5A&#26223;&#21306;&#25968;&#37327;&#29611;&#29808;&#22270;<a class="anchor-link" href="#3.4-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E7%8E%AB%E7%91%B0%E5%9B%BE">&#182;</a></h2>
+<h2 id="3.4-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E7%8E%AB%E7%91%B0%E5%9B%BE">3.4 Provincial4A-5ACount<a class="anchor-link" href="#3.4-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E7%8E%AB%E7%91%B0%E5%9B%BE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -16740,24 +16740,24 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df0</span> <span class="o">=</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">df0</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">c1</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">Pie</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df0</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">df0</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())],</span>
-         <span class="n">radius</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;30%&#39;</span><span class="p">,</span> <span class="s1">&#39;100%&#39;</span><span class="p">],</span>
-         <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;60%&#39;</span><span class="p">],</span>
-         <span class="n">rosetype</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">,</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df0</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">df0</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())],</span>
+         <span class="n">radius</span><span class="o">=</span><span class="p">[</span><span class="s1">'30%'</span><span class="p">,</span> <span class="s1">'100%'</span><span class="p">],</span>
+         <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="s1">'50%'</span><span class="p">,</span> <span class="s1">'60%'</span><span class="p">],</span>
+         <span class="n">rosetype</span><span class="o">=</span><span class="s1">'area'</span><span class="p">,</span>
          <span class="p">)</span>
-    <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;地区景点数量&#39;</span><span class="p">),</span>
+    <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'AttractionCount'</span><span class="p">),</span>
                      <span class="n">legend_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LegendOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
                      <span class="n">toolbox_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ToolboxOpts</span><span class="p">())</span>
-    <span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;inside&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
-                                               <span class="n">formatter</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{b}</span><span class="s1">: </span><span class="si">{c}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">font_style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">,</span>
-                                               <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">font_family</span><span class="o">=</span><span class="s1">&#39;Microsoft YaHei&#39;</span>
+    <span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">'inside'</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+                                               <span class="n">formatter</span><span class="o">=</span><span class="s1">'</span><span class="si">{b}</span><span class="s1">: </span><span class="si">{c}</span><span class="s1">'</span><span class="p">,</span> <span class="n">font_style</span><span class="o">=</span><span class="s1">'italic'</span><span class="p">,</span>
+                                               <span class="n">font_weight</span><span class="o">=</span><span class="s1">'bold'</span><span class="p">,</span> <span class="n">font_family</span><span class="o">=</span><span class="s1">'Microsoft YaHei'</span>
                                                <span class="p">))</span>
 <span class="p">)</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
@@ -17182,7 +17182,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.5-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E9%98%B4%E5%BD%B1%E6%95%A3%E7%82%B9%E5%9B%BE">3.5 &#21508;&#30465;&#24066;4A-5A&#26223;&#21306;&#25968;&#37327;&#38452;&#24433;&#25955;&#28857;&#22270;<a class="anchor-link" href="#3.5-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E9%98%B4%E5%BD%B1%E6%95%A3%E7%82%B9%E5%9B%BE">&#182;</a></h2>
+<h2 id="3.5-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E9%98%B4%E5%BD%B1%E6%95%A3%E7%82%B9%E5%9B%BE">3.5 Provincial4A-5ACount<a class="anchor-link" href="#3.5-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E6%95%B0%E9%87%8F%E9%98%B4%E5%BD%B1%E6%95%A3%E7%82%B9%E5%9B%BE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -17191,21 +17191,21 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">item_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;normal&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;shadowColor&#39;</span><span class="p">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">,</span> 
-                         <span class="s1">&#39;shadowBlur&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-                         <span class="s1">&#39;shadowOffsetX&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> 
-                         <span class="s1">&#39;shadowOffsetY&#39;</span><span class="p">:</span><span class="mi">15</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">item_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'normal'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'shadowColor'</span><span class="p">:</span> <span class="s1">'#000000'</span><span class="p">,</span> 
+                         <span class="s1">'shadowBlur'</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+                         <span class="s1">'shadowOffsetX'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> 
+                         <span class="s1">'shadowOffsetY'</span><span class="p">:</span><span class="mi">15</span>
                          <span class="p">}</span>
               <span class="p">}</span>
 <span class="n">s1</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">Scatter</span><span class="p">()</span>
         <span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="n">df_counts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
-        <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">&#39;4A-5A景区数量&#39;</span><span class="p">,</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">symbol_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">item_style</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">'4A-5ACount'</span><span class="p">,</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">symbol_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">item_style</span><span class="p">)</span>
         <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">visualmap_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">VisualMapOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
-                                              <span class="n">type_</span><span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">,</span>
+                                              <span class="n">type_</span><span class="o">=</span><span class="s1">'size'</span><span class="p">,</span>
                                               <span class="n">range_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">50</span><span class="p">]))</span>
 <span class="p">)</span>
 <span class="n">s1</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
@@ -17598,7 +17598,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.6-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">3.6 &#21508;&#30465;&#24066;4A-5A&#26223;&#21306;&#22320;&#22270;&#20998;&#24067;<a class="anchor-link" href="#3.6-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">&#182;</a></h2>
+<h2 id="3.6-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">3.6 Provincial4A-5ADistribution<a class="anchor-link" href="#3.6-%E5%90%84%E7%9C%81%E5%B8%824A-5A%E6%99%AF%E5%8C%BA%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B8%83">¶</a></h2>
 </div>
 </div>
 </div>
@@ -17607,16 +17607,16 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_tmp3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;星级&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;4A&#39;</span><span class="p">,</span> <span class="s1">&#39;5A&#39;</span><span class="p">])]</span>
-<span class="n">df_counts</span> <span class="o">=</span> <span class="n">df_tmp3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;城市&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="s1">&#39;星级&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_tmp3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'4A'</span><span class="p">,</span> <span class="s1">'5A'</span><span class="p">])]</span>
+<span class="n">df_counts</span> <span class="o">=</span> <span class="n">df_tmp3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'City'</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="s1">''</span><span class="p">]</span>
 <span class="n">m2</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">Map</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;4A-5A景区分布&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">dictcode</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="p">],</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())],</span> <span class="s1">&#39;china&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">'4A-5ADistribution'</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">dictcode</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="p">],</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())],</span> <span class="s1">'china'</span><span class="p">)</span>
     <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span>
-    <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;地图数据分布&#39;</span><span class="p">),</span>
+    <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'dataDistribution'</span><span class="p">),</span>
     <span class="n">visualmap_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">VisualMapOpts</span><span class="p">(</span><span class="n">max_</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">is_piecewise</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
     <span class="p">)</span>
 <span class="p">)</span>
@@ -17932,8 +17932,8 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>江苏、安徽、河南、北京、湖北</strong>等地区4A、5A级景区数量比较多。</p>
-<h2 id="3.7-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E5%8D%A0%E6%AF%94%E7%8E%AB%E7%91%B0%E5%9B%BE">3.7 &#38376;&#31080;&#20215;&#26684;&#21306;&#38388;&#21344;&#27604;&#29611;&#29808;&#22270;<a class="anchor-link" href="#3.7-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E5%8D%A0%E6%AF%94%E7%8E%AB%E7%91%B0%E5%9B%BE">&#182;</a></h2>
+<p><strong>、、、、</strong>4A、5ACountcompare。</p>
+<h2 id="3.7-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E5%8D%A0%E6%AF%94%E7%8E%AB%E7%91%B0%E5%9B%BE">3.7 PriceShare<a class="anchor-link" href="#3.7-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E5%8D%A0%E6%AF%94%E7%8E%AB%E7%91%B0%E5%9B%BE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -17942,13 +17942,13 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 门票价格占比</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># PriceShare</span>
 <span class="n">price_level</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>    
-<span class="n">label_level</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0-50&#39;</span><span class="p">,</span> <span class="s1">&#39;50-100&#39;</span><span class="p">,</span> <span class="s1">&#39;100-150&#39;</span><span class="p">,</span> <span class="s1">&#39;150-200&#39;</span><span class="p">,</span> <span class="s1">&#39;200-250&#39;</span><span class="p">,</span> <span class="s1">&#39;250-300&#39;</span><span class="p">,</span> <span class="s1">&#39;300-350&#39;</span><span class="p">,</span> <span class="s1">&#39;350-400&#39;</span><span class="p">,</span> <span class="s1">&#39;400-500&#39;</span><span class="p">]</span>    
-<span class="n">jzmj_cut</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;价格&#39;</span><span class="p">],</span> <span class="n">price_level</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">label_level</span><span class="p">)</span>        
+<span class="n">label_level</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'0-50'</span><span class="p">,</span> <span class="s1">'50-100'</span><span class="p">,</span> <span class="s1">'100-150'</span><span class="p">,</span> <span class="s1">'150-200'</span><span class="p">,</span> <span class="s1">'200-250'</span><span class="p">,</span> <span class="s1">'250-300'</span><span class="p">,</span> <span class="s1">'300-350'</span><span class="p">,</span> <span class="s1">'350-400'</span><span class="p">,</span> <span class="s1">'400-500'</span><span class="p">]</span>    
+<span class="n">jzmj_cut</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Price'</span><span class="p">],</span> <span class="n">price_level</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">label_level</span><span class="p">)</span>        
 <span class="n">df_price</span> <span class="o">=</span> <span class="n">jzmj_cut</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 <span class="n">df_price</span>
 </pre></div>
@@ -17981,7 +17981,7 @@ dtype: int64</pre>
 300-350     20
 350-400     19
 400-500     13
-Name: 价格, dtype: int64</pre>
+Name: Price, dtype: int64</pre>
 </div>
 
 </div>
@@ -17995,26 +17995,26 @@ Name: 价格, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">Pie</span><span class="p">(</span><span class="n">init_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">InitOpts</span><span class="p">(</span>
-            <span class="n">width</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;600px&#39;</span><span class="p">,</span>
+            <span class="n">width</span><span class="o">=</span><span class="s1">'800px'</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s1">'600px'</span><span class="p">,</span>
             <span class="p">)</span>
        <span class="p">)</span>
         <span class="o">.</span><span class="n">add</span><span class="p">(</span>
-        <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">''</span><span class="p">,</span>
         <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df_price</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">df_price</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())],</span>
-        <span class="n">radius</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;20%&#39;</span><span class="p">,</span> <span class="s1">&#39;60%&#39;</span><span class="p">],</span>
-        <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;40%&#39;</span><span class="p">,</span> <span class="s1">&#39;50%&#39;</span><span class="p">],</span>
-        <span class="n">rosetype</span><span class="o">=</span><span class="s1">&#39;radius&#39;</span><span class="p">,</span>
+        <span class="n">radius</span><span class="o">=</span><span class="p">[</span><span class="s1">'20%'</span><span class="p">,</span> <span class="s1">'60%'</span><span class="p">],</span>
+        <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="s1">'40%'</span><span class="p">,</span> <span class="s1">'50%'</span><span class="p">],</span>
+        <span class="n">rosetype</span><span class="o">=</span><span class="s1">'radius'</span><span class="p">,</span>
         <span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
         <span class="p">)</span>    
-        <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;门票价格占比&#39;</span><span class="p">,</span><span class="n">pos_left</span><span class="o">=</span><span class="s1">&#39;33%&#39;</span><span class="p">,</span><span class="n">pos_top</span><span class="o">=</span><span class="s2">&quot;5%&quot;</span><span class="p">),</span>
-                        <span class="n">legend_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LegendOpts</span><span class="p">(</span><span class="n">type_</span><span class="o">=</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="n">pos_left</span><span class="o">=</span><span class="s2">&quot;80%&quot;</span><span class="p">,</span><span class="n">pos_top</span><span class="o">=</span><span class="s2">&quot;25%&quot;</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'PriceShare'</span><span class="p">,</span><span class="n">pos_left</span><span class="o">=</span><span class="s1">'33%'</span><span class="p">,</span><span class="n">pos_top</span><span class="o">=</span><span class="s2">"5%"</span><span class="p">),</span>
+                        <span class="n">legend_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LegendOpts</span><span class="p">(</span><span class="n">type_</span><span class="o">=</span><span class="s1">'scroll'</span><span class="p">,</span> <span class="n">pos_left</span><span class="o">=</span><span class="s2">"80%"</span><span class="p">,</span><span class="n">pos_top</span><span class="o">=</span><span class="s2">"25%"</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">)</span>
                         <span class="p">)</span>
-        <span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{b}</span><span class="s1">: </span><span class="si">{c}</span><span class="s1"> (</span><span class="si">{d}</span><span class="s1">%)&#39;</span><span class="p">),</span><span class="n">position</span><span class="o">=</span><span class="s1">&#39;outside&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="s1">'</span><span class="si">{b}</span><span class="s1">: </span><span class="si">{c}</span><span class="s1"> (</span><span class="si">{d}</span><span class="s1">%)'</span><span class="p">),</span><span class="n">position</span><span class="o">=</span><span class="s1">'outside'</span><span class="p">)</span>
     <span class="p">)</span>
 <span class="n">p1</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
 </pre></div>
@@ -18268,7 +18268,7 @@ Name: 价格, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.8-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E6%95%B0%E9%87%8F%E6%95%A3%E7%82%B9%E5%9B%BE">3.8 &#38376;&#31080;&#20215;&#26684;&#21306;&#38388;&#25968;&#37327;&#25955;&#28857;&#22270;<a class="anchor-link" href="#3.8-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E6%95%B0%E9%87%8F%E6%95%A3%E7%82%B9%E5%9B%BE">&#182;</a></h2>
+<h2 id="3.8-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E6%95%B0%E9%87%8F%E6%95%A3%E7%82%B9%E5%9B%BE">3.8 PriceCount<a class="anchor-link" href="#3.8-%E9%97%A8%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%8C%BA%E9%97%B4%E6%95%B0%E9%87%8F%E6%95%A3%E7%82%B9%E5%9B%BE">¶</a></h2>
 </div>
 </div>
 </div>
@@ -18277,28 +18277,28 @@ Name: 价格, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">color_js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;new echarts.graphic.RadialGradient(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">color_js</span> <span class="o">=</span> <span class="s2">"""new echarts.graphic.RadialGradient(</span>
 <span class="s2">                    0.5, 0.5, 1,</span>
 <span class="s2">                    [{offset: 0,</span>
-<span class="s2">                      color: &#39;#009ad6&#39;},</span>
+<span class="s2">                      color: '#009ad6'},</span>
 <span class="s2">                     {offset: 1,</span>
-<span class="s2">                      color: &#39;#ed1941&#39;}</span>
-<span class="s2">                      ])&quot;&quot;&quot;</span>
+<span class="s2">                      color: '#ed1941'}</span>
+<span class="s2">                      ])"""</span>
 
 <span class="n">s2</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">Scatter</span><span class="p">()</span>
         <span class="o">.</span><span class="n">add_xaxis</span><span class="p">(</span><span class="n">df_price</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
-        <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">&#39;门票价格区间&#39;</span><span class="p">,</span> <span class="n">df_price</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">symbol_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ItemStyleOpts</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">JsCode</span><span class="p">(</span><span class="n">color_js</span><span class="p">)))</span> 
+        <span class="o">.</span><span class="n">add_yaxis</span><span class="p">(</span><span class="s1">'Price'</span><span class="p">,</span> <span class="n">df_price</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">symbol_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ItemStyleOpts</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">JsCode</span><span class="p">(</span><span class="n">color_js</span><span class="p">)))</span> 
         <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span>
-            <span class="n">yaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;数量&#39;</span><span class="p">),</span>
-            <span class="n">xaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;价格区间(元)&#39;</span><span class="p">))</span>
+            <span class="n">yaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Count'</span><span class="p">),</span>
+            <span class="n">xaxis_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">AxisOpts</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Price()'</span><span class="p">))</span>
         <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">visualmap_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">VisualMapOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
-                                              <span class="c1"># 设置通过图形大小来表现数据</span>
-                                              <span class="n">type_</span><span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">,</span>
-                                              <span class="c1"># 图形大小映射范围</span>
+                                              <span class="c1"># through data</span>
+                                              <span class="n">type_</span><span class="o">=</span><span class="s1">'size'</span><span class="p">,</span>
+                                              <span class="c1"># </span>
                                               <span class="n">range_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">50</span><span class="p">]))</span>
 <span class="p">)</span>
 <span class="n">s2</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
@@ -18578,7 +18578,7 @@ Name: 价格, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.9-%E6%99%AF%E7%82%B9%E7%AE%80%E4%BB%8B%E8%AF%8D%E4%BA%91">3.9 &#26223;&#28857;&#31616;&#20171;&#35789;&#20113;<a class="anchor-link" href="#3.9-%E6%99%AF%E7%82%B9%E7%AE%80%E4%BB%8B%E8%AF%8D%E4%BA%91">&#182;</a></h2>
+<h2 id="3.9-%E6%99%AF%E7%82%B9%E7%AE%80%E4%BB%8B%E8%AF%8D%E4%BA%91">3.9 Attraction<a class="anchor-link" href="#3.9-%E6%99%AF%E7%82%B9%E7%AE%80%E4%BB%8B%E8%AF%8D%E4%BA%91">¶</a></h2>
 </div>
 </div>
 </div>
@@ -18587,29 +18587,29 @@ Name: 价格, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">contents</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;简介&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">contents</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">'</span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
 <span class="n">contents_list</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
 <span class="n">ac</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">contents_list</span><span class="p">)</span>
 
 <span class="n">stopwords</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./stopwords.txt&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># 打开文件</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># 读取文件</span>
-    <span class="n">stopwords</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./stopwords.txt'</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># file</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># file</span>
+    <span class="n">stopwords</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="p">:</span>
     <span class="k">del</span> <span class="n">ac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
  
 <span class="n">w1</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">WordCloud</span><span class="p">()</span>
-    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> 
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> 
          <span class="n">ac</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">150</span><span class="p">),</span> 
          <span class="n">word_size_range</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> 
-         <span class="n">textstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TextStyleOpts</span><span class="p">(</span><span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;cursive&quot;</span><span class="p">),</span>
-         <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;star&#39;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;景点简介词云&quot;</span><span class="p">))</span>
+         <span class="n">textstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TextStyleOpts</span><span class="p">(</span><span class="n">font_family</span><span class="o">=</span><span class="s2">"cursive"</span><span class="p">),</span>
+         <span class="n">shape</span><span class="o">=</span><span class="s1">'star'</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Attraction"</span><span class="p">))</span>
 <span class="p">)</span>
 <span class="n">w1</span><span class="o">.</span><span class="n">render_notebook</span><span class="p">()</span>
 </pre></div>
@@ -19839,10 +19839,10 @@ Prefix dict has been built successfully.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="%E6%80%BB%E7%BB%93">&#24635;&#32467;<a class="anchor-link" href="#%E6%80%BB%E7%BB%93">&#182;</a></h1><ul>
-<li>华东、华南、华中等地区属于国民出游热点地区，尤其是北京、上海、江苏、广东、四川、陕西等地区出行比较密集。</li>
-<li>江苏、安徽、河南、北京、湖北等地区4A、5A级景区数量比较多。</li>
-<li>门票价格100以内居多，大概占比70%，还是比较实惠的，而且一般景区还存在学生优惠等。</li>
+<h1 id="%E6%80%BB%E7%BB%93"><a class="anchor-link" href="#%E6%80%BB%E7%BB%93">¶</a></h1><ul>
+<li>、、，、、、、、compare。</li>
+<li>、、、、4A、5ACountcompare。</li>
+<li>Price100，Share70%，compare，has 。</li>
 </ul>
 
 </div>
@@ -19853,7 +19853,7 @@ Prefix dict has been built successfully.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 

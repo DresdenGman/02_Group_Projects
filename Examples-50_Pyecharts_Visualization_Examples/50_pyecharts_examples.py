@@ -2,20 +2,20 @@
 # coding: utf-8
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#前言" data-toc-modified-id="前言-1">前言</a></span></li><li><span><a href="#1.-柱状图堆叠" data-toc-modified-id="1.-柱状图堆叠-2">1. 柱状图堆叠</a></span></li><li><span><a href="#2.关闭坐标轴显示" data-toc-modified-id="2.关闭坐标轴显示-3">2.关闭坐标轴显示</a></span></li><li><span><a href="#3.自定义坐标轴标签文本" data-toc-modified-id="3.自定义坐标轴标签文本-4">3.自定义坐标轴标签文本</a></span></li><li><span><a href="#4.更改坐标轴数据类型" data-toc-modified-id="4.更改坐标轴数据类型-5">4.更改坐标轴数据类型</a></span></li><li><span><a href="#5.双Y轴【直方图&amp;折线图】" data-toc-modified-id="5.双Y轴【直方图&amp;折线图】-6">5.双Y轴【直方图&amp;折线图】</a></span></li><li><span><a href="#6.直方图——双Y轴" data-toc-modified-id="6.直方图——双Y轴-7">6.直方图——双Y轴</a></span></li><li><span><a href="#7.折线图——双X轴" data-toc-modified-id="7.折线图——双X轴-8">7.折线图——双X轴</a></span></li><li><span><a href="#8.自定义图例图形" data-toc-modified-id="8.自定义图例图形-9">8.自定义图例图形</a></span></li><li><span><a href="#9.图例选择设置单选" data-toc-modified-id="9.图例选择设置单选-10">9.图例选择设置单选</a></span></li><li><span><a href="#10.设置默认选中系列" data-toc-modified-id="10.设置默认选中系列-11">10.设置默认选中系列</a></span></li><li><span><a href="#11.缩略轴——inside组件" data-toc-modified-id="11.缩略轴——inside组件-12">11.缩略轴——inside组件</a></span></li><li><span><a href="#12.缩略轴——slider组件" data-toc-modified-id="12.缩略轴——slider组件-13">12.缩略轴——slider组件</a></span></li><li><span><a href="#13.缩略轴——slider组件&amp;inside组件" data-toc-modified-id="13.缩略轴——slider组件&amp;inside组件-14">13.缩略轴——slider组件&amp;inside组件</a></span></li><li><span><a href="#14.XY轴翻转" data-toc-modified-id="14.XY轴翻转-15">14.XY轴翻转</a></span></li><li><span><a href="#15.设置动画效果" data-toc-modified-id="15.设置动画效果-16">15.设置动画效果</a></span></li><li><span><a href="#15.直方图带视觉组件" data-toc-modified-id="15.直方图带视觉组件-17">15.直方图带视觉组件</a></span></li><li><span><a href="#16.设置渐变色(线性渐变)" data-toc-modified-id="16.设置渐变色(线性渐变)-18">16.设置渐变色(线性渐变)</a></span></li><li><span><a href="#17.设置渐变色(径向渐变)" data-toc-modified-id="17.设置渐变色(径向渐变)-19">17.设置渐变色(径向渐变)</a></span></li><li><span><a href="#18.设置分割线" data-toc-modified-id="18.设置分割线-20">18.设置分割线</a></span></li><li><span><a href="#19.设置分割区域" data-toc-modified-id="19.设置分割区域-21">19.设置分割区域</a></span></li><li><span><a href="#20.通过字典配置" data-toc-modified-id="20.通过字典配置-22">20.通过字典配置</a></span></li><li><span><a href="#21.面积图" data-toc-modified-id="21.面积图-23">21.面积图</a></span></li><li><span><a href="#22.堆叠面积图" data-toc-modified-id="22.堆叠面积图-24">22.堆叠面积图</a></span></li><li><span><a href="#23.自定义线样式（LineStyleOpts）" data-toc-modified-id="23.自定义线样式（LineStyleOpts）-25">23.自定义线样式（LineStyleOpts）</a></span></li><li><span><a href="#24.-带阴影效果折线图" data-toc-modified-id="24.-带阴影效果折线图-26">24. 带阴影效果折线图</a></span></li><li><span><a href="#25.折线图平滑处理" data-toc-modified-id="25.折线图平滑处理-27">25.折线图平滑处理</a></span></li><li><span><a href="#26.-直方图带标记线(最大值，平均值等)" data-toc-modified-id="26.-直方图带标记线(最大值，平均值等)-28">26. 直方图带标记线(最大值，平均值等)</a></span></li><li><span><a href="#27.折线图带自定义标记点" data-toc-modified-id="27.折线图带自定义标记点-29">27.折线图带自定义标记点</a></span></li><li><span><a href="#28.折线图带标记区域" data-toc-modified-id="28.折线图带标记区域-30">28.折线图带标记区域</a></span></li><li><span><a href="#29.折线图带百分号显示" data-toc-modified-id="29.折线图带百分号显示-31">29.折线图带百分号显示</a></span></li><li><span><a href="#30.象形图自定义图形" data-toc-modified-id="30.象形图自定义图形-32">30.象形图自定义图形</a></span></li><li><span><a href="#31.水球图自定义图形" data-toc-modified-id="31.水球图自定义图形-33">31.水球图自定义图形</a></span></li><li><span><a href="#32.日历图自定义cell" data-toc-modified-id="32.日历图自定义cell-34">32.日历图自定义cell</a></span></li><li><span><a href="#33.日历图显示中文标签" data-toc-modified-id="33.日历图显示中文标签-35">33.日历图显示中文标签</a></span></li><li><span><a href="#34.GEO添加自定义坐标" data-toc-modified-id="34.GEO添加自定义坐标-36">34.GEO添加自定义坐标</a></span></li><li><span><a href="#35.GEO使用国外地图" data-toc-modified-id="35.GEO使用国外地图-37">35.GEO使用国外地图</a></span></li><li><span><a href="#36.GEO-带涟漪效果散点图" data-toc-modified-id="36.GEO-带涟漪效果散点图-38">36.GEO 带涟漪效果散点图</a></span></li><li><span><a href="#37.GEO热力图" data-toc-modified-id="37.GEO热力图-39">37.GEO热力图</a></span></li><li><span><a href="#38.GEO-线图" data-toc-modified-id="38.GEO-线图-40">38.GEO 线图</a></span></li><li><span><a href="#39.饼图自定义图形半径范围" data-toc-modified-id="39.饼图自定义图形半径范围-41">39.饼图自定义图形半径范围</a></span></li><li><span><a href="#40.饼图自定义数据标签" data-toc-modified-id="40.饼图自定义数据标签-42">40.饼图自定义数据标签</a></span></li><li><span><a href="#41.多饼图" data-toc-modified-id="41.多饼图-43">41.多饼图</a></span></li><li><span><a href="#42.散点图添加视觉组件（图形大小）" data-toc-modified-id="42.散点图添加视觉组件（图形大小）-44">42.散点图添加视觉组件（图形大小）</a></span></li><li><span><a href="#43.散点图添加视觉组件（图形大小&amp;颜色）" data-toc-modified-id="43.散点图添加视觉组件（图形大小&amp;颜色）-45">43.散点图添加视觉组件（图形大小&amp;颜色）</a></span></li><li><span><a href="#44.散点图添加视觉组件（图形大小&amp;颜色&amp;透明度）" data-toc-modified-id="44.散点图添加视觉组件（图形大小&amp;颜色&amp;透明度）-46">44.散点图添加视觉组件（图形大小&amp;颜色&amp;透明度）</a></span></li><li><span><a href="#45.自定义背景颜色" data-toc-modified-id="45.自定义背景颜色-47">45.自定义背景颜色</a></span></li><li><span><a href="#46.词云图自定义字体范围" data-toc-modified-id="46.词云图自定义字体范围-48">46.词云图自定义字体范围</a></span></li><li><span><a href="#47.Map带视觉组件" data-toc-modified-id="47.Map带视觉组件-49">47.Map带视觉组件</a></span></li><li><span><a href="#48.Page更改布局" data-toc-modified-id="48.Page更改布局-50">48.Page更改布局</a></span></li><li><span><a href="#49.一个Tab下带多个图表" data-toc-modified-id="49.一个Tab下带多个图表-51">49.一个Tab下带多个图表</a></span></li><li><span><a href="#50.Timeline-自动播放" data-toc-modified-id="50.Timeline-自动播放-52">50.Timeline 自动播放</a></span></li></ul></div>
+# <div class="toc"><ul class="toc-item"><li><span><a href="#" data-toc-modified-id="-1"></a></span></li><li><span><a href="#1.-" data-toc-modified-id="1.--2">1. </a></span></li><li><span><a href="#2." data-toc-modified-id="2.-3">2.</a></span></li><li><span><a href="#3.label" data-toc-modified-id="3.label-4">3.label</a></span></li><li><span><a href="#4.data" data-toc-modified-id="4.data-5">4.data</a></span></li><li><span><a href="#5.Y【&】" data-toc-modified-id="5.Y【&】-6">5.Y【&】</a></span></li><li><span><a href="#6.——Y" data-toc-modified-id="6.——Y-7">6.——Y</a></span></li><li><span><a href="#7.——X" data-toc-modified-id="7.——X-8">7.——X</a></span></li><li><span><a href="#8." data-toc-modified-id="8.-9">8.</a></span></li><li><span><a href="#9." data-toc-modified-id="9.-10">9.</a></span></li><li><span><a href="#10." data-toc-modified-id="10.-11">10.</a></span></li><li><span><a href="#11.——inside" data-toc-modified-id="11.——inside-12">11.——inside</a></span></li><li><span><a href="#12.——slider" data-toc-modified-id="12.——slider-13">12.——slider</a></span></li><li><span><a href="#13.——slider&inside" data-toc-modified-id="13.——slider&inside-14">13.——slider&inside</a></span></li><li><span><a href="#14.XY" data-toc-modified-id="14.XY-15">14.XY</a></span></li><li><span><a href="#15.Effectiveness" data-toc-modified-id="15.Effectiveness-16">15.Effectiveness</a></span></li><li><span><a href="#15." data-toc-modified-id="15.-17">15.</a></span></li><li><span><a href="#16.()" data-toc-modified-id="16.()-18">16.()</a></span></li><li><span><a href="#17.()" data-toc-modified-id="17.()-19">17.()</a></span></li><li><span><a href="#18.minute" data-toc-modified-id="18.minute-20">18.minute</a></span></li><li><span><a href="#19.minute" data-toc-modified-id="19.minute-21">19.minute</a></span></li><li><span><a href="#20.through " data-toc-modified-id="20.through -22">20.through </a></span></li><li><span><a href="#21.Area" data-toc-modified-id="21.Area-23">21.Area</a></span></li><li><span><a href="#22.Area" data-toc-modified-id="22.Area-24">22.Area</a></span></li><li><span><a href="#23.（LineStyleOpts）" data-toc-modified-id="23.（LineStyleOpts）-25">23.（LineStyleOpts）</a></span></li><li><span><a href="#24.-Effectiveness" data-toc-modified-id="24.-Effectiveness-26">24. Effectiveness</a></span></li><li><span><a href="#25.processing" data-toc-modified-id="25.processing-27">25.processing</a></span></li><li><span><a href="#26.-(max，mean)" data-toc-modified-id="26.-(max，mean)-28">26. (max，mean)</a></span></li><li><span><a href="#27." data-toc-modified-id="27.-29">27.</a></span></li><li><span><a href="#28." data-toc-modified-id="28.-30">28.</a></span></li><li><span><a href="#29.minute" data-toc-modified-id="29.minute-31">29.minute</a></span></li><li><span><a href="#30." data-toc-modified-id="30.-32">30.</a></span></li><li><span><a href="#31." data-toc-modified-id="31.-33">31.</a></span></li><li><span><a href="#32.daycell" data-toc-modified-id="32.daycell-34">32.daycell</a></span></li><li><span><a href="#33.daylabel" data-toc-modified-id="33.daylabel-35">33.daylabel</a></span></li><li><span><a href="#34.GEO" data-toc-modified-id="34.GEO-36">34.GEO</a></span></li><li><span><a href="#35.GEOusing " data-toc-modified-id="35.GEOusing -37">35.GEOusing </a></span></li><li><span><a href="#36.GEO-Effectiveness" data-toc-modified-id="36.GEO-Effectiveness-38">36.GEO Effectiveness</a></span></li><li><span><a href="#37.GEO" data-toc-modified-id="37.GEO-39">37.GEO</a></span></li><li><span><a href="#38.GEO-" data-toc-modified-id="38.GEO--40">38.GEO </a></span></li><li><span><a href="#39." data-toc-modified-id="39.-41">39.</a></span></li><li><span><a href="#40.datalabel" data-toc-modified-id="40.datalabel-42">40.datalabel</a></span></li><li><span><a href="#41." data-toc-modified-id="41.-43">41.</a></span></li><li><span><a href="#42.（）" data-toc-modified-id="42.（）-44">42.（）</a></span></li><li><span><a href="#43.（&Color）" data-toc-modified-id="43.（&Color）-45">43.（&Color）</a></span></li><li><span><a href="#44.（&Color&）" data-toc-modified-id="44.（&Color&）-46">44.（&Color&）</a></span></li><li><span><a href="#45.Color" data-toc-modified-id="45.Color-47">45.Color</a></span></li><li><span><a href="#46." data-toc-modified-id="46.-48">46.</a></span></li><li><span><a href="#47.Map" data-toc-modified-id="47.Map-49">47.Map</a></span></li><li><span><a href="#48.Page" data-toc-modified-id="48.Page-50">48.Page</a></span></li><li><span><a href="#49.Tab" data-toc-modified-id="49.Tab-51">49.Tab</a></span></li><li><span><a href="#50.Timeline-" data-toc-modified-id="50.Timeline--52">50.Timeline </a></span></li></ul></div>
 
-# #### 前言
+# #### 
 # 
-# * 总共50个完整pyecharts例子，包含一些常用的配置方法，每个cell都包含完整代码，可独立运行；
+# * 50pyecharts，contains，cellcontains，；
 # 
-# * 为避免混淆，每个例子尽量只包含单一配置的代码；
+# * ，contains；
 # 
-# * 所有代码均基于`pyecharts V1.7.1`，不同版本间可能存在不兼容，如遇代码报错请优先确认是否版本问题；
+# * based on `pyecharts V1.7.1`，different has ，；
 # 
 
-# #### 1. 柱状图堆叠
+# #### 1. 
 # 
-# * 不同系列的数据使用相同的stack值会堆叠在一起；
+# * different datausing stack；
 
 
 # In[1]:
@@ -31,7 +31,7 @@ def bar_stack():
                                       width='1000px',
                                       height='600px'))
     bar.add_xaxis(Faker.choose())
-    # stack值一样的系列会堆叠在一起
+    # stack
     bar.add_yaxis('A', Faker.values(), stack='stack1')
     bar.add_yaxis('B', Faker.values(), stack='stack1')
     bar.add_yaxis('C', Faker.values(), stack='stack2')
@@ -43,9 +43,9 @@ chart = bar_stack()
 chart.render_notebook()
 
 
-# #### 2.关闭坐标轴显示
+# #### 2.
 # 
-# * 碰上类目标签过长的时候，可以选择关闭坐标轴，将数据&标签直接显示在图形中；
+# * labelhour，，data&label；
 
 # In[2]:
 
@@ -61,7 +61,7 @@ def bar_with_axis_off():
                                       height='600px'))
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('', Faker.values())
-    # 碰上类目标签过长的时候，可以选择关闭坐标轴，直接显示在图形中
+    # labelhour，，
     bar.set_series_opts(label_opts=opts.LabelOpts(position='insideLeft', formatter='{b}:{c}'))
     bar.set_global_opts(xaxis_opts=opts.AxisOpts(is_show=False),
                         yaxis_opts=opts.AxisOpts(is_show=False))
@@ -73,7 +73,7 @@ chart = bar_with_axis_off()
 chart.render_notebook()
 
 
-# #### 3.自定义坐标轴标签文本
+# #### 3.label
 # 
 
 # In[3]:
@@ -95,8 +95,8 @@ def bar_with_custom_axis_label():
     bar.add_yaxis('', y_data)
 
     bar.set_global_opts(xaxis_opts=opts.AxisOpts(
-        # 自定义坐标轴标签，在年份后加上`年`
-        axislabel_opts=opts.LabelOpts(formatter='{value}年')))
+        # label，Year`year`
+        axislabel_opts=opts.LabelOpts(formatter='{value}year')))
     return bar
 
 
@@ -104,9 +104,9 @@ chart = bar_with_custom_axis_label()
 chart.render_notebook()
 
 
-# #### 4.更改坐标轴数据类型
+# #### 4.data
 # 
-# * x轴默认数据类型是使用离散型，在使用散点图的时候可调整为数值型；
+# * xdatausing ，using hour；
 
 # In[4]:
 
@@ -125,7 +125,7 @@ def scatter_with_value_xaxis():
                                               height='600px'))
     scatter.add_xaxis(x_data)
     scatter.add_yaxis('', y_data)
-    # X轴默认数据类型为离散数据，设置为数值型
+    # Xdatadata，
     scatter.set_global_opts(xaxis_opts=opts.AxisOpts(type_="value"))
     return scatter
 
@@ -133,9 +133,9 @@ chart = scatter_with_value_xaxis()
 chart.render_notebook()
 
 
-# #### 5.双Y轴【直方图&折线图】
+# #### 5.Y【&】
 # 
-# * 实际是Bar和Line两个图表共用同一套坐标体系，将Bar和Line分别指向不同的Y轴；
+# * Bar and Line，Bar and Linerespectivelydifferent Y；
 
 # In[5]:
 
@@ -144,7 +144,7 @@ from pyecharts.charts import *
 from pyecharts import options as opts
 import random
 
-x_data = ['香蕉', '梨子', '水蜜桃', '核桃', '西瓜', '苹果']
+x_data = ['', '', '', '', '', '']
 y_data_1 = [random.randint(10, 50) for _ in range(len(x_data))]
 y_data_2 = [random.randint(100, 500) for _ in range(len(x_data))]
 
@@ -154,16 +154,16 @@ def bar_line_combine_with_two_axis():
                                       width='1000px',
                                       height='600px'))
     bar.add_xaxis(x_data)
-    # 添加一个Y轴
+    # Y
     bar.extend_axis(yaxis=opts.AxisOpts())
-    bar.add_yaxis('左边Y轴', y_data_1, yaxis_index=0)
+    bar.add_yaxis('Y', y_data_1, yaxis_index=0)
 
     line = Line(init_opts=opts.InitOpts(theme='light',
                                         width='1000px',
                                         height='600px'))
     line.add_xaxis(x_data)
-    # 将line数据通过yaxis_index指向后添加的Y轴
-    line.add_yaxis('右边Y轴', y_data_2, yaxis_index=1)
+    # linedatathrough yaxis_indexY
+    line.add_yaxis('Y', y_data_2, yaxis_index=1)
 
     bar.overlap(line)
     return bar
@@ -173,7 +173,7 @@ chart = bar_line_combine_with_two_axis()
 chart.render_notebook()
 
 
-# #### 6.直方图——双Y轴
+# #### 6.——Y
 
 # In[6]:
 
@@ -182,7 +182,7 @@ from pyecharts.charts import *
 from pyecharts import options as opts
 import random
 
-x_data = ['香蕉', '梨子', '水蜜桃', '核桃', '西瓜', '苹果']
+x_data = ['', '', '', '', '', '']
 y_data_1 = [random.randint(10, 50) for _ in range(len(x_data))]
 y_data_2 = [random.randint(100, 500) for _ in range(len(x_data))]
 
@@ -192,11 +192,11 @@ def bar_with_multiple_axis():
                                       width='1000px',
                                       height='600px'))
     bar.add_xaxis(x_data)
-    # 添加一个Y轴
+    # Y
     bar.extend_axis(yaxis=opts.AxisOpts())
-    # 分别指定使用的Y轴
-    bar.add_yaxis('左边Y轴', y_data_1, yaxis_index=0)
-    bar.add_yaxis('右边Y轴', y_data_2, yaxis_index=1)
+    # respectivelyusing Y
+    bar.add_yaxis('Y', y_data_1, yaxis_index=0)
+    bar.add_yaxis('Y', y_data_2, yaxis_index=1)
     return bar
 
 
@@ -204,7 +204,7 @@ chart = bar_with_multiple_axis()
 chart.render_notebook()
 
 
-# #### 7.折线图——双X轴
+# #### 7.——X
 
 # In[7]:
 
@@ -224,10 +224,10 @@ def line_with_two_xaxis():
                                         width='1000px',
                                         height='600px'))
     line.add_xaxis(x_data_1)
-    # 添加一个x轴
+    # x
     line.extend_axis(xaxis_data=x_data_2, xaxis=opts.AxisOpts())
-    line.add_yaxis('下面X轴', y_data_1)
-    line.add_yaxis('上面X轴', y_data_2)
+    line.add_yaxis('X', y_data_1)
+    line.add_yaxis('X', y_data_2)
     return line
 
 
@@ -235,10 +235,10 @@ chart = line_with_two_xaxis()
 chart.render_notebook()
 
 
-# #### 8.自定义图例图形
+# #### 8.
 # 
-# * 当前并不支持同一个图表针对不同的系列设置不同的icon
-# * 方案是将多个系列的数据拆分到多个图表设置各自的icon，最后通过grid将图表组合起来
+# * targeting different different icon
+# * dataminuteicon，through grid
 
 # In[8]:
 
@@ -252,14 +252,14 @@ android_icon = 'path://M28 12c-1.1 0-2 0.9-2 2v8c0 1.1 0.9 2 2 2s2-0.9 2-2v-8c0-
 
 x_data = ["2020/7/{}".format(i + 1) for i in range(10)]
 
-# 随机生成点数据
+# data
 y_data_1 = [random.randint(10, 20) for i in range(len(x_data))]
 y_data_2 = [random.randint(15, 25) for i in range(len(x_data))]
 
 
 def bar_custom_legend_symbol():
-    # 当前并不支持同一个图表针对不同的系列设置不同的icon
-    # 方案是将多个系列的数据拆分到多个图表设置各自的icon，最后通过grid将图表组合起来
+    # targeting different different icon
+    # dataminuteicon，through grid
     ios_bar = Bar()
     ios_bar.add_xaxis(x_data)
     ios_bar.add_yaxis('IOS', y_data_1)
@@ -272,7 +272,7 @@ def bar_custom_legend_symbol():
     az_bar.set_global_opts(legend_opts=opts.LegendOpts(legend_icon=android_icon,
                                                        pos_right='5%'))
 
-    # 将az_bar和ios_bar组合起来
+    # az_bar and ios_bar
     grid = Grid(init_opts=opts.InitOpts(theme='light',
                                         width='1000px',
                                         height='600px'))
@@ -285,7 +285,7 @@ chart = bar_custom_legend_symbol()
 chart.render_notebook()
 
 
-# #### 9.图例选择设置单选
+# #### 9.
 
 # In[9]:
 
@@ -301,7 +301,7 @@ def bar_single_selected():
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('A', Faker.values())
     bar.add_yaxis('B', Faker.values())
-    # 设置图例选择模式为单选
+    # 
     bar.set_global_opts(legend_opts=opts.LegendOpts(selected_mode='single'))
     return bar
 
@@ -310,7 +310,7 @@ chart = bar_single_selected()
 chart.render_notebook()
 
 
-# #### 10.设置默认选中系列
+# #### 10.
 
 # In[10]:
 
@@ -325,7 +325,7 @@ def bar_with_default_selected_series():
                                       width='1000px',
                                       height='600px'))
     bar.add_xaxis(Faker.choose())
-    # 默认选中A C
+    # A C
     bar.add_yaxis('A', Faker.values(), is_selected=True)
     bar.add_yaxis('B', Faker.values(), is_selected=False)
     bar.add_yaxis('C', Faker.values(), is_selected=True)
@@ -336,7 +336,7 @@ chart = bar_with_default_selected_series()
 chart.render_notebook()
 
 
-# #### 11.缩略轴——inside组件
+# #### 11.——inside
 
 # In[11]:
 
@@ -347,7 +347,7 @@ import random
 
 x_data = ["2020/10/{}".format(i + 1) for i in range(30)]
 
-# 随机生成点数据
+# data
 y_data = [random.randint(10, 20) for i in range(len(x_data))]
 
 
@@ -358,7 +358,7 @@ def bar_datazoom_inside():
     bar.add_xaxis(x_data)
     bar.add_yaxis('', y_data)
     bar.set_global_opts(datazoom_opts=opts.DataZoomOpts(type_='inside',
-                                                        range_start=50,   # 设置起止位置，50%-100%
+                                                        range_start=50,   # ，50%-100%
                                                         range_end=100))
     return bar
 
@@ -367,7 +367,7 @@ chart = bar_datazoom_inside()
 chart.render_notebook()
 
 
-# #### 12.缩略轴——slider组件
+# #### 12.——slider
 
 # In[12]:
 
@@ -378,7 +378,7 @@ import random
 
 x_data = ["2020/10/{}".format(i + 1) for i in range(30)]
 
-# 随机生成点数据
+# data
 y_data = [random.randint(10, 20) for i in range(len(x_data))]
 
 
@@ -388,7 +388,7 @@ def bar_with_datazoom_slider():
                                       height='600px'))
     bar.add_xaxis(x_data)
     bar.add_yaxis('', y_data)
-    bar.set_global_opts(datazoom_opts=opts.DataZoomOpts(range_start=50,   # 设置起止位置，50%-100%
+    bar.set_global_opts(datazoom_opts=opts.DataZoomOpts(range_start=50,   # ，50%-100%
                                                         range_end=100))
     return bar
 
@@ -397,7 +397,7 @@ chart = bar_with_datazoom_slider()
 chart.render_notebook()
 
 
-# #### 13.缩略轴——slider组件&inside组件
+# #### 13.——slider&inside
 
 # In[13]:
 
@@ -408,7 +408,7 @@ import random
 
 x_data = ["2020/10/{}".format(i + 1) for i in range(30)]
 
-# 随机生成点数据
+# data
 y_data = [random.randint(10, 20) for i in range(len(x_data))]
 
 
@@ -418,7 +418,7 @@ def bar_datazoom_both_way():
                                       height='600px'))
     bar.add_xaxis(x_data)
     bar.add_yaxis('', y_data)
-    # 通过list传入两个datazoom_opts
+    # through listdatazoom_opts
     bar.set_global_opts(datazoom_opts=[opts.DataZoomOpts(),
                                        opts.DataZoomOpts(type_='inside', range_start=50, range_end=100)])
     return bar
@@ -428,7 +428,7 @@ chart = bar_datazoom_both_way()
 chart.render_notebook()
 
 
-# #### 14.XY轴翻转
+# #### 14.XY
 
 # In[14]:
 
@@ -445,7 +445,7 @@ def bar_reverse_axis():
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('A', Faker.values())
     bar.add_yaxis('B', Faker.values())
-    # x,y轴翻转
+    # x,y
     bar.reversal_axis()
     return bar
 
@@ -454,10 +454,10 @@ chart = bar_reverse_axis()
 chart.render_notebook()
 
 
-# #### 15.设置动画效果
+# #### 15.Effectiveness
 # 
-# * 在图表加载前会有一段动画效果；
-# * 更多动画效果可参见：https://echarts.apache.org/examples/zh/editor.html?c=line-easing
+# * Effectiveness；
+# * Effectiveness：https://echarts.apache.org/examples/zh/editor.html?c=line-easing
 
 # In[15]:
 
@@ -467,7 +467,7 @@ from pyecharts import options as opts
 from pyecharts.faker import Faker
 
 """
-更多动画效果可参见：https://echarts.apache.org/examples/zh/editor.html?c=line-easing
+Effectiveness：https://echarts.apache.org/examples/zh/editor.html?c=line-easing
 """
 
 
@@ -475,7 +475,7 @@ def bar_with_animation():
     bar = Bar(init_opts=opts.InitOpts(theme='light',
                                       width='1000px',
                                       height='600px',
-                                      animation_opts=opts.AnimationOpts(animation_delay=1000,   # 动画延时
+                                      animation_opts=opts.AnimationOpts(animation_delay=1000,   # hour
                                                                         animation_easing='bounceIn')
                                       )
               )
@@ -489,7 +489,7 @@ chart = bar_with_animation()
 chart.render_notebook()
 
 
-# #### 15.直方图带视觉组件
+# #### 15.
 
 # In[16]:
 
@@ -506,7 +506,7 @@ def bar_with_visualmap_color():
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('A', Faker.values())
     bar.add_yaxis('B', Faker.values())
-    # 设置视觉组件，默认通过颜色映射数据，数值范围为0-100，可通过min_和max_进行自定义
+    # ，through Colordata，0-100，through min_ and max_
     bar.set_global_opts(visualmap_opts=opts.VisualMapOpts())
     return bar
 
@@ -515,7 +515,7 @@ chart = bar_with_visualmap_color()
 chart.render_notebook()
 
 
-# #### 16.设置渐变色(线性渐变)
+# #### 16.()
 
 # In[17]:
 
@@ -543,7 +543,7 @@ def bar_with_linear_gradient_color():
                                       height='600px'))
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('', Faker.values(),
-                  # 使用JsCode执行渐变色代码
+                  # using JsCode
                   itemstyle_opts=opts.ItemStyleOpts(color=JsCode(color_js)))
 
     return bar
@@ -553,7 +553,7 @@ chart = bar_with_linear_gradient_color()
 chart.render_notebook()
 
 
-# #### 17.设置渐变色(径向渐变)
+# #### 17.()
 
 # In[18]:
 
@@ -580,7 +580,7 @@ def scatter_with_radial_gradient_color():
 
     scatter.add_yaxis("", Faker.values(),
                       symbol_size=50,
-                      # 渐变配色
+                      # 
                       itemstyle_opts=opts.ItemStyleOpts(color=JsCode(color_js)))
     return scatter
 
@@ -589,7 +589,7 @@ chart = scatter_with_radial_gradient_color()
 chart.render_notebook()
 
 
-# #### 18.设置分割线
+# #### 18.minute
 
 # In[19]:
 
@@ -606,7 +606,7 @@ def bar_with_custom_splitline():
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('A', Faker.values())
     bar.add_yaxis('B', Faker.values())
-    # 设置分割线
+    # minute
     bar.set_global_opts(yaxis_opts=opts.AxisOpts(
         splitline_opts=opts.SplitLineOpts(is_show=True,
                                           linestyle_opts=opts.LineStyleOpts(type_='dotted'))))
@@ -617,7 +617,7 @@ chart = bar_with_custom_splitline()
 chart.render_notebook()
 
 
-# #### 19.设置分割区域
+# #### 19.minute
 
 # In[20]:
 
@@ -634,7 +634,7 @@ def bar_with_custom_splitarea():
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('A', Faker.values())
     bar.add_yaxis('B', Faker.values())
-    # 设置分割区域
+    # minute
     bar.set_global_opts(yaxis_opts=opts.AxisOpts(
         splitarea_opts=opts.SplitAreaOpts(is_show=True,
                                           areastyle_opts=opts.AreaStyleOpts(opacity=1))))
@@ -645,7 +645,7 @@ chart = bar_with_custom_splitarea()
 chart.render_notebook()
 
 
-# #### 20.通过字典配置
+# #### 20.through 
 
 # In[21]:
 
@@ -661,7 +661,7 @@ def bar_with_dict_config():
                                       height='600px'))
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('', Faker.values())
-    # 通过字典配置itemstyle
+    # through itemstyle
     bar.set_series_opts(itemstyle_opts=dict(color='#008B8B', opacity=0.8))
     return bar
 
@@ -670,8 +670,8 @@ chart = bar_with_dict_config()
 chart.render_notebook()
 
 
-# #### 21.面积图
-# * 实现方式就是在**折线图先填充区域**；
+# #### 21.Area
+# * implement ****；
 
 # In[22]:
 
@@ -683,7 +683,7 @@ import random
 
 x_data = ["2020/10/{}".format(i + 1) for i in range(30)]
 
-# 随机生成点数据
+# data
 y_data = [i + random.randint(10, 20) for i in range(len(x_data))]
 
 
@@ -693,7 +693,7 @@ def line_with_area():
                                         height='600px'))
     line.add_xaxis(x_data)
     line.add_yaxis('', y_data)
-    # opacity 默认为0，即透明
+    # opacity 0，
     line.set_series_opts(areastyle_opts=opts.AreaStyleOpts(opacity=0.5))
 
     return line
@@ -703,7 +703,7 @@ chart = line_with_area()
 chart.render_notebook()
 
 
-# #### 22.堆叠面积图
+# #### 22.Area
 
 # In[23]:
 
@@ -727,7 +727,7 @@ def line_stack_area():
     line.add_yaxis('C',
                    Faker.values(),
                    stack='stack')
-    # opacity 默认为0，即透明
+    # opacity 0，
     line.set_series_opts(areastyle_opts=opts.AreaStyleOpts(opacity=0.5))
 
     return line
@@ -737,7 +737,7 @@ chart = line_stack_area()
 chart.render_notebook()
 
 
-# #### 23.自定义线样式（LineStyleOpts）
+# #### 23.（LineStyleOpts）
 
 # In[24]:
 
@@ -752,7 +752,7 @@ def line_with_custom_linestyle():
                                         width='1000px',
                                         height='600px'))
     line.add_xaxis(Faker.choose())
-    line.add_yaxis('样式1',
+    line.add_yaxis('1',
                    Faker.values(),
                    linestyle_opts=opts.LineStyleOpts(width=5,
                                                      curve=0,
@@ -760,7 +760,7 @@ def line_with_custom_linestyle():
                                                      type_='solid',
                                                      color='red')
                    )
-    line.add_yaxis('样式2',
+    line.add_yaxis('2',
                    Faker.values(),
                    linestyle_opts=opts.LineStyleOpts(width=3,
                                                      curve=0.5,
@@ -768,7 +768,7 @@ def line_with_custom_linestyle():
                                                      type_='dashed',
                                                      color='yellow')
                    )
-    line.add_yaxis('样式3',
+    line.add_yaxis('3',
                    Faker.values(),
                    linestyle_opts=opts.LineStyleOpts(width=1,
                                                      curve=1,
@@ -783,9 +783,9 @@ chart = line_with_custom_linestyle()
 chart.render_notebook()
 
 
-# #### 24. 带阴影效果折线图
+# #### 24. Effectiveness
 # 
-# * `linestyle_opts`在默认参数中并不支持直接配置阴影效果，可选择通过dict传入`shadowOffsetX`等参数来实现；
+# * `linestyle_opts`parameterEffectiveness，through dict`shadowOffsetX`parameterimplement ；
 
 # In[25]:
 
@@ -797,18 +797,18 @@ import random
 
 line_style = {
     'normal': {
-        'width': 4,  # 设置线宽
-        'shadowColor': 'rgba(155, 18, 184, .3)',  # 阴影颜色
-        'shadowBlur': 10,  # 阴影大小
-        'shadowOffsetY': 10,  # Y轴方向阴影偏移
-        'shadowOffsetX': 10,  # x轴方向阴影偏移
-        'curve': 0.5  # 线弯曲程度，1表示不弯曲
+        'width': 4,  # 
+        'shadowColor': 'rgba(155, 18, 184, .3)',  # Color
+        'shadowBlur': 10,  # 
+        'shadowOffsetY': 10,  # Y
+        'shadowOffsetX': 10,  # x
+        'curve': 0.5  # ，1indicates
     }
 }
 
 x_data = ["2020/10/{}".format(i + 1) for i in range(30)]
 
-# 随机生成点数据
+# data
 y_data_1 = [i + random.randint(10, 20) for i in range(len(x_data))]
 y_data_2 = [i + random.randint(15, 25) for i in range(len(x_data))]
 
@@ -822,15 +822,15 @@ def line_with_shadow():
                    y_data_1,
                    is_symbol_show=False,
                    is_smooth=True,
-                   # 传入线风格参数
+                   # parameter
                    linestyle_opts=line_style)
     line.add_yaxis("IOS",
                    y_data_2,
                    is_symbol_show=False,
                    is_smooth=True,
-                   # 传入线风格参数
+                   # parameter
                    linestyle_opts=line_style)
-    line.set_global_opts(title_opts=opts.TitleOpts(title="终端日活趋势"))
+    line.set_global_opts(title_opts=opts.TitleOpts(title="day"))
     return line
 
 
@@ -838,7 +838,7 @@ chart = line_with_shadow()
 chart.render_notebook()
 
 
-# #### 25.折线图平滑处理
+# #### 25.processing
 
 # In[26]:
 
@@ -853,9 +853,9 @@ def line_with_smooth_connect():
                                         width='1000px',
                                         height='600px'))
     line.add_xaxis(Faker.choose())
-    # 设置is_smooth=True来平滑曲线
-    line.add_yaxis('平滑曲线', Faker.values(), is_smooth=True)
-    line.add_yaxis('直线', Faker.values(), is_smooth=False)
+    # is_smooth=True
+    line.add_yaxis('', Faker.values(), is_smooth=True)
+    line.add_yaxis('', Faker.values(), is_smooth=False)
 
     return line
 
@@ -864,7 +864,7 @@ chart = line_with_smooth_connect()
 chart.render_notebook()
 
 
-# #### 26. 直方图带标记线(最大值，平均值等)
+# #### 26. (max，mean)
 
 # In[27]:
 
@@ -881,13 +881,13 @@ def bar_with_guide_line():
     bar.add_xaxis(Faker.choose())
     bar.add_yaxis('A', Faker.values())
     bar.add_yaxis('B', Faker.values())
-    # 设置标记线
+    # 
     bar.set_series_opts(
         markline_opts=opts.MarkLineOpts(
             data=[
-                opts.MarkLineItem(type_="min", name="最小值"),
-                opts.MarkLineItem(type_="max", name="最大值"),
-                opts.MarkLineItem(type_="average", name="平均值"),
+                opts.MarkLineItem(type_="min", name="min"),
+                opts.MarkLineItem(type_="max", name="max"),
+                opts.MarkLineItem(type_="average", name="mean"),
             ]
         )
     )
@@ -899,7 +899,7 @@ chart = bar_with_guide_line()
 chart.render_notebook()
 
 
-# #### 27.折线图带自定义标记点
+# #### 27.
 
 # In[28]:
 
@@ -910,7 +910,7 @@ import random
 
 x_data = ["2020/10/{}".format(i + 1) for i in range(30)]
 
-# 随机生成点数据
+# data
 y_data = [i + random.randint(10, 20) for i in range(len(x_data))]
 
 
@@ -920,10 +920,10 @@ def line_with_custom_mark_point():
                                         height='600px'))
     line.add_xaxis(x_data)
     line.add_yaxis('', y_data)
-    # 自定义标记点
+    # 
     line.set_series_opts(
         markpoint_opts=opts.MarkPointOpts(
-            data=[opts.MarkPointItem(name="自定义标记点", coord=[x_data[2], y_data[2]], value=y_data[2])]
+            data=[opts.MarkPointItem(name="", coord=[x_data[2], y_data[2]], value=y_data[2])]
         )
     )
 
@@ -934,7 +934,7 @@ chart = line_with_custom_mark_point()
 chart.render_notebook()
 
 
-# #### 28.折线图带标记区域
+# #### 28.
 
 # In[29]:
 
@@ -945,7 +945,7 @@ import random
 
 x_data = ["2020/10/{}".format(i + 1) for i in range(30)]
 
-# 随机生成点数据
+# data
 y_data = [i + random.randint(10, 20) for i in range(len(x_data))]
 
 
@@ -955,11 +955,11 @@ def line_with_mark_area():
                                         height='600px'))
     line.add_xaxis(x_data)
     line.add_yaxis('', y_data)
-    # 设置标记区域
+    # 
     line.set_series_opts(
         markarea_opts=opts.MarkAreaOpts(
             data=[
-                opts.MarkAreaItem(name="黄金周", x=("2020/10/1", "2020/10/8"))
+                opts.MarkAreaItem(name="", x=("2020/10/1", "2020/10/8"))
             ]
         )
     )
@@ -971,7 +971,7 @@ chart = line_with_mark_area()
 chart.render_notebook()
 
 
-# #### 29.折线图带百分号显示
+# #### 29.minute
 
 # In[30]:
 
@@ -992,9 +992,9 @@ def line_with_per_show():
                                         width='1000px',
                                         height='600px'))
     line.add_xaxis(x_data)
-    # 传入数据时先乘以100
+    # datahour100
     line.add_yaxis('', [round(v * 100, 0) for v in y_data])
-    # 执行js代码让%显示
+    # js%
     line.set_series_opts(label_opts=opts.LabelOpts(is_show=True,
                                                    formatter=JsCode(js)))
 
@@ -1005,7 +1005,7 @@ chart = line_with_per_show()
 chart.render_notebook()
 
 
-# #### 30.象形图自定义图形
+# #### 30.
 
 # In[31]:
 
@@ -1023,7 +1023,7 @@ def pictorialbar_with_custom_symbol():
     pictorialbar.add_yaxis('A',
                            Faker.values(),
                            symbol_size=20,
-                           # 自定义图形
+                           # 
                            symbol='path://M100,0 L41.22,180.90 L195.10,69.09 L4.89,69.09 L158.77,180.90 z',
                            symbol_repeat="fixed",
                            is_symbol_clip=True
@@ -1036,7 +1036,7 @@ chart = pictorialbar_with_custom_symbol()
 chart.render_notebook()
 
 
-# #### 31.水球图自定义图形
+# #### 31.
 
 # In[32]:
 
@@ -1060,7 +1060,7 @@ chart = liquid_with_custom_shape()
 chart.render_notebook()
 
 
-# #### 32.日历图自定义cell
+# #### 32.daycell
 
 # In[33]:
 
@@ -1069,7 +1069,7 @@ from pyecharts.charts import *
 from pyecharts import options as opts
 import datetime
 
-# 美国covid确诊数据
+# coviddata
 data = [(datetime.datetime(2020, 1, 21, 0, 0), 1), (datetime.datetime(2020, 1, 22, 0, 0), 1),
         (datetime.datetime(2020, 1, 23, 0, 0), 1), (datetime.datetime(2020, 1, 24, 0, 0), 2),
         (datetime.datetime(2020, 1, 25, 0, 0), 2), (datetime.datetime(2020, 1, 26, 0, 0), 5),
@@ -1127,18 +1127,18 @@ def calendar_custom_cell():
     calendar = Calendar(init_opts=opts.InitOpts(theme='light',
                                                 width='1000px',
                                                 height='600px'))
-    calendar.add('确证人数',
+    calendar.add('',
                  yaxis_data=data,
                  label_opts=opts.LabelOpts(is_show=True),
                  calendar_opts=opts.CalendarOpts(
-                     # 日历位置
+                     # day
                      pos_top='10%',
                      pos_left='10%',
-                     # 日期范围
+                     # date
                      range_=['2020-01-21', '2020-04-30'],
-                     # 日历单元格尺寸
+                     # day
                      cell_size=50,
-                     # 年月日标签样式设置
+                     # yearmonthdaylabel
                      yearlabel_opts=opts.CalendarYearLabelOpts(margin=40,
                                                                label_font_size=20,
                                                                label_color='rgba(130,134,112,0.8)'),
@@ -1146,7 +1146,7 @@ def calendar_custom_cell():
                      monthlabel_opts=opts.CalendarMonthLabelOpts(label_color='#778633', label_font_weight='bold')
                  )
                  )
-    # 设置视觉组件
+    # 
     calendar.set_global_opts(visualmap_opts=opts.VisualMapOpts(
         max_=1000000,
         is_piecewise=True,
@@ -1163,7 +1163,7 @@ chart = calendar_custom_cell()
 chart.render_notebook()
 
 
-# #### 33.日历图显示中文标签
+# #### 33.daylabel
 
 # In[34]:
 
@@ -1172,7 +1172,7 @@ from pyecharts.charts import *
 from pyecharts import options as opts
 import datetime
 
-# 美国covid确诊数据
+# coviddata
 data = [(datetime.datetime(2020, 1, 21, 0, 0), 1), (datetime.datetime(2020, 1, 22, 0, 0), 1),
         (datetime.datetime(2020, 1, 23, 0, 0), 1), (datetime.datetime(2020, 1, 24, 0, 0), 2),
         (datetime.datetime(2020, 1, 25, 0, 0), 2), (datetime.datetime(2020, 1, 26, 0, 0), 5),
@@ -1230,22 +1230,22 @@ def calendar_in_Chinese():
     calendar = Calendar(init_opts=opts.InitOpts(theme='light',
                                                 width='1000px',
                                                 height='600px'))
-    calendar.add('确诊人数',
+    calendar.add('',
                  yaxis_data=data,
                  label_opts=opts.LabelOpts(is_show=True),
                  calendar_opts=opts.CalendarOpts(
-                     # 日期范围
+                     # date
                      range_=['2020-01-21', '2020-04-30'],
-                     # 日历单元格尺寸
+                     # day
                      cell_size=50,
-                     # 年月日标签样式设置
-                     # 星期和月份设置为中文显示，默认是英文
+                     # yearmonthdaylabel
+                     #  and Month，
                      yearlabel_opts=opts.CalendarYearLabelOpts(margin=50),
                      daylabel_opts=opts.CalendarDayLabelOpts(name_map='cn'),
                      monthlabel_opts=opts.CalendarMonthLabelOpts(name_map='cn')
                  )
                  )
-    # 设置视觉组件
+    # 
     calendar.set_global_opts(visualmap_opts=opts.VisualMapOpts(
         max_=1000000,
         is_piecewise=True,
@@ -1262,7 +1262,7 @@ chart = calendar_in_Chinese()
 chart.render_notebook()
 
 
-# #### 34.GEO添加自定义坐标
+# #### 34.GEO
 
 # In[35]:
 
@@ -1275,7 +1275,7 @@ def geo_add_custom_coordinate():
     geo = Geo(init_opts=opts.InitOpts(theme='light',
                                       width='1000px',
                                       height='600px'))
-    # 添加自定义坐标点
+    # 
     geo.add_coordinate('x', 116.397428, 39.90923)
     geo.add_coordinate('y', 112.398615, 29.91659)
 
@@ -1289,7 +1289,7 @@ chart = geo_add_custom_coordinate()
 chart.render_notebook()
 
 
-# #### 35.GEO使用国外地图
+# #### 35.GEOusing 
 
 # In[36]:
 
@@ -1301,7 +1301,7 @@ import ssl
 
 
 def geo_foreign_country():
-    # 添加其他国家的地图
+    # 
     # noinspection PyBroadException
     try:
         register_url("https://echarts-maps.github.io/echarts-countries-js/")
@@ -1313,7 +1313,7 @@ def geo_foreign_country():
                                       width='1000px',
                                       height='600px'))
 
-    geo.add_schema(maptype="美国")
+    geo.add_schema(maptype="")
 
     return geo
 
@@ -1322,7 +1322,7 @@ chart = geo_foreign_country()
 chart.render_notebook()
 
 
-# #### 36.GEO 带涟漪效果散点图
+# #### 36.GEO Effectiveness
 
 # In[37]:
 
@@ -1339,8 +1339,8 @@ def geo_effect_scatter():
     geo.add_schema(maptype="china")
 
     geo.add("",
-            [("广州", 150), ("北京", 70), ("长沙", 64), ("上海", 74),  ("厦门", 63)],
-            # 涟漪效果散点图
+            [("", 150), ("", 70), ("", 64), ("", 74),  ("", 63)],
+            # Effectiveness
             type_='effectScatter')
 
     return geo
@@ -1350,7 +1350,7 @@ chart = geo_effect_scatter()
 chart.render_notebook()
 
 
-# #### 37.GEO热力图
+# #### 37.GEO
 
 # In[38]:
 
@@ -1367,9 +1367,9 @@ def geo_heatmap():
     geo.add_schema(maptype="china")
 
     geo.add("",
-            [("广州", 150), ("北京", 70), ("深圳", 64), ("上海", 74),  ("杭州", 63)],
+            [("", 150), ("", 70), ("", 64), ("", 74),  ("", 63)],
             type_='heatmap')
-    # 热点图必须配置visualmap_opts
+    # visualmap_opts
     geo.set_global_opts(visualmap_opts=opts.VisualMapOpts())
     return geo
 
@@ -1378,7 +1378,7 @@ chart = geo_heatmap()
 chart.render_notebook()
 
 
-# #### 38.GEO 线图
+# #### 38.GEO 
 
 # In[39]:
 
@@ -1394,13 +1394,13 @@ def geo_lines():
 
     geo.add_schema(maptype="china")
 
-    geo.add("广州出发",
-            # 数据格式（from， to）
-            [("广州", "上海"), ("广州", "北京"), ("广州", "西宁"), ("广州", "重庆")],
+    geo.add("",
+            # data（from， to）
+            [("", ""), ("", ""), ("", ""), ("", "")],
             type_='lines')
-    geo.add("成都出发",
-            # 数据格式（from， to）
-            [("成都", '长沙'), ("成都", "武汉"), ("成都", "长春"), ("成都", "南京")],
+    geo.add("",
+            # data（from， to）
+            [("", ''), ("", ""), ("", ""), ("", "")],
             type_='lines')
 
     return geo
@@ -1410,7 +1410,7 @@ chart = geo_lines()
 chart.render_notebook()
 
 
-# #### 39.饼图自定义图形半径范围
+# #### 39.
 
 # In[40]:
 
@@ -1426,7 +1426,7 @@ def pie_custom_radius():
                                       height='600px'))
     pie.add("",
             [list(z) for z in zip(Faker.choose(), Faker.values())],
-            # 设置半径范围，0%-100%
+            # ，0%-100%
             radius=["40%", "75%"])
 
     return pie
@@ -1436,7 +1436,7 @@ chart = pie_custom_radius()
 chart.render_notebook()
 
 
-# #### 40.饼图自定义数据标签
+# #### 40.datalabel
 
 # In[41]:
 
@@ -1452,7 +1452,7 @@ def pie_with_custom_label():
                                       height='600px'))
     pie.add("", [list(z) for z in zip(Faker.choose(), Faker.values())])
     pie.set_series_opts(
-        # 自定义数据标签
+        # datalabel
         label_opts=opts.LabelOpts(position='top',
                                   color='red',
                                   font_family='Arial',
@@ -1470,7 +1470,7 @@ chart = pie_with_custom_label()
 chart.render_notebook()
 
 
-# #### 41.多饼图
+# #### 41.
 
 # In[42]:
 
@@ -1488,7 +1488,7 @@ def pie_multiple():
             [list(z) for z in zip(Faker.choose(), Faker.values())],
             radius=["20%", "50%"],
             center=["25%", "50%"])
-    # 添加多个饼图
+    # 
     pie.add("",
             [list(z) for z in zip(Faker.choose(), Faker.values())],
             radius=["20%", "50%"],
@@ -1501,7 +1501,7 @@ chart = pie_multiple()
 chart.render_notebook()
 
 
-# #### 42.散点图添加视觉组件（图形大小）
+# #### 42.（）
 
 # In[43]:
 
@@ -1517,7 +1517,7 @@ def scatter_with_visualmap_size():
                                               height='600px'))
     scatter.add_xaxis(Faker.choose())
     scatter.add_yaxis('', Faker.values())
-    # 设置视觉组件
+    # 
     scatter.set_global_opts(visualmap_opts=opts.VisualMapOpts(type_='size'))
     return scatter
 
@@ -1526,7 +1526,7 @@ chart = scatter_with_visualmap_size()
 chart.render_notebook()
 
 
-# #### 43.散点图添加视觉组件（图形大小&颜色）
+# #### 43.（&Color）
 
 # In[44]:
 
@@ -1545,8 +1545,8 @@ def scatter_with_visualmap_color_size():
                                               height='600px'))
     scatter.add_xaxis(x_data)
     scatter.add_yaxis('', y_data)
-    # 多个映射维度通过list形式传入
-    # dimension指定数据维度
+    # through list
+    # dimensiondata
     scatter.set_global_opts(visualmap_opts=[opts.VisualMapOpts(is_show=True, type_='size', dimension=2, pos_top='20%'),
                                             opts.VisualMapOpts(is_show=True, type_='color', dimension=3,  pos_top='60%')
                                             ],
@@ -1558,7 +1558,7 @@ chart = scatter_with_visualmap_color_size()
 chart.render_notebook()
 
 
-# #### 44.散点图添加视觉组件（图形大小&颜色&透明度）
+# #### 44.（&Color&）
 
 # In[45]:
 
@@ -1578,12 +1578,12 @@ def scatter_with_visualmap_color_size_opacity():
                                               height='600px'))
     scatter.add_xaxis(x_data)
     scatter.add_yaxis('', y_data)
-    # 多个映射维度通过list形式传入
-    # dimension制定数据维度
+    # through list
+    # dimensiondata
     scatter.set_global_opts(visualmap_opts=[opts.VisualMapOpts(is_show=True, type_='size', dimension=2, pos_top='10%'),
                                             opts.VisualMapOpts(is_show=True, type_='color', dimension=3, pos_top='40%'),
                                             opts.VisualMapOpts(is_show=True, type_='opacity', dimension=4,
-                                                               # VisualMapOpt中对于range_opacity没给默认值，需要自行设定
+                                                               # VisualMapOptrange_opacity，need to 
                                                                range_opacity=[0.2, 1], pos_top='70%')],
                             xaxis_opts=opts.AxisOpts(type_="value"))
     return scatter
@@ -1593,7 +1593,7 @@ chart = scatter_with_visualmap_color_size_opacity()
 chart.render_notebook()
 
 
-# #### 45.自定义背景颜色
+# #### 45.Color
 
 # In[46]:
 
@@ -1612,12 +1612,12 @@ def scatter_with_custom_bgColor():
         init_opts=opts.InitOpts(theme='light',
                                 width='1000px',
                                 height='600px',
-                                # 自定义背景颜色
+                                # Color
                                 bg_color='#008B8B'))
     scatter.add_xaxis(x_data)
     scatter.add_yaxis('', y_data)
-    # 多个映射维度通过list形式传入
-    # dimension制定数据维度
+    # through list
+    # dimensiondata
     scatter.set_global_opts(visualmap_opts=[opts.VisualMapOpts(is_show=True, type_='size', dimension=2),
                                             opts.VisualMapOpts(is_show=True, type_='color', dimension=3)],
                             xaxis_opts=opts.AxisOpts(type_="value"))
@@ -1628,7 +1628,7 @@ chart = scatter_with_custom_bgColor()
 chart.render_notebook()
 
 
-# #### 46.词云图自定义字体范围
+# #### 46.
 
 # In[47]:
 
@@ -1672,7 +1672,7 @@ def wordcloud_custom_word_size():
                                                   height='600px'))
     wordcloud.add('',
                   words,
-                  # 设置字体大小范围
+                  # 
                   word_size_range=[10, 50])
 
     return wordcloud
@@ -1682,7 +1682,7 @@ chart = wordcloud_custom_word_size()
 chart.render_notebook()
 
 
-# #### 47.Map带视觉组件
+# #### 47.Map
 
 # In[48]:
 
@@ -1690,54 +1690,54 @@ chart.render_notebook()
 from pyecharts.charts import *
 from pyecharts import options as opts
 
-data = [('广东', 10430),
-        ('山东', 9579),
-        ('河南', 9402),
-        ('四川', 8041),
-        ('江苏', 7866),
-        ('河北', 7185),
-        ('湖南', 6568),
-        ('安徽', 5950),
-        ('湖北', 5724),
-        ('浙江', 5442),
-        ('广西', 4603),
-        ('云南', 4597),
-        ('江西', 4457),
-        ('辽宁', 4375),
-        ('黑龙江', 3831),
-        ('陕西', 3733),
-        ('山西', 3571),
-        ('福建', 3552),
-        ('贵州', 3477),
-        ('重庆', 2884),
-        ('吉林', 2746),
-        ('甘肃省', 2557),
-        ('内蒙古', 2471),
-        ('台湾', 2316),
-        ('上海', 2301),
-        ('新疆', 2181),
-        ('北京', 1961),
-        ('天津', 1294),
-        ('海南', 867),
-        ('香港', 710),
-        ('宁夏', 630),
-        ('青海', 562),
-        ('西藏', 300),
-        ('澳门', 55)]
+data = [('', 10430),
+        ('', 9579),
+        ('', 9402),
+        ('', 8041),
+        ('', 7866),
+        ('', 7185),
+        ('', 6568),
+        ('', 5950),
+        ('', 5724),
+        ('', 5442),
+        ('', 4603),
+        ('', 4597),
+        ('', 4457),
+        ('', 4375),
+        ('', 3831),
+        ('', 3733),
+        ('', 3571),
+        ('', 3552),
+        ('', 3477),
+        ('', 2884),
+        ('', 2746),
+        ('', 2557),
+        ('', 2471),
+        ('', 2316),
+        ('', 2301),
+        ('', 2181),
+        ('', 1961),
+        ('days', 1294),
+        ('', 867),
+        ('', 710),
+        ('', 630),
+        ('', 562),
+        ('', 300),
+        ('', 55)]
 
 
 def map_with_viusalmap():
     map_chart = Map(init_opts=opts.InitOpts(theme='light',
                                             width='1000px',
                                             height='600px'))
-    map_chart.add('人口（万人）',
+    map_chart.add('Population（）',
                   data_pair=data,
                   maptype='china',
-                  # 关闭symbol的显示
+                  # symbol
                   is_map_symbol_show=False)
 
     map_chart.set_global_opts(visualmap_opts=opts.VisualMapOpts(
-        max_=10430,  # visualmap默认映射数据范围是【0，100】，需调整
+        max_=10430,  # visualmapdata【0，100】，
         is_piecewise=True,
         range_color=["#CCD3D9", "#E6B6C2", "#D4587A", "#DC364C"]
     ))
@@ -1748,7 +1748,7 @@ chart = map_with_viusalmap()
 chart.render_notebook()
 
 
-# #### 48.Page更改布局
+# #### 48.Page
 
 # In[49]:
 
@@ -1759,7 +1759,7 @@ from pyecharts.faker import Faker
 
 
 def page_simple_layout():
-    # 图表1
+    # 1
     bar_1 = Bar(init_opts=opts.InitOpts(theme='light',
                                         width='500px',
                                         height='300px'))
@@ -1767,16 +1767,16 @@ def page_simple_layout():
     bar_1.add_yaxis('A', Faker.values())
     bar_1.add_yaxis('B', Faker.values())
 
-    # 图表2
+    # 2
     bar_2 = Bar(init_opts=opts.InitOpts(theme='light',
                                         width='500px',
                                         height='300px'))
     bar_2.add_xaxis(Faker.choose())
     bar_2.add_yaxis('A', Faker.values())
-    # x,y轴翻转
+    # x,y
     bar_2.reversal_axis()
 
-    # 图表3
+    # 3
     line = Line(init_opts=opts.InitOpts(theme='light',
                                         width='500px',
                                         height='300px'))
@@ -1784,7 +1784,7 @@ def page_simple_layout():
     line.add_yaxis('A', Faker.values())
     line.add_yaxis('B', Faker.values())
 
-    # 图表4
+    # 4
     pie = Pie(init_opts=opts.InitOpts(theme='light',
                                       width='500px',
                                       height='300px'))
@@ -1793,7 +1793,7 @@ def page_simple_layout():
             radius=["40%", "75%"])
 
     page = Page(layout=Page.SimplePageLayout)
-    # 需要自行调整每个 chart 的 height/width，布局会因为页面大小而不同
+    # need to  chart  height/width， because different 
     page.add(bar_1, bar_2, line, pie)
 
     return page
@@ -1803,9 +1803,9 @@ chart = page_simple_layout()
 chart.render_notebook()
 
 
-# #### 49.一个Tab下带多个图表
+# #### 49.Tab
 # 
-# * 通过Grid将多个图表组合，然后再将Grid添加到Tab中；
+# * through Grid，GridTab；
 
 # In[50]:
 
@@ -1816,26 +1816,26 @@ from pyecharts.faker import Faker
 
 
 def tab_with_multiple_chart():
-    # 图表1
+    # 1
     bar = Bar()
     bar.add_xaxis(Faker.choose())
-    bar.add_yaxis("商家A", Faker.values())
-    bar.add_yaxis("商家B", Faker.values())
+    bar.add_yaxis("A", Faker.values())
+    bar.add_yaxis("B", Faker.values())
 
-    # 图表2
+    # 2
     line = Line()
     line.add_xaxis(Faker.choose())
-    line.add_yaxis("商家A", Faker.values())
-    line.add_yaxis("商家B", Faker.values())
+    line.add_yaxis("A", Faker.values())
+    line.add_yaxis("B", Faker.values())
 
-    # 先通过Grid将图表1和图表2组合起来
+    # through Grid1 and 2
     grid = Grid()
     grid.add(bar, grid_opts=opts.GridOpts(pos_bottom="60%"))
     grid.add(line, grid_opts=opts.GridOpts(pos_top="60%"))
 
-    # 再将Grid添加到Tab
+    # GridTab
     tab = Tab()
-    tab.add(grid, '示例')
+    tab.add(grid, '')
 
     return tab
 
@@ -1844,7 +1844,7 @@ chart = tab_with_multiple_chart()
 chart.render_notebook()
 
 
-# #### 50.Timeline 自动播放
+# #### 50.Timeline 
 
 # In[51]:
 
@@ -1858,15 +1858,15 @@ def timeline_auto_play():
     timeline = Timeline(init_opts=opts.InitOpts(theme='light',
                                                 width='1000px',
                                                 height='600px'))
-    timeline.add_schema(is_auto_play=True,  # 自动播放
-                        is_loop_play=True  # 循环播放
+    timeline.add_schema(is_auto_play=True,  # 
+                        is_loop_play=True  # 
                         )
     for year in range(2000, 2020):
         bar = Bar()
-        bar.add_xaxis(['香蕉', '梨子', '水蜜桃', '核桃', '西瓜', '苹果', '菠萝'])
+        bar.add_xaxis(['', '', '', '', '', '', ''])
         bar.add_yaxis('A', Faker.values())
         bar.add_yaxis('B', Faker.values())
-        timeline.add(bar, '{}年'.format(year))
+        timeline.add(bar, '{}year'.format(year))
     return timeline
 
 

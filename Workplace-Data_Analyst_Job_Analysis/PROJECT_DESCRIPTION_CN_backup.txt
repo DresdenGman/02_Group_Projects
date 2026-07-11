@@ -1,0 +1,9 @@
+PROJECT: Workplace-Data_Analyst_Job_Analysis
+================================================================================
+
+PROJECT OVERVIEW:
+Table of Contents
+ Keywords1. 导包2. 读取View Data3. Data Exploration分析3.1. 不同区域Data Analysis师职位的需求情况3.2. 不同行业Data Analysis师岗位的需求情况3.3. Data Analysis师Analyze应聘者工作年限的要求3.4. Data Analysis师Analyze求职者学历的要求3.5. Data Analysis师的薪酬范围分布3.6. 公司规模与薪酬之间的关系3.7. 工作经验与薪酬的关系3.8. 学历Analyze薪酬的影响3.9. 职业技能Keywords4.分析Conclusion
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

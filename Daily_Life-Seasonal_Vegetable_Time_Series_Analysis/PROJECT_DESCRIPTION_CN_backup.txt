@@ -1,0 +1,9 @@
+PROJECT: Daily_Life-Seasonal_Vegetable_Time_Series_Analysis
+================================================================================
+
+PROJECT OVERVIEW:
+Table of Contents
+ 1&nbsp;&nbsp;2&nbsp;&nbsp;环境准备3&nbsp;&nbsp;Data Preprocessing4&nbsp;&nbsp;各类农产品批发价的历史变化4.1&nbsp;&nbsp;畜禽产品4.2&nbsp;&nbsp;水产品4.3&nbsp;&nbsp;水果4.4&nbsp;&nbsp;蔬菜5&nbsp;&nbsp;农产品批发价的历史波动幅度6&nbsp;&nbsp;using多元回归计算农产品价格的趋势和季节性6.1&nbsp;&nbsp;如何计算季节性6.2&nbsp;&nbsp;计算所有农产品的季节性信息6.3&nbsp;&nbsp;哪些农产品的季节性更强？7&nbsp;&nbsp;时令蔬菜有哪些？8&nbsp;&nbsp;哪些农产品的价格有明显的涨跌？
+
+This project demonstrates data analysis and machine learning techniques.
+Key technologies include data preprocessing, exploratory data analysis, visualization, and predictive modeling.

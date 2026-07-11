@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>二手房房价分析和预测</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Second-handHouse Priceanalysis and prediction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14260,17 +14260,17 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#安装依赖包" data-toc-modified-id="安装依赖包-1">安装依赖包</a></span></li><li><span><a href="#数据清洗" data-toc-modified-id="数据清洗-2">数据清洗</a></span></li><li><span><a href="#数据可视化" data-toc-modified-id="数据可视化-3">数据可视化</a></span></li><li><span><a href="#构建房价预测模型" data-toc-modified-id="构建房价预测模型-4">构建房价预测模型</a></span><ul class="toc-item"><li><span><a href="#多特征模型训练（多元线性回归）" data-toc-modified-id="多特征模型训练（多元线性回归）-4.1">多特征模型训练（多元线性回归）</a></span></li><li><span><a href="#假设验证法选出最佳特征组合" data-toc-modified-id="假设验证法选出最佳特征组合-4.2">假设验证法选出最佳特征组合</a></span></li></ul></li><li><span><a href="#房价的预测" data-toc-modified-id="房价的预测-5">房价的预测</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#" data-toc-modified-id="-1"></a></span></li><li><span><a href="#Data Cleaning" data-toc-modified-id="Data Cleaning-2">Data Cleaning</a></span></li><li><span><a href="#datavisualization" data-toc-modified-id="datavisualization-3">datavisualization</a></span></li><li><span><a href="#House Pricepredictionmodel" data-toc-modified-id="House Pricepredictionmodel-4">House Pricepredictionmodel</a></span><ul class="toc-item"><li><span><a href="#featuremodeltraining（regression）" data-toc-modified-id="featuremodeltraining（regression）-4.1">featuremodeltraining（regression）</a></span></li><li><span><a href="#feature" data-toc-modified-id="feature-4.2">feature</a></span></li></ul></li><li><span><a href="#House Priceprediction" data-toc-modified-id="House Priceprediction-5">House Priceprediction</a></span></li></ul></div>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#23433;&#35013;&#20381;&#36182;&#21253;">&#23433;&#35013;&#20381;&#36182;&#21253;<a class="anchor-link" href="#&#23433;&#35013;&#20381;&#36182;&#21253;">&#182;</a></h2>
+<h2 id=""><a class="anchor-link" href="#">¶</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple/
@@ -14295,10 +14295,10 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple/
 Requirement already satisfied: pandas in c:\users\administrator\envs\jupytervir\lib\site-packages (1.2.3)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in c:\users\administrator\envs\jupytervir\lib\site-packages (from pandas) (2.8.1)
-Requirement already satisfied: numpy&gt;=1.16.5 in c:\users\administrator\envs\jupytervir\lib\site-packages (from pandas) (1.20.1)
-Requirement already satisfied: pytz&gt;=2017.3 in c:\users\administrator\envs\jupytervir\lib\site-packages (from pandas) (2021.1)
-Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupytervir\lib\site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.15.0)
+Requirement already satisfied: python-dateutil>=2.7.3 in c:\users\administrator\envs\jupytervir\lib\site-packages (from pandas) (2.8.1)
+Requirement already satisfied: numpy>=1.16.5 in c:\users\administrator\envs\jupytervir\lib\site-packages (from pandas) (1.20.1)
+Requirement already satisfied: pytz>=2017.3 in c:\users\administrator\envs\jupytervir\lib\site-packages (from pandas) (2021.1)
+Requirement already satisfied: six>=1.5 in c:\users\administrator\envs\jupytervir\lib\site-packages (from python-dateutil>=2.7.3->pandas) (1.15.0)
 </pre>
 </div>
 </div>
@@ -14310,12 +14310,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25968;&#25454;&#28165;&#27927;">&#25968;&#25454;&#28165;&#27927;<a class="anchor-link" href="#&#25968;&#25454;&#28165;&#27927;">&#182;</a></h2>
+<h2 id="Data Cleaning">Data Cleaning<a class="anchor-link" href="#Data Cleaning">¶</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14330,10 +14330,10 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;house_information.csv&#39;</span><span class="p">)</span> <span class="c1"># 如果用pandas打不开数据，可以使用记事本打开把编码格式改成utf-8另存</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">'house_information.csv'</span><span class="p">)</span> <span class="c1">#  if pandasdata，using encodingutf-8</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14374,76 +14374,76 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr style="text-align: right;">
       <th></th>
       <th>index</th>
-      <th>单价</th>
-      <th>小区名称</th>
-      <th>建筑面积</th>
-      <th>户型</th>
-      <th>房屋总价</th>
-      <th>朝向</th>
-      <th>楼层</th>
-      <th>装修</th>
+      <th></th>
+      <th>Community</th>
+      <th>Area</th>
+      <th>Layout</th>
+      <th></th>
+      <th>Orientation</th>
+      <th>Floor</th>
+      <th>Decoration</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>0</td>
-      <td>41117元/平米</td>
-      <td>仙岳山庄</td>
-      <td>104.58平米</td>
-      <td>2室2厅2卫</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>低层</td>
-      <td>简装修</td>
+      <td>41117/</td>
+      <td></td>
+      <td>104.58</td>
+      <td>222</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
-      <td>63489元/平米</td>
-      <td>禹洲华侨海景城</td>
-      <td>201.61平米</td>
-      <td>5室2厅2卫</td>
-      <td>1280万</td>
-      <td>东北</td>
-      <td>高层</td>
-      <td>豪华装修</td>
+      <td>63489/</td>
+      <td></td>
+      <td>201.61</td>
+      <td>522</td>
+      <td>1280</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2</td>
-      <td>58339元/平米</td>
-      <td>汇丰家园</td>
-      <td>128.56平米</td>
-      <td>3室2厅2卫</td>
-      <td>750万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>中装修</td>
+      <td>58339/</td>
+      <td></td>
+      <td>128.56</td>
+      <td>322</td>
+      <td>750</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>3</th>
       <td>3</td>
-      <td>46739元/平米</td>
-      <td>嘉盛豪园</td>
-      <td>92平米</td>
-      <td>3室2厅1卫</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>精装修</td>
+      <td>46739/</td>
+      <td></td>
+      <td>92</td>
+      <td>321</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>4</th>
       <td>4</td>
-      <td>43952元/平米</td>
-      <td>金帝花园</td>
-      <td>118.31平米</td>
-      <td>3室2厅2卫</td>
-      <td>520万</td>
-      <td>南北</td>
-      <td>高层</td>
-      <td>简装修</td>
+      <td>43952/</td>
+      <td></td>
+      <td>118.31</td>
+      <td>322</td>
+      <td>520</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
   </tbody>
 </table>
@@ -14459,10 +14459,10 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 删除index列（用del更方便）</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'index'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># index（del）</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14502,71 +14502,71 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>单价</th>
-      <th>小区名称</th>
-      <th>建筑面积</th>
-      <th>户型</th>
-      <th>房屋总价</th>
-      <th>朝向</th>
-      <th>楼层</th>
-      <th>装修</th>
+      <th></th>
+      <th>Community</th>
+      <th>Area</th>
+      <th>Layout</th>
+      <th></th>
+      <th>Orientation</th>
+      <th>Floor</th>
+      <th>Decoration</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>41117元/平米</td>
-      <td>仙岳山庄</td>
-      <td>104.58平米</td>
-      <td>2室2厅2卫</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>低层</td>
-      <td>简装修</td>
+      <td>41117/</td>
+      <td></td>
+      <td>104.58</td>
+      <td>222</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>63489元/平米</td>
-      <td>禹洲华侨海景城</td>
-      <td>201.61平米</td>
-      <td>5室2厅2卫</td>
-      <td>1280万</td>
-      <td>东北</td>
-      <td>高层</td>
-      <td>豪华装修</td>
+      <td>63489/</td>
+      <td></td>
+      <td>201.61</td>
+      <td>522</td>
+      <td>1280</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>58339元/平米</td>
-      <td>汇丰家园</td>
-      <td>128.56平米</td>
-      <td>3室2厅2卫</td>
-      <td>750万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>中装修</td>
+      <td>58339/</td>
+      <td></td>
+      <td>128.56</td>
+      <td>322</td>
+      <td>750</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>46739元/平米</td>
-      <td>嘉盛豪园</td>
-      <td>92平米</td>
-      <td>3室2厅1卫</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>精装修</td>
+      <td>46739/</td>
+      <td></td>
+      <td>92</td>
+      <td>321</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>43952元/平米</td>
-      <td>金帝花园</td>
-      <td>118.31平米</td>
-      <td>3室2厅2卫</td>
-      <td>520万</td>
-      <td>南北</td>
-      <td>高层</td>
-      <td>简装修</td>
+      <td>43952/</td>
+      <td></td>
+      <td>118.31</td>
+      <td>322</td>
+      <td>520</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
     </tr>
   </tbody>
 </table>
@@ -14582,11 +14582,11 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Series的extract支持正则匹配抽取，返回的值是字符串</span>
-<span class="n">data</span><span class="p">[[</span><span class="s1">&#39;室&#39;</span><span class="p">,</span><span class="s1">&#39;厅&#39;</span><span class="p">,</span><span class="s1">&#39;卫&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;户型&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d+)室(\d+)厅(\d+)卫&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Seriesextract，</span>
+<span class="n">data</span><span class="p">[[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Layout'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s1">'(\d+)(\d+)(\d+)'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14597,14 +14597,14 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 把字符串格式转化为float，并删除户型</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;室&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;室&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;厅&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;厅&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;卫&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;卫&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;户型&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># float，Layout</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Layout'</span><span class="p">]</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14644,80 +14644,80 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>单价</th>
-      <th>小区名称</th>
-      <th>建筑面积</th>
-      <th>房屋总价</th>
-      <th>朝向</th>
-      <th>楼层</th>
-      <th>装修</th>
-      <th>室</th>
-      <th>厅</th>
-      <th>卫</th>
+      <th></th>
+      <th>Community</th>
+      <th>Area</th>
+      <th></th>
+      <th>Orientation</th>
+      <th>Floor</th>
+      <th>Decoration</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>41117元/平米</td>
-      <td>仙岳山庄</td>
-      <td>104.58平米</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>低层</td>
-      <td>简装修</td>
+      <td>41117/</td>
+      <td></td>
+      <td>104.58</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>63489元/平米</td>
-      <td>禹洲华侨海景城</td>
-      <td>201.61平米</td>
-      <td>1280万</td>
-      <td>东北</td>
-      <td>高层</td>
-      <td>豪华装修</td>
+      <td>63489/</td>
+      <td></td>
+      <td>201.61</td>
+      <td>1280</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>5.0</td>
       <td>2.0</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>58339元/平米</td>
-      <td>汇丰家园</td>
-      <td>128.56平米</td>
-      <td>750万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>中装修</td>
+      <td>58339/</td>
+      <td></td>
+      <td>128.56</td>
+      <td>750</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>46739元/平米</td>
-      <td>嘉盛豪园</td>
-      <td>92平米</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>精装修</td>
+      <td>46739/</td>
+      <td></td>
+      <td>92</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>43952元/平米</td>
-      <td>金帝花园</td>
-      <td>118.31平米</td>
-      <td>520万</td>
-      <td>南北</td>
-      <td>高层</td>
-      <td>简装修</td>
+      <td>43952/</td>
+      <td></td>
+      <td>118.31</td>
+      <td>520</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -14736,12 +14736,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 将建筑面积后的平方米去除，并将数据类型改成浮点型</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span><span class="n">e</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;平米&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span><span class="c1"># Series中的map</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Area，data</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span><span class="n">e</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">))</span><span class="c1"># Seriesmap</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14781,80 +14781,80 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>单价</th>
-      <th>小区名称</th>
-      <th>建筑面积</th>
-      <th>房屋总价</th>
-      <th>朝向</th>
-      <th>楼层</th>
-      <th>装修</th>
-      <th>室</th>
-      <th>厅</th>
-      <th>卫</th>
+      <th></th>
+      <th>Community</th>
+      <th>Area</th>
+      <th></th>
+      <th>Orientation</th>
+      <th>Floor</th>
+      <th>Decoration</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>41117元/平米</td>
-      <td>仙岳山庄</td>
+      <td>41117/</td>
+      <td></td>
       <td>104.58</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>低层</td>
-      <td>简装修</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>63489元/平米</td>
-      <td>禹洲华侨海景城</td>
+      <td>63489/</td>
+      <td></td>
       <td>201.61</td>
-      <td>1280万</td>
-      <td>东北</td>
-      <td>高层</td>
-      <td>豪华装修</td>
+      <td>1280</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>5.0</td>
       <td>2.0</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>58339元/平米</td>
-      <td>汇丰家园</td>
+      <td>58339/</td>
+      <td></td>
       <td>128.56</td>
-      <td>750万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>中装修</td>
+      <td>750</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>46739元/平米</td>
-      <td>嘉盛豪园</td>
+      <td>46739/</td>
+      <td></td>
       <td>92.00</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>精装修</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>43952元/平米</td>
-      <td>金帝花园</td>
+      <td>43952/</td>
+      <td></td>
       <td>118.31</td>
-      <td>520万</td>
-      <td>南北</td>
-      <td>高层</td>
-      <td>简装修</td>
+      <td>520</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -14873,12 +14873,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 将单价后的元/平米去除，并将数据类型改成浮点型</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;单价&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;单价&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span><span class="n">e</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;元/平米&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;单价&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;单价&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># /，data</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span><span class="n">e</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">'/'</span><span class="p">,</span><span class="s1">''</span><span class="p">))</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14918,28 +14918,28 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>单价</th>
-      <th>小区名称</th>
-      <th>建筑面积</th>
-      <th>房屋总价</th>
-      <th>朝向</th>
-      <th>楼层</th>
-      <th>装修</th>
-      <th>室</th>
-      <th>厅</th>
-      <th>卫</th>
+      <th></th>
+      <th>Community</th>
+      <th>Area</th>
+      <th></th>
+      <th>Orientation</th>
+      <th>Floor</th>
+      <th>Decoration</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>41117.0</td>
-      <td>仙岳山庄</td>
+      <td></td>
       <td>104.58</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>低层</td>
-      <td>简装修</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -14947,12 +14947,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>1</th>
       <td>63489.0</td>
-      <td>禹洲华侨海景城</td>
+      <td></td>
       <td>201.61</td>
-      <td>1280万</td>
-      <td>东北</td>
-      <td>高层</td>
-      <td>豪华装修</td>
+      <td>1280</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>5.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -14960,12 +14960,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>2</th>
       <td>58339.0</td>
-      <td>汇丰家园</td>
+      <td></td>
       <td>128.56</td>
-      <td>750万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>中装修</td>
+      <td>750</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -14973,12 +14973,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>3</th>
       <td>46739.0</td>
-      <td>嘉盛豪园</td>
+      <td></td>
       <td>92.00</td>
-      <td>430万</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>精装修</td>
+      <td>430</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>1.0</td>
@@ -14986,12 +14986,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>4</th>
       <td>43952.0</td>
-      <td>金帝花园</td>
+      <td></td>
       <td>118.31</td>
-      <td>520万</td>
-      <td>南北</td>
-      <td>高层</td>
-      <td>简装修</td>
+      <td>520</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -15010,12 +15010,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 将房屋总价后的万去除，并将数据类型改成浮点型</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span><span class="n">e</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;万&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ，data</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span><span class="n">e</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">))</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15055,28 +15055,28 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>单价</th>
-      <th>小区名称</th>
-      <th>建筑面积</th>
-      <th>房屋总价</th>
-      <th>朝向</th>
-      <th>楼层</th>
-      <th>装修</th>
-      <th>室</th>
-      <th>厅</th>
-      <th>卫</th>
+      <th></th>
+      <th>Community</th>
+      <th>Area</th>
+      <th></th>
+      <th>Orientation</th>
+      <th>Floor</th>
+      <th>Decoration</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>41117.0</td>
-      <td>仙岳山庄</td>
+      <td></td>
       <td>104.58</td>
       <td>430.0</td>
-      <td>南北</td>
-      <td>低层</td>
-      <td>简装修</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -15084,12 +15084,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>1</th>
       <td>63489.0</td>
-      <td>禹洲华侨海景城</td>
+      <td></td>
       <td>201.61</td>
       <td>1280.0</td>
-      <td>东北</td>
-      <td>高层</td>
-      <td>豪华装修</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>5.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -15097,12 +15097,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>2</th>
       <td>58339.0</td>
-      <td>汇丰家园</td>
+      <td></td>
       <td>128.56</td>
       <td>750.0</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>中装修</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -15110,12 +15110,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>3</th>
       <td>46739.0</td>
-      <td>嘉盛豪园</td>
+      <td></td>
       <td>92.00</td>
       <td>430.0</td>
-      <td>南北</td>
-      <td>中层</td>
-      <td>精装修</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>1.0</td>
@@ -15123,12 +15123,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
     <tr>
       <th>4</th>
       <td>43952.0</td>
-      <td>金帝花园</td>
+      <td></td>
       <td>118.31</td>
       <td>520.0</td>
-      <td>南北</td>
-      <td>高层</td>
-      <td>简装修</td>
+      <td></td>
+      <td></td>
+      <td>Decoration</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -15147,11 +15147,11 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用pd.get_dummies() 量化数据</span>
-<span class="n">data_direction</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;朝向&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using pd.get_dummies() data</span>
+<span class="n">data_direction</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'Orientation'</span><span class="p">])</span>
 <span class="n">data_direction</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15191,17 +15191,17 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>东</th>
-      <th>东北</th>
-      <th>东南</th>
-      <th>东西</th>
-      <th>北</th>
-      <th>南</th>
-      <th>南北</th>
-      <th>暂无</th>
-      <th>西</th>
-      <th>西北</th>
-      <th>西南</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -15289,11 +15289,11 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用pd.get_dummies() 量化数据</span>
-<span class="n">data_floor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;楼层&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using pd.get_dummies() data</span>
+<span class="n">data_floor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'Floor'</span><span class="p">])</span>
 <span class="n">data_floor</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15333,9 +15333,9 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>中层</th>
-      <th>低层</th>
-      <th>高层</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -15383,11 +15383,11 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用pd.get_dummies() 量化数据</span>
-<span class="n">data_decoration</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;装修&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using pd.get_dummies() data</span>
+<span class="n">data_decoration</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'Decoration'</span><span class="p">])</span>
 <span class="n">data_decoration</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15427,12 +15427,12 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>中装修</th>
-      <th>暂无</th>
-      <th>毛坯</th>
-      <th>简装修</th>
-      <th>精装修</th>
-      <th>豪华装修</th>
+      <th>Decoration</th>
+      <th></th>
+      <th></th>
+      <th>Decoration</th>
+      <th>Decoration</th>
+      <th>Decoration</th>
     </tr>
   </thead>
   <tbody>
@@ -15495,10 +15495,10 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用pd.concat矩阵拼接，axis=1：水平拼接</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using pd.concat，axis=1：</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data</span><span class="p">,</span><span class="n">data_direction</span><span class="p">,</span><span class="n">data_floor</span><span class="p">,</span><span class="n">data_decoration</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
 </pre></div>
 
@@ -15510,10 +15510,10 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 拼接后的列名</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># </span>
 <span class="n">data</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 
@@ -15536,10 +15536,10 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Index([&#39;单价&#39;, &#39;小区名称&#39;, &#39;建筑面积&#39;, &#39;房屋总价&#39;, &#39;朝向&#39;, &#39;楼层&#39;, &#39;装修&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;卫&#39;, &#39;东&#39;,
-       &#39;东北&#39;, &#39;东南&#39;, &#39;东西&#39;, &#39;北&#39;, &#39;南&#39;, &#39;南北&#39;, &#39;暂无&#39;, &#39;西&#39;, &#39;西北&#39;, &#39;西南&#39;, &#39;中层&#39;, &#39;低层&#39;,
-       &#39;高层&#39;, &#39;中装修&#39;, &#39;暂无&#39;, &#39;毛坯&#39;, &#39;简装修&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;],
-      dtype=&#39;object&#39;)</pre>
+<pre>Index(['', 'Community', 'Area', '', 'Orientation', 'Floor', 'Decoration', '', '', '', '',
+       '', '', '', '', '', '', '', '', '', '', '', '',
+       '', 'Decoration', '', '', 'Decoration', 'Decoration', 'Decoration'],
+      dtype='object')</pre>
 </div>
 
 </div>
@@ -15551,19 +15551,19 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 特征帅选</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;小区名称&#39;</span><span class="p">]</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;朝向&#39;</span><span class="p">]</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;楼层&#39;</span><span class="p">]</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;装修&#39;</span><span class="p">]</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;东西&#39;</span><span class="p">]</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;南北&#39;</span><span class="p">]</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;暂无&#39;</span><span class="p">]</span> <span class="c1"># 两列都删除</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;中层&#39;</span><span class="p">]</span> <span class="c1"># 多重共线性问题（线性回归）</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;中装修&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># feature</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Community'</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Orientation'</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Floor'</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Decoration'</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="c1"># </span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span> <span class="c1"># （regression）</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Decoration'</span><span class="p">]</span>
 <span class="n">data</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 
@@ -15586,9 +15586,9 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Index([&#39;单价&#39;, &#39;建筑面积&#39;, &#39;房屋总价&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;卫&#39;, &#39;东&#39;, &#39;东北&#39;, &#39;东南&#39;, &#39;北&#39;, &#39;南&#39;, &#39;西&#39;,
-       &#39;西北&#39;, &#39;西南&#39;, &#39;低层&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;简装修&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;],
-      dtype=&#39;object&#39;)</pre>
+<pre>Index(['', 'Area', '', '', '', '', '', '', '', '', '', '',
+       '', '', '', '', '', 'Decoration', 'Decoration', 'Decoration'],
+      dtype='object')</pre>
 </div>
 
 </div>
@@ -15600,7 +15600,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15642,26 +15642,26 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>单价</th>
-      <th>建筑面积</th>
-      <th>房屋总价</th>
-      <th>室</th>
-      <th>厅</th>
-      <th>卫</th>
-      <th>东</th>
-      <th>东北</th>
-      <th>东南</th>
-      <th>北</th>
-      <th>南</th>
-      <th>西</th>
-      <th>西北</th>
-      <th>西南</th>
-      <th>低层</th>
-      <th>高层</th>
-      <th>毛坯</th>
-      <th>简装修</th>
-      <th>精装修</th>
-      <th>豪华装修</th>
+      <th></th>
+      <th>Area</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Decoration</th>
+      <th>Decoration</th>
+      <th>Decoration</th>
     </tr>
   </thead>
   <tbody>
@@ -15794,10 +15794,10 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1"># 发现 室厅卫中 有缺失值</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1">#   missing values</span>
 </pre></div>
 
      </div>
@@ -15817,31 +15817,31 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\administrator\envs\jupyte
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 5830 entries, 0 to 5829
 Data columns (total 20 columns):
  #   Column  Non-Null Count  Dtype  
 ---  ------  --------------  -----  
- 0   单价      5830 non-null   float64
- 1   建筑面积    5830 non-null   float64
- 2   房屋总价    5830 non-null   float64
- 3   室       5748 non-null   float64
- 4   厅       5748 non-null   float64
- 5   卫       5748 non-null   float64
- 6   东       5830 non-null   uint8  
- 7   东北      5830 non-null   uint8  
- 8   东南      5830 non-null   uint8  
- 9   北       5830 non-null   uint8  
- 10  南       5830 non-null   uint8  
- 11  西       5830 non-null   uint8  
- 12  西北      5830 non-null   uint8  
- 13  西南      5830 non-null   uint8  
- 14  低层      5830 non-null   uint8  
- 15  高层      5830 non-null   uint8  
- 16  毛坯      5830 non-null   uint8  
- 17  简装修     5830 non-null   uint8  
- 18  精装修     5830 non-null   uint8  
- 19  豪华装修    5830 non-null   uint8  
+ 0         5830 non-null   float64
+ 1   Area    5830 non-null   float64
+ 2       5830 non-null   float64
+ 3          5748 non-null   float64
+ 4          5748 non-null   float64
+ 5          5748 non-null   float64
+ 6          5830 non-null   uint8  
+ 7         5830 non-null   uint8  
+ 8         5830 non-null   uint8  
+ 9          5830 non-null   uint8  
+ 10         5830 non-null   uint8  
+ 11         5830 non-null   uint8  
+ 12        5830 non-null   uint8  
+ 13        5830 non-null   uint8  
+ 14        5830 non-null   uint8  
+ 15        5830 non-null   uint8  
+ 16        5830 non-null   uint8  
+ 17  Decoration     5830 non-null   uint8  
+ 18  Decoration     5830 non-null   uint8  
+ 19  Decoration    5830 non-null   uint8  
 dtypes: float64(6), uint8(14)
 memory usage: 353.1 KB
 </pre>
@@ -15855,12 +15855,12 @@ memory usage: 353.1 KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 删除缺失值</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># missing values</span>
 <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>                       <span class="c1"># 到这里数据预处理完毕</span>
+<span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>                       <span class="c1"># Data Preprocessing</span>
 </pre></div>
 
      </div>
@@ -15880,31 +15880,31 @@ memory usage: 353.1 KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
 Int64Index: 5748 entries, 0 to 5829
 Data columns (total 20 columns):
  #   Column  Non-Null Count  Dtype  
 ---  ------  --------------  -----  
- 0   单价      5748 non-null   float64
- 1   建筑面积    5748 non-null   float64
- 2   房屋总价    5748 non-null   float64
- 3   室       5748 non-null   float64
- 4   厅       5748 non-null   float64
- 5   卫       5748 non-null   float64
- 6   东       5748 non-null   uint8  
- 7   东北      5748 non-null   uint8  
- 8   东南      5748 non-null   uint8  
- 9   北       5748 non-null   uint8  
- 10  南       5748 non-null   uint8  
- 11  西       5748 non-null   uint8  
- 12  西北      5748 non-null   uint8  
- 13  西南      5748 non-null   uint8  
- 14  低层      5748 non-null   uint8  
- 15  高层      5748 non-null   uint8  
- 16  毛坯      5748 non-null   uint8  
- 17  简装修     5748 non-null   uint8  
- 18  精装修     5748 non-null   uint8  
- 19  豪华装修    5748 non-null   uint8  
+ 0         5748 non-null   float64
+ 1   Area    5748 non-null   float64
+ 2       5748 non-null   float64
+ 3          5748 non-null   float64
+ 4          5748 non-null   float64
+ 5          5748 non-null   float64
+ 6          5748 non-null   uint8  
+ 7         5748 non-null   uint8  
+ 8         5748 non-null   uint8  
+ 9          5748 non-null   uint8  
+ 10         5748 non-null   uint8  
+ 11         5748 non-null   uint8  
+ 12        5748 non-null   uint8  
+ 13        5748 non-null   uint8  
+ 14        5748 non-null   uint8  
+ 15        5748 non-null   uint8  
+ 16        5748 non-null   uint8  
+ 17  Decoration     5748 non-null   uint8  
+ 18  Decoration     5748 non-null   uint8  
+ 19  Decoration    5748 non-null   uint8  
 dtypes: float64(6), uint8(14)
 memory usage: 392.9 KB
 </pre>
@@ -15918,15 +15918,15 @@ memory usage: 392.9 KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25968;&#25454;&#21487;&#35270;&#21270;">&#25968;&#25454;&#21487;&#35270;&#21270;<a class="anchor-link" href="#&#25968;&#25454;&#21487;&#35270;&#21270;">&#182;</a></h2>
+<h2 id="datavisualization">datavisualization<a class="anchor-link" href="#datavisualization">¶</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -15959,7 +15959,7 @@ memory usage: 392.9 KB
 5827     47.00
 5828    117.00
 5829     95.50
-Name: 建筑面积, Length: 5748, dtype: float64</pre>
+Name: Area, Length: 5748, dtype: float64</pre>
 </div>
 
 </div>
@@ -15971,14 +15971,14 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">area</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span>
-<span class="n">price</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">price</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># 有离群点数据，对线性分析不利，需要过滤</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># data，analysis，need to </span>
 </pre></div>
 
      </div>
@@ -16014,16 +16014,16 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span> <span class="o">&lt;=</span><span class="mi">300</span><span class="p">]</span> <span class="c1"># 正常住宅面积小于等于300平米</span>
-<span class="n">area</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">]</span>
-<span class="n">price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span>
-<span class="c1">#print(area.count()) #过滤后的数据量</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span> <span class="o"><=</span><span class="mi">300</span><span class="p">]</span> <span class="c1"># Area300</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Area'</span><span class="p">]</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span>
+<span class="c1">#print(area.count()) #data</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">price</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;area&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"area"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"price"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -16060,22 +16060,22 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#26500;&#24314;&#25151;&#20215;&#39044;&#27979;&#27169;&#22411;">&#26500;&#24314;&#25151;&#20215;&#39044;&#27979;&#27169;&#22411;<a class="anchor-link" href="#&#26500;&#24314;&#25151;&#20215;&#39044;&#27979;&#27169;&#22411;">&#182;</a></h2>
+<h2 id="House Pricepredictionmodel">House Pricepredictionmodel<a class="anchor-link" href="#House Pricepredictionmodel">¶</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 先根据建筑面积和房屋总价训练模型（一元线性回归）</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># based on Area and trainingmodel（regression）</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="n">linear</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 这里需要注意新版的sklearn需要将数据转换为矩阵才能进行计算</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># need to sklearnneed to datacalculate</span>
 <span class="n">price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">price</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="c1"># 训练模型</span>
+<span class="c1"># trainingmodel</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">price</span><span class="p">)</span>
-<span class="c1"># 打印截距和回归系数</span>
+<span class="c1">#  and regression</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
 </pre></div>
 
@@ -16108,16 +16108,16 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 线性回归可视化(数据拟合)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># regressionvisualization(data)</span>
 <span class="n">linear_p</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">price</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">linear_p</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;area&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">linear_p</span><span class="p">,</span><span class="s1">'red'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"area"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"price"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -16154,16 +16154,16 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#22810;&#29305;&#24449;&#27169;&#22411;&#35757;&#32451;&#65288;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;&#65289;">&#22810;&#29305;&#24449;&#27169;&#22411;&#35757;&#32451;&#65288;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;&#65289;<a class="anchor-link" href="#&#22810;&#29305;&#24449;&#27169;&#22411;&#35757;&#32451;&#65288;&#22810;&#20803;&#32447;&#24615;&#22238;&#24402;&#65289;">&#182;</a></h3>
+<h3 id="featuremodeltraining（regression）">featuremodeltraining（regression）<a class="anchor-link" href="#featuremodeltraining（regression）">¶</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">,</span><span class="s1">&#39;室&#39;</span><span class="p">,</span> <span class="s1">&#39;厅&#39;</span><span class="p">,</span> <span class="s1">&#39;卫&#39;</span><span class="p">,</span> <span class="s1">&#39;东&#39;</span><span class="p">,</span> <span class="s1">&#39;东北&#39;</span><span class="p">,</span> <span class="s1">&#39;东南&#39;</span><span class="p">,</span> <span class="s1">&#39;北&#39;</span><span class="p">,</span> <span class="s1">&#39;南&#39;</span><span class="p">,</span> <span class="s1">&#39;西&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;西北&#39;</span><span class="p">,</span> <span class="s1">&#39;西南&#39;</span><span class="p">,</span> <span class="s1">&#39;低层&#39;</span><span class="p">,</span> <span class="s1">&#39;高层&#39;</span><span class="p">,</span> <span class="s1">&#39;毛坯&#39;</span><span class="p">,</span> <span class="s1">&#39;简装修&#39;</span><span class="p">,</span> <span class="s1">&#39;精装修&#39;</span><span class="p">,</span> <span class="s1">&#39;豪华装修&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Area'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span>
+       <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -16174,7 +16174,7 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
@@ -16217,24 +16217,24 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>建筑面积</th>
-      <th>室</th>
-      <th>厅</th>
-      <th>卫</th>
-      <th>东</th>
-      <th>东北</th>
-      <th>东南</th>
-      <th>北</th>
-      <th>南</th>
-      <th>西</th>
-      <th>西北</th>
-      <th>西南</th>
-      <th>低层</th>
-      <th>高层</th>
-      <th>毛坯</th>
-      <th>简装修</th>
-      <th>精装修</th>
-      <th>豪华装修</th>
+      <th>Area</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Decoration</th>
+      <th>Decoration</th>
+      <th>Decoration</th>
     </tr>
   </thead>
   <tbody>
@@ -16357,10 +16357,10 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span>
 <span class="n">y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -16388,7 +16388,7 @@ Name: 建筑面积, Length: 5748, dtype: float64</pre>
 2     750.0
 3     430.0
 4     520.0
-Name: 房屋总价, dtype: float64</pre>
+Name: , dtype: float64</pre>
 </div>
 
 </div>
@@ -16400,12 +16400,12 @@ Name: 房屋总价, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
-<span class="c1"># 使用train_test_split进行交叉验证</span>
+<span class="c1"># using train_test_splitcross-validation</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -16429,8 +16429,8 @@ Name: 房屋总价, dtype: float64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-&lt;class &#39;pandas.core.series.Series&#39;&gt;
+<pre><class 'pandas.core.frame.DataFrame'>
+<class 'pandas.core.series.Series'>
 (4406, 18) (4406,)
 (1102, 18) (1102,)
 </pre>
@@ -16444,10 +16444,10 @@ Name: 房屋总价, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 模型训练</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Model training</span>
 <span class="n">linear</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
@@ -16485,13 +16485,13 @@ Name: 房屋总价, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 模型性能评分</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># modelRating</span>
 <span class="n">price_end</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
 <span class="n">score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;模型得分：&quot;</span><span class="p">,</span><span class="n">score</span><span class="p">)</span><span class="c1"># 一般模型在0.6以上就表现的不错</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"modelScore："</span><span class="p">,</span><span class="n">score</span><span class="p">)</span><span class="c1"># model0.6</span>
 </pre></div>
 
      </div>
@@ -16511,7 +16511,7 @@ Name: 房屋总价, dtype: float64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>模型得分： 0.7639142687890217
+<pre>modelScore： 0.7639142687890217
 </pre>
 </div>
 </div>
@@ -16523,28 +16523,28 @@ Name: 房屋总价, dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#20551;&#35774;&#39564;&#35777;&#27861;&#36873;&#20986;&#26368;&#20339;&#29305;&#24449;&#32452;&#21512;">&#20551;&#35774;&#39564;&#35777;&#27861;&#36873;&#20986;&#26368;&#20339;&#29305;&#24449;&#32452;&#21512;<a class="anchor-link" href="#&#20551;&#35774;&#39564;&#35777;&#27861;&#36873;&#20986;&#26368;&#20339;&#29305;&#24449;&#32452;&#21512;">&#182;</a></h3>
+<h3 id="feature">feature<a class="anchor-link" href="#feature">¶</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用假设验证法，选出最佳特征组合</span>
-<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">,</span><span class="s1">&#39;室&#39;</span><span class="p">,</span> <span class="s1">&#39;厅&#39;</span><span class="p">,</span> <span class="s1">&#39;卫&#39;</span><span class="p">,</span> <span class="s1">&#39;东&#39;</span><span class="p">,</span> <span class="s1">&#39;东北&#39;</span><span class="p">,</span> <span class="s1">&#39;东南&#39;</span><span class="p">,</span> <span class="s1">&#39;北&#39;</span><span class="p">,</span> <span class="s1">&#39;南&#39;</span><span class="p">,</span> <span class="s1">&#39;西&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;西北&#39;</span><span class="p">,</span> <span class="s1">&#39;西南&#39;</span><span class="p">,</span> <span class="s1">&#39;低层&#39;</span><span class="p">,</span> <span class="s1">&#39;高层&#39;</span><span class="p">,</span> <span class="s1">&#39;毛坯&#39;</span><span class="p">,</span> <span class="s1">&#39;简装修&#39;</span><span class="p">,</span> <span class="s1">&#39;精装修&#39;</span><span class="p">,</span> <span class="s1">&#39;豪华装修&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using ，feature</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Area'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span>
+       <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">]</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
-<span class="n">X_</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1">#增加一列值为1的const列，保证偏置项的正常</span>
+<span class="n">X_</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1">#1const，</span>
 <span class="c1">#print(X_)</span>
-<span class="c1"># 使用最小平方法</span>
+<span class="c1"># using </span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X_</span><span class="p">)</span>
-<span class="c1"># 使用fit方法进行计算</span>
+<span class="c1"># using fitcalculate</span>
 <span class="n">summary</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="c1"># 调用summary2方法打印出假设验证信息（性能指标）</span>
-<span class="n">summary</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span> <span class="c1"># R-squared:模型评分 AIC：组合完越小越好</span>
+<span class="c1"># summary2info（）</span>
+<span class="n">summary</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span> <span class="c1"># R-squared:modelRating AIC：</span>
 </pre></div>
 
      </div>
@@ -16570,7 +16570,7 @@ Name: 房屋总价, dtype: float64</pre>
         <td>Model:</td>               <td>OLS</td>         <td>Adj. R-squared:</td>      <td>0.771</td>  
 </tr>
 <tr>
-  <td>Dependent Variable:</td>       <td>房屋总价</td>              <td>AIC:</td>         <td>74021.4015</td>
+  <td>Dependent Variable:</td>       <td></td>              <td>AIC:</td>         <td>74021.4015</td>
 </tr>
 <tr>
          <td>Date:</td>        <td>2021-05-03 18:54</td>        <td>BIC:</td>         <td>74147.0667</td>
@@ -16596,58 +16596,58 @@ Name: 房屋总价, dtype: float64</pre>
   <th>const</th> <td>-190.5740</td>  <td>14.3527</td> <td>-13.2779</td> <td>0.0000</td> <td>-218.7111</td> <td>-162.4370</td>
 </tr>
 <tr>
-  <th>建筑面积</th>   <td>6.7798</td>    <td>0.1065</td>   <td>63.6645</td> <td>0.0000</td>  <td>6.5711</td>    <td>6.9886</td>  
+  <th>Area</th>   <td>6.7798</td>    <td>0.1065</td>   <td>63.6645</td> <td>0.0000</td>  <td>6.5711</td>    <td>6.9886</td>  
 </tr>
 <tr>
-  <th>室</th>      <td>32.4766</td>   <td>4.8180</td>   <td>6.7407</td>  <td>0.0000</td>  <td>23.0315</td>   <td>41.9218</td> 
+  <th></th>      <td>32.4766</td>   <td>4.8180</td>   <td>6.7407</td>  <td>0.0000</td>  <td>23.0315</td>   <td>41.9218</td> 
 </tr>
 <tr>
-  <th>厅</th>     <td>-36.6403</td>   <td>7.4305</td>   <td>-4.9311</td> <td>0.0000</td> <td>-51.2070</td>  <td>-22.0735</td> 
+  <th></th>     <td>-36.6403</td>   <td>7.4305</td>   <td>-4.9311</td> <td>0.0000</td> <td>-51.2070</td>  <td>-22.0735</td> 
 </tr>
 <tr>
-  <th>卫</th>      <td>5.9103</td>    <td>5.9003</td>   <td>1.0017</td>  <td>0.3165</td>  <td>-5.6565</td>   <td>17.4771</td> 
+  <th></th>      <td>5.9103</td>    <td>5.9003</td>   <td>1.0017</td>  <td>0.3165</td>  <td>-5.6565</td>   <td>17.4771</td> 
 </tr>
 <tr>
-  <th>东</th>      <td>23.4166</td>   <td>13.2163</td>  <td>1.7718</td>  <td>0.0765</td>  <td>-2.4925</td>   <td>49.3258</td> 
+  <th></th>      <td>23.4166</td>   <td>13.2163</td>  <td>1.7718</td>  <td>0.0765</td>  <td>-2.4925</td>   <td>49.3258</td> 
 </tr>
 <tr>
-  <th>东北</th>    <td>-34.1670</td>   <td>17.2426</td>  <td>-1.9815</td> <td>0.0476</td> <td>-67.9694</td>   <td>-0.3645</td> 
+  <th></th>    <td>-34.1670</td>   <td>17.2426</td>  <td>-1.9815</td> <td>0.0476</td> <td>-67.9694</td>   <td>-0.3645</td> 
 </tr>
 <tr>
-  <th>东南</th>     <td>9.0724</td>    <td>10.6111</td>  <td>0.8550</td>  <td>0.3926</td> <td>-11.7295</td>   <td>29.8744</td> 
+  <th></th>     <td>9.0724</td>    <td>10.6111</td>  <td>0.8550</td>  <td>0.3926</td> <td>-11.7295</td>   <td>29.8744</td> 
 </tr>
 <tr>
-  <th>北</th>      <td>25.5771</td>   <td>19.4207</td>  <td>1.3170</td>  <td>0.1879</td> <td>-12.4952</td>   <td>63.6493</td> 
+  <th></th>      <td>25.5771</td>   <td>19.4207</td>  <td>1.3170</td>  <td>0.1879</td> <td>-12.4952</td>   <td>63.6493</td> 
 </tr>
 <tr>
-  <th>南</th>      <td>69.3747</td>   <td>11.3337</td>  <td>6.1211</td>  <td>0.0000</td>  <td>47.1560</td>   <td>91.5933</td> 
+  <th></th>      <td>69.3747</td>   <td>11.3337</td>  <td>6.1211</td>  <td>0.0000</td>  <td>47.1560</td>   <td>91.5933</td> 
 </tr>
 <tr>
-  <th>西</th>      <td>28.2927</td>   <td>24.8301</td>  <td>1.1395</td>  <td>0.2546</td> <td>-20.3842</td>   <td>76.9695</td> 
+  <th></th>      <td>28.2927</td>   <td>24.8301</td>  <td>1.1395</td>  <td>0.2546</td> <td>-20.3842</td>   <td>76.9695</td> 
 </tr>
 <tr>
-  <th>西北</th>    <td>-21.8337</td>   <td>15.8412</td>  <td>-1.3783</td> <td>0.1682</td> <td>-52.8888</td>   <td>9.2213</td>  
+  <th></th>    <td>-21.8337</td>   <td>15.8412</td>  <td>-1.3783</td> <td>0.1682</td> <td>-52.8888</td>   <td>9.2213</td>  
 </tr>
 <tr>
-  <th>西南</th>     <td>33.8956</td>   <td>13.4285</td>  <td>2.5241</td>  <td>0.0116</td>  <td>7.5703</td>    <td>60.2208</td> 
+  <th></th>     <td>33.8956</td>   <td>13.4285</td>  <td>2.5241</td>  <td>0.0116</td>  <td>7.5703</td>    <td>60.2208</td> 
 </tr>
 <tr>
-  <th>低层</th>     <td>8.6321</td>    <td>6.8894</td>   <td>1.2530</td>  <td>0.2103</td>  <td>-4.8738</td>   <td>22.1381</td> 
+  <th></th>     <td>8.6321</td>    <td>6.8894</td>   <td>1.2530</td>  <td>0.2103</td>  <td>-4.8738</td>   <td>22.1381</td> 
 </tr>
 <tr>
-  <th>高层</th>     <td>-8.0947</td>   <td>6.3467</td>   <td>-1.2754</td> <td>0.2022</td> <td>-20.5367</td>   <td>4.3472</td>  
+  <th></th>     <td>-8.0947</td>   <td>6.3467</td>   <td>-1.2754</td> <td>0.2022</td> <td>-20.5367</td>   <td>4.3472</td>  
 </tr>
 <tr>
-  <th>毛坯</th>     <td>86.0976</td>   <td>15.2708</td>  <td>5.6381</td>  <td>0.0000</td>  <td>56.1608</td>  <td>116.0343</td> 
+  <th></th>     <td>86.0976</td>   <td>15.2708</td>  <td>5.6381</td>  <td>0.0000</td>  <td>56.1608</td>  <td>116.0343</td> 
 </tr>
 <tr>
-  <th>简装修</th>    <td>-1.7023</td>   <td>8.4182</td>   <td>-0.2022</td> <td>0.8398</td> <td>-18.2053</td>   <td>14.8007</td> 
+  <th>Decoration</th>    <td>-1.7023</td>   <td>8.4182</td>   <td>-0.2022</td> <td>0.8398</td> <td>-18.2053</td>   <td>14.8007</td> 
 </tr>
 <tr>
-  <th>精装修</th>    <td>51.9228</td>   <td>8.3723</td>   <td>6.2018</td>  <td>0.0000</td>  <td>35.5098</td>   <td>68.3358</td> 
+  <th>Decoration</th>    <td>51.9228</td>   <td>8.3723</td>   <td>6.2018</td>  <td>0.0000</td>  <td>35.5098</td>   <td>68.3358</td> 
 </tr>
 <tr>
-  <th>豪华装修</th>  <td>113.2164</td>   <td>12.8088</td>  <td>8.8389</td>  <td>0.0000</td>  <td>88.1060</td>  <td>138.3267</td> 
+  <th>Decoration</th>  <td>113.2164</td>   <td>12.8088</td>  <td>8.8389</td>  <td>0.0000</td>  <td>88.1060</td>  <td>138.3267</td> 
 </tr>
 </table>
 <table class="simpletable">
@@ -16675,59 +16675,59 @@ Name: 房屋总价, dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>名词解释</p>
+<p></p>
 <ul>
-<li>coef 回归系数</li>
-<li>Std.Err 标准差</li>
-<li>t 虚无假设成立时的t值</li>
-<li>P&gt;|t| 虚无假设成立时的概率值</li>
-<li>[0.025,0.975] 97.5%置信估计区间</li>
-<li>要做假设性验证，首先要设置显著性标准。</li>
-<li>a.假设显著性标准是0.01</li>
-<li>b.推翻虚无假设的标准是p&lt;0.01</li>
-<li>c.上面的SqFt的t=9.2416，P(&gt;5) = 0.0000 &lt; 0.01,因此虚无假设被推翻（这里的虚无假设是SqFt对price的回归系数为0，即SqFt与price不相关）</li>
+<li>coef regression</li>
+<li>Std.Err std</li>
+<li>t hourt</li>
+<li>P>|t| hour</li>
+<li>[0.025,0.975] 97.5%</li>
+<li>，。</li>
+<li>a.0.01</li>
+<li>b.p<0.01</li>
+<li>c.SqFtt=9.2416，P(>5) = 0.0000 < 0.01, therefore （SqFtpriceregression0，SqFtpricerelated ）</li>
 </ul>
-<p>F统计</p>
+<p>F</p>
 <ul>
-<li>回归平方和Regression Square Sum[RSS]:依变量的变化归咎于回归模型A=sum((y-y_)^2</li>
-<li>误差平方和Error Square Sum[ESS]:依变量的变化归咎于线性模型B=sum((y-y_)^2</li>
-<li>总的平方和Total Square Sum[TSS]:依变量整体变化C=A+B</li>
-<li>回归平方平均Model Mean Square:=RSS/Regression d.f(k) k=自变量的数量</li>
-<li>误差平方平均Error Mean square:=ESS/Error d.f(n-k-1) n=观测值得数量</li>
-<li>F统计F=Model Mean Square /Error Mean Square</li>
-<li>F值越大越好，Prob(F-statistic)越小越好</li>
+<li>regression and Regression Square Sum[RSS]:variableregressionmodelA=sum((y-y_)^2</li>
+<li>error and Error Square Sum[ESS]:variablemodelB=sum((y-y_)^2</li>
+<li> and Total Square Sum[TSS]:variableC=A+B</li>
+<li>regressionModel Mean Square:=RSS/Regression d.f(k) k=variableCount</li>
+<li>errorError Mean square:=ESS/Error d.f(n-k-1) n=Count</li>
+<li>FF=Model Mean Square /Error Mean Square</li>
+<li>F，Prob(F-statistic)</li>
 </ul>
 <p>R Square</p>
 <ul>
-<li>回归可以解释变量比例，可以作为自变量预测因变量准确度的指标</li>
-<li>SSE(残差平方和) = sum((y-y_)^2)</li>
-<li>SST(整体平方和）= sum((yi-yavg)^2</li>
-<li>R^2 = 1-SEE/SST 一般要大于0.6,0.7才算好</li>
+<li>regressionvariable，variablepredictionvariableAccuracy</li>
+<li>SSE( and ) = sum((y-y_)^2)</li>
+<li>SST( and ）= sum((yi-yavg)^2</li>
+<li>R^2 = 1-SEE/SST 0.6,0.7</li>
 </ul>
 <p>Adjust R Square</p>
 <ul>
-<li>R^2 = 1-SSE/SST SSE最小，推导出R^2不会递减</li>
-<li>yi = b1x1 + b2x2 +...+bkxk+...增加任何一个变量都会增加R^2</li>
+<li>R^2 = 1-SSE/SST SSE，R^2</li>
+<li>yi = b1x1 + b2x2 +...+bkxk+...variableR^2</li>
 <li>Adj R^2 = 1-(1-R^2) * ((n-1)/(n-p-1))</li>
-<li>n为总体大小，p为回归因子个数</li>
+<li>n，pregression</li>
 </ul>
 <p>AIC/BIC</p>
 <ul>
-<li>AIC(The Akaike Information Criterion)= 2K + nln(SSE/n) K是参数数量，n是观察数，SSE是残差平方和。</li>
-<li>AIC鼓励数据拟合的优良性，但是应该尽量避免过拟合，所以优先考虑的模型应该是AIC最小的哪一个，</li>
-<li>赤池信息量的准则是寻找可以最好的解释数据但是包含最少自由参数的模型。</li>
+<li>AIC(The Akaike Information Criterion)= 2K + nln(SSE/n) KparameterCount，n，SSE and 。</li>
+<li>AICdata， but overfitting， so modelAIC，</li>
+<li>infodata but containsparametermodel。</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
 
-<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span> <span class="c1">#特征超过16个将发生异常</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span> <span class="c1">#feature16</span>
 <span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">iter1</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
@@ -16743,20 +16743,20 @@ Name: 房屋总价, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
-<span class="c1"># 使用itertools，找出AIC最小值的特征组合作为模型训练的特征</span>
-<span class="c1"># 寻找最小AIC值的特征组合</span>
-<span class="n">fileds</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">,</span><span class="s1">&#39;室&#39;</span><span class="p">,</span> <span class="s1">&#39;厅&#39;</span><span class="p">,</span> <span class="s1">&#39;卫&#39;</span><span class="p">,</span> <span class="s1">&#39;东&#39;</span><span class="p">,</span><span class="s1">&#39;北&#39;</span><span class="p">,</span> <span class="s1">&#39;南&#39;</span><span class="p">,</span> <span class="s1">&#39;西&#39;</span><span class="p">,</span><span class="s1">&#39;低层&#39;</span><span class="p">,</span> <span class="s1">&#39;高层&#39;</span><span class="p">,</span> <span class="s1">&#39;毛坯&#39;</span><span class="p">,</span> <span class="s1">&#39;简装修&#39;</span><span class="p">,</span> <span class="s1">&#39;精装修&#39;</span><span class="p">,</span> <span class="s1">&#39;豪华装修&#39;</span><span class="p">]</span>
+<span class="c1"># using itertools，AICminfeaturemodeltrainingfeature</span>
+<span class="c1"># AICfeature</span>
+<span class="n">fileds</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Area'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">]</span>
 <span class="n">acis</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">fileds</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">virables</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">fileds</span><span class="p">,</span><span class="n">i</span><span class="p">):</span> <span class="c1">#从fileds中随机选择i个特征机型组合，返回的virables为元组类型</span>
+    <span class="k">for</span> <span class="n">virables</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">fileds</span><span class="p">,</span><span class="n">i</span><span class="p">):</span> <span class="c1">#filedsifeature，virables</span>
         <span class="n">x1</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">virables</span><span class="p">)])</span>
         <span class="n">x2</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">x1</span><span class="p">)</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">x2</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-        <span class="n">acis</span><span class="p">[</span><span class="n">virables</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">aic</span> <span class="c1"># AIC评分越小越好</span>
+        <span class="n">acis</span><span class="p">[</span><span class="n">virables</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">aic</span> <span class="c1"># AICRating</span>
 </pre></div>
 
      </div>
@@ -16767,13 +16767,13 @@ Name: 房屋总价, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="c1"># 对字典进行统计</span>
+<span class="c1"># </span>
 <span class="n">counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">acis</span><span class="p">)</span>
-<span class="c1"># 降序选出AIC最小的10个数，也就是最佳特征组合</span>
+<span class="c1"># AIC10，feature</span>
 <span class="n">counter</span><span class="o">.</span><span class="n">most_common</span><span class="p">()[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span> 
 </pre></div>
 
@@ -16796,24 +16796,24 @@ Name: 房屋总价, dtype: float64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;南&#39;, &#39;西&#39;, &#39;低层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+<pre>[(('Area', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74023.56464247877),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;北&#39;, &#39;南&#39;, &#39;西&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+ (('Area', '', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74023.41564227329),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;卫&#39;, &#39;东&#39;, &#39;南&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+ (('Area', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74023.36778965591),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;北&#39;, &#39;南&#39;, &#39;低层&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+ (('Area', '', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74023.31766334853),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;南&#39;, &#39;西&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+ (('Area', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74023.14955002116),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;北&#39;, &#39;南&#39;, &#39;低层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+ (('Area', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74023.14910923649),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;南&#39;, &#39;低层&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+ (('Area', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74023.02854387014),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;北&#39;, &#39;南&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;),
+ (('Area', '', '', '', '', '', '', '', 'Decoration', 'Decoration'),
   74022.91373410511),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;南&#39;, &#39;低层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;), 74022.8722434788),
- ((&#39;建筑面积&#39;, &#39;室&#39;, &#39;厅&#39;, &#39;东&#39;, &#39;南&#39;, &#39;高层&#39;, &#39;毛坯&#39;, &#39;精装修&#39;, &#39;豪华装修&#39;), 74022.56669895534)]</pre>
+ (('Area', '', '', '', '', '', '', 'Decoration', 'Decoration'), 74022.8722434788),
+ (('Area', '', '', '', '', '', '', 'Decoration', 'Decoration'), 74022.56669895534)]</pre>
 </div>
 
 </div>
@@ -16825,17 +16825,17 @@ Name: 房屋总价, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 接下来使用AIC值最小的特征组合进行预测</span>
-<span class="n">col2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;建筑面积&#39;</span><span class="p">,</span> <span class="s1">&#39;室&#39;</span><span class="p">,</span> <span class="s1">&#39;厅&#39;</span><span class="p">,</span> <span class="s1">&#39;东&#39;</span><span class="p">,</span> <span class="s1">&#39;南&#39;</span><span class="p">,</span> <span class="s1">&#39;高层&#39;</span><span class="p">,</span> <span class="s1">&#39;毛坯&#39;</span><span class="p">,</span> <span class="s1">&#39;精装修&#39;</span><span class="p">,</span> <span class="s1">&#39;豪华装修&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using AICfeatureprediction</span>
+<span class="n">col2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Area'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">,</span> <span class="s1">'Decoration'</span><span class="p">]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col2</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;房屋总价&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">''</span><span class="p">]</span>
 <span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
 <span class="n">linear</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span> <span class="c1"># 模型性能有所提高，但是提升的不明显</span>
+<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span> <span class="c1"># model， but </span>
 </pre></div>
 
      </div>
@@ -16869,25 +16869,25 @@ Name: 房屋总价, dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25151;&#20215;&#30340;&#39044;&#27979;">&#25151;&#20215;&#30340;&#39044;&#27979;<a class="anchor-link" href="#&#25151;&#20215;&#30340;&#39044;&#27979;">&#182;</a></h2>
+<h2 id="House Priceprediction">House Priceprediction<a class="anchor-link" href="#House Priceprediction">¶</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>现在我们可以根据给定的最佳特征组合进行预测房价</p>
+<p>based on featurepredictionHouse Price</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 假设我要买一套房子（想想就觉得很美），房子面积120平米，3室，1厅，南面，高层，精装修</span>
-<span class="n">my_house</span> <span class="o">=</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#根据col2特征</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># （），Area120，3，1，，，Decoration</span>
+<span class="n">my_house</span> <span class="o">=</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#based on col2feature</span>
 <span class="n">my_house</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_house</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 <span class="c1">#print(x_test)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">my_house</span><span class="p">)</span><span class="c1"># 预测价格</span>
+<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">my_house</span><span class="p">)</span><span class="c1"># predictionPrice</span>
 </pre></div>
 
      </div>
